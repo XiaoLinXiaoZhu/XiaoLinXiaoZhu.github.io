@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="[[___C++]] &amp;emsp;&amp;emsp;使用C++写入数据或者读取表格数据然后转化为vector<vector<string>>,代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041#include <iostream>#include <stri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用C++处理表格数据">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/07/1.Archieve/%E4%BD%BF%E7%94%A8C-%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="[[___C++]] &amp;emsp;&amp;emsp;使用C++写入数据或者读取表格数据然后转化为vector<vector<string>>,代码如下：1234567891011121314151617181920212223242526272829303132333435363738394041#include <iostream>#include <stri">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-06T23:17:29.000Z">
+<meta property="article:modified_time" content="2023-12-07T10:13:44.536Z">
+<meta property="article:author" content="XLXZ">
+<meta property="article:tag" content="Cpp">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2023/11/07/1.Archieve/%E4%BD%BF%E7%94%A8C-%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2023/11/07/1.Archieve/%E4%BD%BF%E7%94%A8C-%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/","path":"2023/11/07/1.Archieve/使用C-处理表格数据/","title":"使用C++处理表格数据"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用C++处理表格数据 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">94</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">94</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/12/08/C++%20%E6%95%B0%E7%BB%84%EF%BC%88vector%EF%BC%89%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%80%BB%E7%BB%93/" rel="bookmark">
+        <time class="popular-posts-time">2023-12-08</time>
+        <br>
+      C++ 数组（vector）常用操作总结
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/12/08/C++%E8%BF%94%E5%9B%9Evector%E3%80%81%E5%B0%86vector%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" rel="bookmark">
+        <time class="popular-posts-time">2023-12-08</time>
+        <br>
+      C++返回vector、将vector作为参数传递
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/11/07/1.Archieve/%E4%BD%BF%E7%94%A8C-%E5%A4%84%E7%90%86%E8%A1%A8%E6%A0%BC%E6%95%B0%E6%8D%AE/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="使用C++处理表格数据 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用C++处理表格数据
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-11-07 07:17:29" itemprop="dateCreated datePublished" datetime="2023-11-07T07:17:29+08:00">2023-11-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-07 18:13:44" itemprop="dateModified" datetime="2023-12-07T18:13:44+08:00">2023-12-07</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>237</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>[[___C++]]</p>
+<p>  使用C++<strong>写入数据</strong>或者<strong>读取表格数据</strong>然后转化为<code>vector&lt;vector&lt;string&gt;&gt;</code>,代码如下：<br></p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">// 写文件</span></span><br><span class="line">	ofstream outFile;</span><br><span class="line">	outFile.<span class="built_in">open</span>(<span class="string">"data.csv"</span>, ios::out); <span class="comment">// 打开模式可省略</span></span><br><span class="line">	outFile &lt;&lt; <span class="string">"name"</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="string">"age"</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="string">"hobby"</span> &lt;&lt; endl;</span><br><span class="line">	outFile &lt;&lt; <span class="string">"Mike"</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="number">18</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="string">"paiting"</span> &lt;&lt; endl;</span><br><span class="line">	outFile &lt;&lt; <span class="string">"Tom"</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="number">25</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="string">"football"</span> &lt;&lt; endl;</span><br><span class="line">	outFile &lt;&lt; <span class="string">"Jack"</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="number">21</span> &lt;&lt; <span class="string">','</span> &lt;&lt; <span class="string">"music"</span> &lt;&lt; endl;</span><br><span class="line">	outFile.<span class="built_in">close</span>();</span><br><span class="line"> </span><br><span class="line">	<span class="comment">// 读文件</span></span><br><span class="line">	<span class="function">ifstream <span class="title">inFile</span><span class="params">(<span class="string">"data.csv"</span>, ios::in)</span></span>;</span><br><span class="line">	string lineStr;</span><br><span class="line">	vector&lt;vector&lt;string&gt;&gt; strArray;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">getline</span>(inFile, lineStr))</span><br><span class="line">	{</span><br><span class="line">		<span class="comment">// 打印整行字符串</span></span><br><span class="line">		cout &lt;&lt; lineStr &lt;&lt; endl;</span><br><span class="line">		<span class="comment">// 存成二维表结构</span></span><br><span class="line">		<span class="function">stringstream <span class="title">ss</span><span class="params">(lineStr)</span></span>;</span><br><span class="line">		string str;</span><br><span class="line">		vector&lt;string&gt; lineArray;</span><br><span class="line">		<span class="comment">// 按照逗号分隔</span></span><br><span class="line">		<span class="keyword">while</span> (<span class="built_in">getline</span>(ss, str, <span class="string">','</span>))</span><br><span class="line">			lineArray.<span class="built_in">push_back</span>(str);</span><br><span class="line">		strArray.<span class="built_in">push_back</span>(lineArray);</span><br><span class="line">	}</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>  最后读取的结果保存在<code>strArray</code>里面。</p>
+<p>  注意，该方法通过分辨<code>,</code>来进行分割，所以说处理字符串类型的数据的时候注意不应该包含<code>,</code></p>
+<blockquote>
+<p>  另外，一件比较有趣的事情：我现在才知道循环中定义的变量会在循环结束后自动垃圾回收🧐</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/alipay.jpg" alt="XLXZ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/07/1.Archieve/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8MATLAB%E8%BF%9B%E8%A1%8C%E7%BB%98%E5%9B%BE/" rel="prev" title="第一次使用MATLAB进行绘图">
+                  <i class="fa fa-angle-left"></i> 第一次使用MATLAB进行绘图
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/11/08/1.Archieve/%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8%E9%A3%9E%E9%A1%B9/" rel="next" title="学习使用飞项">
+                  学习使用飞项 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
