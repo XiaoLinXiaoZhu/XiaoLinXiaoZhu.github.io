@@ -235,7 +235,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>662</span>
+      <span>105</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -255,7 +255,8 @@
     <div class="post-body" itemprop="articleBody">
           <p>[[___C++]]</p>
 <p>C++11:string和wstring之间互转换</p>
-<p>今天打算做string到wstring转换时从哪里找来的，贴出代码，以防再忘记。C++11后UTF8编码转换还真是方便<br></p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;codecvt&gt;</span></span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// convert string to wstring</span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::wstring <span class="title">to_wide_string</span><span class="params">(<span class="type">const</span> std::string&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">from_bytes</span>(input);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">// convert wstring to string </span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::string <span class="title">to_byte_string</span><span class="params">(<span class="type">const</span> std::wstring&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="comment">//std::wstring_convert&lt;std::codecvt_utf8_utf16&lt;wchar_t&gt;&gt; converter;</span></span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">to_bytes</span>(input);</span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>今天打算做string到wstring转换时从哪里找来的，贴出代码，以防再忘记。C++11后UTF8编码转换还真是方便
+</p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;codecvt&gt;</span></span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// convert string to wstring</span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::wstring <span class="title">to_wide_string</span><span class="params">(<span class="type">const</span> std::string&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">from_bytes</span>(input);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">// convert wstring to string </span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::string <span class="title">to_byte_string</span><span class="params">(<span class="type">const</span> std::wstring&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="comment">//std::wstring_convert&lt;std::codecvt_utf8_utf16&lt;wchar_t&gt;&gt; converter;</span></span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">to_bytes</span>(input);</span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure><p></p>
 
       
     </div>
@@ -328,7 +329,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>523</span>
+      <span>232</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -347,8 +348,12 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___编程]]</p>
-<h3 id="总而来说失败了。。"><a href="#总而来说失败了。。" class="headerlink" title="总而来说失败了。。"></a>总而来说失败了。。</h3><p>  我本来是想做一个自动将文本处理成xmind格式的小程序。<br>  但是我不知道为什么一对字符进行处理就会出现乱码。。。</p>
-<h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><h4 id="1-regex的使用"><a href="#1-regex的使用" class="headerlink" title="1.regex的使用"></a>1.regex的使用</h4><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//通过这个设定 正则表达式</span></span><br><span class="line"><span class="function">regex <span class="title">pattern0</span><span class="params">(<span class="string">"([,，]+)"</span>)</span></span>;</span><br><span class="line"><span class="comment">//通过这个进行替换</span></span><br><span class="line"><span class="built_in">regex_replace</span>(原来的字符串,正则表达式,替换字符串);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="总而来说失败了">总而来说失败了。。</h3>
+<p>  我本来是想做一个自动将文本处理成xmind格式的小程序。
+  但是我不知道为什么一对字符进行处理就会出现乱码。。。</p>
+<h3 id="收获">收获：</h3>
+<h4 id="regex的使用">1.regex的使用</h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//通过这个设定 正则表达式</span></span><br><span class="line"><span class="function">regex <span class="title">pattern0</span><span class="params">(<span class="string">"([,，]+)"</span>)</span></span>;</span><br><span class="line"><span class="comment">//通过这个进行替换</span></span><br><span class="line"><span class="built_in">regex_replace</span>(原来的字符串,正则表达式,替换字符串);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/03/1.Archieve/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E6%88%90Xmind%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F/#more" rel="contents">
@@ -428,7 +433,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>20</span>
+      <span>131</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -526,14 +531,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>750</span>
+      <span>669</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -545,19 +550,23 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___游戏设计]]</p>
-<h3 id="〇、概览："><a href="#〇、概览：" class="headerlink" title="〇、概览："></a>〇、概览：</h3><p>  最大的特征是：</p>
-<ol>
+<h3 id="概览">〇、概览：</h3>
+<p>  最大的特征是：</p>
+<ol type="1">
 <li>将树状的科技树变为网状的</li>
 <li>将玩家可以精确控制的加点变为玩家控制科技树的发展目标（比如说装备），从而促进科技树的发展</li>
 <li>加入国家政策机制：玩家可以调整国家的政策，从而指定侧重哪一方面发展(会烧钱)</li>
 <li>人才团队机制：玩家将会获得可以调控的人才团队用来配置研究方向，从而促进科技网的发展。</li>
 </ol>
-<h3 id="一、科技网"><a href="#一、科技网" class="headerlink" title="一、科技网"></a>一、科技网</h3><ul>
+<h3 id="一科技网">一、科技网</h3>
+<ul>
 <li>各个科技点之间按照<strong>网状</strong>链接</li>
 <li>科技点会<strong>受到周围的科技点的影响</strong>(有的时候甚至还会出现坏的科技点)</li>
 <li>玩家可以看到的是<strong>已经点亮的科技点</strong>，以及其<strong>对应的可能的前沿研究方向</strong></li>
 </ul>
-<h3 id="二、加点方式"><a href="#二、加点方式" class="headerlink" title="二、加点方式"></a>二、加点方式</h3><h4 id="在常规的游戏中："><a href="#在常规的游戏中：" class="headerlink" title="在常规的游戏中："></a>在常规的游戏中：</h4><ul>
+<h3 id="二加点方式">二、加点方式</h3>
+<h4 id="在常规的游戏中">在常规的游戏中：</h4>
+<ul>
 <li>科技树的加点十分的确定</li>
 <li>科技需要固定时间去研发</li>
 <li>科技对于装备的增益十分的直接</li>
@@ -641,7 +650,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>85</span>
+      <span>57</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -661,8 +670,9 @@
     <div class="post-body" itemprop="articleBody">
           <p>[[___杂谈]]</p>
 <p>[[___hexo]]</p>
-<p>偶然间看到了还有其他的几个离线网页生成器，就好奇地去看了一眼~   </p>
-<h3 id="hmmm省流：我懒而且不贪那点速度"><a href="#hmmm省流：我懒而且不贪那点速度" class="headerlink" title="hmmm省流：我懒而且不贪那点速度"></a>hmmm省流：我懒而且不贪那点速度</h3><p>所以说我选择：就使用hexo就ok</p>
+<p>偶然间看到了还有其他的几个离线网页生成器，就好奇地去看了一眼~</p>
+<h3 id="hmmm省流我懒而且不贪那点速度">hmmm省流：我懒而且不贪那点速度</h3>
+<p>所以说我选择：就使用hexo就ok</p>
 
       
     </div>
@@ -735,14 +745,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>736</span>
+      <span>457</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -753,10 +763,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[<strong>_大学]]<br>[[_</strong>设备]]</p>
-<p>自己筛选了一下然后又是问了问贴吧老哥们<br>最后还是犹豫不决😂</p>
+          <p>[[___大学]] [[___设备]]</p>
+<p>自己筛选了一下然后又是问了问贴吧老哥们 最后还是犹豫不决😂</p>
 <p>不过还好暂时还不急，我这电脑目前做一些外围的工作还是可以做的</p>
-<h3 id="这个是自己捣鼓的配置："><a href="#这个是自己捣鼓的配置：" class="headerlink" title="这个是自己捣鼓的配置："></a>这个是自己捣鼓的配置：</h3><ul>
+<h3 id="这个是自己捣鼓的配置">这个是自己捣鼓的配置：</h3>
+<ul>
 <li>i5-12490F 【1050】</li>
 <li>微星 B760M DDR4 【720】</li>
 <li>RTX 4060 GDDR6 8G【2450】</li>
@@ -764,7 +775,8 @@
 <li>1T PCIe4.0【309】</li>
 <li>长城X650w电源【331】</li>
 <li>散热和机箱随意￥400解决</li>
-<li>键鼠￥100解决  </li>
+<li>键鼠￥100解决<br>
+</li>
 <li>显示器￥600解决</li>
 <li>一共6913￥</li>
 </ul>
@@ -847,14 +859,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>633</span>
+      <span>454</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -945,7 +957,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>210</span>
+      <span>222</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1043,7 +1055,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>19</span>
+      <span>10</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1141,7 +1153,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>11</span>
+      <span>40</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">

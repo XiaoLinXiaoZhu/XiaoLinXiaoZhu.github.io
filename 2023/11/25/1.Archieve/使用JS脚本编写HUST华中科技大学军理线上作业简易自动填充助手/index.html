@@ -18,12 +18,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___JS]] 〇、前情提要今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？ 然后在油叉上面找了找发现了这个：HUST华中科技大学军理线上作业简易自动填充助手 (greasyfork.org)  这是它的github页面：HUST-MT-Helper  在尝试安装并使用之后，我发现并不能正常使用，主要原因">
+    <meta name="description" content="[[___JS]]
+ 〇、前情提要
+ 今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？
+ 然后在油叉上面找了找发现了这个： HUST华中科技大学军理线上作业简易自动填充助手
+ (greasyfork.org)
+ 这是它的github页面： HUST-MT-Helper
+ 在尝试安装并使用之后，我发现并不能正常">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用JS脚本编写HUST华中科技大学军理线上作业简易自动填充助手">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/25/1.Archieve/%E4%BD%BF%E7%94%A8JS%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99HUST%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%86%9B%E7%90%86%E7%BA%BF%E4%B8%8A%E4%BD%9C%E4%B8%9A%E7%AE%80%E6%98%93%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%A9%E6%89%8B/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___JS]] 〇、前情提要今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？ 然后在油叉上面找了找发现了这个：HUST华中科技大学军理线上作业简易自动填充助手 (greasyfork.org)  这是它的github页面：HUST-MT-Helper  在尝试安装并使用之后，我发现并不能正常使用，主要原因">
+<meta property="og:description" content="[[___JS]]
+ 〇、前情提要
+ 今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？
+ 然后在油叉上面找了找发现了这个： HUST华中科技大学军理线上作业简易自动填充助手
+ (greasyfork.org)
+ 这是它的github页面： HUST-MT-Helper
+ 在尝试安装并使用之后，我发现并不能正常">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-25T08:34:30.000Z">
 <meta property="article:modified_time" content="2023-11-25T14:06:25.384Z">
@@ -138,7 +150,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E3%80%87%E3%80%81%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">〇、前情提要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%80%E5%A4%A7%E7%9A%84%E6%84%9F%E8%A7%A6"><span class="nav-number">2.</span> <span class="nav-text">一、最大的感触</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AF%B9%E4%BA%8EJavaScript%E7%9A%84%E7%AC%AC%E4%B8%80%E5%8D%B0%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">1.对于JavaScript的第一印象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BC%B1%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">2.弱类型语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%9C%A8JavaScript%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BA%9B%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="nav-number">2.3.</span> <span class="nav-text">3.在JavaScript中数据类型有些不一样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%BE%97%E5%88%A9%E4%BA%8EEdge%E6%8F%90%E4%BE%9B%E7%9A%84%E8%89%AF%E5%A5%BD%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7%EF%BC%8Cdebug%E5%8D%81%E5%88%86%E5%9C%B0%E4%BE%BF%E6%8D%B7"><span class="nav-number">2.4.</span> <span class="nav-text">4.得利于Edge提供的良好的开发者工具，debug十分地便捷</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">二、其他的一些知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E5%85%83%E7%B4%A0data-%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">1. 获取标签元素data-*属性值的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-radio%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">2. radio表单结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-js-%E9%87%8C%E9%9D%A2%E7%9A%84%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0"><span class="nav-number">3.3.</span> <span class="nav-text">3.js 里面的函数构造</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">〇、前情提要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E6%9C%80%E5%A4%A7%E7%9A%84%E6%84%9F%E8%A7%A6"><span class="nav-number">2.</span> <span class="nav-text">一、最大的感触</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8Ejavascript%E7%9A%84%E7%AC%AC%E4%B8%80%E5%8D%B0%E8%B1%A1"><span class="nav-number">2.1.</span> <span class="nav-text">1.对于JavaScript的第一印象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%B1%E7%B1%BB%E5%9E%8B%E8%AF%AD%E8%A8%80"><span class="nav-number">2.2.</span> <span class="nav-text">2.弱类型语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8javascript%E4%B8%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BA%9B%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="nav-number">2.3.</span> <span class="nav-text">3.在JavaScript中数据类型有些不一样</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%97%E5%88%A9%E4%BA%8Eedge%E6%8F%90%E4%BE%9B%E7%9A%84%E8%89%AF%E5%A5%BD%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7debug%E5%8D%81%E5%88%86%E5%9C%B0%E4%BE%BF%E6%8D%B7"><span class="nav-number">2.4.</span> <span class="nav-text">4.得利于Edge提供的良好的开发者工具，debug十分地便捷</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%85%B6%E4%BB%96%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">二、其他的一些知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E5%85%83%E7%B4%A0data-%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">1.
+获取标签元素data-*属性值的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#radio%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">2. radio表单结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#js-%E9%87%8C%E9%9D%A2%E7%9A%84%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0"><span class="nav-number">3.3.</span> <span class="nav-text">3.js 里面的函数构造</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -259,14 +272,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>728</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -277,27 +290,41 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>[[___JS]]</p>
-<h3 id="〇、前情提要"><a href="#〇、前情提要" class="headerlink" title="〇、前情提要"></a>〇、前情提要</h3><p>今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？</p>
-<p>然后在油叉上面找了找发现了这个：<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/445342-hust%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%86%9B%E7%90%86%E7%BA%BF%E4%B8%8A%E4%BD%9C%E4%B8%9A%E7%AE%80%E6%98%93%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%A9%E6%89%8B">HUST华中科技大学军理线上作业简易自动填充助手 (greasyfork.org)</a> </p>
-<p>这是它的github页面：<br><a target="_blank" rel="noopener" href="https://github.com/gongchen618/HUST-MT-Helper">HUST-MT-Helper</a> </p>
+<h3 id="前情提要">〇、前情提要</h3>
+<p>今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？</p>
+<p>然后在油叉上面找了找发现了这个： <a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/445342-hust%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%86%9B%E7%90%86%E7%BA%BF%E4%B8%8A%E4%BD%9C%E4%B8%9A%E7%AE%80%E6%98%93%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%A9%E6%89%8B">HUST华中科技大学军理线上作业简易自动填充助手
+(greasyfork.org)</a></p>
+<p>这是它的github页面： <a target="_blank" rel="noopener" href="https://github.com/gongchen618/HUST-MT-Helper">HUST-MT-Helper</a></p>
 <p>在尝试安装并使用之后，我发现并不能正常使用，主要原因是<strong>华中科技大学出版社的官网更新了，原有的域名和内容编排都发生了变化</strong>，于是我就开始尝试自己将其中的js代码进行改写。</p>
 <p>具体改写过程在这里不再赘述，但是想要在这里记录一下自己所遇到的几个问题，以及学到的几个知识。</p>
 <span id="more"></span>
-<h3 id="一、最大的感触"><a href="#一、最大的感触" class="headerlink" title="一、最大的感触"></a>一、最大的感触</h3><h4 id="1-对于JavaScript的第一印象"><a href="#1-对于JavaScript的第一印象" class="headerlink" title="1.对于JavaScript的第一印象"></a>1.对于JavaScript的第一印象</h4><p>对于感觉js有点像就是对于html的源代码进行检索，编辑，操作……本身就提供了相当多的接口来使用，使用起来相对轻松。</p>
+<h3 id="一最大的感触">一、最大的感触</h3>
+<h4 id="对于javascript的第一印象">1.对于JavaScript的第一印象</h4>
+<p>对于感觉js有点像就是对于html的源代码进行检索，编辑，操作……本身就提供了相当多的接口来使用，使用起来相对轻松。</p>
 <p>基本语法和C++基本一致，除了在函数声明上和另外一些我暂时看不懂的东西上有所区别，基本上是相同的。</p>
-<h4 id="2-弱类型语言"><a href="#2-弱类型语言" class="headerlink" title="2.弱类型语言"></a>2.弱类型语言</h4><p>JavaScript是一个弱类型语言，在定义变量时，变量类型由其储存的内容决定。</p>
+<h4 id="弱类型语言">2.弱类型语言</h4>
+<p>JavaScript是一个弱类型语言，在定义变量时，变量类型由其储存的内容决定。</p>
 <p>其实结合后面的另外一点，感觉JavaScript在存储数据方面更像是存取指针，而不是引用具体的实例。</p>
-<h4 id="3-在JavaScript中数据类型有些不一样"><a href="#3-在JavaScript中数据类型有些不一样" class="headerlink" title="3.在JavaScript中数据类型有些不一样"></a>3.在JavaScript中数据类型有些不一样</h4><p>和常规的语言相比，JavaScript的运行依赖于html文件，在很多操作上比起引用更像是指针。</p>
-<p>比如这样的DOM结构：<br></p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"a2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>我之前想的是这样交换：<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">"div"</span>);</span><br><span class="line"><span class="keyword">var</span> temp;</span><br><span class="line"></span><br><span class="line">temp = divs[<span class="number">0</span>];</span><br><span class="line">divs[<span class="number">0</span>] = divs[<span class="number">1</span>];</span><br><span class="line">divs[<span class="number">1</span>] = temp;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h4 id="在javascript中数据类型有些不一样">3.在JavaScript中数据类型有些不一样</h4>
+<p>和常规的语言相比，JavaScript的运行依赖于html文件，在很多操作上比起引用更像是指针。</p>
+<p>比如这样的DOM结构： </p><figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"a1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"a2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>我之前想的是这样交换： </p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> divs = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">"div"</span>);</span><br><span class="line"><span class="keyword">var</span> temp;</span><br><span class="line"></span><br><span class="line">temp = divs[<span class="number">0</span>];</span><br><span class="line">divs[<span class="number">0</span>] = divs[<span class="number">1</span>];</span><br><span class="line">divs[<span class="number">1</span>] = temp;</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>但是实际上这将不进行交换。原因如下：</p>
 <p>![[js-将nodeList像数组一样进行操作]]</p>
-<h4 id="4-得利于Edge提供的良好的开发者工具，debug十分地便捷"><a href="#4-得利于Edge提供的良好的开发者工具，debug十分地便捷" class="headerlink" title="4.得利于Edge提供的良好的开发者工具，debug十分地便捷"></a>4.得利于Edge提供的良好的开发者工具，debug十分地便捷</h4><p>可以将js挂载到网页中，然后使用edge开发者工具对代码进行debug调试</p>
+<h4 id="得利于edge提供的良好的开发者工具debug十分地便捷">4.得利于Edge提供的良好的开发者工具，debug十分地便捷</h4>
+<p>可以将js挂载到网页中，然后使用edge开发者工具对代码进行debug调试</p>
 <p>最大的优点是数据类型会以悬浮窗的形式显示出来，而数据的具体数据及其变化情况会以旁批的形式标注出来。</p>
-<h3 id="二、其他的一些知识点"><a href="#二、其他的一些知识点" class="headerlink" title="二、其他的一些知识点"></a>二、其他的一些知识点</h3><h4 id="1-获取标签元素data-属性值的方法"><a href="#1-获取标签元素data-属性值的方法" class="headerlink" title="1. 获取标签元素data-*属性值的方法"></a>1. 获取标签元素data-*属性值的方法</h4><p>在JavaScript 如果直接使用 <code>a.data-id</code> 会被理解为两数相减<code>a.data - id</code><br>这个时候就需要换一种读取方式。</p>
+<h3 id="二其他的一些知识点">二、其他的一些知识点</h3>
+<h4 id="获取标签元素data-属性值的方法">1.
+获取标签元素data-*属性值的方法</h4>
+<p>在JavaScript 如果直接使用 <code>a.data-id</code>
+会被理解为两数相减<code>a.data - id</code>
+这个时候就需要换一种读取方式。</p>
 <p>![[js-获取标签元素data-xxx属性值的方法]]</p>
-<h4 id="2-radio表单结构"><a href="#2-radio表单结构" class="headerlink" title="2. radio表单结构"></a>2. radio表单结构</h4><p>![[js-radio表单结构]]</p>
-<h4 id="3-js-里面的函数构造"><a href="#3-js-里面的函数构造" class="headerlink" title="3.js 里面的函数构造"></a>3.js 里面的函数构造</h4><p>![[js-函数构造]]</p>
+<h4 id="radio表单结构">2. radio表单结构</h4>
+<p>![[js-radio表单结构]]</p>
+<h4 id="js-里面的函数构造">3.js 里面的函数构造</h4>
+<p>![[js-函数构造]]</p>
 
     </div>
 
