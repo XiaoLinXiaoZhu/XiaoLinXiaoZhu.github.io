@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">104</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">36</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">110</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">104</span>
+          <span class="site-state-item-count">110</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,6 +180,649 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">Matlab：条件与循环</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:24:00 / 修改时间：07:29:47" itemprop="dateCreated datePublished" datetime="2023-12-08T07:24:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>402</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<p>一、语法知识</p>
+<p>1、循环控制语句：</p>
+<p>1）for~end：用于要求重复多次执行for与end之间的程序语句。允许嵌套。其一般格式为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for 变量 = 起始值 ：增量 ：终点</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 	%一般要输出循环运算结果，还应在end后加“，变量名”，运行时按enter键</span><br></pre></td></tr></tbody></table></figure>
+<p>2）while~end：与c++类似，while也不规定循环次数，其终止时刻由while后面的条件表达式决定，若条件成立，则重复执行while与end之间的程序语句，否则结束循环。其一般格式为
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while 条件表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 		&nbsp; %与for~end语句类似，要想输出运算结果，在end后加“，变量名”，再按enter键</span><br></pre></td></tr></tbody></table></figure> 2、条件选择语句<p></p>
+<p>1）if~end：其一般格式为 </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+2）if<sub>elseif</sub>···<sub>else</sub>end：elseif~else是进一步的if条件语句，其一般格式为
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式1</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp; 程序语句1</span><br><span class="line"></span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line"></span><br><span class="line">  程序语句2</span><br><span class="line"></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">  程序语句n</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【注意：在多分支条件选择语句中，if和elseif是互相独立且互相排斥的条件选择语句，else后的语句执行的条件是先前所有的条件语句均不成立】</span><br></pre></td></tr></tbody></table></figure>
+<p>3）switch~end：开关语句是一种多分支条件选择语句，他执行特定选择语句，当且仅当变量或表达式的值相符。其一般格式为
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch 表达式</span><br><span class="line">	</span><br><span class="line">	case值1</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	case值2</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	······</span><br><span class="line">	</span><br><span class="line">	otherwise</span><br><span class="line">	程序语句</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">Matlab：for循环</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:22:00 / 修改时间：07:56:34" itemprop="dateCreated datePublished" datetime="2023-12-08T07:22:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>470</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<h3 id="简单for循环">简单for循环</h3>
+<p>for循环用来循环处理数据。<br>
+例：输出1~100的和</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:100</span><br><span class="line">       sum = sum +i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">        5050</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：i从1到100，每次增加一个，该共循环100次<br>
+注意：分号的位置；不能使用“+=”符号；每写一层循环，必须以end结尾</p>
+<h3 id="带有步长的for循环">带有步长的for循环</h3>
+<p>例：输出1到10之间的奇数和</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       sum = sum + i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    25</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：i =
+1:2:10中间的2表示步长，表示从1到10，每次增加2，即1，3，5，7，9五个数之和；步长也可以为负数</p>
+<h3 id="对向量和矩阵的遍历">对向量和矩阵的遍历</h3>
+<ol type="1">
+<li>对向量的遍历</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; A = rand(1,4);</span><br><span class="line">&gt;&gt; for i = A</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.9572</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.4854</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.8003</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.1419</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：rand函数用于随机生成0~1之间的数，rand(1,4)生成1*4的列向量。</p>
+<ol start="2" type="1">
+<li>对矩阵的遍历</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A = magic(4);</span><br><span class="line">&gt;&gt; A</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">    16     2     3    13</span><br><span class="line">     5    11    10     8</span><br><span class="line">     9     7     6    12</span><br><span class="line">     4    14    15     1</span><br><span class="line"></span><br><span class="line">&gt;&gt; for i = A;</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    16</span><br><span class="line">     5</span><br><span class="line">     9</span><br><span class="line">     4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line">    11</span><br><span class="line">     7</span><br><span class="line">    14</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    10</span><br><span class="line">     6</span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    13</span><br><span class="line">     8</span><br><span class="line">    12</span><br><span class="line">     1</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：magic(n)函数用于生成任意一行或一列或主副对角线之和相等的方阵，对矩阵的循环遍历是依次取出矩阵中的每一列元素</p>
+<h3 id="break和continue的使用">break和continue的使用</h3>
+<p>break用于终止离它最近的一层for循环；<br>
+continue用于跳过离它最近的一层for循环，接着执行下一次循环</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x = 1;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       if i &gt; 7</span><br><span class="line">          break</span><br><span class="line">       else</span><br><span class="line">          x = x* i</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">   105</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:6</span><br><span class="line">       if i == 4</span><br><span class="line">          continue</span><br><span class="line">       else</span><br><span class="line">          sum = sum + i</span><br><span class="line">       end</span><br><span class="line">   end;</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    11</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    17</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="多层for循环">多层for循环</h3>
+<p>for循环可以按照需要进行嵌套。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; for i = 1:2:6</span><br><span class="line">       for j = 1:3</span><br><span class="line">           y = i * j</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     5</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    10</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Matlab：函数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:18:00 / 修改时间：07:21:25" itemprop="dateCreated datePublished" datetime="2023-12-08T07:18:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<h2 id="前言">前言</h2>
+<p>函数——是编程的核心概念之一，是能够完成相对独立功能的代码封装成的模块。</p>
+<p>在主程序中通过函数名和实参调用它，通过接口（即函数的输入、输出参数）来实现“通讯”。所以在调用函数时，你只要知道“被调用的函数是用来做什么的”，以及“如何对应它的输入、输出参数”就行了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/" class="post-title-link" itemprop="url">Matlab：函数返回多个值</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:14:00 / 修改时间：07:16:53" itemprop="dateCreated datePublished" datetime="2023-12-08T07:14:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>266</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<h3 id="matlab函数返回多个值">Matlab：函数返回多个值</h3>
+<p>在 MATLAB
+中，函数可以返回多个值。要返回多个值，可以使用中括号将它们括起来，并用逗号分隔。以下是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function [output1, output2] = myFunction(input1, input2)</span><br><span class="line">    % function code here</span><br><span class="line">    output1 = someValue1;</span><br><span class="line">    output2 = someValue2;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+<p>在这个例子中，函数 <code>myFunction</code> 接受两个输入参数
+<code>input1</code> 和 <code>input2</code>，并返回两个输出值
+<code>output1</code> 和 <code>output2</code>。在函数的结尾处，使用
+<code>output1</code> 和 <code>output2</code> 变量来存储要返回的值。</p>
+<p>要调用这个函数并获取返回的值，可以使用以下语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[output1, output2] = myFunction(input1, input2);</span><br></pre></td></tr></tbody></table></figure>
+<p>这将调用函数 <code>myFunction</code> 并将输入参数 <code>input1</code>
+和 <code>input2</code> 传递给它。函数将计算输出值 <code>output1</code>
+和 <code>output2</code>，并将它们分别赋值给变量 <code>output1</code> 和
+<code>output2</code>。</p>
+<h3 id="相关问题">相关问题</h3>
+<p>在 Matlab
+中，可以通过在函数定义行中使用多个输入参数来实现函数接受多个输入。以下是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function output = myFunc(input1, input2, input3)</span><br><span class="line">    % 在函数体内处理输入参数</span><br><span class="line">    output = input1 + input2 + input3;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%9C%A8%E5%87%BD%E6%95%B0%E9%87%8C%E4%BD%BF%E7%94%A8%E2%80%9C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E2%80%9D/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%9C%A8%E5%87%BD%E6%95%B0%E9%87%8C%E4%BD%BF%E7%94%A8%E2%80%9C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E2%80%9D/" class="post-title-link" itemprop="url">Matlab：在函数里使用“全局变量”</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:08:00 / 修改时间：07:13:15" itemprop="dateCreated datePublished" datetime="2023-12-08T07:08:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>260</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<h3 id="matlab在函数里使用全局变量">Matlab：在函数里使用“全局变量”</h3>
+<p>函数里的变量自在函数内有效, 那么如何在函数内调用外部的变量呢?</p>
+<ol type="1">
+<li>全局变量 global<br>
+global可以定义全局变量, 但要注意先定义, 再赋值. 否则会有警告:</li>
+</ol>
+<blockquote>
+<p>Warning: The value of local variables may have been changed to match
+the globals. Future versions of <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=MATLAB&amp;spm=1001.2101.3001.7020">MATLAB</a>
+will require that you declare a variable to be global before you use
+that variable.</p>
+</blockquote>
+<p>并且需要在你写的函数里面声明使用全局变量。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">global x</span><br><span class="line">x=5;</span><br><span class="line"></span><br><span class="line">subfunc % 输出为5</span><br><span class="line"></span><br><span class="line">function output=subfunc</span><br><span class="line">global x % 在使用全局变量时, 要先声明</span><br><span class="line">output=x;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">clear global x % 清除全局变量</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<ol start="2" type="1">
+<li>使用子函数</li>
+</ol>
+<p>子函数默认可以调用其母函数中所有的变量</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> main</span><br><span class="line">x=5;</span><br><span class="line">subfunc</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> output=subfunc</span><br><span class="line"></span><br><span class="line">output=x;</span><br><span class="line">end</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+<p>执行 main, 输出5. 子函数共享父函数的变量</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%9C%A8%E5%87%BD%E6%95%B0%E9%87%8C%E4%BD%BF%E7%94%A8%E2%80%9C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E2%80%9D/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/matlab%EF%BC%9A%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%90%E7%94%A8/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/matlab%EF%BC%9A%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%90%E7%94%A8/" class="post-title-link" itemprop="url">matlab：三角函数的运用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:05:00 / 修改时间：07:05:57" itemprop="dateCreated datePublished" datetime="2023-12-08T07:05:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>77</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___matlab]]</p>
+<h3 id="matlab三角函数的运用">matlab：三角函数的运用</h3>
+<p>matlab里三角函数有sin,cos,tan,csc,sec和cot,是弧度制；<br>
+如，sin(pi/2)=1；</p>
+<p>sind,cosd,tand是角度制；<br>
+如，sind(90)=1；</p>
+<p>asin,acos,atan是弧度制反三角函数；</p>
+<p>asind,acosd,atand是角度制反三角函数；</p>
+<p>sinh,cosh,tanh是双曲函数</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/matlab%EF%BC%9A%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%90%E7%94%A8/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -236,7 +879,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>10 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -618,7 +1261,7 @@ vector数组 与使用内置数组通常没有什么区别。两者的区别主�
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -844,7 +1487,7 @@ char数组转换为double</h3>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -890,638 +1533,6 @@ to_string 函数</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++：string的运用和相关方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-08 00:30:00 / 修改时间：00:33:16" itemprop="dateCreated datePublished" datetime="2023-12-08T00:30:00+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>121</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___C++]]</p>
-<h1 id="cstring的运用和相关方法">C++：string的运用和相关方法</h1>
-<h2 id="一删除stdstring或stdwstring的最后一个字符">一、删除std::string或std::wstring的最后一个字符：</h2>
-<h3 id="s.pop_back">s.pop_back();</h3>
-<p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
-<h3 id="s.erases.end-1">s.erase(s.end()-1);</h3>
-<p>  删除s的最后一个字符</p>
-<h3 id="ss.substr0s.length-1">s=s.substr(0,s.length()-1);</h3>
-<p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">C++的运算符重载</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-08 00:24:00 / 修改时间：00:27:51" itemprop="dateCreated datePublished" datetime="2023-12-08T00:24:00+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___C++]] [[___未完成]]</p>
-<h3 id="概念">1.概念</h3>
-<p>  运算符的重载，实际是一种特殊的函数重载，必须定义一个函数，并告诉C++编译器，当遇到该运算符时就调用此函数来行使运算符功能。这个函数叫做运算符重载函数（常为类的成员函数）。<br>
-  用函数的方式实现了（+ - * / []数组 &amp;&amp; || 逻辑
-等）运算符的重载。根据需求决定重载那些运算符，用到的时候再百度案例即可。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">01背包问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-07 23:34:00" itemprop="dateCreated datePublished" datetime="2023-12-07T23:34:00+08:00">2023-12-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-08 00:20:07" itemprop="dateModified" datetime="2023-12-08T00:20:07+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___未完成]]</p>
-<h2 id="背包问题详解">01背包问题详解</h2>
-<p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
-<h2 id="问题描述">问题描述</h2>
-<p>01背包问题可描述为如下问题：
-有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。
-问：如何向背包装物体才能使背包中物体的总价值最大？</p>
-<h2 id="为什么不用贪心">为什么不用贪心？</h2>
-<p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。
-为什么这个问题不能用贪心呢？ 举个例子
-我的背包容量为10，而且有4个物体，它们的体积和价值分别为 w1 = 8, v1 = 9
-w2 = 3, v2 = 3 w3 = 4, v3 = 4 w4 = 3, v4 = 3
-贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体 c1 =
-v1/w1 = 1.125（最大） c2 = v2/w2 = 1 c3 = v3/w3 = 1 c4 = v4/w4 = 1
-所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。
-但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！
-所以这个问题不可以用贪心法来处理。</p>
-<h2 id="原始的-01背包">原始的 01背包</h2>
-<p>01背包的状态转移方程为 `f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]]
-+ v[j])</p>
-<p>i代表对i件物体做决策，有两种方式—放入背包和不放入背包。
-j表示当前背包剩余的容量。</p>
-<p>转移方程的解释： 创建一个状态矩阵f，横坐标 i 是物体编号，纵坐标 j
-为背包容量。 首先将 f 第0行和第0列初始化为0
-（代码里面将整个f初始化为0了，其实只初始化第0行和第0列就够了）。这个表示不放物体时最大价值为0
-。（物体编号从1开始） 接下来依次遍历f的每一行。如下所示。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">{</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (j &gt;= w[i])<span class="comment">//如果背包装得下当前的物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//如果背包装不下当前物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>如果背包装得下当前的物体，在遍历过程中分别计算第i件物体放入和不放入背包的价值，取其中大的做为当前的最大价值。
-如果背包装不下当前物体那么第i个物体只有不放入背包一种选择。</p>
-<p>不放入背包时:第i次决策后的最大价值和第i-1次决策时候的价值是一样的（还是原来的那些物体，没多没少）。
-放入背包时:第i次决策后的价值为 第i-1次决策时候的价值 加上
-当前物体的价值v[j]。物体放入背包后会使背包容量变为 j
-，即没放物体之前背包的容量为j - w[i]。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> max(N1,N2) N1&gt;N2?N1:N2</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	第一行输入背包容量V和物体的个数n</span></span><br><span class="line"><span class="comment">	接下来有n行，每行包含两个数字，分别为该物体的花费和价值</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; w, v;<span class="comment">//w为花费，v为价值</span></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; f;<span class="comment">//f状态矩阵</span></span><br><span class="line">	<span class="type">int</span> V, n;<span class="comment">//V背包容量，n物体数</span></span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; V &gt;&gt; n)</span><br><span class="line">	{</span><br><span class="line">		w.<span class="built_in">clear</span>();</span><br><span class="line">		v.<span class="built_in">clear</span>();</span><br><span class="line">		f.<span class="built_in">clear</span>();</span><br><span class="line">		w.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		v.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输入原始数据</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="type">int</span> cur_w, cur_v;</span><br><span class="line">			cin &gt;&gt; cur_w &gt;&gt; cur_v;</span><br><span class="line">			w.<span class="built_in">push_back</span>(cur_w);</span><br><span class="line">			v.<span class="built_in">push_back</span>(cur_v);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//初始化状态矩阵</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">buff</span><span class="params">(V + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">			f.<span class="built_in">push_back</span>(buff);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//动态规划过程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">			{</span><br><span class="line">				<span class="keyword">if</span> (j &gt;= w[i])</span><br><span class="line">				{</span><br><span class="line">					f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">				}</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				{</span><br><span class="line">					f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="type">int</span> ans = f[n][V];</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/" class="post-title-link" itemprop="url">机械键盘初次选购</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-05 20:01:00" itemprop="dateCreated datePublished" datetime="2023-12-05T20:01:00+08:00">2023-12-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-11 06:59:59" itemprop="dateModified" datetime="2023-12-11T06:59:59+08:00">2023-12-11</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___杂谈]] [[___设备]]</p>
-<blockquote>
-<p>今天是我初次选购机械键盘，有一说一就算是选择了茶轴，结果还是很吵……</p>
-<p>总的来说到手的键盘我很满意，手感、做工、rgb灯效都很棒</p>
-<p>但是就是有一个问题，那就是这个空格的手感相较于其他的按键来说，会有点过于拉跨，就是也不是说会发生晃动什么的，就是这个手感要比其他的按钮要烂一点，尤其是它的回弹，每次一按下去我都感觉是在按一个又沉又厚重的东西……</p>
-<p>其实也不是很难得出它这个样子的原因，实际上空格键因为加上了卫星轴的设计，加上本身的重量比较大，所以说会导致这样的问题。</p>
-<p>可能比较好的办法就是换一个弹簧？反正这件事情暂时没有解决。</p>
-</blockquote>
-<p><strong>接下来，我来总结一下这次购买的经验。</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/05/1.Archieve/%E7%81%B5%E6%84%9F%EF%BC%9A%E4%BA%A4%E8%AD%A6%E6%B8%85%E8%B7%AF/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/05/1.Archieve/%E7%81%B5%E6%84%9F%EF%BC%9A%E4%BA%A4%E8%AD%A6%E6%B8%85%E8%B7%AF/" class="post-title-link" itemprop="url">灵感：交警清路</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-05 14:47:00 / 修改时间：14:47:40" itemprop="dateCreated datePublished" datetime="2023-12-05T14:47:00+08:00">2023-12-05</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>48</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___游戏设计]]</p>
-<h2 id="灵感来源">灵感来源</h2>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11w411W7ZQ/">盘点那些专属于中国人的安全感_哔哩哔哩_bilibili</a></p>
-<h2 id="我的想法">我的想法</h2>
-<p>即时性，策略性。</p>
-<p>只能说灵感来源于生活。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/05/1.Archieve/%E7%81%B5%E6%84%9F%EF%BC%9A%E4%BA%A4%E8%AD%A6%E6%B8%85%E8%B7%AF/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/05/2.Reference/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%BD%E8%B5%9B/2023-B%E9%A2%98/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/05/2.Reference/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%BD%E8%B5%9B/2023-B%E9%A2%98/" class="post-title-link" itemprop="url">2023-B题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-05 08:43:00" itemprop="dateCreated datePublished" datetime="2023-12-05T08:43:00+08:00">2023-12-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-07 10:10:10" itemprop="dateModified" datetime="2023-12-07T10:10:10+08:00">2023-12-07</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>12</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___数学建模题目]]</p>
-<figure>
-<img src="https://s1.imagehub.cc/images/2023/12/05/b82d1a248d6642d01fb0acfa1f932a46.png" alt="b82d1a248d6642d01fb0acfa1f932a46.png">
-<figcaption aria-hidden="true">b82d1a248d6642d01fb0acfa1f932a46.png</figcaption>
-</figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/05/2.Reference/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%BD%E8%B5%9B/2023-B%E9%A2%98/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
