@@ -4595,12 +4595,16 @@ href="https://www.bilibili.com/video/BV1Pi4y157Eh/">tesseract-ocr，基本安装
     <title>python中输出到txt</title>
     <url>/2023/11/23/1.Archieve/python%E4%B8%AD%E8%BE%93%E5%87%BA%E5%88%B0txt/</url>
     <content><![CDATA[<p>[[___python]]</p>
-<h1 id="python中输出到txt">python中输出到txt</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;使用print函数输出&quot;</span>, file=f)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<p>在实际操作中，我们常常会从文件中输入和输出，在这个时候我们就需要调用相关的函数进行读取和写入操作，在下面就记录几种较为常用的方式</p>
 <span id="more"></span>
-<hr />
-<h1 id="reference">Reference</h1>
-]]></content>
+<h3 id="使用open"><a href="#使用open" class="headerlink" title="使用open()"></a>使用open()</h3><p>open函数可以打开任意格式的文件并且进行读写操作，这个的好处是，可以来回在多个文件之间切换。<br>在实际使用的时候需要注意的是，在程序写入完成之后，需要记得将文件关闭，不然的话数据不会实际写入</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;使用print函数输出&quot;</span>, file=f)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<h3 id="使用with-open-as-file-的方式"><a href="#使用with-open-as-file-的方式" class="headerlink" title="使用with open() as file:的方式"></a>使用<code>with open() as file:</code>的方式</h3><p>在找不到文件对应的路径/无法创建文件的时候，执行open()函数往往会报错，在这个时候我们往往会选择使用with，with会尝试打开，如果失败则不会执行其后的指令。且使用with会在结束之后自动将文件关闭。</p>
+<p>实际上，这两者等价：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    file.write(ret)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	f = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">	file.write(ret)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">	f.close()</span><br></pre></td></tr></table></figure>
+<p>但是前者明显更加清晰易读</p>
+<hr>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1>]]></content>
       <tags>
         <tag>编程</tag>
         <tag>python</tag>
