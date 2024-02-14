@@ -8020,43 +8020,65 @@ href="https://www.bilibili.com/read/cv15975040/">【非人学园/第五人格】
   <entry>
     <title>awa</title>
     <url>/2023/10/27/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%88%91%E8%87%AA%E5%B7%B1blog%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BB%A5%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%96/</url>
-    <content><![CDATA[<p>[[___未完成]]</p>
+    <content><![CDATA[<p>[[___杂谈]]</p>
 <p>这篇文章简单讲讲我自己的blog是如何构建的。</p>
-<h2 id="一了解如何搭建自己的blog">一、了解如何搭建自己的blog</h2>
-<p>搭建blog的方式无非两种，一种是本地构建，另外一种是云端构建。</p>
+<h2 id="一、了解如何搭建自己的blog"><a href="#一、了解如何搭建自己的blog" class="headerlink" title="一、了解如何搭建自己的blog"></a>一、了解如何搭建自己的blog</h2><p>搭建blog的方式无非两种，一种是本地构建，另外一种是云端构建。</p>
 <p>本地构建指的是网页在本地渲染，然后提交到云端，云端不进行任何计算，只是负责将文件分发给接收者。</p>
 <p>云端构建指的是云端上只存储原始的markdown文件，在分发时进行渲染，这就要求云端有一定的计算能力。</p>
 <p>我并不打算花费金钱群购买服务器，但是同时我又想要尽可能个性化的blog页面，但是我又不太希望将其公之于众，那么这个时候github的github_page就十分合适了</p>
 <p>githubpage的原理就是属于本地构建，服务器相当于提供下载功能，总而言之是一种相对方便与美观的构建方式</p>
 <p>一般较为常见的方式是使用hexo搭建，但是同样也有使用huge搭建的方式，后者更加美观，但是我并不计较那些，hexo搭建的话有许多bug都可以直接找的到解决办法。详细的可以看[[关于hexo与hugo]]</p>
 <p>之后，我选择了看起来简洁社群也相对较为的发达的hexo</p>
-<h2 id="二开始搭建">二、开始搭建</h2>
-<p>这里是有专门的教程的，直接跟着一步步做即可。我没有作过于深入的了解。</p>
-<p>遇到的几个问题，我记得的有： -
-git被拒绝了：有可能是因为你开了加速器，关掉就好了 -
-localhost显示不正常：使用hexo clean之后重新生成试试看</p>
-<h2 id="三编写自动化bat脚本">三、编写自动化bat脚本</h2>
-<p>每次想要构建都需要打开所在文件夹，点击open git bash
-here，这十分麻烦，于是我搜集了资料，自己编写了一个bat脚本来便于我一键生成~</p>
-<p>再加上powertoys的powertoys
-run功能，使我只需要按下alt+space并且输入<code>&gt;</code>就可以开始键入命令调用bat脚本了</p>
-<p>下面是我的bat脚本，bat的名称为myhexo：<br />
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"><span class="built_in">set</span> p0=%<span class="number">1</span></span><br><span class="line"><span class="built_in">set</span> &quot;p1=defaultName&quot;</span><br><span class="line"><span class="built_in">set</span> p1=%<span class="number">2</span></span><br><span class="line"><span class="built_in">set</span> &quot;fileAddress=E:\HexoFile\source\_posts\<span class="variable">%p1%</span>.<span class="built_in">md</span>&quot;</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;r&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;g&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo clean &amp;&amp;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;n&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new post <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo n <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;x&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new xmind <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo x <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;b&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new bilibili <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo b <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo <span class="variable">%p0%</span>;bash&quot;</span><br><span class="line"><span class="keyword">Exit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<h2 id="二、开始搭建"><a href="#二、开始搭建" class="headerlink" title="二、开始搭建"></a>二、开始搭建</h2><p>这里是有专门的教程的，直接跟着一步步做即可。我没有作过于深入的了解。</p>
+<p>遇到的几个问题，我记得的有：</p>
+<ul>
+<li>git被拒绝了：有可能是因为你开了加速器，关掉就好了</li>
+<li>localhost显示不正常：使用hexo clean之后重新生成试试看</li>
+</ul>
+<h2 id="三、编写自动化bat脚本"><a href="#三、编写自动化bat脚本" class="headerlink" title="三、编写自动化bat脚本"></a>三、编写自动化bat脚本</h2><p>每次想要构建都需要打开所在文件夹，点击open git bash here，这十分麻烦，于是我搜集了资料，自己编写了一个bat脚本来便于我一键生成~</p>
+<p>再加上powertoys的powertoys run功能，使我只需要按下alt+space并且输入<code>&gt;</code>就可以开始键入命令调用bat脚本了</p>
+<p>下面是我的bat脚本，bat的名称为myhexo：<br><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"><span class="built_in">set</span> p0=%<span class="number">1</span></span><br><span class="line"><span class="built_in">set</span> &quot;p1=defaultName&quot;</span><br><span class="line"><span class="built_in">set</span> p1=%<span class="number">2</span></span><br><span class="line"><span class="built_in">set</span> &quot;fileAddress=E:\HexoFile\source\_posts\<span class="variable">%p1%</span>.<span class="built_in">md</span>&quot;</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;r&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;g&quot; (</span><br><span class="line">    <span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo clean &amp;&amp;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;n&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new post <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo n <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;x&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new xmind <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo x <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="keyword">if</span> &quot;<span class="variable">%p0%</span>&quot;==&quot;b&quot; (</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( explorer &quot;<span class="variable">%fileAddress%</span>&quot;  ) </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">exist</span> <span class="variable">%fileAddress%</span> ( <span class="keyword">Exit</span> ) </span><br><span class="line"></span><br><span class="line">    <span class="built_in">start</span> E:\Git\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo new bilibili <span class="variable">%p1%</span>&amp;&amp;<span class="keyword">exit</span>&quot;</span><br><span class="line">    timeout /t <span class="number">8</span> /nobreak &gt;<span class="built_in">nul</span></span><br><span class="line">    <span class="built_in">cmd</span> /c &quot;myhexo b <span class="variable">%p1%</span>&quot;</span><br><span class="line">    <span class="keyword">Exit</span></span><br><span class="line">) </span><br><span class="line"><span class="built_in">start</span> E:\\Git\\git-bash.exe --<span class="built_in">cd</span>=E:\HexoFile -c &quot;hexo <span class="variable">%p0%</span>;bash&quot;</span><br><span class="line"><span class="keyword">Exit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
 <p>使用start调用git-bash，并cd进入指定目录</p>
 <p>使用 -c附带执行的指令语句。</p>
-<p>比如简单的生成就输入<code>myhexo r</code>
-，这将会调用下面的指令：<code>start E:\\Git\\git-bash.exe --cd=E:\HexoFile -c "hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash"</code>
-先generate生成网页，然后再develop提交给GitHub，最后再serve构建本地预览。</p>
-<p>如果要清空再生成，就是<code>myhexo g</code>，这将会调用：<code>start E:\\Git\\git-bash.exe --cd=E:\HexoFile -c "hexo clean &amp;&amp;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash"</code></p>
-<hr />
+<p>比如简单的生成就输入<code>myhexo r</code> ，这将会调用下面的指令：<code>start E:\\Git\\git-bash.exe --cd=E:\HexoFile -c &quot;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</code> 先generate生成网页，然后再develop提交给GitHub，最后再serve构建本地预览。</p>
+<p>如果要清空再生成，就是<code>myhexo g</code>，这将会调用：<code>start E:\\Git\\git-bash.exe --cd=E:\HexoFile -c &quot;hexo clean &amp;&amp;hexo g &amp;&amp; hexo d &amp;&amp;hexo s;bash&quot;</code> </p>
+<hr>
 <p>自动化让生活更美好~</p>
-<h2 id="四后续">四、后续</h2>
-<p>我后面又联合obsidian和一个本机文件同步软件FreeFileSync还有一个
-多设备的文件同步软件SyncTrazor进一步构建我的blog体系。</p>
+<h2 id="四、后续"><a href="#四、后续" class="headerlink" title="四、后续"></a>四、后续</h2><p>我后面又联合obsidian和一个本机文件同步软件FreeFileSync还有一个 多设备的文件同步软件SyncTrazor进一步构建我的blog体系。</p>
 <p>我使用obsidian构建知识库，然后使用FreeFileSync实时将其中部分公开内容同步到本地的hexo的_post文件夹内，同时也将文件通过SyncTrazor随时准备共享到其他设备上。</p>
 ]]></content>
       <tags>
-        <tag>未完成</tag>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>杂谈：游戏账号相关</title>
+    <url>/2024/02/14/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%B8%B8%E6%88%8F%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>[[<strong>_杂谈]]<br>[[_</strong>游戏体验日记]]</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>除了制作十分精良的独立游戏和所谓的商业游戏之外，我常常也会游玩一些二次元游戏以达到我对于可爱妹子的摄入需求，那么为了开荒一款游戏，常常是需要十分大的时间成本的。<br>想要解决游玩游戏的时间成本，又想要获得良好的游戏体验（因为二次元游戏常常会包含或多或少的养成元素，养成程度会影响到游戏的体验），最好的选择就是花钱。  </p>
+<p>同时对于那种可能只是想要玩一段时间的游戏，也可以考虑将账号卖出，从而使得自己花费的时间转化为金钱作为补偿。  </p>
+<p>实际上，游戏账号交易已经是一个较为普遍的市场，甚至有人以此牟利。</p>
+<h2 id="账号买卖注意事项"><a href="#账号买卖注意事项" class="headerlink" title="账号买卖注意事项"></a>账号买卖注意事项</h2><p>通常来说，为了体验自己抽和通关的乐趣，我们常常会选择购买初始号。</p>
+<p>初始号指的是没有推剧情和代充，只是通过一些活动和通关一些基本的关卡来获得资源，且获得了一定的抽卡资源的账号。购买此类账号的时候需要注意以下几点：</p>
+<h3 id="1-选择信用度高的商家"><a href="#1-选择信用度高的商家" class="headerlink" title="1. 选择信用度高的商家"></a>1. 选择信用度高的商家</h3><p>购买之前先确认商家是否可信，在较为小的性价比的提升之下并不需要去贪图那点蝇头小利。多花点钱在较为可信任的商家购买可以省下很多烦恼</p>
+<h3 id="2-确认账号信息"><a href="#2-确认账号信息" class="headerlink" title="2. 确认账号信息"></a>2. 确认账号信息</h3><p>在购买之前，请务必核对账号信息，比如：</p>
+<ol>
+<li>账号是否已经首充？</li>
+<li>账号是否可以更换绑定信息？</li>
+<li>等等等等</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">账号一般分为活绑和死绑定两种，其中死绑指的是无法更换绑定的账号或者说是手机号（使用的是一次性的验证码注册的手机号）。</span><br><span class="line"></span><br><span class="line">死绑的账号无法更换密码，且较为容易被二次售卖，价格也相较来说更为便宜。一般只是作为抽卡找个乐子玩。</span><br></pre></td></tr></table></figure>
+<h3 id="3-确认游戏是否存在找回方式"><a href="#3-确认游戏是否存在找回方式" class="headerlink" title="3.确认游戏是否存在找回方式"></a>3.确认游戏是否存在找回方式</h3><p>有一些游戏可以通过其他的手段来将账号找回，购买账号的时候需要注意是否存在其他的找回方式，并且加以防范。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title:案例</span><br><span class="line"></span><br><span class="line">碧蓝航线可以通过举报账号违规封号，然后使用实名认证的身份证来找回的方式。</span><br></pre></td></tr></table></figure>
+<h3 id="4-确认是否划算"><a href="#4-确认是否划算" class="headerlink" title="4.确认是否划算"></a>4.确认是否划算</h3><p>理清楚自己的目标，检验是否划算。  </p>
+<p>举个例子，我想要购买战双新出的皮肤，且实际上其他的东西对我的影响不大。如果使用我自己原本的号进行氪金购买的话，至少需要氪金250￥（算上首充的翻倍）。<br>但是如果我选择购买账号的话，可以获得一堆资源和部分限定道具（概率），还可以拥有足够抽出新皮肤的黑卡。而这样的账号才50￥  </p>
+<h2 id="实际购买经验"><a href="#实际购买经验" class="headerlink" title="实际购买经验"></a>实际购买经验</h2><p>实际购买过一次战双的账号之后，就目前来说，体验良好。花费50获得了我期望中的东西，且剧本通关程度和我原本的账号相近，所以说体验剧情也是不会差太多的。</p>
+<span id="more"></span>
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>]]></content>
+      <tags>
+        <tag>游戏体验日记</tag>
+        <tag>杂谈</tag>
       </tags>
   </entry>
 </search>
