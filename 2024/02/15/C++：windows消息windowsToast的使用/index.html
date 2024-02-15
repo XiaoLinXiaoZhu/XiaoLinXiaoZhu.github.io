@@ -1,0 +1,464 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="[[___C++]]
+ 简介
+ windowsToast是一个集成了window的toast消息提醒的第三方c++库，可以十分便捷地在windows下显示toast消息提醒。
+ 使用步骤
+ 导入库
+ 如果担心冲突的话就导入之后在每一条wintoast的命令前面加上wintoastlib::
+ 即可，但是我无所谓，所以说直接导入后加using namespace std;
+ 一般还需要包含windo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++：windows消息windowsToast的使用">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/02/15/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="[[___C++]]
+ 简介
+ windowsToast是一个集成了window的toast消息提醒的第三方c++库，可以十分便捷地在windows下显示toast消息提醒。
+ 使用步骤
+ 导入库
+ 如果担心冲突的话就导入之后在每一条wintoast的命令前面加上wintoastlib::
+ 即可，但是我无所谓，所以说直接导入后加using namespace std;
+ 一般还需要包含windo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-15T14:23:00.000Z">
+<meta property="article:modified_time" content="2024-02-15T14:43:57.743Z">
+<meta property="article:author" content="XLXZ">
+<meta property="article:tag" content="Cpp">
+<meta property="article:tag" content="编程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2024/02/15/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2024/02/15/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/","path":"2024/02/15/C++：windows消息windowsToast的使用/","title":"C++：windows消息windowsToast的使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C++：windows消息windowsToast的使用 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">119</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">使用步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">导入库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89toasthandler"><span class="nav-number">2.2.</span> <span class="nav-text">定义ToastHandler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89wintoasttemplate"><span class="nav-number">2.3.</span> <span class="nav-text">定义WinToastTemplate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E6%B6%88%E6%81%AF%E6%8F%90%E9%86%92"><span class="nav-number">2.4.</span> <span class="nav-text">调用消息提醒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">2.5.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/02/15/bat%EF%BC%9Astart%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E3%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/" rel="bookmark">
+        <time class="popular-posts-time">2024-02-15</time>
+        <br>
+      bat：start命令的使用方法的详细说明、参数列表
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/11/13/1.Archieve/WINDOWS-11-22H2-%E6%96%B0%E7%89%B9%E6%80%A7%E5%92%8C%E5%8F%98%E5%8C%96%E8%AF%A6%E8%A7%A3/" rel="bookmark">
+        <time class="popular-posts-time">2023-11-13</time>
+        <br>
+      WINDOWS-11-22H2-新特性和变化详解
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/11/25/1.Archieve/js-%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E5%85%83%E7%B4%A0data-xxx%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95/" rel="bookmark">
+        <time class="popular-posts-time">2023-11-25</time>
+        <br>
+      js-获取标签元素data-xxx属性值的方法
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/11/03/1.Archieve/%E6%9C%89%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E8%AF%BB%E5%8F%96%E5%92%8C%E5%86%99%E5%85%A5/" rel="bookmark">
+        <time class="popular-posts-time">2023-11-03</time>
+        <br>
+      有关于文本读取和写入
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/02/15/bat%EF%BC%9A%E9%80%9A%E8%BF%87start%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8%E7%9A%84%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/" rel="bookmark">
+        <time class="popular-posts-time">2024-02-15</time>
+        <br>
+      bat：通过start打开应用的常见用法
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C++：windows消息windowsToast的使用 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C++：windows消息windowsToast的使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-15 22:23:00 / 修改时间：22:43:57" itemprop="dateCreated datePublished" datetime="2024-02-15T22:23:00+08:00">2024-02-15</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>[[___C++]]</p>
+<h2 id="简介">简介</h2>
+<p>windowsToast是一个集成了window的toast消息提醒的第三方c++库，可以十分便捷地在windows下显示toast消息提醒。</p>
+<h2 id="使用步骤">使用步骤</h2>
+<h3 id="导入库">导入库</h3>
+<p>如果担心冲突的话就导入之后在每一条wintoast的命令前面加上<code>wintoastlib::</code>
+即可，但是我无所谓，所以说直接导入后加<code>using namespace std;</code></p>
+<p>一般还需要包含windows库，所以说一并加入</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;string&gt;</span><br><span class="line">#include "wintoastlib.h"</span><br><span class="line">#include &lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line">using namespace WinToastLib;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="定义toasthandler">定义ToastHandler</h3>
+<p>ToastHandler定义了当展示的toast消息接受不同的响应之后所执行的命令，通过继承<code>IWinToastHandler</code>
+我们可以自定义自己想要的响应程序。</p>
+<p>查看<code>IWinToastHandler</code>
+的定义我们得知其有以下几种状态：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">IWinToastHandler</span> {</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="keyword">enum</span> <span class="title class_">WinToastDismissalReason</span> {</span><br><span class="line">            UserCanceled      = ToastDismissalReason::ToastDismissalReason_UserCanceled,</span><br><span class="line">            ApplicationHidden = ToastDismissalReason::ToastDismissalReason_ApplicationHidden,</span><br><span class="line">            TimedOut          = ToastDismissalReason::ToastDismissalReason_TimedOut</span><br><span class="line">        };</span><br><span class="line"></span><br><span class="line">        <span class="keyword">virtual</span> ~<span class="built_in">IWinToastHandler</span>()                                      = <span class="keyword">default</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastActivated</span><span class="params">()</span> <span class="type">const</span>                              </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastActivated</span><span class="params">(<span class="type">int</span> actionIndex)</span> <span class="type">const</span>               </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastDismissed</span><span class="params">(WinToastDismissalReason state)</span> <span class="type">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastFailed</span><span class="params">()</span> <span class="type">const</span>                                 </span>= <span class="number">0</span>;</span><br><span class="line">    };</span><br></pre></td></tr></tbody></table></figure>
+<p>对于这些未定义的虚函数，我们对其继承并且加以定义： </p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyToastHandler</span> : <span class="keyword">public</span> WinToastLib::IWinToastHandler {</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastActivated</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"The user clicked in this toast"</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastActivated</span><span class="params">(<span class="type">int</span> actionIndex)</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"The user clicked on action #"</span> &lt;&lt; actionIndex &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">16</span> + actionIndex);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastDismissed</span><span class="params">(WinToastDismissalReason state)</span> <span class="type">const</span> </span>{</span><br><span class="line">        <span class="keyword">switch</span> (state) {</span><br><span class="line">            <span class="keyword">case</span> UserCanceled:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The user dismissed this toast"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> TimedOut:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The toast has timed out"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">2</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> ApplicationHidden:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The application hid the toast using ToastNotifier.hide()"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">3</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"Toast not activated"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">4</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastFailed</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::wcout &lt;&lt; <span class="string">L"Error showing current toast"</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">5</span>);</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>我们也可以对于这些响应写出更为复杂的交互逻辑，但是在这里仅仅展示不同情况输出不同内容提示的代码。</p>
+<h3 id="定义wintoasttemplate">定义WinToastTemplate</h3>
+<p><code>WinToastTemplate</code>
+可以理解为所需要展示的消息提示的具体内容，下面是一个简单的函数示例，包含了从初始化定义到自定义格式和内容</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">ShowNotification</span><span class="params">(std::wstring&amp; appName, std::wstring&amp; firstLine, std::wstring&amp; secondLine, std::wstring&amp; imagePath,std::wstring&amp; hero_imagePath)</span> </span>{</span><br><span class="line">    std::wstring appUserModelID = <span class="string">L"SystemProxy_Agency_Tool"</span>;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//这里是初始化消息提示的appnamde和appID</span></span><br><span class="line">	<span class="comment">//appname不能包含特殊字符，appname中的_会被转化为空格</span></span><br><span class="line">    WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">setAppName</span>(appName);</span><br><span class="line">    WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">setAppUserModelId</span>(appUserModelID);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//这里是设定格式为ImageAndText02</span></span><br><span class="line">    WinToastTemplate templ = <span class="built_in">WinToastTemplate</span>(WinToastTemplate::ImageAndText02);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设定具体的文本内容和图片路径</span></span><br><span class="line">	<span class="comment">//WinToastTemplate::CropHint::Square指的是将图片裁剪为正方形</span></span><br><span class="line">	</span><br><span class="line">    templ.<span class="built_in">setTextField</span>(firstLine, WinToastTemplate::FirstLine);</span><br><span class="line">    templ.<span class="built_in">setTextField</span>(secondLine, WinToastTemplate::SecondLine);</span><br><span class="line">    <span class="comment">//展示小图片</span></span><br><span class="line">    templ.<span class="built_in">setImagePath</span>(imagePath, WinToastTemplate::CropHint::Square);</span><br><span class="line">    <span class="comment">//展示大图片</span></span><br><span class="line">    templ.<span class="built_in">setHeroImagePath</span>(hero_imagePath);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//展示toast，样式为我们设定好了的templ，返回函数为我们指定的MyToastHandler</span></span><br><span class="line">    <span class="keyword">if</span> (WinToastLib::WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">initialize</span>()) {</span><br><span class="line">        WinToastLib::WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">showToast</span>(templ, <span class="keyword">new</span> <span class="built_in">MyToastHandler</span>());</span><br><span class="line">        <span class="comment">//消息延时5s后自动退出</span></span><br><span class="line">        <span class="built_in">Sleep</span>(<span class="number">5000</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>更多的消息提示样式可以看看作者的库里面写的说明： <a target="_blank" rel="noopener" href="https://github.com/mohabouje/WinToast">mohabouje/WinToast(github.com)</a></p>
+<p>或者可以看看这位大佬写的示例： <a target="_blank" rel="noopener" href="https://www.codeproject.com/Articles/5286393/Cplusplus-Windows-Toast-Notification">C++:
+Windows Toast Notification - CodeProject</a></p>
+<h3 id="调用消息提醒">调用消息提醒</h3>
+<p>使用这种方式创建消息提醒有一个缺点，就是创建出来的命令提示符的黑框会一直保持到消息消失，十分的丑。</p>
+<p>所以说可以选择使用bat的<code>start /b</code>间接启动，来使得黑框最小化：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start /b "" E:\AgencyProxyTools\messageBox.exe</span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>
+<hr>
+<h3 id="reference">Reference</h3>
+<p><a target="_blank" rel="noopener" href="https://github.com/mohabouje/WinToast">mohabouje/WinToast(github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.codeproject.com/Articles/5286393/Cplusplus-Windows-Toast-Notification">C++:
+Windows Toast Notification - CodeProject</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45165669/article/details/119424897">C++
+WIn10 通知:WinToast_c语言调用win10操作中心发送通知-CSDN博客</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/alipay.jpg" alt="XLXZ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Cpp/" rel="tag"># Cpp</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"># 编程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/02/15/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/" rel="prev" title="C++：生成的exe文件如何传参数到main中">
+                  <i class="fa fa-angle-left"></i> C++：生成的exe文件如何传参数到main中
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
