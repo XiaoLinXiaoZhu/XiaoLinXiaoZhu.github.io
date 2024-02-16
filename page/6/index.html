@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">119</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">120</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,6 +180,106 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++：string的运用和相关方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 00:30:00 / 修改时间：00:33:16" itemprop="dateCreated datePublished" datetime="2023-12-08T00:30:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>243</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___C++]]</p>
+<h1 id="cstring的运用和相关方法">C++：string的运用和相关方法</h1>
+<h2 id="一删除stdstring或stdwstring的最后一个字符">一、删除std::string或std::wstring的最后一个字符：</h2>
+<h3 id="s.pop_back">s.pop_back();</h3>
+<p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
+<h3 id="s.erases.end-1">s.erase(s.end()-1);</h3>
+<p>  删除s的最后一个字符</p>
+<h3 id="ss.substr0s.length-1">s=s.substr(0,s.length()-1);</h3>
+<p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -236,7 +336,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
+      <span>17 分钟</span>
     </span>
 </div>
 
@@ -338,7 +438,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>8 分钟</span>
     </span>
 </div>
 
@@ -469,7 +569,7 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -774,7 +874,7 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -977,7 +1077,7 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -1096,104 +1196,6 @@ j表示当前背包剩余的容量。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/04/1.Archieve/%E5%B0%86%E6%B8%B8%E6%88%8F%E7%9A%84%E5%B1%9E%E6%80%A7%E7%B2%BE%E7%AE%80%E5%8C%96/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/" class="post-title-link" itemprop="url">冰汽时代：《帝国的边界》</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-04 09:37:00 / 修改时间：11:43:57" itemprop="dateCreated datePublished" datetime="2023-12-04T09:37:00+08:00">2023-12-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>535</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**苍天已死，黄天当立**</span><br></pre></td></tr></tbody></table></figure>
-<p>[[___冰汽时代]] [[___游戏体验日记]]</p>
-<h2 id="简介">简介</h2>
-<p>在这部dlc中，你将作为一支探险小队，接到命令的你将在前政府留下来的军火库中搜集资源，并且提交给新伦敦的政府。</p>
-<p>但是政府腐败日益增长，你也因为伦敦长期不提供食物而关系破裂。</p>
-<p>我们没有能源塔，在孤独无援，冰天雪地之中，我们需要找到其他的盟友并且打好关系，只有这样我们才能活下去。</p>
-<p>在游戏的最后，新伦敦四分五裂，其中的人们向我们求助，救援？还是不救？面对昔日的母城。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
