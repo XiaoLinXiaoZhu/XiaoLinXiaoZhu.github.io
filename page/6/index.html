@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">37</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">121</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">39</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,13 +147,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">121</span>
+          <span class="site-state-item-count">123</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,232 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/C++%E8%BF%94%E5%9B%9Evector%E3%80%81%E5%B0%86vector%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/C++%E8%BF%94%E5%9B%9Evector%E3%80%81%E5%B0%86vector%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" class="post-title-link" itemprop="url">C++返回vector、将vector作为参数传递</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 00:45:00 / 修改时间：00:48:00" itemprop="dateCreated datePublished" datetime="2023-12-08T00:45:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___C++]] [[___未完成]] ### C++返回vector、将vector作为参数传递</p>
+<p>在C++里很多时候我们会遇到函数想返回两个以上结果的情况，这时候可以用数组（vector）、类来作为容器返回，也可以声明一个全局变量的数组，将数值存放在数组里解决。</p>
+<p>第一个方式是使用引用来解决，将vector的引用在函数间传递
+这是一个例子，假设我要传入一个数，我的函数的功能是返回这个数后面十个数的序列。</p>
+<p>#include<iostream> #include<vector> using namespace std;</vector></iostream></p>
+<p>/<em> 输入一个数，返回这个数后面的十个数字序列 注意参数的这个 &amp;
+符号不能省略 </em>/ void getSequence(int num,vector<int>&amp; sequence){
+for(int i=0;i&lt;10;i++){ sequence.push_back(i+num); } }</int></p>
+<p>int main(){ int num=9; vector<int> sequence;
+//在主调函数这边，直接传入该vector变量 getSequence(num,sequence);
+//访问该vector的值的时候，也是直接访问即可 for(vector<int>::iterator
+it=sequence.begin();it!=sequence.end();it++){
+cout&lt;&lt;*it&lt;&lt;endl; } } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+17 18 19 20 21 22 23 24</int></int></p>
+<p>第二个方式是返回vector变量
+在被调用函数中声明一个vector变量，函数结束的时候返回vector变量
+但是这样的传参方式我有一个不太理解的地方，既然vector变量是在被调函数中声明的，就应该是一个局部变量，在被调函数执行完毕之后这部分空间应该会被销毁，这个变量就无法访问到了，莫非vector是在堆空间开辟的地址？然后返回的其实是指向堆空间vector的指针？</p>
+<p>vector<int> getSequence(int num){ vector<int> sequence; for(int
+i=0;i&lt;10;i++){ sequence.push_back(i+num); } return sequence; }</int></int></p>
+<p>int main(){ int num=9; vector<int> sequence;
+//在主调函数这边，只传入num sequence=getSequence(num);
+//访问该vector的值的时候，也是直接访问即可 for(vector<int>::iterator
+it=sequence.begin();it!=sequence.end();it++){
+cout&lt;&lt;*it&lt;&lt;endl; } }</int></int></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/C++%E8%BF%94%E5%9B%9Evector%E3%80%81%E5%B0%86vector%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E5%92%8Cdouble&amp;float%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E5%92%8Cdouble&amp;float%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">float的相互转换</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 00:40:00 / 修改时间：00:42:09" itemprop="dateCreated datePublished" datetime="2023-12-08T00:40:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___C++]]</p>
+<h2 id="c-字符串与浮点数和双浮点数转换">C
+++字符串与浮点数和双浮点数转换</h2>
+<p>将字符串转换为浮点数的最简单方法是使用以下<strong>C ++
+11</strong>函数：</p>
+<ul>
+<li><strong>std :: stof()</strong>&nbsp;- 将string转换为float</li>
+<li><strong>std :: stod()</strong>&nbsp;- 将string转换为double</li>
+<li><strong>std :: stold()</strong>&nbsp;- 将string转换为long double。</li>
+</ul>
+<p>这些函数在string头文件中定义。</p>
+<h3 id="示例1c-字符串转换为浮点和双浮点数">示例1：C
+++字符串转换为浮点和双浮点数</h3>
+<p>示例 </p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;str&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为浮点数</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">float</span>&nbsp;num_float&nbsp;=&nbsp;std::<span class="built_in">stof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为双浮点数&nbsp;double</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">stod</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_float&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_float&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure> <strong>输出结果</strong><p></p>
+<p>num_float&nbsp;=&nbsp;123.457 num_double&nbsp;=&nbsp;123.457</p>
+<h3 id="示例2将c-char数组转换为double">示例2：将C ++
+char数组转换为double</h3>
+<p>我们可以使用std::atof()函数将char数组转换为double。</p>
+<p>示例 </p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&nbsp;atoi()需要cstdlib</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;声明和初始化字符数组</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">char</span>&nbsp;str[]&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">atof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::cout&nbsp;&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure> <strong>输出结果</strong><p></p>
+<p>num_double&nbsp;=&nbsp;123.457</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E5%92%8Cdouble&amp;float%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -236,7 +462,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>6 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -459,7 +685,7 @@ to_string 函数</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>17 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -561,7 +787,7 @@ to_string 函数</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>8 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -675,7 +901,7 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-11 06:59:59" itemprop="dateModified" datetime="2023-12-11T06:59:59+08:00">2023-12-11</time>
+      <time title="修改时间：2024-02-17 09:52:13" itemprop="dateModified" datetime="2024-02-17T09:52:13+08:00">2024-02-17</time>
     </span>
 
   
@@ -685,14 +911,14 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>5 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -703,7 +929,7 @@ j表示当前背包剩余的容量。</p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[___杂谈]] [[___设备]]</p>
+          <p>[[<strong>_杂谈]] [[_</strong>键盘]]</p>
 <blockquote>
 <p>今天是我初次选购机械键盘，有一说一就算是选择了茶轴，结果还是很吵……</p>
 <p>总的来说到手的键盘我很满意，手感、做工、rgb灯效都很棒</p>
@@ -997,7 +1223,7 @@ j表示当前背包剩余的容量。</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>3 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1026,212 +1252,6 @@ j表示当前背包剩余的容量。</p>
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/04/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3-%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9%EF%BC%9A%E8%AE%A9%E7%8E%A9%E5%AE%B6%E9%80%89%E6%8B%A9/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3-%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9%EF%BC%9A%E8%AE%A9%E7%8E%A9%E5%AE%B6%E9%80%89%E6%8B%A9/" class="post-title-link" itemprop="url">冰汽时代-最后的秋天：让玩家选择</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-04 12:27:00" itemprop="dateCreated datePublished" datetime="2023-12-04T12:27:00+08:00">2023-12-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-20 22:43:43" itemprop="dateModified" datetime="2023-12-20T22:43:43+08:00">2023-12-20</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>133</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在任务的压力之下，你不得不选</span><br></pre></td></tr></tbody></table></figure>
-<p>[[___游戏设计]] [[___冰汽时代]] [[___未完成]]</p>
-<p>在冰汽时代中，你有的时候不得不选那种“负面的”政策。</p>
-<p>在这种不得不接受的妥协之下……会激发玩家对于自己的批判。</p>
-<p>抱歉，对于这方面我还没有想清楚……下次再来写</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/04/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3-%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9%EF%BC%9A%E8%AE%A9%E7%8E%A9%E5%AE%B6%E9%80%89%E6%8B%A9/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3-%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B%EF%BC%9A%E5%88%A9%E7%94%A8%E4%BA%BA%E6%80%A7%E4%B8%AD%E7%9A%84%E6%80%80%E7%96%91%E4%B8%8E%E7%8C%9C%E5%BF%8C/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话：1.你的目标有多坚定。2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3-%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B%EF%BC%9A%E5%88%A9%E7%94%A8%E4%BA%BA%E6%80%A7%E4%B8%AD%E7%9A%84%E6%80%80%E7%96%91%E4%B8%8E%E7%8C%9C%E5%BF%8C/" class="post-title-link" itemprop="url">冰汽时代-《帝国的边界》：利用人性中的怀疑与猜忌</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-04 11:52:00 / 修改时间：12:16:55" itemprop="dateCreated datePublished" datetime="2023-12-04T11:52:00+08:00">2023-12-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>688</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">人性就是最复杂的决策问题</span><br></pre></td></tr></tbody></table></figure>
-<p>[[___冰汽时代]] [[___游戏设计]]</p>
-<h3 id="在冰汽时代-帝国的边界中">在冰汽时代-《帝国的边界》中</h3>
-<p>在游戏 冰汽时代-《帝国的边界》中 游戏需要让玩家和
-<code>自己腐败的母城、温泉村、儿童矿井、废船</code>
-这四个其他的定居点进行贸易，或者进行影响。</p>
-<h4 id="游戏中过于浅层的决策系统">1.游戏中过于浅层的决策系统</h4>
-<p>在游戏的后面，我发现整个系统根本就没有那么复杂：你跟他交换资源或者给予它帮助就可以增加互惠值，你只要向他们要求东西就会减低互惠值。</p>
-<p>……互惠值其实就像是你能从他那里拿的资源的限额，其实根本不会影响之间的关系。</p>
-<p>而你们之间还有一一个关系的值，则是由特殊事件决定的。比如说温泉村因为开发水泵把间歇泉搞爆发了，导致了温泉村的损失……然后你就选一个怪温泉还是怪自己。
-- 选择怪自己：自己居民的不满值增加，你和温泉村的关系变好 -
-选择怪泉水：自己居民的不满值会上升，你和温泉村的关系会变差。</p>
-<p>就是这样的一个简单的决策，实际上这个选择对后面就没有别的影响了。我当时还以为这个水泵是关键决策……</p>
-<p>说实话，这个决策的设计水平的前后关联度和其他的一系列东西，感觉都不如gal设计的复杂。</p>
-<h4 id="如果给他们赋予复杂的人性">2.如果给他们赋予复杂的人性……</h4>
-<p>如果给他们赋予复杂的人性，增加你们之间的相互影响程度，游戏可以变得更加有意思。</p>
-<p>是选择背叛欺骗最大化自己的利益，还是合作共赢？在这样艰苦的环境之中，我们无法不以最大的恶意来揣测对方的心理。</p>
-<p>你需要花费事件了解对方，试探对方的底线…… 对方也会试探你的底线……</p>
-<p>如果能够这样，那么游戏将会变得十分有意思……</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">总的来说，帝国的边界很有创意地加入了外交系统</span><br><span class="line"></span><br><span class="line">但是整个外交系统构建得又过于简单了，如果能够复杂一点，那么整个游戏的可玩度将会大大提升。</span><br></pre></td></tr></tbody></table></figure>
-
       
     </div>
 
