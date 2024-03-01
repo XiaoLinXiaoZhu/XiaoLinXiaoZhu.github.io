@@ -253,7 +253,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state=""># 游戏策划</a><br><a href="/tags/灵感/" rel="contents" data-pjax-state=""># 灵感</a><br>原文来自于</p>
+          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state="">#
+游戏策划</a> <a href="/tags/灵感/" rel="contents" data-pjax-state="">#
+灵感</a> 原文来自于</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv15975040/">【非人学园/第五人格】自制联动英雄——爱哭鬼|-|哔哩哔哩|(bilibili.com)</a></p>
 <p>本篇在其基础上改了些东西，以达到本人的审美水准</p>
           <!--noindex-->
@@ -347,8 +349,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a><br><a href="/tags//" rel="contents" data-pjax-state=""># </a></p>
-<h3 id="脑叶公司：十分矛盾的底层设计"><a href="#脑叶公司：十分矛盾的底层设计" class="headerlink" title="脑叶公司：十分矛盾的底层设计"></a>脑叶公司：十分矛盾的底层设计</h3>
+          <p><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <a href="/tags//" rel="contents" data-pjax-state=""># </a>
+### 脑叶公司：十分矛盾的底层设计</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/06/%E8%84%91%E5%8F%B6%E5%85%AC%E5%8F%B8%EF%BC%9A%E5%8D%81%E5%88%86%E7%9F%9B%E7%9B%BE%E7%9A%84%E5%BA%95%E5%B1%82%E8%AE%BE%E8%AE%A1/#more" rel="contents">
@@ -440,15 +443,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>python中hex内置函数无法将生成的16进制码自动补0，比如说：  </p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：  </p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>&nbsp;通过多次查资料和尝试，得到如下：  </p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure>
+          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a></p>
+<h3 id="背景">背景</h3>
+<p>python中hex内置函数无法将生成的16进制码自动补0，比如说：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="解决办法">解决办法</h3>
+<p>&nbsp;通过多次查资料和尝试，得到如下：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/02/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/#more" rel="contents">
@@ -540,7 +544,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a></p>
+          <p><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a></p>
 <p>有机会去玩玩</p>
 
       
@@ -632,8 +637,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state="">#
+杂谈</a></p>
+<h3 id="背景">背景</h3>
+<p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
 <p>hmmm然后就发现了一件比较有意思的事情</p>
           <!--noindex-->
             <div class="post-button">
@@ -732,7 +739,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state=""># mcmod</a><br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
+          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state=""># mcmod</a>
+我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
 <p>实际上，只需要照着IDF框架给出的示例进行改编即可</p>
           <!--noindex-->
             <div class="post-button">
@@ -831,7 +839,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state=""># mcmod</a></p>
+          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state="">#
+mcmod</a></p>
 <p>因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
 <p>首先肯定就是创建声明，使得我们的mod能够正常被挂载</p>
           <!--noindex-->
@@ -931,7 +940,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state=""># mcmod</a></p>
+          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state="">#
+mcmod</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/30/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/#more" rel="contents">
@@ -1029,8 +1039,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state=""># mcmod</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
+          <p><a href="/tags/mcmod/" rel="contents" data-pjax-state="">#
+mcmod</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC
+Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
 <p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑</p>
           <!--noindex-->
             <div class="post-button">
@@ -1129,7 +1141,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏体验日记/" rel="contents" data-pjax-state=""># 游戏体验日记</a></p>
+          <p><a href="/tags/游戏体验日记/" rel="contents" data-pjax-state="">#
+游戏体验日记</a></p>
 <p>昨天和王仁喆一起去桌游店去体验了一款重策，名字叫做<strong>方舟动物园</strong></p>
 <p>总体来说，游戏给我带来的体验较为良好，整体游戏的设计较为良好</p>
 <p>我并不想过多复杂的介绍它的具体规则，这里挑几个我认为比较有讨论性的点进行分析。</p>
