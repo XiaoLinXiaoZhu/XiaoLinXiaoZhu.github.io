@@ -16,30 +16,14 @@
 
   
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___matlab]]
- （一）基本运算与矩阵输入
- 1 创建数组
- 一维数组称为向量，二维数组称为矩阵
- 可以使用中括号“[
- ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组
- 1.1 直接创建
- 元素间使用空格或者英文逗号间隔，使用英文分号执行换行操作
- 1234567>>A=[1 2 3;4 5 6;7 8 9]A =     1     2">
+    <meta name="description" content="[[___matlab]] （一）基本运算与矩阵输入1 创建数组一维数组称为向量，二维数组称为矩阵可以使用中括号“[ ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组 1.1 直接创建元素间使用空格或者英文逗号间隔，使用英文分号执行换行操作 1234567>>A=[1 2 3;4 5 6;7 8 9]A =     1     2     3     4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab：数组">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___matlab]]
- （一）基本运算与矩阵输入
- 1 创建数组
- 一维数组称为向量，二维数组称为矩阵
- 可以使用中括号“[
- ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组
- 1.1 直接创建
- 元素间使用空格或者英文逗号间隔，使用英文分号执行换行操作
- 1234567>>A=[1 2 3;4 5 6;7 8 9]A =     1     2">
+<meta property="og:description" content="[[___matlab]] （一）基本运算与矩阵输入1 创建数组一维数组称为向量，二维数组称为矩阵可以使用中括号“[ ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组 1.1 直接创建元素间使用空格或者英文逗号间隔，使用英文分号执行换行操作 1234567>>A=[1 2 3;4 5 6;7 8 9]A =     1     2     3     4">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-07T23:31:00.000Z">
 <meta property="article:modified_time" content="2023-12-07T23:36:43.688Z">
@@ -154,8 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%BE%93%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">（一）基本运算与矩阵输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="nav-number">1.1.</span> <span class="nav-text">1 创建数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 直接创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E7%89%B9%E6%AE%8A%E6%95%B0%E7%BB%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 内置函数创建特殊数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95index"><span class="nav-number">1.2.</span> <span class="nav-text">2 数组索引(Index)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97"><span class="nav-number">1.3.</span> <span class="nav-text">3 数组运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AD%89%E5%B7%AE%E6%95%B0%E7%BB%84"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 等差数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E4%B8%B2%E8%81%94%E5%90%88%E5%B9%B6"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 数组串联（合并）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%80%E8%A1%8C%E6%9F%90%E4%B8%80%E5%88%97"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3
-删除元素（删除某一行、某一列）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 数组操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">1.4.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E4%B8%8E%E7%9F%A9%E9%98%B5%E8%BE%93%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">（一）基本运算与矩阵输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84"><span class="nav-number">1.1.</span> <span class="nav-text">1 创建数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 直接创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%88%9B%E5%BB%BA%E7%89%B9%E6%AE%8A%E6%95%B0%E7%BB%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 内置函数创建特殊数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95-Index"><span class="nav-number">1.2.</span> <span class="nav-text">2 数组索引(Index)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97"><span class="nav-number">1.3.</span> <span class="nav-text">3 数组运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-%E7%AD%89%E5%B7%AE%E6%95%B0%E7%BB%84"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1 等差数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-%E6%95%B0%E7%BB%84%E4%B8%B2%E8%81%94%EF%BC%88%E5%90%88%E5%B9%B6%EF%BC%89"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 数组串联（合并）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0%EF%BC%88%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%80%E8%A1%8C%E3%80%81%E6%9F%90%E4%B8%80%E5%88%97%EF%BC%89"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 删除元素（删除某一行、某一列）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.4 数组操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.4.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -163,7 +146,7 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定？2.明天和今天一样？</div>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定�?2.明天和今天一样？</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -252,7 +235,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定？2.明天和今天一样？">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定�?2.明天和今天一样？">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -301,150 +284,107 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>[[___matlab]]</p>
-<h2 id="一基本运算与矩阵输入">（一）基本运算与矩阵输入</h2>
-<h3 id="创建数组">1 创建数组</h3>
-<p>一维数组称为<strong>向量</strong>，二维数组称为<strong>矩阵</strong><br>
-可以使用中括号“[
-]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组</p>
-<h4 id="直接创建">1.1 直接创建</h4>
-<p>元素间使用<strong>空格</strong>或者<strong>英文逗号</strong>间隔，使用<strong>英文分号</strong>执行换行操作</p>
+<h2 id="（一）基本运算与矩阵输入"><a href="#（一）基本运算与矩阵输入" class="headerlink" title="（一）基本运算与矩阵输入"></a>（一）基本运算与矩阵输入</h2><h3 id="1-创建数组"><a href="#1-创建数组" class="headerlink" title="1 创建数组"></a>1 创建数组</h3><p>一维数组称为<strong>向量</strong>，二维数组称为<strong>矩阵</strong><br>可以使用中括号“[ ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组</p>
+<h4 id="1-1-直接创建"><a href="#1-1-直接创建" class="headerlink" title="1.1 直接创建"></a>1.1 直接创建</h4><p>元素间使用<strong>空格</strong>或者<strong>英文逗号</strong>间隔，使用<strong>英文分号</strong>执行换行操作</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;A=[1 2 3;4 5 6;7 8 9]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     1     2     3</span><br><span class="line">     4     5     6</span><br><span class="line">     7     8     9</span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<h4 id="内置函数创建特殊数组">1.2 内置函数创建特殊数组</h4>
-<ul>
-<li><strong>zeros(m,n)</strong> ----创建m×n阶全零矩阵</li>
-<li><strong>ones(m,n)</strong> ----创建m×n阶全幺阵</li>
-<li><strong>rand(m,n)</strong> ----生成一个由介于 0 和 1
-之间的均匀分布的随机数组成的 m×n 矩阵</li>
-<li><strong>randi(imax,n)</strong> ----生成一个元素在区间 [1,imax]
-的均匀离散分布的伪随机整数的 n×n 矩阵</li>
-<li><strong>magic(n)</strong> ----生成n×n阶魔方矩阵</li>
-<li><strong>diag(A)</strong>
-----返回一个列向量，其元素为由矩阵A的对角线元素</li>
-<li><strong>diag(V)</strong>
-----V是一个向量（行向量、列向量结果相同），返回一个对角矩阵，其对角元素为向量V的元素</li>
+<h4 id="1-2-内置函数创建特殊数组"><a href="#1-2-内置函数创建特殊数组" class="headerlink" title="1.2 内置函数创建特殊数组"></a>1.2 内置函数创建特殊数组</h4><ul>
+<li><strong>zeros(m,n)</strong> ——创建m×n阶全零矩阵</li>
+<li><strong>ones(m,n)</strong> ——创建m×n阶全幺阵</li>
+<li><strong>rand(m,n)</strong> ——生成一个由介于 0 和 1 之间的均匀分布的随机数组成的 m×n 矩阵</li>
+<li><strong>randi(imax,n)</strong> ——生成一个元素在区间 [1,imax] 的均匀离散分布的伪随机整数的 n×n 矩阵</li>
+<li><strong>magic(n)</strong> ——生成n×n阶魔方矩阵</li>
+<li><strong>diag(A)</strong> ——返回一个列向量，其元素为由矩阵A的对角线元素</li>
+<li><strong>diag(V)</strong> ——V是一个向量（行向量、列向量结果相同），返回一个对角矩阵，其对角元素为向量V的元素</li>
 </ul>
-<p><strong>zeros(m,n)</strong> ----创建m×n阶全零矩阵</p>
+<p><strong>zeros(m,n)</strong> ——创建m×n阶全零矩阵</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; zeros(2,3)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     0     0     0</span><br><span class="line">     0     0     0</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>ones(m,n)</strong> ----创建m×n阶全幺阵</p>
+<p><strong>ones(m,n)</strong> ——创建m×n阶全幺阵</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; ones(2,3)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     1     1     1</span><br><span class="line">     1     1     1</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>rand(m,n)</strong> ----生成一个由介于 0 和 1
-之间的均匀分布的随机数组成的 m×n 矩阵</p>
+<p><strong>rand(m,n)</strong> ——生成一个由介于 0 和 1 之间的均匀分布的随机数组成的 m×n 矩阵</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; rand(2,3)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    0.7655    0.1869    0.4456</span><br><span class="line">    0.7952    0.4898    0.6463</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>randi(imax,n)</strong> ----生成一个元素在区间 [1,imax]
-的均匀离散分布的伪随机整数的 n×n 矩阵</p>
+<p><strong>randi(imax,n)</strong> ——生成一个元素在区间 [1,imax] 的均匀离散分布的伪随机整数的 n×n 矩阵</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; randi(5,3)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     3     2     5</span><br><span class="line">     1     5     2</span><br><span class="line">     1     2     5</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>magic(n)</strong> ----生成n×n阶魔方矩阵</p>
+<p><strong>magic(n)</strong> ——生成n×n阶魔方矩阵</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>diag(A)</strong>
-----返回一个列向量，其元素为由矩阵A的对角线元素</p>
+<p><strong>diag(A)</strong> ——返回一个列向量，其元素为由矩阵A的对角线元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; diag(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8</span><br><span class="line">     5</span><br><span class="line">     2</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>diag(V)</strong>
-----V是一个向量（行向量、列向量结果相同），返回一个对角矩阵，其对角元素为向量V的元素</p>
+<p><strong>diag(V)</strong> ——V是一个向量（行向量、列向量结果相同），返回一个对角矩阵，其对角元素为向量V的元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=[1 2 3];</span><br><span class="line">&gt;&gt; diag(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     1     0     0</span><br><span class="line">     0     2     0</span><br><span class="line">     0     0     3</span><br><span class="line"></span><br><span class="line">&gt;&gt; diag(A')</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     1     0     0</span><br><span class="line">     0     2     0</span><br><span class="line">     0     0     3</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="数组索引index">2 数组索引(Index)</h3>
-<p>数组中的每个元素都有<strong>两个属性</strong>：<br>
-1）元素的值<br>
-2）元素在数组中的位置</p>
+<h3 id="2-数组索引-Index"><a href="#2-数组索引-Index" class="headerlink" title="2 数组索引(Index)"></a>2 数组索引(Index)</h3><p>数组中的每个元素都有<strong>两个属性</strong>：<br>1）元素的值<br>2）元素在数组中的位置</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**注意：MATLAB数组索引从1开始！而不是0！！**</span><br></pre></td></tr></tbody></table></figure>
 <p>以三阶魔方矩阵 <strong>A=[8 1 6;3 5 7;4 9 2]</strong> 为例</p>
 <ul>
-<li><strong>A(id)</strong> ----按列索引数组第id个元素</li>
-<li><strong>A(m,n)</strong> ----返回数组A第m行第n列对应的元素</li>
-<li><strong>A([l m n])</strong>
-----返回一个行向量，元素为数组A第l、m、n个元素</li>
-<li><strong>A(l m; p q)</strong>
-----返回一个2×2阶矩阵，其元素第一行为数组A第l、m个元素，第二行为数组A第p、q个元素</li>
-<li><strong>A(m, : )</strong>
-----返回一个行向量，其元素为数组A第m行元素</li>
-<li><strong>A(:, n)</strong>
-----返回一个列向量，其元素为数组A第n列元素</li>
-<li><strong>A([m n], p)</strong>
-----返回数组A第m行、第n列与第p行相交的元素</li>
+<li><strong>A(id)</strong> ——按列索引数组第id个元素</li>
+<li><strong>A(m,n)</strong> ——返回数组A第m行第n列对应的元素</li>
+<li><strong>A([l m n])</strong> ——返回一个行向量，元素为数组A第l、m、n个元素</li>
+<li><strong>A(l m; p q)</strong> ——返回一个2×2阶矩阵，其元素第一行为数组A第l、m个元素，第二行为数组A第p、q个元素</li>
+<li><strong>A(m, : )</strong> ——返回一个行向量，其元素为数组A第m行元素</li>
+<li><strong>A(:, n)</strong> ——返回一个列向量，其元素为数组A第n列元素</li>
+<li><strong>A([m n], p)</strong> ——返回数组A第m行、第n列与第p行相交的元素</li>
 </ul>
-<p><strong>A(id)</strong> ----按列索引数组第id个元素</p>
+<p><strong>A(id)</strong> ——按列索引数组第id个元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line"></span><br><span class="line">&gt;&gt; A(6)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     9</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A(m,n)</strong> ----返回数组A第m行第n列对应的元素</p>
+<p><strong>A(m,n)</strong> ——返回数组A第m行第n列对应的元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(2,3)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     7</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A([l m n])</strong>
-----返回一个行向量，元素为数组A第l、m、n个元素</p>
+<p><strong>A([l m n])</strong> ——返回一个行向量，元素为数组A第l、m、n个元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([1,3,5])</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8     4     5</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A(l m; p q)</strong>
-----返回一个2×2阶矩阵，其元素第一行为数组A第l、m个元素，第二行为数组A第p、q个元素</p>
+<p><strong>A(l m; p q)</strong> ——返回一个2×2阶矩阵，其元素第一行为数组A第l、m个元素，第二行为数组A第p、q个元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([1 3;1 3])</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8     4</span><br><span class="line">     8     4</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A([m,n], [p,q])</strong>
-----返回一个2×2阶矩阵，其元素为数组A第m行、第n行与第p列、第q列相交的元素，即[m,n]代表行(row)，[p,q]代表列(col)</p>
+<p><strong>A([m,n], [p,q])</strong> ——返回一个2×2阶矩阵，其元素为数组A第m行、第n行与第p列、第q列相交的元素，即[m,n]代表行(row)，[p,q]代表列(col)</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([1 3],[1 3])</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8     6</span><br><span class="line">     4     2</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A(m,:)</strong>
-----返回一个行向量，其元素为数组A第m行元素</p>
+<p><strong>A(m,:)</strong> ——返回一个行向量，其元素为数组A第m行元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(2,:)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     3     5     7</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A(:, n)</strong>
-----返回一个列向量，其元素为数组A第n列元素</p>
+<p><strong>A(:, n)</strong> ——返回一个列向量，其元素为数组A第n列元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(:,2)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line">     5</span><br><span class="line">     9</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A([m n], p)</strong> ----
-返回数组A第m行、第n列与第p行相交的元素</p>
+<p><strong>A([m n], p)</strong> —— 返回数组A第m行、第n列与第p行相交的元素</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A([1 3], 2)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line">     9</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="数组运算">3 数组运算</h3>
-<h4 id="等差数组">3.1 等差数组</h4>
-<p><strong>A(l: m: n)</strong>
-----生成一个<strong>等差数组</strong>，首项=l，等差=m(默认为1)，尾项=n</p>
+<h3 id="3-数组运算"><a href="#3-数组运算" class="headerlink" title="3 数组运算"></a>3 数组运算</h3><h4 id="3-1-等差数组"><a href="#3-1-等差数组" class="headerlink" title="3.1 等差数组"></a>3.1 等差数组</h4><p><strong>A(l: m: n)</strong> ——生成一个<strong>等差数组</strong>，首项=l，等差=m(默认为1)，尾项=n</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=[1:9]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     1     2     3     4     5     6     7     8     9</span><br><span class="line"></span><br><span class="line">&gt;&gt; B=[1:2:9]</span><br><span class="line"></span><br><span class="line">B =</span><br><span class="line"></span><br><span class="line">     1     3     5     7     9</span><br><span class="line"></span><br><span class="line">&gt;&gt; C=[1:2:5; 2:4]</span><br><span class="line"></span><br><span class="line">C =</span><br><span class="line"></span><br><span class="line">     1     3     5</span><br><span class="line">     2     3     4</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="数组串联合并">3.2 数组串联（合并）</h4>
-<p><strong>C=[A B] ，C=[A; B]</strong>
-----将<strong>维度一致</strong>的两个数组合并为一个数组</p>
+<h4 id="3-2-数组串联（合并）"><a href="#3-2-数组串联（合并）" class="headerlink" title="3.2 数组串联（合并）"></a>3.2 数组串联（合并）</h4><p><strong>C=[A B] ，C=[A; B]</strong> ——将<strong>维度一致</strong>的两个数组合并为一个数组</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=[1 2; 3 4]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     1     2</span><br><span class="line">     3     4</span><br><span class="line"></span><br><span class="line">&gt;&gt; B=[5 6; 7 8]</span><br><span class="line"></span><br><span class="line">B =</span><br><span class="line"></span><br><span class="line">     5     6</span><br><span class="line">     7     8</span><br><span class="line"></span><br><span class="line">&gt;&gt; C=[A B]</span><br><span class="line"></span><br><span class="line">C =</span><br><span class="line"></span><br><span class="line">     1     2     5     6</span><br><span class="line">     3     4     7     8</span><br><span class="line"></span><br><span class="line">&gt;&gt; C=[A;B]</span><br><span class="line"></span><br><span class="line">C =</span><br><span class="line"></span><br><span class="line">     1     2</span><br><span class="line">     3     4</span><br><span class="line">     5     6</span><br><span class="line">     7     8</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="删除元素删除某一行某一列">3.3
-删除元素（删除某一行、某一列）</h4>
-<p><strong>A(m)=[ ]</strong>
-----删除数组A第m个元素，并返回一个行向量</p>
+<h4 id="3-3-删除元素（删除某一行、某一列）"><a href="#3-3-删除元素（删除某一行、某一列）" class="headerlink" title="3.3 删除元素（删除某一行、某一列）"></a>3.3 删除元素（删除某一行、某一列）</h4><p><strong>A(m)=[ ]</strong> ——删除数组A第m个元素，并返回一个行向量</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line"></span><br><span class="line">&gt;&gt; A(3)=[]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     3     1     5     9     6     7     2</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>A(m, :)=[ ]</strong>
-----返回删除数组A第m行后缩短的数组（列操作同理）</p>
+<p><strong>A(m, :)=[ ]</strong> ——返回删除数组A第m行后缩短的数组（列操作同理）</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line">&gt;&gt; A(2,:)=[]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     4     9     2</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="数组操作">3.4 数组操作</h4>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组操作符：+  -  *   /   ^   .   '</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="3-4-数组操作"><a href="#3-4-数组操作" class="headerlink" title="3.4 数组操作"></a>3.4 数组操作</h4><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数组操作符：+  -  *   /   ^   .   '</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>1. 数组A与标量a</strong></p>
 <ul>
-<li><strong>A+a, A-a</strong> ----数组A的每个元素加 a、减 a</li>
-<li><strong>A*a</strong> ----数组A每个元素乘 a</li>
-<li>A.*a ----数组A每个元素乘 a</li>
-<li><strong>A/a</strong> ----数组A每个元素除以 a</li>
-<li><strong>A./a</strong> ----数组A每个元素除以 a</li>
-<li><strong>A^a</strong> ----a个数组A相乘</li>
-<li><strong>A.^a</strong> ----数组A的每个元素进行a次方</li>
+<li><strong>A+a, A-a</strong> ——数组A的每个元素加 a、减 a</li>
+<li><strong>A*a</strong> ——数组A每个元素乘 a</li>
+<li>A.*a ——数组A每个元素乘 a</li>
+<li><strong>A/a</strong> ——数组A每个元素除以 a</li>
+<li><strong>A./a</strong> ——数组A每个元素除以 a</li>
+<li><strong>A^a</strong> ——a个数组A相乘</li>
+<li><strong>A.^a</strong> ——数组A的每个元素进行a次方</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line"></span><br><span class="line">&gt;&gt; a=2;</span><br><span class="line">&gt;&gt; A+a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    10     3     8</span><br><span class="line">     5     7     9</span><br><span class="line">     6    11     4</span><br><span class="line"></span><br><span class="line">&gt;&gt; A-a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     6    -1     4</span><br><span class="line">     1     3     5</span><br><span class="line">     2     7     0</span><br><span class="line"></span><br><span class="line">&gt;&gt; A*a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    16     2    12</span><br><span class="line">     6    10    14</span><br><span class="line">     8    18     4</span><br><span class="line"></span><br><span class="line">&gt;&gt; A.*a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    16     2    12</span><br><span class="line">     6    10    14</span><br><span class="line">     8    18     4</span><br><span class="line"></span><br><span class="line">&gt;&gt; A/a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    4.0000    0.5000    3.0000</span><br><span class="line">    1.5000    2.5000    3.5000</span><br><span class="line">    2.0000    4.5000    1.0000</span><br><span class="line"></span><br><span class="line">&gt;&gt; A./a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    4.0000    0.5000    3.0000</span><br><span class="line">    1.5000    2.5000    3.5000</span><br><span class="line">    2.0000    4.5000    1.0000</span><br><span class="line">    </span><br><span class="line">&gt;&gt; A^a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    91    67    67</span><br><span class="line">    67    91    67</span><br><span class="line">    67    67    91</span><br><span class="line"></span><br><span class="line">&gt;&gt; A.^a</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    64     1    36</span><br><span class="line">     9    25    49</span><br><span class="line">    16    81     4</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>2. 数组与数组</strong></p>
 <ul>
-<li><strong>A+B, A-B</strong> ----数组A、B对应元素向加减</li>
-<li><strong>A*B</strong> ----数组A左乘数组B</li>
-<li>A.*B ----数组A与数组B对应元素相乘</li>
-<li><strong>A/B</strong>
-----A/B≈A_inv(B)，其中A_inv(B)中的B必须为方阵</li>
-<li><strong>A./B</strong> ----数组A除以数组B的对应元素</li>
+<li><strong>A+B, A-B</strong> ——数组A、B对应元素向加减</li>
+<li><strong>A*B</strong> ——数组A左乘数组B</li>
+<li>A.*B ——数组A与数组B对应元素相乘</li>
+<li><strong>A/B</strong> ——A/B≈A_inv(B)，其中A_inv(B)中的B必须为方阵</li>
+<li><strong>A./B</strong> ——数组A除以数组B的对应元素</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line"></span><br><span class="line">&gt;&gt; B=randi(5,3)</span><br><span class="line"></span><br><span class="line">B =</span><br><span class="line"></span><br><span class="line">     1     4     1</span><br><span class="line">     3     5     5</span><br><span class="line">     5     4     5</span><br><span class="line"></span><br><span class="line">&gt;&gt; A+B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     9     5     7</span><br><span class="line">     6    10    12</span><br><span class="line">     9    13     7</span><br><span class="line"></span><br><span class="line">&gt;&gt; A-B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     7    -3     5</span><br><span class="line">     0     0     2</span><br><span class="line">    -1     5    -3</span><br><span class="line"></span><br><span class="line">&gt;&gt; A*B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    41    61    43</span><br><span class="line">    53    65    63</span><br><span class="line">    41    69    59</span><br><span class="line"></span><br><span class="line">&gt;&gt; A.*B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8     4     6</span><br><span class="line">     9    25    35</span><br><span class="line">    20    36    10</span><br><span class="line"></span><br><span class="line">&gt;&gt; A/B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">   -0.8750   -1.0000    2.3750</span><br><span class="line">   -0.8125    2.0000   -0.4375</span><br><span class="line">    2.6250   -1.0000    0.8750</span><br><span class="line"></span><br><span class="line">&gt;&gt; A./B</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    8.0000    0.2500    6.0000</span><br><span class="line">    1.0000    1.0000    1.4000</span><br><span class="line">    0.8000    2.2500    0.4000</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>3.矩阵运算</strong></p>
 <ul>
 <li><ul>
-<li><strong>B’</strong> ----矩阵B转置</li>
-</ul></li>
-<li><strong>rank(B)</strong> ----矩阵B的秩</li>
-<li><strong>inv(A)</strong> ----方阵A求逆</li>
-<li><strong>det()</strong> ----方阵A的行列式</li>
-<li><strong>size(A)</strong> ----
-[[matlab：获取数组的大小]]返回一个行向量，其元素是 A
-的相应维度的长度，即A的大小</li>
-<li><strong>length(A)</strong>
-----返回A中最大维度的长度。对于向量，长度仅仅是元素数量。对于具有更多维度的数据，长度为
-max(size(X))。空数组的长度为零。</li>
-<li><strong>D=eig(A)</strong> ----返回方阵A的特征值D</li>
-<li><strong>[V D]=eig(A)</strong> ----返回方阵A的特征值D和特征向量V</li>
+<li><strong>B’</strong> ——矩阵B转置</li>
+</ul>
+</li>
+<li><strong>rank(B)</strong> ——矩阵B的秩</li>
+<li><strong>inv(A)</strong> ——方阵A求逆</li>
+<li><strong>det()</strong> ——方阵A的行列式</li>
+<li><strong>size(A)</strong> —— [[matlab：获取数组的大小]]返回一个行向量，其元素是 A 的相应维度的长度，即A的大小</li>
+<li><strong>length(A)</strong> ——返回A中最大维度的长度。对于向量，长度仅仅是元素数量。对于具有更多维度的数据，长度为 max(size(X))。空数组的长度为零。</li>
+<li><strong>D=eig(A)</strong> ——返回方阵A的特征值D</li>
+<li><strong>[V D]=eig(A)</strong> ——返回方阵A的特征值D和特征向量V</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">A=magic(3)</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     8     1     6</span><br><span class="line">     3     5     7</span><br><span class="line">     4     9     2</span><br><span class="line">     </span><br><span class="line">&gt;&gt; A'</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     8     3     4</span><br><span class="line">     1     5     9</span><br><span class="line">     6     7     2</span><br><span class="line"></span><br><span class="line">&gt;&gt; rank(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">     </span><br><span class="line">&gt;&gt; inv(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">    0.1472   -0.1444    0.0639</span><br><span class="line">   -0.0611    0.0222    0.1056</span><br><span class="line">   -0.0194    0.1889   -0.1028</span><br><span class="line"></span><br><span class="line">&gt;&gt; det(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">  -360</span><br><span class="line"></span><br><span class="line">&gt;&gt; size(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     3     3</span><br><span class="line"></span><br><span class="line">&gt;&gt; length(A)</span><br><span class="line"></span><br><span class="line">ans =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line">&gt;&gt; D=eig(A)</span><br><span class="line"></span><br><span class="line">D =</span><br><span class="line"></span><br><span class="line">   15.0000</span><br><span class="line">    4.8990</span><br><span class="line">   -4.8990</span><br><span class="line"></span><br><span class="line">&gt;&gt; [V D]=eig(A)</span><br><span class="line"></span><br><span class="line">V =</span><br><span class="line"></span><br><span class="line">   -0.5774   -0.8131   -0.3416</span><br><span class="line">   -0.5774    0.4714   -0.4714</span><br><span class="line">   -0.5774    0.3416    0.8131</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">D =</span><br><span class="line"></span><br><span class="line">   15.0000         0         0</span><br><span class="line">         0    4.8990         0</span><br><span class="line">         0         0   -4.8990</span><br></pre></td></tr></tbody></table></figure>
 <hr>
-<h3 id="reference">Reference</h3>
-
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>
 
     
