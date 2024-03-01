@@ -248,8 +248,13 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h2 id="（一）基本运算与矩阵输入"><a href="#（一）基本运算与矩阵输入" class="headerlink" title="（一）基本运算与矩阵输入"></a>（一）基本运算与矩阵输入</h2><h3 id="1-创建数组"><a href="#1-创建数组" class="headerlink" title="1 创建数组"></a>1 创建数组</h3><p>一维数组称为<strong>向量</strong>，二维数组称为<strong>矩阵</strong><br>可以使用中括号“[ ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组</p>
-<h4 id="1-1-直接创建"><a href="#1-1-直接创建" class="headerlink" title="1.1 直接创建"></a>1.1 直接创建</h4><p>元素间使用<strong>空格</strong>或者<strong>英文逗号</strong>间隔，使用<strong>英文分号</strong>执行换行操作</p>
+<h2 id="一基本运算与矩阵输入">（一）基本运算与矩阵输入</h2>
+<h3 id="创建数组">1 创建数组</h3>
+<p>一维数组称为<strong>向量</strong>，二维数组称为<strong>矩阵</strong><br>
+可以使用中括号“[
+]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组</p>
+<h4 id="直接创建">1.1 直接创建</h4>
+<p>元素间使用<strong>空格</strong>或者<strong>英文逗号</strong>间隔，使用<strong>英文分号</strong>执行换行操作</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;A=[1 2 3;4 5 6;7 8 9]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     1     2     3</span><br><span class="line">     4     5     6</span><br><span class="line">     7     8     9</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -347,10 +352,14 @@
 <p>1、循环控制语句：</p>
 <p>1）for~end：用于要求重复多次执行for与end之间的程序语句。允许嵌套。其一般格式为</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for 变量 = 起始值 ：增量 ：终点</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 	%一般要输出循环运算结果，还应在end后加“，变量名”，运行时按enter键</span><br></pre></td></tr></tbody></table></figure>
-<p>2）while~end：与c++类似，while也不规定循环次数，其终止时刻由while后面的条件表达式决定，若条件成立，则重复执行while与end之间的程序语句，否则结束循环。其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while 条件表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 		&nbsp; %与for~end语句类似，要想输出运算结果，在end后加“，变量名”，再按enter键</span><br></pre></td></tr></tbody></table></figure><br>2、条件选择语句<p></p>
-<p>1）if~end：其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><br>2）if~elseif~···~else~end：elseif~else是进一步的if条件语句，其一般格式为<br><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式1</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp; 程序语句1</span><br><span class="line"></span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line"></span><br><span class="line">  程序语句2</span><br><span class="line"></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">  程序语句n</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>2）while~end：与c++类似，while也不规定循环次数，其终止时刻由while后面的条件表达式决定，若条件成立，则重复执行while与end之间的程序语句，否则结束循环。其一般格式为
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while 条件表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 		&nbsp; %与for~end语句类似，要想输出运算结果，在end后加“，变量名”，再按enter键</span><br></pre></td></tr></tbody></table></figure> 2、条件选择语句<p></p>
+<p>1）if~end：其一般格式为 </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+2）if<sub>elseif</sub>···<sub>else</sub>end：elseif~else是进一步的if条件语句，其一般格式为
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式1</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp; 程序语句1</span><br><span class="line"></span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line"></span><br><span class="line">  程序语句2</span><br><span class="line"></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">  程序语句n</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【注意：在多分支条件选择语句中，if和elseif是互相独立且互相排斥的条件选择语句，else后的语句执行的条件是先前所有的条件语句均不成立】</span><br></pre></td></tr></tbody></table></figure>
-<p>3）switch~end：开关语句是一种多分支条件选择语句，他执行特定选择语句，当且仅当变量或表达式的值相符。其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch 表达式</span><br><span class="line">	</span><br><span class="line">	case值1</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	case值2</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	······</span><br><span class="line">	</span><br><span class="line">	otherwise</span><br><span class="line">	程序语句</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>3）switch~end：开关语句是一种多分支条件选择语句，他执行特定选择语句，当且仅当变量或表达式的值相符。其一般格式为
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch 表达式</span><br><span class="line">	</span><br><span class="line">	case值1</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	case值2</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	······</span><br><span class="line">	</span><br><span class="line">	otherwise</span><br><span class="line">	程序语句</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/#more" rel="contents">
@@ -443,26 +452,35 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h3 id="简单for循环"><a href="#简单for循环" class="headerlink" title="简单for循环"></a>简单for循环</h3><p>for循环用来循环处理数据。<br>例：输出1~100的和</p>
+<h3 id="简单for循环">简单for循环</h3>
+<p>for循环用来循环处理数据。<br>
+例：输出1~100的和</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:100</span><br><span class="line">       sum = sum +i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">        5050</span><br></pre></td></tr></tbody></table></figure>
-<p>解释：i从1到100，每次增加一个，该共循环100次<br>注意：分号的位置；不能使用“+=”符号；每写一层循环，必须以end结尾</p>
-<h3 id="带有步长的for循环"><a href="#带有步长的for循环" class="headerlink" title="带有步长的for循环"></a>带有步长的for循环</h3><p>例：输出1到10之间的奇数和</p>
+<p>解释：i从1到100，每次增加一个，该共循环100次<br>
+注意：分号的位置；不能使用“+=”符号；每写一层循环，必须以end结尾</p>
+<h3 id="带有步长的for循环">带有步长的for循环</h3>
+<p>例：输出1到10之间的奇数和</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       sum = sum + i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    25</span><br></pre></td></tr></tbody></table></figure>
-<p>解释：i = 1:2:10中间的2表示步长，表示从1到10，每次增加2，即1，3，5，7，9五个数之和；步长也可以为负数</p>
-<h3 id="对向量和矩阵的遍历"><a href="#对向量和矩阵的遍历" class="headerlink" title="对向量和矩阵的遍历"></a>对向量和矩阵的遍历</h3><ol>
+<p>解释：i =
+1:2:10中间的2表示步长，表示从1到10，每次增加2，即1，3，5，7，9五个数之和；步长也可以为负数</p>
+<h3 id="对向量和矩阵的遍历">对向量和矩阵的遍历</h3>
+<ol type="1">
 <li>对向量的遍历</li>
 </ol>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; A = rand(1,4);</span><br><span class="line">&gt;&gt; for i = A</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.9572</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.4854</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.8003</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.1419</span><br></pre></td></tr></tbody></table></figure>
 <p>解释：rand函数用于随机生成0~1之间的数，rand(1,4)生成1*4的列向量。</p>
-<ol>
+<ol start="2" type="1">
 <li>对矩阵的遍历</li>
 </ol>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A = magic(4);</span><br><span class="line">&gt;&gt; A</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">    16     2     3    13</span><br><span class="line">     5    11    10     8</span><br><span class="line">     9     7     6    12</span><br><span class="line">     4    14    15     1</span><br><span class="line"></span><br><span class="line">&gt;&gt; for i = A;</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    16</span><br><span class="line">     5</span><br><span class="line">     9</span><br><span class="line">     4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line">    11</span><br><span class="line">     7</span><br><span class="line">    14</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    10</span><br><span class="line">     6</span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    13</span><br><span class="line">     8</span><br><span class="line">    12</span><br><span class="line">     1</span><br></pre></td></tr></tbody></table></figure>
 <p>解释：magic(n)函数用于生成任意一行或一列或主副对角线之和相等的方阵，对矩阵的循环遍历是依次取出矩阵中的每一列元素</p>
-<h3 id="break和continue的使用"><a href="#break和continue的使用" class="headerlink" title="break和continue的使用"></a>break和continue的使用</h3><p>break用于终止离它最近的一层for循环；<br>continue用于跳过离它最近的一层for循环，接着执行下一次循环</p>
+<h3 id="break和continue的使用">break和continue的使用</h3>
+<p>break用于终止离它最近的一层for循环；<br>
+continue用于跳过离它最近的一层for循环，接着执行下一次循环</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x = 1;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       if i &gt; 7</span><br><span class="line">          break</span><br><span class="line">       else</span><br><span class="line">          x = x* i</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">   105</span><br></pre></td></tr></tbody></table></figure>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:6</span><br><span class="line">       if i == 4</span><br><span class="line">          continue</span><br><span class="line">       else</span><br><span class="line">          sum = sum + i</span><br><span class="line">       end</span><br><span class="line">   end;</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    11</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    17</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="多层for循环"><a href="#多层for循环" class="headerlink" title="多层for循环"></a>多层for循环</h3><p>for循环可以按照需要进行嵌套。</p>
+<h3 id="多层for循环">多层for循环</h3>
+<p>for循环可以按照需要进行嵌套。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; for i = 1:2:6</span><br><span class="line">       for j = 1:3</span><br><span class="line">           y = i * j</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     5</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    10</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -556,7 +574,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>函数——是编程的核心概念之一，是能够完成相对独立功能的代码封装成的模块。</p>
+<h2 id="前言">前言</h2>
+<p>函数——是编程的核心概念之一，是能够完成相对独立功能的代码封装成的模块。</p>
 <p>在主程序中通过函数名和实参调用它，通过接口（即函数的输入、输出参数）来实现“通讯”。所以在调用函数时，你只要知道“被调用的函数是用来做什么的”，以及“如何对应它的输入、输出参数”就行了。</p>
           <!--noindex-->
             <div class="post-button">
@@ -650,13 +669,23 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h3 id="Matlab：函数返回多个值"><a href="#Matlab：函数返回多个值" class="headerlink" title="Matlab：函数返回多个值"></a>Matlab：函数返回多个值</h3><p>在 MATLAB 中，函数可以返回多个值。要返回多个值，可以使用中括号将它们括起来，并用逗号分隔。以下是一个简单的示例：</p>
+<h3 id="matlab函数返回多个值">Matlab：函数返回多个值</h3>
+<p>在 MATLAB
+中，函数可以返回多个值。要返回多个值，可以使用中括号将它们括起来，并用逗号分隔。以下是一个简单的示例：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function [output1, output2] = myFunction(input1, input2)</span><br><span class="line">    % function code here</span><br><span class="line">    output1 = someValue1;</span><br><span class="line">    output2 = someValue2;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
-<p>在这个例子中，函数 <code>myFunction</code> 接受两个输入参数 <code>input1</code> 和 <code>input2</code>，并返回两个输出值 <code>output1</code> 和 <code>output2</code>。在函数的结尾处，使用 <code>output1</code> 和 <code>output2</code> 变量来存储要返回的值。</p>
+<p>在这个例子中，函数 <code>myFunction</code> 接受两个输入参数
+<code>input1</code> 和 <code>input2</code>，并返回两个输出值
+<code>output1</code> 和 <code>output2</code>。在函数的结尾处，使用
+<code>output1</code> 和 <code>output2</code> 变量来存储要返回的值。</p>
 <p>要调用这个函数并获取返回的值，可以使用以下语法：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[output1, output2] = myFunction(input1, input2);</span><br></pre></td></tr></tbody></table></figure>
-<p>这将调用函数 <code>myFunction</code> 并将输入参数 <code>input1</code> 和 <code>input2</code> 传递给它。函数将计算输出值 <code>output1</code> 和 <code>output2</code>，并将它们分别赋值给变量 <code>output1</code> 和 <code>output2</code>。</p>
-<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><p>在 Matlab 中，可以通过在函数定义行中使用多个输入参数来实现函数接受多个输入。以下是一个简单的示例：</p>
+<p>这将调用函数 <code>myFunction</code> 并将输入参数 <code>input1</code>
+和 <code>input2</code> 传递给它。函数将计算输出值 <code>output1</code>
+和 <code>output2</code>，并将它们分别赋值给变量 <code>output1</code> 和
+<code>output2</code>。</p>
+<h3 id="相关问题">相关问题</h3>
+<p>在 Matlab
+中，可以通过在函数定义行中使用多个输入参数来实现函数接受多个输入。以下是一个简单的示例：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function output = myFunc(input1, input2, input3)</span><br><span class="line">    % 在函数体内处理输入参数</span><br><span class="line">    output = input1 + input2 + input3;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -750,16 +779,21 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h3 id="Matlab：在函数里使用“全局变量”"><a href="#Matlab：在函数里使用“全局变量”" class="headerlink" title="Matlab：在函数里使用“全局变量”"></a>Matlab：在函数里使用“全局变量”</h3><p>函数里的变量自在函数内有效, 那么如何在函数内调用外部的变量呢?</p>
-<ol>
-<li>全局变量 global<br>global可以定义全局变量, 但要注意先定义, 再赋值. 否则会有警告:</li>
+<h3 id="matlab在函数里使用全局变量">Matlab：在函数里使用“全局变量”</h3>
+<p>函数里的变量自在函数内有效, 那么如何在函数内调用外部的变量呢?</p>
+<ol type="1">
+<li>全局变量 global<br>
+global可以定义全局变量, 但要注意先定义, 再赋值. 否则会有警告:</li>
 </ol>
 <blockquote>
-<p>Warning: The value of local variables may have been changed to match the globals. Future versions of <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=MATLAB&amp;spm=1001.2101.3001.7020">MATLAB</a> will require that you declare a variable to be global before you use that variable.</p>
+<p>Warning: The value of local variables may have been changed to match
+the globals. Future versions of <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=MATLAB&amp;spm=1001.2101.3001.7020">MATLAB</a>
+will require that you declare a variable to be global before you use
+that variable.</p>
 </blockquote>
 <p>并且需要在你写的函数里面声明使用全局变量。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">global x</span><br><span class="line">x=5;</span><br><span class="line"></span><br><span class="line">subfunc % 输出为5</span><br><span class="line"></span><br><span class="line">function output=subfunc</span><br><span class="line">global x % 在使用全局变量时, 要先声明</span><br><span class="line">output=x;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">clear global x % 清除全局变量</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<ol>
+<ol start="2" type="1">
 <li>使用子函数</li>
 </ol>
 <p>子函数默认可以调用其母函数中所有的变量</p>
@@ -857,8 +891,11 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___matlab]]</p>
-<h3 id="matlab：三角函数的运用"><a href="#matlab：三角函数的运用" class="headerlink" title="matlab：三角函数的运用"></a>matlab：三角函数的运用</h3><p>matlab里三角函数有sin,cos,tan,csc,sec和cot,是弧度制；<br>如，sin(pi/2)=1；</p>
-<p>sind,cosd,tand是角度制；<br>如，sind(90)=1；</p>
+<h3 id="matlab三角函数的运用">matlab：三角函数的运用</h3>
+<p>matlab里三角函数有sin,cos,tan,csc,sec和cot,是弧度制；<br>
+如，sin(pi/2)=1；</p>
+<p>sind,cosd,tand是角度制；<br>
+如，sind(90)=1；</p>
 <p>asin,acos,atan是弧度制反三角函数；</p>
 <p>asind,acosd,atand是角度制反三角函数；</p>
 <p>sinh,cosh,tanh是双曲函数</p>
@@ -953,86 +990,304 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[<strong>_C++]]<br>[[_</strong>未完成]]</p>
+          <p>[[___C++]] [[___未完成]]</p>
 <p><strong>目录</strong></p>
-<p>1、vector对象的定义和初始化方式<br>2、vector 常用基础操作<br>3、使用迭代器的遍历、插入、删除操作</p>
+<p>1、vector对象的定义和初始化方式 2、vector 常用基础操作
+3、使用迭代器的遍历、插入、删除操作</p>
 <p>4、vector 元素的重排操作（排序、逆序等）</p>
 <p>5、vector 中找最值</p>
 <p>6、改变vector大小 及其 内存分配机制</p>
 <p>7、vector数组 与 内置数组 的选择问题</p>
 <hr>
-<h3 id="1、vector对象的定义和初始化方式"><a href="#1、vector对象的定义和初始化方式" class="headerlink" title="1、vector对象的定义和初始化方式"></a>1、vector对象的定义和初始化方式</h3><p>常用的初始化方式及作用如下：</p>
-<p>vector 中的数据类型 T 可以代表任何数据类型，如 int、string、class、vector（构建多维数组） 等，就像一个可以放下任何东西的容器，因此 vector 也常被称作<strong>容器</strong>。字符串类型 string 也是一种容器，c++ 中的不同种类的容器拥有很多相同的操作，因此 string 的很多操作方法可以直接用在 vector 中。</p>
-<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td>vector&lt;T&gt; 
-v1</td><td>v1 是一个元素类型为 T 的空 vector</td></tr><tr><td>vector&lt;T&gt; 
-v2(v1)</td><td>使用 v2 中所有元素初始化 v1</td></tr><tr><td>vector&lt;T&gt; 
-v2 = v1</td><td>同上</td></tr><tr><td>vector&lt;T&gt; 
-v3(n, val)</td><td>v3 中包含了 n 个值为 val 的元素</td></tr><tr><td>vector&lt;T&gt; 
-v4(n)</td><td>v3 中包含了 n 个默认值初始化的元素</td></tr><tr><td>vector&lt;T&gt; 
-v5{a, b, c...}</td><td>使用&nbsp;a, b, c... 初始化 v5</td></tr><tr><td>vector&lt;T&gt; 
-v1</td><td>同上</td></tr><tr><td><p>vector&lt;vector&lt;int&gt;&gt; 
-matrix(M,vector&lt;int&gt;(N));</p></td><td>二维数组初始化</td></tr></tbody></table>
-
-<h3 id="2、vector-常用基础操作"><a href="#2、vector-常用基础操作" class="headerlink" title="2、vector 常用基础操作"></a>2、vector 常用基础操作</h3><p> 下表列出了 添加元素、查询、索引、赋值、比较 等常用操作方法。</p>
-<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;"><tbody><tr><td>v.empty()</td><td>如果 v 为空则返回 true，否则返回 false</td></tr><tr><td>v.size()</td><td>返回 v 中元素的个数</td></tr><tr><td><strong>v.push_back(val)</strong></td><td><p>向 vector 的尾端添加值为 val 的元素。</p><p>注意：vector <span style="color:#fe2c24;">不支持</span>&nbsp;<strong>push_front </strong>操作。</p></td></tr><tr><td><strong>v.pop_back(val)</strong></td><td><p>删除尾元素，返回<strong>void</strong>。vector同样&nbsp;<span style="color:#fe2c24;">不支持</span>&nbsp;<strong>pop_front</strong> 操作。若想在同时弹出元素的值，就必须在执行弹出之前保存它（可以使用 v.back()）。</p></td></tr><tr><td>v[n]</td><td>返回 v 中第 n 个位置上元素的<span style="color:#fe2c24;"><strong>引用</strong></span>，不能用下标操作添加元素</td></tr><tr><td>v.back()</td><td>返回 v 中最后一个元素的<span style="color:#fe2c24;"><strong>引用</strong></span></td></tr><tr><td>v.front()</td><td>返回 v 中第一个元素的<span style="color:#fe2c24;"><strong>引用</strong></span></td></tr><tr><td>v1 = v2</td><td>用 v2 中的元素替换 v1 中的元素</td></tr><tr><td>v1 =&nbsp;{a, b, c...}</td><td>用元素 {a, b, c...}&nbsp;替换 v1 中的元素</td></tr><tr><td>v1 == v2</td><td>当且仅当拥有相同数量且相同位置上值相同的元素时，v1 与 v2 相等</td></tr><tr><td>v1 != v2</td><td>自行体会</td></tr><tr><td>&lt;, &lt;=, &gt;, &gt;=</td><td>以字典序进行比较</td></tr></tbody></table>
-
-<h3 id="3、使用迭代器的遍历、插入、删除操作"><a href="#3、使用迭代器的遍历、插入、删除操作" class="headerlink" title="3、使用迭代器的遍历、插入、删除操作"></a>3、使用迭代器的遍历、插入、删除操作</h3><p>迭代器类似于指针，提供了对象的间接访问，但获取迭代器并不是使用取地址符。如果将指针理解为元素的“地址”，那么迭代器可以理解为元素的“位置”。可以使用迭代器访问某个元素，迭代器也能从一个元素移动到另一个元素。</p>
-<p>一个迭代器的范围由一对迭代器表示，分别为 <strong>begin</strong> 和 <strong>end</strong>。其中 <strong>begin</strong> 成员返回指向第一个元素的迭代器；<strong>end</strong> 成员返回容器最后一个元素的下一个位置（one past the end），也就是指向一个根本不存在的尾后位置，这样的迭代器没什么实际含义，仅是个标记而已，表示已经处理完了容器中的所有元素。所以 <strong>begin</strong> 和 <strong>end</strong> 表示的是一个左闭右开的区间 [ <strong>begin</strong> , <strong>end</strong>)</p>
+<h3 id="vector对象的定义和初始化方式">1、vector对象的定义和初始化方式</h3>
+<p>常用的初始化方式及作用如下：</p>
+<p>vector 中的数据类型 T 可以代表任何数据类型，如
+int、string、class、vector（构建多维数组）
+等，就像一个可以放下任何东西的容器，因此 vector
+也常被称作<strong>容器</strong>。字符串类型 string 也是一种容器，c++
+中的不同种类的容器拥有很多相同的操作，因此 string
+的很多操作方法可以直接用在 vector 中。</p>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td>
+vector&lt;T&gt; v1
+</td>
+<td>
+v1 是一个元素类型为 T 的空 vector
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v2(v1)
+</td>
+<td>
+使用 v2 中所有元素初始化 v1
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v2 = v1
+</td>
+<td>
+同上
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v3(n, val)
+</td>
+<td>
+v3 中包含了 n 个值为 val 的元素
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v4(n)
+</td>
+<td>
+v3 中包含了 n 个默认值初始化的元素
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v5{a, b, c...}
+</td>
+<td>
+使用&nbsp;a, b, c... 初始化 v5
+</td>
+</tr>
+<tr>
+<td>
+vector&lt;T&gt; v1
+</td>
+<td>
+同上
+</td>
+</tr>
+<tr>
+<td>
+<p>
+vector&lt;vector&lt;int&gt;&gt; matrix(M,vector&lt;int&gt;(N));
+</p>
+</td>
+<td>
+二维数组初始化
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vector-常用基础操作">2、vector 常用基础操作</h3>
+<p>&nbsp;下表列出了 添加元素、查询、索引、赋值、比较 等常用操作方法。</p>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td>
+v.empty()
+</td>
+<td>
+如果 v 为空则返回 true，否则返回 false
+</td>
+</tr>
+<tr>
+<td>
+v.size()
+</td>
+<td>
+返回 v 中元素的个数
+</td>
+</tr>
+<tr>
+<td>
+<strong>v.push_back(val)</strong>
+</td>
+<td>
+<p>
+向 vector 的尾端添加值为 val 的元素。
+</p>
+<p>
+注意：vector <span style="color:#fe2c24;">不支持</span>&nbsp;<strong>push_front </strong>操作。
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<strong>v.pop_back(val)</strong>
+</td>
+<td>
+<p>
+删除尾元素，返回<strong>void</strong>。vector同样&nbsp;<span style="color:#fe2c24;">不支持</span>&nbsp;<strong>pop_front</strong>
+操作。若想在同时弹出元素的值，就必须在执行弹出之前保存它（可以使用
+v.back()）。
+</p>
+</td>
+</tr>
+<tr>
+<td>
+v[n]
+</td>
+<td>
+返回 v 中第 n 个位置上元素的<span style="color:#fe2c24;"><strong>引用</strong></span>，不能用下标操作添加元素
+</td>
+</tr>
+<tr>
+<td>
+v.back()
+</td>
+<td>
+返回 v 中最后一个元素的<span style="color:#fe2c24;"><strong>引用</strong></span>
+</td>
+</tr>
+<tr>
+<td>
+v.front()
+</td>
+<td>
+返回 v 中第一个元素的<span style="color:#fe2c24;"><strong>引用</strong></span>
+</td>
+</tr>
+<tr>
+<td>
+v1 = v2
+</td>
+<td>
+用 v2 中的元素替换 v1 中的元素
+</td>
+</tr>
+<tr>
+<td>
+v1 =&nbsp;{a, b, c...}
+</td>
+<td>
+用元素 {a, b, c...}&nbsp;替换 v1 中的元素
+</td>
+</tr>
+<tr>
+<td>
+v1 == v2
+</td>
+<td>
+当且仅当拥有相同数量且相同位置上值相同的元素时，v1 与 v2 相等
+</td>
+</tr>
+<tr>
+<td>
+v1 != v2
+</td>
+<td>
+自行体会
+</td>
+</tr>
+<tr>
+<td>
+&lt;, &lt;=, &gt;, &gt;=
+</td>
+<td>
+以字典序进行比较
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="使用迭代器的遍历插入删除操作">3、使用迭代器的遍历、插入、删除操作</h3>
+<p>迭代器类似于指针，提供了对象的间接访问，但获取迭代器并不是使用取地址符。如果将指针理解为元素的“地址”，那么迭代器可以理解为元素的“位置”。可以使用迭代器访问某个元素，迭代器也能从一个元素移动到另一个元素。</p>
+<p>一个迭代器的范围由一对迭代器表示，分别为 <strong>begin</strong> 和
+<strong>end</strong>。其中 <strong>begin</strong>
+成员返回指向第一个元素的迭代器；<strong>end</strong>
+成员返回容器最后一个元素的下一个位置（one past the
+end），也就是指向一个根本不存在的尾后位置，这样的迭代器没什么实际含义，仅是个标记而已，表示已经处理完了容器中的所有元素。所以
+<strong>begin</strong> 和 <strong>end</strong>
+表示的是一个左闭右开的区间 [ <strong>begin</strong>
+,&nbsp;<strong>end</strong>)</p>
 <p>迭代器可以用来实现容器的<strong>遍历</strong>、<strong>插入</strong>等操作，可以细品下面的例子：</p>
 <p><strong>1、遍历</strong></p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    </span><br><span class="line">    vector&lt;string&gt; a{<span class="string">"0"</span>, <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>, <span class="string">"6"</span>, <span class="string">"7"</span>, <span class="string">"8"</span>};    </span><br><span class="line">    <span class="keyword">auto</span> it = a.<span class="built_in">begin</span>();  </span><br><span class="line">    <span class="comment">// 返回一个迭代器类型，一般来说我们并不关心迭代器具体的数据类型    </span></span><br><span class="line">    <span class="keyword">while</span>(it != a.<span class="built_in">end</span>()) {        </span><br><span class="line">        cout &lt;&lt; *it &lt;&lt; <span class="string">" "</span>;        </span><br><span class="line">        it++;    </span><br><span class="line">    }    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 运行结果 </span></span><br><span class="line"><span class="comment">//0 1 2 3 4 5 6 7 8 </span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>2、插入</strong></p>
 <p>插入操作的函数：</p>
-<p><strong>v.insert(p, n, val)</strong> ：在迭代器 p 之前插入 n 个值为 val 的元素，返回新添加的第一个元素的迭代器。</p>
+<p><strong>v.insert(p, n, val)</strong> ：在迭代器 p 之前插入 n 个值为
+val 的元素，返回新添加的第一个元素的迭代器。</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    vector&lt;<span class="type">int</span>&gt; a{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, };    </span><br><span class="line"><span class="keyword">auto</span> it1 = a.<span class="built_in">begin</span>();  </span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回一个迭代器类型，一般来说我们并不关心迭代器具体的数据类型 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> it2 = a.<span class="built_in">insert</span>((it1+<span class="number">1</span>), {<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>});  </span><br><span class="line"><span class="comment">// 利用迭代器在第二个元素之前插入数据    </span></span><br><span class="line"></span><br><span class="line">cout &lt;&lt; *it2 &lt;&lt; endl;  </span><br><span class="line"><span class="comment">// 返回的是新插入元素第一个元素的迭代器   </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> it = a.<span class="built_in">begin</span>();  </span><br><span class="line"><span class="keyword">while</span>(it != a.<span class="built_in">end</span>())    {        </span><br><span class="line">    cout &lt;&lt; *it &lt;&lt; <span class="string">" "</span>;        </span><br><span class="line">it++;    </span><br><span class="line">}    <span class="keyword">return</span> <span class="number">0</span>;}</span><br><span class="line"><span class="comment">// 输出结果 </span></span><br><span class="line"><span class="comment">//61 6 7 8 2 3</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>3、删除</strong> </p>
+<p><strong>3、删除</strong>&nbsp;</p>
 <p>删除操作的函数：</p>
-<p><strong>v.erase(p)</strong> ：删除迭代器 p 所指的元素，返回指向被删除元素之后元素的迭代器。</p>
-<p><strong>v.erase(b, e)</strong> ：删除迭代器 b, e 之间的元素，返回指向最后一个被删除元素之后元素的迭代器。</p>
+<p><strong>v.erase(p)</strong> ：删除迭代器 p
+所指的元素，返回指向被删除元素之后元素的迭代器。</p>
+<p><strong>v.erase(b, e)</strong> ：删除迭代器 b, e
+之间的元素，返回指向最后一个被删除元素之后元素的迭代器。</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    vector&lt;<span class="type">int</span>&gt; a{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, };    </span><br><span class="line">    <span class="keyword">auto</span> it1 = a.<span class="built_in">begin</span>();  </span><br><span class="line">    <span class="comment">// 返回一个迭代器类型，一般来说我们并不关心迭代器具体的数据类型 </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it2 = a.<span class="built_in">erase</span>(it1+<span class="number">1</span>);  </span><br><span class="line">    <span class="comment">// 删除元素 2    </span></span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; *it2 &lt;&lt; endl;  </span><br><span class="line">    <span class="comment">// 返回的是新插入元素第一个元素的迭代器 </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> it = a.<span class="built_in">begin</span>();  </span><br><span class="line">    <span class="comment">//     </span></span><br><span class="line">    <span class="keyword">while</span>(it != a.<span class="built_in">end</span>())    {        </span><br><span class="line">        cout &lt;&lt; *it &lt;&lt; <span class="string">" "</span>;        </span><br><span class="line">        it++;    </span><br><span class="line">    }    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行结果 </span></span><br><span class="line"></span><br><span class="line"><span class="comment">//31 3</span></span><br></pre></td></tr></tbody></table></figure>
-<h3 id="4、vector-元素的重排操作（排序、逆序等）"><a href="#4、vector-元素的重排操作（排序、逆序等）" class="headerlink" title="4、vector 元素的重排操作（排序、逆序等）"></a>4、vector 元素的重排操作（排序、逆序等）</h3><p>容器的重排需要用到头文件 <code>&lt;algorithm&gt;</code> 中的算法</p>
+<h3 id="vector-元素的重排操作排序逆序等">4、vector
+元素的重排操作（排序、逆序等）</h3>
+<p>容器的重排需要用到头文件 <code>&lt;algorithm&gt;</code> 中的算法</p>
 <p><strong>1、排序 sort()</strong></p>
-<p>使用到的函数为 <strong>sort()</strong> ：按输入序列的字典序<strong>升序</strong>排序，原位操作，无返回值函数原型：</p>
+<p>使用到的函数为 <strong>sort()</strong>
+：按输入序列的字典序<strong>升序</strong>排序，原位操作，无返回值函数原型：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> std::sort&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator, std::vector&lt;<span class="type">int</span>&gt;::iterator)</span><br></pre></td></tr></tbody></table></figure>
 <p>举例：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; a{<span class="number">2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">9</span>};    </span><br><span class="line">    <span class="built_in">sort</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>());  </span><br><span class="line">    <span class="comment">//原位操作    </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i:a)        </span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>;    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;}</span><br><span class="line">    <span class="comment">// 输出结果 </span></span><br><span class="line">    <span class="comment">//0 0 0 2 2 2 3 9 </span></span><br></pre></td></tr></tbody></table></figure>
 <p><strong>2、消除相邻的重复元素</strong> <strong>unique()</strong></p>
-<p>使用到的函数为 <strong>unique()</strong> ：将输入序列相邻的重复项“消除”，返回一个指向不重复值范围末尾的迭代器，一般配合 sort() 使用，函数原型：</p>
+<p>使用到的函数为 <strong>unique()</strong>
+：将输入序列相邻的重复项“消除”，返回一个指向不重复值范围末尾的迭代器，一般配合
+sort() 使用，函数原型：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">std::vector&lt;<span class="type">int</span>&gt;::iterator </span><br><span class="line">std::unique&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator, std::vector&lt;<span class="type">int</span>&gt;::iterator)</span><br></pre></td></tr></tbody></table></figure>
 <p>举例：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    vector&lt;<span class="type">int</span>&gt; a{<span class="number">2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">9</span>};    </span><br><span class="line"><span class="built_in">sort</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>());  </span><br><span class="line"><span class="comment">// 先排序    </span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:a)   cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>; </span><br><span class="line"><span class="comment">// 输出    </span></span><br><span class="line">cout &lt;&lt; endl;    </span><br><span class="line"><span class="keyword">auto</span> end_unique = <span class="built_in">unique</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>());  </span><br><span class="line"><span class="comment">//将输入序列相邻的重复项“消除”，返回一个指向不重复值范围末尾的迭代器    a.erase(end_unique, a.end()); </span></span><br><span class="line"><span class="comment">// 删除末尾元素    </span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i:a)   cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>; </span><br><span class="line"><span class="comment">// 输出    </span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 运行结果 </span></span><br><span class="line"><span class="comment">//0 0 0 2 2 2 3 9 0 2 3 9</span></span><br></pre></td></tr></tbody></table></figure>
-<p><strong>3、逆序 reverse()</strong></p>
-<p>方法1：使用到的函数为 <strong>reverse**</strong>()** ：将输入序列按照下标逆序排列，原位操作，无返回值函数原型：</p>
+<p><strong>3、逆序&nbsp;reverse()</strong></p>
+<p>方法1：使用到的函数为 <strong>reverse()</strong>
+：将输入序列按照下标逆序排列，原位操作，无返回值函数原型：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> std::reverse&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator, std::vector&lt;<span class="type">int</span>&gt;::iterator)</span><br></pre></td></tr></tbody></table></figure>
-<p> 方法2：使用 <code>greater&lt;int&gt;()</code> 作为参数（内置函数）</p>
+<p>&nbsp;方法2：使用 <code>greater&lt;int&gt;()</code>
+作为参数（内置函数）</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), <span class="built_in">greater</span>&lt;<span class="type">int</span>&gt;());</span><br></pre></td></tr></tbody></table></figure>
-<p> 举例：</p>
+<p>&nbsp;举例：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{    </span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; a{<span class="number">2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">9</span>};    </span><br><span class="line">    <span class="built_in">reverse</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>());  </span><br><span class="line">    <span class="comment">// 原位逆序排列    </span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i:a)   </span><br><span class="line">        cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>; </span><br><span class="line">    <span class="comment">// 输出    </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"><span class="comment">// 运行结果 </span></span><br><span class="line"><span class="comment">//9 0 3 0 2 2 0 2 </span></span><br></pre></td></tr></tbody></table></figure>
-<h3 id="5、vector-中找最值"><a href="#5、vector-中找最值" class="headerlink" title="5、vector 中找最值"></a>5、vector 中找最值</h3><p>容器的重排同样需要用到头文件 <code>&lt;algorithm&gt;</code> 中的算法。</p>
-<p><strong>1、最大值</strong> auto it = max_element(v.begin, v,end())，返回最大值的迭代器，函数原型如下：</p>
+<h3 id="vector-中找最值">5、vector 中找最值</h3>
+<p>容器的重排同样需要用到头文件 <code>&lt;algorithm&gt;</code>
+中的算法。</p>
+<p><strong>1、最大值</strong> auto it = max_element(v.begin,
+v,end())，返回最大值的迭代器，函数原型如下：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> std::vector&lt;<span class="type">int</span>&gt;::iterator std::max_element&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator, std::vector&lt;<span class="type">int</span>&gt;::iterator)</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>2、最小值</strong> auto it = min_element(v.begin, v,end())，返回最小值的迭代器，函数原型如下：</p>
+<p><strong>2、最小值</strong>&nbsp;auto it = min_element(v.begin,
+v,end())，返回最小值的迭代器，函数原型如下：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> std::vector&lt;<span class="type">int</span>&gt;::iterator std::min_element&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator, std::vector&lt;<span class="type">int</span>&gt;::iterator)</span><br></pre></td></tr></tbody></table></figure>
-<p><strong>3、相对位置大小</strong> auto b = distance(x, y)，x、y 是迭代器类型，返回 x、y 之间的距离，可以用来获取最大/小值的索引，函数原型如下：</p>
+<p><strong>3、相对位置大小</strong>&nbsp;auto b = distance(x, y)，x、y
+是迭代器类型，返回&nbsp;x、y
+之间的距离，可以用来获取最大/小值的索引，函数原型如下：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::<span class="type">ptrdiff_t</span> std::distance&lt;std::vector&lt;<span class="type">int</span>&gt;::iterator&gt;(std::vector&lt;<span class="type">int</span>&gt;::iterator __first, std::vector&lt;<span class="type">int</span>&gt;::iterator __last)</span><br></pre></td></tr></tbody></table></figure>
 <p><strong>举例：</strong></p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">({<span class="number">0</span>,<span class="number">1</span>,<span class="number">-2</span>,<span class="number">3</span>})</span></span>;    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> b = <span class="built_in">distance</span>(a.<span class="built_in">begin</span>(), <span class="built_in">min_element</span>(a.<span class="built_in">begin</span>(), a.<span class="built_in">end</span>()));    </span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; a[b] &lt;&lt; endl;    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;}</span><br><span class="line">    <span class="comment">// 输出 </span></span><br><span class="line">    <span class="comment">//-2</span></span><br></pre></td></tr></tbody></table></figure>
-<h3 id="6、改变vector大小-及其-内存分配机制"><a href="#6、改变vector大小-及其-内存分配机制" class="headerlink" title="6、改变vector大小 及其 内存分配机制"></a>6、改变vector大小 及其 内存分配机制</h3><p>与内置数组一样，vector 的所有元素必须存放在一片连续的内存中，但 vector 的大小可变性使得其所占用的内存大小也是可变的。</p>
-<p>为了避免每次改变 vector 时重新分配内存空间再将原来的数据从新拷贝到新空间的操作，标准库实现者采用了减少容器空间重新分配次数的策略：当不得不获取新空间时，vector（string 也是如此）通常会分配比需求更大的空间作为预留的备用空间，这样就减少了重新分配空间的次数。</p>
+<h3 id="改变vector大小-及其-内存分配机制">6、改变vector大小 及其
+内存分配机制</h3>
+<p>与内置数组一样，vector 的所有元素必须存放在一片连续的内存中，但
+vector 的大小可变性使得其所占用的内存大小也是可变的。</p>
+<p>为了避免每次改变 vector
+时重新分配内存空间再将原来的数据从新拷贝到新空间的操作，标准库实现者采用了减少容器空间重新分配次数的策略：当不得不获取新空间时，vector（string
+也是如此）通常会分配比需求更大的空间作为预留的备用空间，这样就减少了重新分配空间的次数。</p>
 <ul>
-<li>改变 vector 的大小可以使用 <strong>v.resize(n, t)</strong> 函数，调整 <strong>v</strong> 的大小为 <strong>n</strong> 个元素，任何新添加的元素都初始化为值 <strong>t</strong> 。</li>
+<li>改变 vector 的大小可以使用 <strong>v.resize(n, t)</strong>
+函数，调整 <strong>v</strong> 的大小为 <strong>n</strong>
+个元素，任何新添加的元素都初始化为值 <strong>t</strong> 。</li>
 </ul>
 <p><strong>举例：</strong></p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span>{</span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; a;</span><br><span class="line">    a.<span class="built_in">resize</span>(<span class="number">3</span>, <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(<span class="number">3</span>));</span><br><span class="line">    cout &lt;&lt; <span class="string">"row : "</span> &lt;&lt; a.<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="string">"col : "</span> &lt;&lt; a[<span class="number">0</span>].<span class="built_in">size</span>() &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;}</span><br><span class="line">    <span class="comment">// 输出 </span></span><br><span class="line">    <span class="comment">//row : 3col : 3</span></span><br></pre></td></tr></tbody></table></figure>
 <ul>
-<li>函数 <strong>v.resize(n)</strong>  可以用来告知容器分配至少能分配 n 个元素的内存空间。并不改变容器中元素的数量，仅影响 vector 预先分配多大的内存空间</li>
+<li>函数 <strong>v.resize(n)</strong>&nbsp; 可以用来告知容器分配至少能分配 n
+个元素的内存空间。并不改变容器中元素的数量，仅影响 vector
+预先分配多大的内存空间</li>
 </ul>
-<h3 id="7、vector数组-与-内置数组-的选择问题"><a href="#7、vector数组-与-内置数组-的选择问题" class="headerlink" title="7、vector数组 与 内置数组 的选择问题"></a>7、vector数组 与 内置数组 的选择问题</h3><p>一般来说，我们在使用 C++ 编程时会将 <strong>vector</strong> 类型的数据与类似于使用 <strong>a[N]</strong> 定义的内置数组统称为数组，两者是很类似的数据结构，在一般的任务中使用 vector数组 与使用内置数组通常没有什么区别。两者的区别主要如下：</p>
+<h3 id="vector数组-与-内置数组-的选择问题">7、vector数组 与 内置数组
+的选择问题</h3>
+<p>一般来说，我们在使用 C++ 编程时会将 <strong>vector</strong>
+类型的数据与类似于使用 <strong>a[N]</strong>
+定义的内置数组统称为数组，两者是很类似的数据结构，在一般的任务中使用
+vector数组 与使用内置数组通常没有什么区别。两者的区别主要如下：</p>
 <ul>
-<li>vector数组 是 C++ 的标准库类型，即使用 vector 定义的变量本质上是定义了一个 vector 类的对象。而类似于使用 <strong>a[N]</strong> 定义的数组是内置数组，类似于 int、float 等内置类型的变量。</li>
-<li>vector数组 的大小可变，而内置数组类型在定义时必须明确定义大小，之后大小不能变化。因为内置数组的大小固定，因此对某些特殊的应用来说程序运行时的性能较好，但是也失去了一定的灵活性。</li>
+<li>vector数组 是 C++ 的标准库类型，即使用 vector
+定义的变量本质上是定义了一个 vector 类的对象。而类似于使用
+<strong>a[N]</strong> 定义的数组是内置数组，类似于 int、float
+等内置类型的变量。</li>
+<li>vector数组
+的大小可变，而内置数组类型在定义时必须明确定义大小，之后大小不能变化。因为内置数组的大小固定，因此对某些特殊的应用来说程序运行时的性能较好，但是也失去了一定的灵活性。</li>
 </ul>
-<p><strong>如果不确定元素的确定个数，那么 vector 就是最好的选择。</strong></p>
+<p><strong>如果不确定元素的确定个数，那么 vector
+就是最好的选择。</strong></p>
 
       
     </div>
@@ -1117,16 +1372,30 @@ matrix(M,vector&lt;int&gt;(N));</p></td><td>二维数组初始化</td></tr></tbo
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[<strong>_C++]]<br>[[_</strong>未完成]] </p>
-<h3 id="C-返回vector、将vector作为参数传递"><a href="#C-返回vector、将vector作为参数传递" class="headerlink" title="C++返回vector、将vector作为参数传递"></a>C++返回vector、将vector作为参数传递</h3><p>在C++里很多时候我们会遇到函数想返回两个以上结果的情况，这时候可以用数组（vector）、类来作为容器返回，也可以声明一个全局变量的数组，将数值存放在数组里解决。</p>
-<p>第一个方式是使用引用来解决，将vector的引用在函数间传递<br>这是一个例子，假设我要传入一个数，我的函数的功能是返回这个数后面十个数的序列。</p>
-<h1 id="include"><a href="#include" class="headerlink" title="include"></a>include<iostream></iostream></h1><h1 id="include-1"><a href="#include-1" class="headerlink" title="include"></a>include<vector></vector></h1><p>using namespace std;</p>
-<p>/<em><br>输入一个数，返回这个数后面的十个数字序列<br>注意参数的这个 &amp; 符号不能省略
-</em>/<br>void getSequence(int num,vector<int>&amp; sequence){<br>    for(int i=0;i&lt;10;i++){<br>        sequence.push_back(i+num);<br>    }<br>}</int></p>
-<p>int main(){<br>    int num=9;<br>    vector<int> sequence;<br>    //在主调函数这边，直接传入该vector变量<br>    getSequence(num,sequence);<br>    //访问该vector的值的时候，也是直接访问即可<br>    for(vector<int>::iterator it=sequence.begin();it!=sequence.end();it++){<br>        cout&lt;&lt;*it&lt;&lt;endl;<br>    }<br>}<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24</int></int></p>
-<p>第二个方式是返回vector变量<br>在被调用函数中声明一个vector变量，函数结束的时候返回vector变量<br>但是这样的传参方式我有一个不太理解的地方，既然vector变量是在被调函数中声明的，就应该是一个局部变量，在被调函数执行完毕之后这部分空间应该会被销毁，这个变量就无法访问到了，莫非vector是在堆空间开辟的地址？然后返回的其实是指向堆空间vector的指针？</p>
-<p>vector<int> getSequence(int num){<br>    vector<int> sequence;<br>    for(int i=0;i&lt;10;i++){<br>        sequence.push_back(i+num);<br>    }<br>    return sequence;<br>}</int></int></p>
-<p>int main(){<br>    int num=9;<br>    vector<int> sequence;<br>    //在主调函数这边，只传入num<br>    sequence=getSequence(num);<br>    //访问该vector的值的时候，也是直接访问即可<br>    for(vector<int>::iterator it=sequence.begin();it!=sequence.end();it++){<br>        cout&lt;&lt;*it&lt;&lt;endl;<br>    }<br>}</int></int></p>
+          <p>[[___C++]] [[___未完成]] ### C++返回vector、将vector作为参数传递</p>
+<p>在C++里很多时候我们会遇到函数想返回两个以上结果的情况，这时候可以用数组（vector）、类来作为容器返回，也可以声明一个全局变量的数组，将数值存放在数组里解决。</p>
+<p>第一个方式是使用引用来解决，将vector的引用在函数间传递
+这是一个例子，假设我要传入一个数，我的函数的功能是返回这个数后面十个数的序列。</p>
+<p>#include<iostream> #include<vector> using namespace std;</vector></iostream></p>
+<p>/<em> 输入一个数，返回这个数后面的十个数字序列 注意参数的这个 &amp;
+符号不能省略 </em>/ void getSequence(int num,vector<int>&amp; sequence){
+for(int i=0;i&lt;10;i++){ sequence.push_back(i+num); } }</int></p>
+<p>int main(){ int num=9; vector<int> sequence;
+//在主调函数这边，直接传入该vector变量 getSequence(num,sequence);
+//访问该vector的值的时候，也是直接访问即可 for(vector<int>::iterator
+it=sequence.begin();it!=sequence.end();it++){
+cout&lt;&lt;*it&lt;&lt;endl; } } 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+17 18 19 20 21 22 23 24</int></int></p>
+<p>第二个方式是返回vector变量
+在被调用函数中声明一个vector变量，函数结束的时候返回vector变量
+但是这样的传参方式我有一个不太理解的地方，既然vector变量是在被调函数中声明的，就应该是一个局部变量，在被调函数执行完毕之后这部分空间应该会被销毁，这个变量就无法访问到了，莫非vector是在堆空间开辟的地址？然后返回的其实是指向堆空间vector的指针？</p>
+<p>vector<int> getSequence(int num){ vector<int> sequence; for(int
+i=0;i&lt;10;i++){ sequence.push_back(i+num); } return sequence; }</int></int></p>
+<p>int main(){ int num=9; vector<int> sequence;
+//在主调函数这边，只传入num sequence=getSequence(num);
+//访问该vector的值的时候，也是直接访问即可 for(vector<int>::iterator
+it=sequence.begin();it!=sequence.end();it++){
+cout&lt;&lt;*it&lt;&lt;endl; } }</int></int></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/C++%E8%BF%94%E5%9B%9Evector%E3%80%81%E5%B0%86vector%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/#more" rel="contents">
@@ -1219,18 +1488,25 @@ matrix(M,vector&lt;int&gt;(N));</p></td><td>二维数组初始化</td></tr></tbo
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___C++]]</p>
-<h2 id="C-字符串与浮点数和双浮点数转换"><a href="#C-字符串与浮点数和双浮点数转换" class="headerlink" title="C ++字符串与浮点数和双浮点数转换"></a>C ++字符串与浮点数和双浮点数转换</h2><p>将字符串转换为浮点数的最简单方法是使用以下<strong>C ++ 11</strong>函数：</p>
+<h2 id="c-字符串与浮点数和双浮点数转换">C
+++字符串与浮点数和双浮点数转换</h2>
+<p>将字符串转换为浮点数的最简单方法是使用以下<strong>C ++
+11</strong>函数：</p>
 <ul>
-<li><strong>std :: stof()</strong> - 将string转换为float</li>
-<li><strong>std :: stod()</strong> - 将string转换为double</li>
-<li><strong>std :: stold()</strong> - 将string转换为long double。</li>
+<li><strong>std :: stof()</strong>&nbsp;- 将string转换为float</li>
+<li><strong>std :: stod()</strong>&nbsp;- 将string转换为double</li>
+<li><strong>std :: stold()</strong>&nbsp;- 将string转换为long double。</li>
 </ul>
 <p>这些函数在string头文件中定义。</p>
-<h3 id="示例1：C-字符串转换为浮点和双浮点数"><a href="#示例1：C-字符串转换为浮点和双浮点数" class="headerlink" title="示例1：C ++字符串转换为浮点和双浮点数"></a>示例1：C ++字符串转换为浮点和双浮点数</h3><p>示例<br></p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;str&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为浮点数</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">float</span>&nbsp;num_float&nbsp;=&nbsp;std::<span class="built_in">stof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为双浮点数&nbsp;double</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">stod</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_float&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_float&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><br><strong>输出结果</strong><p></p>
-<p>num_float = 123.457<br>num_double = 123.457</p>
-<h3 id="示例2：将C-char数组转换为double"><a href="#示例2：将C-char数组转换为double" class="headerlink" title="示例2：将C ++ char数组转换为double"></a>示例2：将C ++ char数组转换为double</h3><p>我们可以使用std::atof()函数将char数组转换为double。</p>
-<p>示例<br></p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&nbsp;atoi()需要cstdlib</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;声明和初始化字符数组</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">char</span>&nbsp;str[]&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">atof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::cout&nbsp;&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><br><strong>输出结果</strong><p></p>
-<p>num_double = 123.457</p>
+<h3 id="示例1c-字符串转换为浮点和双浮点数">示例1：C
+++字符串转换为浮点和双浮点数</h3>
+<p>示例 </p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::string&nbsp;str&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为浮点数</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">float</span>&nbsp;num_float&nbsp;=&nbsp;std::<span class="built_in">stof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;将字符串转换为双浮点数&nbsp;double</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">stod</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_float&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_float&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;std::&nbsp;cout&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure> <strong>输出结果</strong><p></p>
+<p>num_float&nbsp;=&nbsp;123.457 num_double&nbsp;=&nbsp;123.457</p>
+<h3 id="示例2将c-char数组转换为double">示例2：将C ++
+char数组转换为double</h3>
+<p>我们可以使用std::atof()函数将char数组转换为double。</p>
+<p>示例 </p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&nbsp;atoi()需要cstdlib</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span>&nbsp;<span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span>&nbsp;<span class="title">main</span><span class="params">()</span>&nbsp;</span>{</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;声明和初始化字符数组</span></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">char</span>&nbsp;str[]&nbsp;=&nbsp;<span class="string">"123.4567"</span>;</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="type">double</span>&nbsp;num_double&nbsp;=&nbsp;std::<span class="built_in">atof</span>(str);</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;std::cout&nbsp;&lt;&lt;&nbsp;<span class="string">"num_double&nbsp;=&nbsp;"</span>&nbsp;&lt;&lt;&nbsp;num_double&nbsp;&lt;&lt;&nbsp;std::endl;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;</span><br><span class="line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>&nbsp;<span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure> <strong>输出结果</strong><p></p>
+<p>num_double&nbsp;=&nbsp;123.457</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E5%92%8Cdouble&amp;float%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2/#more" rel="contents">

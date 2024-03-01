@@ -18,12 +18,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___编程]] 总而来说失败了。。&amp;emsp;&amp;emsp;我本来是想做一个自动将文本处理成xmind格式的小程序。&amp;emsp;&amp;emsp;但是我不知道为什么一对字符进行处理就会出现乱码。。。 收获：1.regex的使用1234567#include <regex>using namespace std;//通过这个设定 正则表达式regex pattern0(&quot;([,，]">
+    <meta name="description" content="[[___编程]]
+ 总而来说失败了。。
+   我本来是想做一个自动将文本处理成xmind格式的小程序。
+   但是我不知道为什么一对字符进行处理就会出现乱码。。。
+ 收获：
+ 1.regex的使用
+ 1234567#include <regex>using namespace std;//通过这个设定 正则表达式regex pattern0(&quot;([,，]+)&quot;);">
 <meta property="og:type" content="article">
 <meta property="og:title" content="制作一个可以将文本处理成Xmind格式的小程序">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/03/1.Archieve/%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E5%B0%86%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E6%88%90Xmind%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___编程]] 总而来说失败了。。&amp;emsp;&amp;emsp;我本来是想做一个自动将文本处理成xmind格式的小程序。&amp;emsp;&amp;emsp;但是我不知道为什么一对字符进行处理就会出现乱码。。。 收获：1.regex的使用1234567#include <regex>using namespace std;//通过这个设定 正则表达式regex pattern0(&quot;([,，]">
+<meta property="og:description" content="[[___编程]]
+ 总而来说失败了。。
+   我本来是想做一个自动将文本处理成xmind格式的小程序。
+   但是我不知道为什么一对字符进行处理就会出现乱码。。。
+ 收获：
+ 1.regex的使用
+ 1234567#include <regex>using namespace std;//通过这个设定 正则表达式regex pattern0(&quot;([,，]+)&quot;);">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-03T03:55:51.000Z">
 <meta property="article:modified_time" content="2023-11-28T05:47:45.468Z">
@@ -138,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E8%80%8C%E6%9D%A5%E8%AF%B4%E5%A4%B1%E8%B4%A5%E4%BA%86%E3%80%82%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">总而来说失败了。。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E8%8E%B7%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">收获：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-regex%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">1.regex的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%9C%89%E5%85%B3%E4%BA%8E%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.</span> <span class="nav-text">2.有关于中文字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-string%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text">3.string的相关操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BAtxt"><span class="nav-number">2.4.</span> <span class="nav-text">4.使用自定义输入输出流输入/输出txt</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E8%80%8C%E6%9D%A5%E8%AF%B4%E5%A4%B1%E8%B4%A5%E4%BA%86"><span class="nav-number">1.</span> <span class="nav-text">总而来说失败了。。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E8%8E%B7"><span class="nav-number">2.</span> <span class="nav-text">收获：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#regex%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">1.regex的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%85%B3%E4%BA%8E%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6"><span class="nav-number">2.2.</span> <span class="nav-text">2.有关于中文字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string%E7%9A%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text">3.string的相关操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BAtxt"><span class="nav-number">2.4.</span> <span class="nav-text">4.使用自定义输入输出流输入/输出txt</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -297,14 +309,22 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>[[___编程]]</p>
-<h3 id="总而来说失败了。。"><a href="#总而来说失败了。。" class="headerlink" title="总而来说失败了。。"></a>总而来说失败了。。</h3><p>  我本来是想做一个自动将文本处理成xmind格式的小程序。<br>  但是我不知道为什么一对字符进行处理就会出现乱码。。。</p>
-<h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><h4 id="1-regex的使用"><a href="#1-regex的使用" class="headerlink" title="1.regex的使用"></a>1.regex的使用</h4><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//通过这个设定 正则表达式</span></span><br><span class="line"><span class="function">regex <span class="title">pattern0</span><span class="params">(<span class="string">"([,，]+)"</span>)</span></span>;</span><br><span class="line"><span class="comment">//通过这个进行替换</span></span><br><span class="line"><span class="built_in">regex_replace</span>(原来的字符串,正则表达式,替换字符串);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="总而来说失败了">总而来说失败了。。</h3>
+<p>  我本来是想做一个自动将文本处理成xmind格式的小程序。
+  但是我不知道为什么一对字符进行处理就会出现乱码。。。</p>
+<h3 id="收获">收获：</h3>
+<h4 id="regex的使用">1.regex的使用</h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//通过这个设定 正则表达式</span></span><br><span class="line"><span class="function">regex <span class="title">pattern0</span><span class="params">(<span class="string">"([,，]+)"</span>)</span></span>;</span><br><span class="line"><span class="comment">//通过这个进行替换</span></span><br><span class="line"><span class="built_in">regex_replace</span>(原来的字符串,正则表达式,替换字符串);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
-<h4 id="2-有关于中文字符"><a href="#2-有关于中文字符" class="headerlink" title="2.有关于中文字符"></a>2.有关于中文字符</h4><p>  中文字符占两个字符位置，所以不可以用<code>'我'</code>，而是tm要用<code>"我"</code>。所以说所有基础原理是操作char类型的都需要重写。<br>  只能说是最不爱国的一集……</p>
-<h4 id="3-string的相关操作"><a href="#3-string的相关操作" class="headerlink" title="3.string的相关操作"></a>3.string的相关操作</h4><ul>
+<h4 id="有关于中文字符">2.有关于中文字符</h4>
+<p>  中文字符占两个字符位置，所以不可以用<code>'我'</code>，而是tm要用<code>"我"</code>。所以说所有基础原理是操作char类型的都需要重写。
+  只能说是最不爱国的一集……</p>
+<h4 id="string的相关操作">3.string的相关操作</h4>
+<ul>
 <li>其实在开头和结尾的插入可以直接用加法减法写</li>
 </ul>
-<h4 id="4-使用自定义输入输出流输入-输出txt"><a href="#4-使用自定义输入输出流输入-输出txt" class="headerlink" title="4.使用自定义输入输出流输入/输出txt"></a>4.使用自定义输入输出流输入/输出txt</h4><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"input.txt"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"output.txt"</span>)</span></span>;</span><br><span class="line">in&gt;&gt;……;</span><br><span class="line">out&lt;&lt;……;</span><br></pre></td></tr></tbody></table></figure>
+<h4 id="使用自定义输入输出流输入输出txt">4.使用自定义输入输出流输入/输出txt</h4>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"input.txt"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"output.txt"</span>)</span></span>;</span><br><span class="line">in&gt;&gt;……;</span><br><span class="line">out&lt;&lt;……;</span><br></pre></td></tr></tbody></table></figure>
 
     </div>
 

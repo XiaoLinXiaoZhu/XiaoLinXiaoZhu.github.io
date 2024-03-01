@@ -253,11 +253,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[<strong>_冰汽时代]]<br>[[_</strong>游戏体验日记]]</p>
+          <p>[[___冰汽时代]] [[___游戏体验日记]]</p>
 <p>冰汽时代是一个模拟经营的策略性游戏，玩家需要子啊严寒、饥饿和物资匮乏的条件下带领玩家度过寒冬。</p>
-<p>今天大概花了5h把游戏的第一章给打通关了，也有了一些想法和评价，下面我将我认为游戏中的亮点和缺点标记出来。<br>
+<p>今天大概花了5h把游戏的第一章给打通关了，也有了一些想法和评价，下面我将我认为游戏中的亮点和缺点标记出来。</p>
           <!--noindex-->
-            </p><div class="post-button">
+            <div class="post-button">
               <a class="btn" href="/2023/11/27/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E6%B8%B8%E7%8E%A9%E5%88%9D%E4%BD%93%E9%AA%8C/#more" rel="contents">
                 阅读全文 »
               </a>
@@ -347,7 +347,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[<strong>_耻辱2]]<br>[[_</strong>游戏设计]]</p>
+          <p>[[___耻辱2]] [[___游戏设计]]</p>
 <p>这个设计比较有意思，使用技能会消耗蓝量，蓝量会在使用技能一段时间后恢复至当前数值+固定数值。相当于多次连续使用技能不仅会耗蓝，还会消耗蓝量的当前的上限。只有通过使用道具才能将蓝量拉回来。</p>
 <p>这种设计在不过分限制蓝条的使用的前提下，对过于依赖魔法做出了惩罚：即下一次能透支的连续使用魔法的次数会变少，我认为这是值得借鉴的一点。</p>
           <!--noindex-->
@@ -542,26 +542,25 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___JS]]</p>
-<h3 id="普通函数的构造"><a href="#普通函数的构造" class="headerlink" title="普通函数的构造"></a>普通函数的构造</h3><h3 id="自启动函数"><a href="#自启动函数" class="headerlink" title="自启动函数"></a>自启动函数</h3><p>其实就是 js中页面加载完成立即执行函数<sup><a href="#fn_1" id="reffn_1">1</a></sup></p>
-<h4 id="一、javascript"><a href="#一、javascript" class="headerlink" title="一、javascript"></a>一、javascript</h4><ol>
+<h3 id="普通函数的构造">普通函数的构造</h3>
+<h3 id="自启动函数">自启动函数</h3>
+<p>其实就是 js中页面加载完成立即执行函数<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<h4 id="一javascript">一、javascript</h4>
+<ol type="1">
 <li>直接在标签里写</li>
 </ol>
-<p></p>
-<ol>
-<li>js中window.onload调用    //整个window加载完成后执行<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">func</span>(<span class="params"></span>){</span><br><span class="line">  <span class="comment">/* window.onload调用*/</span></span><br><span class="line">}</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span>=func <span class="comment">//不要括号</span></span><br></pre></td></tr></tbody></table></figure>
-</li>
+
+
+<ol start="2" type="1">
+<li>js中window.onload调用 //整个window加载完成后执行 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">func</span>(<span class="params"></span>){</span><br><span class="line">  <span class="comment">/* window.onload调用*/</span></span><br><span class="line">}</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span>=func <span class="comment">//不要括号</span></span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">onload</span>=<span class="keyword">function</span>(<span class="params"></span>){</span><br><span class="line">    <span class="title function_">fun1</span>();</span><br><span class="line">    <span class="title function_">fun2</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>二、jQuery   //document加载完成后就执行   </p>
-<ol>
+<p>二、jQuery //document加载完成后就执行</p>
+<ol type="1">
 <li><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="variable language_">document</span>).<span class="title function_">ready</span>(<span class="keyword">function</span>(<span class="params"></span>){</span><br><span class="line"></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure></li>
-<li><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function(){</span><br><span class="line">  alert();</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
-</li>
+<li><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(function(){</span><br><span class="line">  alert();</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure></li>
 </ol>
 <p>注：document执行顺序大于window大于onload</p>
-<blockquote id="fn_1">
-<sup>1</sup>. <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43394109/article/details/84787264#:~:text=%E4%B8%80.javascript1.%E7%9B%B4%E6%8E%A5%E5%9C%A8%E6%A0%87%E7%AD%BE%E9%87%8C%E5%86%99%3Cbody%20onload%3D%22func%20%28%29%22%3E%3C%2Fbody%3E2.js%E4%B8%ADwindow.onload%E8%B0%83%E7%94%A8%20%2F%2F%E6%95%B4%E4%B8%AAwindow%E5%8A%A0%E8%BD%BD%E5%AE%8C%E6%88%90%E5%90%8E%E6%89%A7%E8%A1%8Cfunction%20func,%28%29%20%7B%20%2F%2A%20window.onload%E8%B0%83%E7%94%A8%2A%2F%7Dwindow.onload%3Dfunc%20%2F%2F%E4%B8%8D%E8%A6%81%E6%8B%AC%E5%8F%B7window.onload%3Df..._js%E5%9C%A8%E5%90%AF%E5%8A%A8%E5%AE%8C%E6%AF%95%E5%90%8E%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0">js中页面加载完成立即执行函数的写法_js在启动完毕后执行函数-CSDN博客</a> <a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
-</blockquote>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/25/1.Archieve/js-%E5%87%BD%E6%95%B0%E6%9E%84%E9%80%A0/#more" rel="contents">
@@ -654,9 +653,12 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___JS]]</p>
-<h3 id="js-radio表单结构"><a href="#js-radio表单结构" class="headerlink" title="js-radio表单结构"></a>js-radio表单结构</h3><p>该类型下面有以下方法：</p>
-<h4 id="1-radioObject-click"><a href="#1-radioObject-click" class="headerlink" title="1. radioObject.click()"></a>1. radioObject.click()</h4><p>click() 方法用于在单选按钮上模拟一次鼠标点击：</p>
-<h4 id="2-radioObject-checked"><a href="#2-radioObject-checked" class="headerlink" title="2. radioObject.checked"></a>2. radioObject.checked</h4><p>这个是直接改变按钮的状态，而不触发click事件（有点像将链接标记为已经按过，但是）。</p>
+<h3 id="js-radio表单结构">js-radio表单结构</h3>
+<p>该类型下面有以下方法：</p>
+<h4 id="radioobject.click">1. radioObject.click()</h4>
+<p>click() 方法用于在单选按钮上模拟一次鼠标点击：</p>
+<h4 id="radioobject.checked">2. radioObject.checked</h4>
+<p>这个是直接改变按钮的状态，而不触发click事件（有点像将链接标记为已经按过，但是）。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/25/1.Archieve/js-radio%E8%A1%A8%E5%8D%95%E7%BB%93%E6%9E%84/#more" rel="contents">
@@ -748,9 +750,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[___JS]]</p>
-<h3 id="js-获取标签元素data-xxx属性值的方法"><a href="#js-获取标签元素data-xxx属性值的方法" class="headerlink" title="js-获取标签元素data-xxx属性值的方法"></a>js-获取标签元素data-xxx属性值的方法</h3><p>标签上有两个属性<code>data-id</code> 和 <code>data-user-name</code>, 需要通过js去获取</p>
-<p>个人认为较为好用的方法为：使用getAttribute/setAttribute/removeAttribute ，较为直观和易读。<br></p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">"#user"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// 666</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-user-name"</span>)); <span class="comment">// Tom</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-id"</span>, <span class="number">777</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新增属性</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-age"</span>, <span class="number">23</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除属性</span></span><br><span class="line">user.<span class="title function_">removeAttribute</span>(<span class="string">"data-user-name"</span>);</span><br><span class="line"><span class="comment">// &lt;div id="user" data-id="777" data-age="23"&gt;&lt;/div&gt;</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><p></p>
+          <p>[[___JS]] ### js-获取标签元素data-xxx属性值的方法</p>
+<p>标签上有两个属性<code>data-id</code>&nbsp;和&nbsp;<code>data-user-name</code>,
+需要通过js去获取</p>
+<p>个人认为较为好用的方法为：使用getAttribute/setAttribute/removeAttribute
+，较为直观和易读。 </p><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">"#user"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// 666</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-user-name"</span>)); <span class="comment">// Tom</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-id"</span>, <span class="number">777</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新增属性</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-age"</span>, <span class="number">23</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除属性</span></span><br><span class="line">user.<span class="title function_">removeAttribute</span>(<span class="string">"data-user-name"</span>);</span><br><span class="line"><span class="comment">// &lt;div id="user" data-id="777" data-age="23"&gt;&lt;/div&gt;</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/25/1.Archieve/js-%E8%8E%B7%E5%8F%96%E6%A0%87%E7%AD%BE%E5%85%83%E7%B4%A0data-xxx%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
@@ -842,8 +846,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>[[___JS]]<br>因为divs是nodeList而不是array<br><strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(divs instanceof Array);; //false</span><br><span class="line">console.log(divs instanceof NodeList);//true</span><br></pre></td></tr></tbody></table></figure><br>要想把nodeList像数组一样操作，得先把divs转换为array；<br><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var divsArray = Array.prototype.slice.call(divs,0);</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>然后，交换“位置”，注意，<strong>这只是交换两个节点对象在数组中的位置，而不是在DOM中的位置</strong>；<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log("before:",divsArray);//[div#test, div#test2] </span><br><span class="line">var temp = divsArray[0];</span><br><span class="line">divsArray[0] = divsArray[1];</span><br><span class="line">divsArray[1] = temp;</span><br><span class="line">console.log("after:",divsArray);//[div#test2, div#test] </span><br></pre></td></tr></tbody></table></figure><p></p>
+          <p>[[___JS]] 因为divs是nodeList而不是array
+<strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(divs instanceof Array);; //false</span><br><span class="line">console.log(divs instanceof NodeList);//true</span><br></pre></td></tr></tbody></table></figure> 要想把nodeList像数组一样操作，得先把divs转换为array；
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var divsArray = Array.prototype.slice.call(divs,0);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>然后，交换“位置”，注意，<strong>这只是交换两个节点对象在数组中的位置，而不是在DOM中的位置</strong>；
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log("before:",divsArray);//[div#test, div#test2] </span><br><span class="line">var temp = divsArray[0];</span><br><span class="line">divsArray[0] = divsArray[1];</span><br><span class="line">divsArray[1] = temp;</span><br><span class="line">console.log("after:",divsArray);//[div#test2, div#test] </span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/25/1.Archieve/js-%E5%B0%86nodeList%E5%83%8F%E6%95%B0%E7%BB%84%E4%B8%80%E6%A0%B7%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/#more" rel="contents">
@@ -936,9 +944,11 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>[[___JS]]</p>
-<h3 id="〇、前情提要"><a href="#〇、前情提要" class="headerlink" title="〇、前情提要"></a>〇、前情提要</h3><p>今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？</p>
-<p>然后在油叉上面找了找发现了这个：<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/445342-hust%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%86%9B%E7%90%86%E7%BA%BF%E4%B8%8A%E4%BD%9C%E4%B8%9A%E7%AE%80%E6%98%93%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%A9%E6%89%8B">HUST华中科技大学军理线上作业简易自动填充助手 (greasyfork.org)</a> </p>
-<p>这是它的github页面：<br><a target="_blank" rel="noopener" href="https://github.com/gongchen618/HUST-MT-Helper">HUST-MT-Helper</a> </p>
+<h3 id="前情提要">〇、前情提要</h3>
+<p>今天在填写HUST华中科技大学军理线上作业的时候，看着满屏幕的选择题，我望了望手中的答案，突然想到，有没有先人已经做好了的脚本可以使用呢？</p>
+<p>然后在油叉上面找了找发现了这个： <a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/445342-hust%E5%8D%8E%E4%B8%AD%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E5%86%9B%E7%90%86%E7%BA%BF%E4%B8%8A%E4%BD%9C%E4%B8%9A%E7%AE%80%E6%98%93%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E5%8A%A9%E6%89%8B">HUST华中科技大学军理线上作业简易自动填充助手
+(greasyfork.org)</a></p>
+<p>这是它的github页面： <a target="_blank" rel="noopener" href="https://github.com/gongchen618/HUST-MT-Helper">HUST-MT-Helper</a></p>
 <p>在尝试安装并使用之后，我发现并不能正常使用，主要原因是<strong>华中科技大学出版社的官网更新了，原有的域名和内容编排都发生了变化</strong>，于是我就开始尝试自己将其中的js代码进行改写。</p>
 <p>具体改写过程在这里不再赘述，但是想要在这里记录一下自己所遇到的几个问题，以及学到的几个知识。</p>
           <!--noindex-->
