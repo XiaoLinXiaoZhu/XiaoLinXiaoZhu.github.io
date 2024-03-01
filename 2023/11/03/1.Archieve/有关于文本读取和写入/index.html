@@ -18,12 +18,18 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="C++ 通过流式输入输出读取，代码如下：12345678#include<fstream>using namespace std;ifstream in(&quot;input.txt&quot;);ofstream out(&quot;output.txt&quot;);in>>……;out<<……;in.close();out.close(); //关闭文档">
+    <meta name="description" content="#
+ C++
+ 通过流式输入输出读取，代码如下：
+ 12345678#include<fstream>using namespace std;ifstream in(&quot;input.txt&quot;);ofstream out(&quot;output.txt&quot;);in>>……;out<<……;in.close();out.close();">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有关于文本读取和写入">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/03/1.Archieve/%E6%9C%89%E5%85%B3%E4%BA%8E%E6%96%87%E6%9C%AC%E8%AF%BB%E5%8F%96%E5%92%8C%E5%86%99%E5%85%A5/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="C++ 通过流式输入输出读取，代码如下：12345678#include<fstream>using namespace std;ifstream in(&quot;input.txt&quot;);ofstream out(&quot;output.txt&quot;);in>>……;out<<……;in.close();out.close(); //关闭文档">
+<meta property="og:description" content="#
+ C++
+ 通过流式输入输出读取，代码如下：
+ 12345678#include<fstream>using namespace std;ifstream in(&quot;input.txt&quot;);ofstream out(&quot;output.txt&quot;);in>>……;out<<……;in.close();out.close();">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-03T13:23:07.000Z">
 <meta property="article:modified_time" content="2023-12-07T10:14:56.014Z">
@@ -138,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%B5%81%E5%BC%8F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%BB%E5%8F%96%EF%BC%8C%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">通过流式输入输出读取，代码如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-eof-%E6%9D%A5%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%88%B0%E8%BE%BE%E6%96%87%E6%9C%AC%E7%BB%93%E5%B0%BE%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">通过.eof()来判断是否到达文本结尾。</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E6%B5%81%E5%BC%8F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%BB%E5%8F%96%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">1.</span> <span class="nav-text">通过流式输入输出读取，代码如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E8%BF%87.eof%E6%9D%A5%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%88%B0%E8%BE%BE%E6%96%87%E6%9C%AC%E7%BB%93%E5%B0%BE"><span class="nav-number">2.</span> <span class="nav-text">通过.eof()来判断是否到达文本结尾。</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -286,7 +292,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>92</span>
+      <span>364</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -303,11 +309,14 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/C++/" rel="contents" data-pjax-state="">C++</a></p>
-<h3 id="通过流式输入输出读取，代码如下："><a href="#通过流式输入输出读取，代码如下：" class="headerlink" title="通过流式输入输出读取，代码如下："></a>通过流式输入输出读取，代码如下：</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"input.txt"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"output.txt"</span>)</span></span>;</span><br><span class="line">in&gt;&gt;……;</span><br><span class="line">out&lt;&lt;……;</span><br><span class="line">in.<span class="built_in">close</span>();</span><br><span class="line">out.<span class="built_in">close</span>(); <span class="comment">//关闭文档以保存</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="通过-eof-来判断是否到达文本结尾。"><a href="#通过-eof-来判断是否到达文本结尾。" class="headerlink" title="通过.eof()来判断是否到达文本结尾。"></a>通过.eof()来判断是否到达文本结尾。</h3><p>  返回值为bool，结合循环使用：</p>
+    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/C++/" rel="tag" data-pjax-state="">#
+C++</a></p>
+<h3 id="通过流式输入输出读取代码如下">通过流式输入输出读取，代码如下：</h3>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function">ifstream <span class="title">in</span><span class="params">(<span class="string">"input.txt"</span>)</span></span>;</span><br><span class="line"><span class="function">ofstream <span class="title">out</span><span class="params">(<span class="string">"output.txt"</span>)</span></span>;</span><br><span class="line">in&gt;&gt;……;</span><br><span class="line">out&lt;&lt;……;</span><br><span class="line">in.<span class="built_in">close</span>();</span><br><span class="line">out.<span class="built_in">close</span>(); <span class="comment">//关闭文档以保存</span></span><br></pre></td></tr></tbody></table></figure>
+<h3 id="通过.eof来判断是否到达文本结尾">通过.eof()来判断是否到达文本结尾。</h3>
+<p>  返回值为bool，结合循环使用：</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (!ifs.<span class="built_in">eof</span>()) {</span><br><span class="line">	ifs.<span class="built_in">get</span>(ch);</span><br><span class="line">	std::cout &lt;&lt; ch;</span><br><span class="line">	ch = <span class="string">' '</span>;				<span class="comment">//这句话可以避免最后一个字符重复被读取</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
     </div>
 
     

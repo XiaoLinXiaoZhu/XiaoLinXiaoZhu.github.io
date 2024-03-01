@@ -229,7 +229,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>600</span>
+      <span>2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -247,23 +247,39 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/C++/" rel="contents" data-pjax-state="">C++</a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>字符串操作是各种算法题中的常客，很多数据常常以字符串形式给出，其中有的需要自己转化成整数，而一些整型数据有时转换成字符串处理起来更加方便，比如判断一个整数是否是回文数，所以字符串和整数的转换是一些问题处理的基础步骤，C++ 在处理这类问题时并不像 Python 那样方便，但是也有许多方法能够实现，为了今后查找方便，整理如下。</p>
-<h1 id="int-转-string"><a href="#int-转-string" class="headerlink" title="int 转 string"></a>int 转 string</h1><h2 id="通过-std-to-string-函数转换"><a href="#通过-std-to-string-函数转换" class="headerlink" title="通过 std::to_string() 函数转换"></a>通过 std::to_string() 函数转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::cout &lt;&lt; std::<span class="built_in">to_string</span>(num);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">这种方式在 C++<span class="number">11</span> 中才能使用，编译时记得加上 --std=c++<span class="number">11</span> 的选项</span><br><span class="line"></span><br><span class="line">## 通过 ostringstream 转换</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::ostringstream ss;</span><br><span class="line">    ss &lt;&lt; num;</span><br><span class="line">    std::cout &lt;&lt; ss.<span class="built_in">str</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
+          <p><a class="btn" href="tags/C++/" rel="tag" data-pjax-state="">#
+C++</a></p>
+<h1 id="前言">前言</h1>
+<p>字符串操作是各种算法题中的常客，很多数据常常以字符串形式给出，其中有的需要自己转化成整数，而一些整型数据有时转换成字符串处理起来更加方便，比如判断一个整数是否是回文数，所以字符串和整数的转换是一些问题处理的基础步骤，C++
+在处理这类问题时并不像 Python
+那样方便，但是也有许多方法能够实现，为了今后查找方便，整理如下。</p>
+<h1 id="int-转-string">int 转 string</h1>
+<h2 id="通过-stdto_string-函数转换">通过 std::to_string() 函数转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::cout &lt;&lt; std::<span class="built_in">to_string</span>(num);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">这种方式在 C++<span class="number">11</span> 中才能使用，编译时记得加上 --std=c++<span class="number">11</span> 的选项</span><br><span class="line"></span><br><span class="line">## 通过 ostringstream 转换</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::ostringstream ss;</span><br><span class="line">    ss &lt;&lt; num;</span><br><span class="line">    std::cout &lt;&lt; ss.<span class="built_in">str</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>这是一种通过字符流的方式将整数转换成字符串，这种方式在C++11之前也可以使用</p>
-<h2 id="通过-sprintf-转换"><a href="#通过-sprintf-转换" class="headerlink" title="通过 sprintf 转换"></a>通过 sprintf 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(buffer, <span class="string">"%d"</span>, num);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, buffer);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这是一种C语言中的转换方式，sprintf 也可以换成更安全的 snprintf 函数</p>
-<h1 id="string-转-int"><a href="#string-转-int" class="headerlink" title="string 转 int"></a>string 转 int</h1><h2 id="通过-istringstream-转换"><a href="#通过-istringstream-转换" class="headerlink" title="通过 istringstream 转换"></a>通过 istringstream 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">std::istringstream <span class="title">ss</span><span class="params">(str)</span></span>;</span><br><span class="line">    ss &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<p>使用 istringstream 可以从字符流中读取整数，与 ostringstream 是一种相反的操作</p>
-<h2 id="使用-sscanf-来转化"><a href="#使用-sscanf-来转化" class="headerlink" title="使用 sscanf 来转化"></a>使用 sscanf 来转化</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sscanf</span>(str.<span class="built_in">c_str</span>(), <span class="string">"%d"</span>, &amp;num);</span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>注意 sscanf 函数的第一个参数类型是 const char *，string类型的参数需要转换一下</p>
-<h2 id="使用-atoi-转换"><a href="#使用-atoi-转换" class="headerlink" title="使用 atoi 转换"></a>使用 atoi 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">atoi</span>(str.<span class="built_in">c_str</span>());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="通过-sprintf-转换">通过 sprintf 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(buffer, <span class="string">"%d"</span>, num);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, buffer);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这是一种C语言中的转换方式，sprintf 也可以换成更安全的 snprintf
+函数</p>
+<h1 id="string-转-int">string 转 int</h1>
+<h2 id="通过-istringstream-转换">通过 istringstream 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">std::istringstream <span class="title">ss</span><span class="params">(str)</span></span>;</span><br><span class="line">    ss &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>使用 istringstream 可以从字符流中读取整数，与 ostringstream
+是一种相反的操作</p>
+<h2 id="使用-sscanf-来转化">使用 sscanf 来转化</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sscanf</span>(str.<span class="built_in">c_str</span>(), <span class="string">"%d"</span>, &amp;num);</span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>注意 sscanf 函数的第一个参数类型是 const char
+*，string类型的参数需要转换一下</p>
+<h2 id="使用-atoi-转换">使用 atoi 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">atoi</span>(str.<span class="built_in">c_str</span>());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 <p>atoi 函数的头文件是 stdlib.h，同样是一个C语言中的函数</p>
-<h2 id="使用方法stod"><a href="#使用方法stod" class="headerlink" title="使用方法stod"></a>使用方法stod</h2><p>该方法在C++11中被支持，十分地方便，但是需要确保给定的string是否可以转化为double，不然会抛出错误。</p>
-<p>总结<br>itoa 不是c语言标准函数，在跨平台的整数转字符串的代码中不要使用这个函数<br>atoi 是一个标准函数，需要将它和 itoa 区别开来，这一点很容易记混的<br>如果是在C++环境中进行转换，推荐使用 stringstream 字符流的形式和 to_string 函数</p>
+<h2 id="使用方法stod">使用方法stod</h2>
+<p>该方法在C++11中被支持，十分地方便，但是需要确保给定的string是否可以转化为double，不然会抛出错误。</p>
+<p>总结 itoa
+不是c语言标准函数，在跨平台的整数转字符串的代码中不要使用这个函数 atoi
+是一个标准函数，需要将它和 itoa 区别开来，这一点很容易记混的
+如果是在C++环境中进行转换，推荐使用 stringstream 字符流的形式和
+to_string 函数</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
@@ -337,7 +353,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>121</span>
+      <span>261</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -355,10 +371,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/C++/" rel="contents" data-pjax-state="">C++</a> </p>
-<h1 id="C-：string的运用和相关方法"><a href="#C-：string的运用和相关方法" class="headerlink" title="C++：string的运用和相关方法"></a>C++：string的运用和相关方法</h1><h2 id="一、删除std-string或std-wstring的最后一个字符："><a href="#一、删除std-string或std-wstring的最后一个字符：" class="headerlink" title="一、删除std::string或std::wstring的最后一个字符："></a>一、删除std::string或std::wstring的最后一个字符：</h2><h3 id="s-pop-back"><a href="#s-pop-back" class="headerlink" title="s.pop_back();"></a>s.pop_back();</h3><p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
-<h3 id="s-erase-s-end-1"><a href="#s-erase-s-end-1" class="headerlink" title="s.erase(s.end()-1);"></a>s.erase(s.end()-1);</h3><p>  删除s的最后一个字符</p>
-<h3 id="s-s-substr-0-s-length-1"><a href="#s-s-substr-0-s-length-1" class="headerlink" title="s=s.substr(0,s.length()-1);"></a>s=s.substr(0,s.length()-1);</h3><p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
+          <p>[[___C++]]</p>
+<h1 id="cstring的运用和相关方法">C++：string的运用和相关方法</h1>
+<h2 id="一删除stdstring或stdwstring的最后一个字符">一、删除std::string或std::wstring的最后一个字符：</h2>
+<h3 id="s.pop_back">s.pop_back();</h3>
+<p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
+<h3 id="s.erases.end-1">s.erase(s.end()-1);</h3>
+<p>  删除s的最后一个字符</p>
+<h3 id="ss.substr0s.length-1">s=s.substr(0,s.length()-1);</h3>
+<p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
@@ -432,7 +453,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>5.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -450,8 +471,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/C++/" rel="contents" data-pjax-state="">C++</a><br><a class="btn" href="tags/未完成/" rel="contents" data-pjax-state="">未完成</a> </p>
-<h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>  运算符的重载，实际是一种特殊的函数重载，必须定义一个函数，并告诉C++编译器，当遇到该运算符时就调用此函数来行使运算符功能。这个函数叫做运算符重载函数（常为类的成员函数）。<br>  用函数的方式实现了（+ - * / []数组 &amp;&amp; || 逻辑 等）运算符的重载。根据需求决定重载那些运算符，用到的时候再百度案例即可。</p>
+          <p><a class="btn" href="tags/C++/" rel="tag" data-pjax-state="">#
+C++</a>[[___未完成]]</p>
+<h3 id="概念">1.概念</h3>
+<p>  运算符的重载，实际是一种特殊的函数重载，必须定义一个函数，并告诉C++编译器，当遇到该运算符时就调用此函数来行使运算符功能。这个函数叫做运算符重载函数（常为类的成员函数）。<br>
+  用函数的方式实现了（+ - * / []数组 &amp;&amp; || 逻辑
+等）运算符的重载。根据需求决定重载那些运算符，用到的时候再百度案例即可。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#more" rel="contents">
@@ -531,14 +556,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -549,17 +574,40 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/未完成/" rel="contents" data-pjax-state="">未完成</a></p>
-<h2 id="01背包问题详解"><a href="#01背包问题详解" class="headerlink" title="01背包问题详解"></a>01背包问题详解</h2><p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>01背包问题可描述为如下问题：<br>有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。<br>问：如何向背包装物体才能使背包中物体的总价值最大？</p>
-<h2 id="为什么不用贪心？"><a href="#为什么不用贪心？" class="headerlink" title="为什么不用贪心？"></a>为什么不用贪心？</h2><p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。<br>为什么这个问题不能用贪心呢？<br>举个例子<br>我的背包容量为10，而且有4个物体，它们的体积和价值分别为<br>w1 = 8, v1 = 9<br>w2 = 3, v2 = 3<br>w3 = 4, v3 = 4<br>w4 = 3, v4 = 3<br>贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体<br>c1 = v1/w1 = 1.125（最大）<br>c2 = v2/w2 = 1<br>c3 = v3/w3 = 1<br>c4 = v4/w4 = 1<br>所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。<br>但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！<br>所以这个问题不可以用贪心法来处理。</p>
-<h2 id="原始的-01背包"><a href="#原始的-01背包" class="headerlink" title="原始的 01背包"></a>原始的 01背包</h2><p>01背包的状态转移方程为<br>`f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]] + v[j])</p>
-<p>i代表对i件物体做决策，有两种方式—放入背包和不放入背包。<br>j表示当前背包剩余的容量。</p>
-<p>转移方程的解释：<br>创建一个状态矩阵f，横坐标 i 是物体编号，纵坐标 j 为背包容量。<br>首先将 f 第0行和第0列初始化为0 （代码里面将整个f初始化为0了，其实只初始化第0行和第0列就够了）。这个表示不放物体时最大价值为0 。（物体编号从1开始）<br>接下来依次遍历f的每一行。如下所示。</p>
+          <p><a class="btn" href="tags/未完成/" rel="tag" data-pjax-state="">#
+未完成</a></p>
+<h2 id="背包问题详解">01背包问题详解</h2>
+<p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
+<h2 id="问题描述">问题描述</h2>
+<p>01背包问题可描述为如下问题：
+有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。
+问：如何向背包装物体才能使背包中物体的总价值最大？</p>
+<h2 id="为什么不用贪心">为什么不用贪心？</h2>
+<p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。
+为什么这个问题不能用贪心呢？ 举个例子
+我的背包容量为10，而且有4个物体，它们的体积和价值分别为<br>
+w1 = 8, v1 = 9 w2 = 3, v2 = 3 w3 = 4, v3 = 4 w4 = 3, v4 = 3
+贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体<br>
+c1 = v1/w1 = 1.125（最大） c2 = v2/w2 = 1 c3 = v3/w3 = 1 c4 = v4/w4 = 1
+所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。
+但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！
+所以这个问题不可以用贪心法来处理。</p>
+<h2 id="原始的-01背包">原始的 01背包</h2>
+<p>01背包的状态转移方程为 `f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]]
++ v[j])</p>
+<p>i代表对i件物体做决策，有两种方式—放入背包和不放入背包。
+j表示当前背包剩余的容量。</p>
+<p>转移方程的解释： 创建一个状态矩阵f，横坐标 i 是物体编号，纵坐标 j
+为背包容量。 首先将 f 第0行和第0列初始化为0
+（代码里面将整个f初始化为0了，其实只初始化第0行和第0列就够了）。这个表示不放物体时最大价值为0
+。（物体编号从1开始） 接下来依次遍历f的每一行。如下所示。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">{</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (j &gt;= w[i])<span class="comment">//如果背包装得下当前的物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//如果背包装不下当前物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果背包装得下当前的物体，在遍历过程中分别计算第i件物体放入和不放入背包的价值，取其中大的做为当前的最大价值。<br>如果背包装不下当前物体那么第i个物体只有不放入背包一种选择。</p>
-<p>不放入背包时:第i次决策后的最大价值和第i-1次决策时候的价值是一样的（还是原来的那些物体，没多没少）。<br>放入背包时:第i次决策后的价值为 第i-1次决策时候的价值 加上 当前物体的价值v[j]。物体放入背包后会使背包容量变为 j ，即没放物体之前背包的容量为j - w[i]。</p>
+<p>如果背包装得下当前的物体，在遍历过程中分别计算第i件物体放入和不放入背包的价值，取其中大的做为当前的最大价值。
+如果背包装不下当前物体那么第i个物体只有不放入背包一种选择。</p>
+<p>不放入背包时:第i次决策后的最大价值和第i-1次决策时候的价值是一样的（还是原来的那些物体，没多没少）。
+放入背包时:第i次决策后的价值为 第i-1次决策时候的价值 加上
+当前物体的价值v[j]。物体放入背包后会使背包容量变为 j
+，即没放物体之前背包的容量为j - w[i]。</p>
 <figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> max(N1,N2) N1&gt;N2?N1:N2</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	第一行输入背包容量V和物体的个数n</span></span><br><span class="line"><span class="comment">	接下来有n行，每行包含两个数字，分别为该物体的花费和价值</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; w, v;<span class="comment">//w为花费，v为价值</span></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; f;<span class="comment">//f状态矩阵</span></span><br><span class="line">	<span class="type">int</span> V, n;<span class="comment">//V背包容量，n物体数</span></span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; V &gt;&gt; n)</span><br><span class="line">	{</span><br><span class="line">		w.<span class="built_in">clear</span>();</span><br><span class="line">		v.<span class="built_in">clear</span>();</span><br><span class="line">		f.<span class="built_in">clear</span>();</span><br><span class="line">		w.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		v.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输入原始数据</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="type">int</span> cur_w, cur_v;</span><br><span class="line">			cin &gt;&gt; cur_w &gt;&gt; cur_v;</span><br><span class="line">			w.<span class="built_in">push_back</span>(cur_w);</span><br><span class="line">			v.<span class="built_in">push_back</span>(cur_v);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//初始化状态矩阵</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">buff</span><span class="params">(V + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">			f.<span class="built_in">push_back</span>(buff);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//动态规划过程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">			{</span><br><span class="line">				<span class="keyword">if</span> (j &gt;= w[i])</span><br><span class="line">				{</span><br><span class="line">					f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">				}</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				{</span><br><span class="line">					f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="type">int</span> ans = f[n][V];</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -640,14 +688,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -658,14 +706,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/杂谈/" rel="contents" data-pjax-state="">杂谈</a> <a class="btn" href="tags/键盘/" rel="contents" data-pjax-state="">键盘</a></p>
-<blockquote>
-<p>今天是我初次选购机械键盘，有一说一就算是选择了茶轴，结果还是很吵……</p>
-<p>总的来说到手的键盘我很满意，手感、做工、rgb灯效都很棒</p>
-<p>但是就是有一个问题，那就是这个空格的手感相较于其他的按键来说，会有点过于拉跨，就是也不是说会发生晃动什么的，就是这个手感要比其他的按钮要烂一点，尤其是它的回弹，每次一按下去我都感觉是在按一个又沉又厚重的东西……</p>
-<p>其实也不是很难得出它这个样子的原因，实际上空格键因为加上了卫星轴的设计，加上本身的重量比较大，所以说会导致这样的问题。</p>
-<p>可能比较好的办法就是换一个弹簧？反正这件事情暂时没有解决。</p>
-</blockquote>
+          <p><a class="btn" href="tags/杂谈]] [[___键盘/" rel="tag" data-pjax-state="">#
+杂谈]] [[___键盘</a>
+&gt;今天是我初次选购机械键盘，有一说一就算是选择了茶轴，结果还是很吵……
+&gt; &gt;总的来说到手的键盘我很满意，手感、做工、rgb灯效都很棒 &gt;
+&gt;但是就是有一个问题，那就是这个空格的手感相较于其他的按键来说，会有点过于拉跨，就是也不是说会发生晃动什么的，就是这个手感要比其他的按钮要烂一点，尤其是它的回弹，每次一按下去我都感觉是在按一个又沉又厚重的东西……
+&gt;
+&gt;其实也不是很难得出它这个样子的原因，实际上空格键因为加上了卫星轴的设计，加上本身的重量比较大，所以说会导致这样的问题。
+&gt; &gt;可能比较好的办法就是换一个弹簧？反正这件事情暂时没有解决。</p>
 <p><strong>接下来，我来总结一下这次购买的经验。</strong></p>
           <!--noindex-->
             <div class="post-button">
@@ -740,7 +788,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>48</span>
+      <span>71</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -758,9 +806,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/游戏设计/" rel="contents" data-pjax-state="">游戏设计</a></p>
-<h2 id="灵感来源"><a href="#灵感来源" class="headerlink" title="灵感来源"></a>灵感来源</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11w411W7ZQ/">盘点那些专属于中国人的安全感_哔哩哔哩_bilibili</a></p>
-<h2 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h2><p>即时性，策略性。</p>
+          <p><a class="btn" href="tags/游戏设计/" rel="tag" data-pjax-state="">#
+游戏设计</a> ## 灵感来源 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11w411W7ZQ/">盘点那些专属于中国人的安全感_哔哩哔哩_bilibili</a></p>
+<h2 id="我的想法">我的想法</h2>
+<p>即时性，策略性。</p>
 <p>只能说灵感来源于生活。</p>
           <!--noindex-->
             <div class="post-button">
@@ -841,7 +890,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>12</span>
+      <span>52</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -859,8 +908,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/数学建模题目/" rel="contents" data-pjax-state="">数学建模题目</a></p>
-<p><img src="https://s1.imagehub.cc/images/2023/12/05/b82d1a248d6642d01fb0acfa1f932a46.png" alt="b82d1a248d6642d01fb0acfa1f932a46.png"></p>
+          <p><a class="btn" href="tags/数学建模题目/" rel="tag" data-pjax-state="">#
+数学建模题目</a></p>
+<figure>
+<img src="https://s1.imagehub.cc/images/2023/12/05/b82d1a248d6642d01fb0acfa1f932a46.png" alt="b82d1a248d6642d01fb0acfa1f932a46.png">
+<figcaption aria-hidden="true">b82d1a248d6642d01fb0acfa1f932a46.png</figcaption>
+</figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/05/2.Reference/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%BD%E8%B5%9B/2023-B%E9%A2%98/#more" rel="contents">
@@ -940,14 +993,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>559</span>
+      <span>824</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -958,21 +1011,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a class="btn" href="tags/数学建模/" rel="contents" data-pjax-state="">数学建模</a></p>
-<h2 id="一、题目描述"><a href="#一、题目描述" class="headerlink" title="一、题目描述"></a>一、题目描述</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 国赛2023-B题</span><br><span class="line">![[2023-B题]]</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="二、问题解决"><a href="#二、问题解决" class="headerlink" title="二、问题解决"></a>二、问题解决</h2><h3 id="1-前面两道问题"><a href="#1-前面两道问题" class="headerlink" title="1.前面两道问题"></a>1.前面两道问题</h3><p>其实就是纯数学问题</p>
-<p>总的来说不是特别难，只需要使用三角函数即可。</p>
-<h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><ul>
-<li>坡度 ：$\alpha$</li>
-<li>波束的覆盖宽度：W</li>
-<li>相邻两条带间重叠率：η</li>
-<li>换能器开角：θ</li>
-<li>水深：D</li>
-<li>相邻测线间距：d</li>
-<li>海底坡度：αη=1-dW</li>
-<li>（测线方向与海底坡面法向在水平面上投影的夹角β）</li>
-</ul>
+          <p><a class="btn" href="tags/数学建模/" rel="tag" data-pjax-state="">#
+数学建模</a> ## 一、题目描述</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 国赛2023-B题</span><br><span class="line">![[2023-B题]]</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="二问题解决">二、问题解决</h2>
+<h3 id="前面两道问题">1.前面两道问题</h3>
+<p>其实就是纯数学问题</p>
+<p>总的来说不是特别难，只需要使用三角函数即可。 #### 定义： - 坡度
+：<span class="math inline">\(\alpha\)</span> - 波束的覆盖宽度：W -
+相邻两条带间重叠率：η - 换能器开角：θ - 水深：D - 相邻测线间距：d -
+海底坡度：αη=1-dW - （测线方向与海底坡面法向在水平面上投影的夹角β）</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/05/1.Archieve/2023-12-3%E6%95%B0%E6%A8%A1%E8%AE%B2%E5%BA%A7%E8%AE%B0%E5%BD%95%EF%BC%88%E6%B5%B7%E5%BA%95%E6%B5%8B%E7%BA%BF%EF%BC%89/#more" rel="contents">
@@ -1052,7 +1100,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>94</span>
+      <span>126</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1071,9 +1119,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在任务的压力之下，你不得不选</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a class="btn" href="tags/游戏设计/" rel="contents" data-pjax-state="">游戏设计</a><br><a class="btn" href="tags/冰汽时代/" rel="contents" data-pjax-state="">冰汽时代</a><br><a class="btn" href="tags/未完成/" rel="contents" data-pjax-state="">未完成</a></p>
-<p>在冰汽时代中，你有的时候不得不选那种“负面的”政策。</p>
+<p><a class="btn" href="tags/游戏设计/" rel="tag" data-pjax-state="">#
+游戏设计</a><a class="btn" href="tags/冰汽时代/" rel="tag" data-pjax-state="">#
+冰汽时代</a><a class="btn" href="tags/未完成/" rel="tag" data-pjax-state="">#
+未完成</a> 在冰汽时代中，你有的时候不得不选那种“负面的”政策。</p>
 <p>在这种不得不接受的妥协之下……会激发玩家对于自己的批判。</p>
 <p>抱歉，对于这方面我还没有想清楚……下次再来写</p>
           <!--noindex-->
@@ -1149,14 +1198,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>610</span>
+      <span>707</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1168,23 +1217,27 @@
     
     <div class="post-body" itemprop="articleBody">
           <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">人性就是最复杂的决策问题</span><br></pre></td></tr></tbody></table></figure>
-
-<p><a class="btn" href="tags/冰汽时代/" rel="contents" data-pjax-state="">冰汽时代</a><br><a class="btn" href="tags/游戏设计/" rel="contents" data-pjax-state="">游戏设计</a></p>
-<h3 id="在冰汽时代-《帝国的边界》中"><a href="#在冰汽时代-《帝国的边界》中" class="headerlink" title="在冰汽时代-《帝国的边界》中"></a>在冰汽时代-《帝国的边界》中</h3><p>在游戏 冰汽时代-《帝国的边界》中 游戏需要让玩家和 <code>自己腐败的母城、温泉村、儿童矿井、废船</code> 这四个其他的定居点进行贸易，或者进行影响。</p>
-<h4 id="1-游戏中过于浅层的决策系统"><a href="#1-游戏中过于浅层的决策系统" class="headerlink" title="1.游戏中过于浅层的决策系统"></a>1.游戏中过于浅层的决策系统</h4><p>在游戏的后面，我发现整个系统根本就没有那么复杂：你跟他交换资源或者给予它帮助就可以增加互惠值，你只要向他们要求东西就会减低互惠值。</p>
+<p><a class="btn" href="tags/冰汽时代/" rel="tag" data-pjax-state="">#
+冰汽时代</a><a class="btn" href="tags/游戏设计/" rel="tag" data-pjax-state="">#
+游戏设计</a> ### 在冰汽时代-《帝国的边界》中</p>
+<p>在游戏 冰汽时代-《帝国的边界》中 游戏需要让玩家和
+<code>自己腐败的母城、温泉村、儿童矿井、废船</code>
+这四个其他的定居点进行贸易，或者进行影响。</p>
+<h4 id="游戏中过于浅层的决策系统">1.游戏中过于浅层的决策系统</h4>
+<p>在游戏的后面，我发现整个系统根本就没有那么复杂：你跟他交换资源或者给予它帮助就可以增加互惠值，你只要向他们要求东西就会减低互惠值。</p>
 <p>……互惠值其实就像是你能从他那里拿的资源的限额，其实根本不会影响之间的关系。</p>
-<p>而你们之间还有一一个关系的值，则是由特殊事件决定的。比如说温泉村因为开发水泵把间歇泉搞爆发了，导致了温泉村的损失……然后你就选一个怪温泉还是怪自己。</p>
-<ul>
-<li>选择怪自己：自己居民的不满值增加，你和温泉村的关系变好</li>
-<li>选择怪泉水：自己居民的不满值会上升，你和温泉村的关系会变差。</li>
-</ul>
+<p>而你们之间还有一一个关系的值，则是由特殊事件决定的。比如说温泉村因为开发水泵把间歇泉搞爆发了，导致了温泉村的损失……然后你就选一个怪温泉还是怪自己。
+- 选择怪自己：自己居民的不满值增加，你和温泉村的关系变好 -
+选择怪泉水：自己居民的不满值会上升，你和温泉村的关系会变差。</p>
 <p>就是这样的一个简单的决策，实际上这个选择对后面就没有别的影响了。我当时还以为这个水泵是关键决策……</p>
 <p>说实话，这个决策的设计水平的前后关联度和其他的一系列东西，感觉都不如gal设计的复杂。</p>
-<h4 id="2-如果给他们赋予复杂的人性……"><a href="#2-如果给他们赋予复杂的人性……" class="headerlink" title="2.如果给他们赋予复杂的人性……"></a>2.如果给他们赋予复杂的人性……</h4><p>如果给他们赋予复杂的人性，增加你们之间的相互影响程度，游戏可以变得更加有意思。</p>
+<h4 id="如果给他们赋予复杂的人性">2.如果给他们赋予复杂的人性……</h4>
+<p>如果给他们赋予复杂的人性，增加你们之间的相互影响程度，游戏可以变得更加有意思。</p>
 <p>是选择背叛欺骗最大化自己的利益，还是合作共赢？在这样艰苦的环境之中，我们无法不以最大的恶意来揣测对方的心理。</p>
-<p>你需要花费事件了解对方，试探对方的底线……<br>对方也会试探你的底线……</p>
+<p>你需要花费事件了解对方，试探对方的底线…… 对方也会试探你的底线……</p>
 <p>如果能够这样，那么游戏将会变得十分有意思……</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">总的来说，帝国的边界很有创意地加入了外交系统</span><br><span class="line"></span><br><span class="line">但是整个外交系统构建得又过于简单了，如果能够复杂一点，那么整个游戏的可玩度将会大大提升。</span><br></pre></td></tr></tbody></table></figure>
+
       
     </div>
 
