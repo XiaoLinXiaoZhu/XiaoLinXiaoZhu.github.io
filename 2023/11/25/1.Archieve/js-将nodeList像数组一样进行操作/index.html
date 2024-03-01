@@ -234,7 +234,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>486</span>
+      <span>123</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -251,7 +251,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="tags/JS/" rel="contents" data-pjax-state=""># JS</a><br>因为divs是nodeList而不是array<br><strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;</p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/JS/" rel="contents" data-pjax-state=""># JS</a><br>因为divs是nodeList而不是array<br><strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(divs instanceof Array);; //false</span><br><span class="line">console.log(divs instanceof NodeList);//true</span><br></pre></td></tr></tbody></table></figure>
 <p>要想把nodeList像数组一样操作，得先把divs转换为array；</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var divsArray = Array.prototype.slice.call(divs,0);</span><br></pre></td></tr></tbody></table></figure>
