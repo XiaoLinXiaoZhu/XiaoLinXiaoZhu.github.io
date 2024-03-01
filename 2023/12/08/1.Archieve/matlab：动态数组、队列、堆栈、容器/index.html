@@ -18,16 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___matlab]]
- 
- 一直以为matlab中没有动态数组，或者类似C++的vector容器的数据结构。其实不然，matlab的数组就是一个动态数组，它可以当作vector，或者队列等数据结构使用。">
+    <meta name="description" content="[[___matlab]]  一直以为matlab中没有动态数组，或者类似C++的vector容器的数据结构。其实不然，matlab的数组就是一个动态数组，它可以当作vector，或者队列等数据结构使用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="matlab：动态数组、队列、堆栈、容器">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/matlab%EF%BC%9A%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84%E3%80%81%E9%98%9F%E5%88%97%E3%80%81%E5%A0%86%E6%A0%88%E3%80%81%E5%AE%B9%E5%99%A8/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___matlab]]
- 
- 一直以为matlab中没有动态数组，或者类似C++的vector容器的数据结构。其实不然，matlab的数组就是一个动态数组，它可以当作vector，或者队列等数据结构使用。">
+<meta property="og:description" content="[[___matlab]]  一直以为matlab中没有动态数组，或者类似C++的vector容器的数据结构。其实不然，matlab的数组就是一个动态数组，它可以当作vector，或者队列等数据结构使用。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-07T23:49:00.000Z">
 <meta property="article:modified_time" content="2023-12-07T23:52:29.992Z">
@@ -141,7 +137,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -283,7 +279,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>243</span>
+      <span>652</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -306,16 +302,12 @@
 </blockquote>
 <span id="more"></span>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array = 1:10;</span><br><span class="line">array =1     2     3     4     5     6     7     8     9    10</span><br><span class="line">array(1) = [];</span><br><span class="line">array =2     3     4     5     6     7     8     9    10</span><br><span class="line">array(end) = [];</span><br><span class="line">array =2     3     4     5     6     7     8     9</span><br><span class="line">array(end+1) = 10;</span><br><span class="line">array =2     3     4     5     6     7     8     9    10</span><br></pre></td></tr></tbody></table></figure>
-<p>上面的例子可以看出，只要令数组的某一个元素为[]，就相当于删除了数组中该元素。array(1)
-= [] 这条语句，就类似于队列的pop()操作，array(end) = []
-相当于堆栈的pop()操作，而array(end+1)&nbsp; = 10 就相当于push()操作。</p>
+<p>上面的例子可以看出，只要令数组的某一个元素为[]，就相当于删除了数组中该元素。array(1) = [] 这条语句，就类似于队列的pop()操作，array(end) = [] 相当于堆栈的pop()操作，而array(end+1)  = 10 就相当于push()操作。</p>
 <p>2. 数组的一些操作技巧</p>
 <p>2.1 在数组中找到某个特定元素的索引</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [1 2 3 3 4 5];</span><br><span class="line">i = find(a==3)</span><br><span class="line">i =</span><br><span class="line">	2     3</span><br></pre></td></tr></tbody></table></figure>
 <hr>
-<h3 id="reference">Reference</h3>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tyl532667325/article/details/98473750">matlab动态数组、队列、堆栈、容器_matlab
-堆栈-CSDN博客</a></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tyl532667325/article/details/98473750">matlab动态数组、队列、堆栈、容器_matlab 堆栈-CSDN博客</a></p>
 
     </div>
 
