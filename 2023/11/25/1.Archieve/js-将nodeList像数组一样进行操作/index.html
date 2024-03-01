@@ -18,20 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# JS
- 因为divs是nodeList而不是array
- nodeList是只读的，反映的是文档节点的实时结构;
- 12console.log(divs instanceof Array);; //falseconsole.log(divs instanceof NodeList);//true 要想把nodeList像数组一样操作，得先把divs转换为array；
- 12var divsAr">
+    <meta name="description" content="# JS 因为divs是nodeList而不是arraynodeList是只读的，反映的是文档节点的实时结构; 12console.log(divs instanceof Array);; //falseconsole.log(divs instanceof NodeList);//true 要想把nodeList像数组一样操作，得先把divs转换为array； 12var divsArray =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="将nodeList像数组一样进行操作">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/25/1.Archieve/js-%E5%B0%86nodeList%E5%83%8F%E6%95%B0%E7%BB%84%E4%B8%80%E6%A0%B7%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# JS
- 因为divs是nodeList而不是array
- nodeList是只读的，反映的是文档节点的实时结构;
- 12console.log(divs instanceof Array);; //falseconsole.log(divs instanceof NodeList);//true 要想把nodeList像数组一样操作，得先把divs转换为array；
- 12var divsAr">
+<meta property="og:description" content="# JS 因为divs是nodeList而不是arraynodeList是只读的，反映的是文档节点的实时结构; 12console.log(divs instanceof Array);; //falseconsole.log(divs instanceof NodeList);//true 要想把nodeList像数组一样操作，得先把divs转换为array； 12var divsArray =">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-25T12:43:00.000Z">
 <meta property="article:modified_time" content="2023-11-25T14:05:42.088Z">
@@ -242,7 +234,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>123</span>
+      <span>487</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -259,14 +251,16 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/JS/" rel="contents" data-pjax-state=""># JS</a>
-因为divs是nodeList而不是array
-<strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;
-</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(divs instanceof Array);; //false</span><br><span class="line">console.log(divs instanceof NodeList);//true</span><br></pre></td></tr></tbody></table></figure> 要想把nodeList像数组一样操作，得先把divs转换为array；
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var divsArray = Array.prototype.slice.call(divs,0);</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>然后，交换“位置”，注意，<strong>这只是交换两个节点对象在数组中的位置，而不是在DOM中的位置</strong>；
-</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log("before:",divsArray);//[div#test, div#test2] </span><br><span class="line">var temp = divsArray[0];</span><br><span class="line">divsArray[0] = divsArray[1];</span><br><span class="line">divsArray[1] = temp;</span><br><span class="line">console.log("after:",divsArray);//[div#test2, div#test] </span><br></pre></td></tr></tbody></table></figure><p></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/JS/" rel="contents" data-pjax-state=""># JS</a> <br>因为divs是nodeList而不是array<br><strong>nodeList是只读的，反映的是文档节点的实时结构</strong>;</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(divs instanceof Array);; //false</span><br><span class="line">console.log(divs instanceof NodeList);//true</span><br></pre></td></tr></tbody></table></figure>
+<p>要想把nodeList像数组一样操作，得先把divs转换为array；</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var divsArray = Array.prototype.slice.call(divs,0);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>然后，交换“位置”，注意，<strong>这只是交换两个节点对象在数组中的位置，而不是在DOM中的位置</strong>；</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log("before:",divsArray);//[div#test, div#test2] </span><br><span class="line">var temp = divsArray[0];</span><br><span class="line">divsArray[0] = divsArray[1];</span><br><span class="line">divsArray[1] = temp;</span><br><span class="line">console.log("after:",divsArray);//[div#test2, div#test] </span><br></pre></td></tr></tbody></table></figure>
+
 <span id="more"></span>
+
 <hr>
 
     </div>
