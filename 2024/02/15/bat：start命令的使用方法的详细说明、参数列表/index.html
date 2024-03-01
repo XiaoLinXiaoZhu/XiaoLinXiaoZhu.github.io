@@ -18,12 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___bat]] 1. start 命令的使用方法start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法： 1start [&quot;title&quot;] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /nor">
+    <meta name="description" content="bat 1. start 命令的使用方法start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法： 1start [&quot;title&quot;] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /normal | /">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bat：start命令的使用方法的详细说明、参数列表">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/02/15/bat%EF%BC%9Astart%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E3%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___bat]] 1. start 命令的使用方法start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法： 1start [&quot;title&quot;] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /nor">
+<meta property="og:description" content="bat 1. start 命令的使用方法start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法： 1start [&quot;title&quot;] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /normal | /">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-15T14:12:00.000Z">
 <meta property="article:modified_time" content="2024-02-15T14:14:38.794Z">
@@ -297,9 +297,10 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>[[___bat]]</p>
+    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/bat/" rel="contents" data-pjax-state="">bat</a></p>
 <h3 id="1-start-命令的使用方法"><a href="#1-start-命令的使用方法" class="headerlink" title="1. start 命令的使用方法"></a>1. start 命令的使用方法</h3><p>start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start ["title"] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /normal | /high | /realtime] [/wait] [/b] [command/program] [parameters]</span><br></pre></td></tr></tbody></table></figure>
+
 <p>其中，方括号表示可选参数。下面是各个参数的详细说明：</p>
 <ul>
 <li>“title”: 可选参数，指定窗口标题。</li>
@@ -317,32 +318,41 @@
 <li>启动记事本：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li>启动计算器：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start calc.exe</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li>启动 Internet Explorer：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start iexplore.exe "http://www.example.com"</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li>启动 Windows Media Player：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start wmplayer.exe "C:\Users\UserName\Music\Sample.mp3"</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li>启动命令提示符：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start cmd.exe</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li>启动 PowerShell：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start powershell.exe</span><br></pre></td></tr></tbody></table></figure>
+
 <p>除了启动应用程序外，start 命令还可以启动批处理文件。例如，可以创建一个名为 “test.bat” 的批处理文件，其中包含以下命令：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
+
 <p>然后在<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6&amp;spm=1001.2101.3001.7020">命令提示符</a>中执行以下命令来运行该批处理文件：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.bat</span><br></pre></td></tr></tbody></table></figure>
+
 <p>这将启动记事本程序。</p>
 <span id="more"></span>
+
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_47406832/article/details/130379434">【BAT】有关 Bat 中 start 命令的使用方法的详细说明、参数列表和示例_bat start-CSDN博客</a></p>
 

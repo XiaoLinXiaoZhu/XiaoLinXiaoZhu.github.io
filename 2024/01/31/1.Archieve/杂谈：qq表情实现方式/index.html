@@ -18,12 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___杂谈]] 背景最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。 hmmm然后就发现了一件比较有意思的事情">
+    <meta name="description" content="杂谈 背景最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。 hmmm然后就发现了一件比较有意思的事情">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杂谈：qq表情实现方式">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/01/31/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9Aqq%E8%A1%A8%E6%83%85%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___杂谈]] 背景最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。 hmmm然后就发现了一件比较有意思的事情">
+<meta property="og:description" content="杂谈 背景最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。 hmmm然后就发现了一件比较有意思的事情">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-31T15:21:00.000Z">
 <meta property="article:modified_time" content="2024-02-01T01:42:27.957Z">
@@ -302,14 +302,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>[[___杂谈]]</p>
+    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/杂谈/" rel="contents" data-pjax-state="">杂谈</a></p>
 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
 <p>hmmm然后就发现了一件比较有意思的事情</p>
 <span id="more"></span>
+
+
 <p>qq的表情的实现方式原理原来是两个个特殊的字符：<code>Ɗ</code><br>前者是一个控制字符，后者是特定序号对应的拉丁字母</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv27574558/">QQ隐藏表情代码？！ - 哔哩哔哩 (bilibili.com)</a></p>
 <p>\u0014\u18a，比如说这个 就是大龙</p>
-<h3 id="表情一览"><a href="#表情一览" class="headerlink" title="表情一览"></a>表情一览</h3><p>复制到qq里面即可正常显示<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~&nbsp;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊ</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="表情一览"><a href="#表情一览" class="headerlink" title="表情一览"></a>表情一览</h3><p>复制到qq里面即可正常显示  </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~&nbsp;¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłŃńŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞşŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſƀƁƂƃƄƅƆƇƈƉƊ</span><br></pre></td></tr></tbody></table></figure>
+
+
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

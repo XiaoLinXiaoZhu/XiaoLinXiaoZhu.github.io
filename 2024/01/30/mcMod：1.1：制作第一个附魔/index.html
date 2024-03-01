@@ -18,12 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[___mcmod]] 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod 首先肯定就是创建声明，使得我们的mod能够正常被挂载">
+    <meta name="description" content="mcmod 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod 首先肯定就是创建声明，使得我们的mod能够正常被挂载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mcMod：1.1：制作第一个附魔">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/01/30/mcMod%EF%BC%9A1.1%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%99%84%E9%AD%94/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[___mcmod]] 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod 首先肯定就是创建声明，使得我们的mod能够正常被挂载">
+<meta property="og:description" content="mcmod 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod 首先肯定就是创建声明，使得我们的mod能够正常被挂载">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s11.ax1x.com/2024/01/30/pFujTDH.png">
 <meta property="og:image" content="https://s11.ax1x.com/2024/01/30/pFujbVA.png">
@@ -301,7 +301,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>[[___mcmod]]</p>
+    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/mcmod/" rel="contents" data-pjax-state="">mcmod</a></p>
 <p>因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
 <p>首先肯定就是创建声明，使得我们的mod能够正常被挂载</p>
 <span id="more"></span>
@@ -323,12 +323,15 @@
 <p><img src="https://s11.ax1x.com/2024/01/30/pFujqUI.png" alt="pFujqUI.png"></p>
 <h4 id="4-更改资源文件夹名称"><a href="#4-更改资源文件夹名称" class="headerlink" title="4.更改资源文件夹名称"></a>4.更改资源文件夹名称</h4><p><img src="https://s11.ax1x.com/2024/01/30/pFKwYUf.png" alt="pFKwYUf.png"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">这里有一个十分大的大坑，报错如下：</span><br><span class="line">~~~</span><br><span class="line">net.minecraftforge.fml.common.LoaderException: java.lang.ClassNotFoundException: ClientProxy</span><br><span class="line">~~~</span><br><span class="line">`ClientProxy`出现异常</span><br><span class="line"></span><br><span class="line">出现这个问题的原因是编译器在执行refactor的时候，如果你勾选了`Compact middle Package`的话，对于`com.作者名称.mod`名称的重命名会出现异常。</span><br><span class="line"></span><br><span class="line">具体而言就是`src\main\java\com\作者名\模组ID\util`里面的`CLIENT_PROXY_CLASS`不能被正确重命名</span><br><span class="line"></span><br><span class="line">建议去除勾选再次重命名即可</span><br><span class="line"></span><br><span class="line">![pFKyZVA.png](https://s11.ax1x.com/2024/01/30/pFKyZVA.png)</span><br><span class="line"></span><br><span class="line">&gt; 这个bug在后续的idea中被修复，属于编译器bug</span><br><span class="line"></span><br><span class="line">具体可以参考这个：[湖面群日常·传统头衔二 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv17173344/)</span><br></pre></td></tr></tbody></table></figure>
+
+
 <h3 id="二、创建附魔"><a href="#二、创建附魔" class="headerlink" title="二、创建附魔"></a>二、创建附魔</h3><p>对着抄就可以了，对应的位置在：<br><code>IdeallandFramework-master\src\main\java\com\XLXZ\testmod\enchantments</code>  </p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//Example Enchant  </span><br><span class="line">//    public static final ModEnchantmentBase ANTI_VANILLA = new ModEnchantmentBase("testmod.anti_vanilla", Enchantment.Rarity.UNCOMMON, EnumEnchantmentType.WEAPON,  mainHand)  </span><br><span class="line">//            .setMaxLevel(10).setValue(0.3f, 0.3f);  </span><br><span class="line">  </span><br><span class="line">public static final ModEnchantmentBase test_Enchance = new ModEnchantmentBase("testmod.test_enchance", Enchantment.Rarity.UNCOMMON, EnumEnchantmentType.WEAPON,  mainHand);</span><br></pre></td></tr></tbody></table></figure>
+
 <ul>
 <li><code>Enchantment.Rarity.UNCOMMON</code>指的是稀有程度</li>
 <li><code>EnumEnchantmentType.WEAPON</code>指的是附魔类型</li>
-<li><code>mainHand</code>设置是主手还是副手效果  </li>
+<li><code>mainHand</code>设置是主手还是副手效果</li>
 </ul>
 <hr>
 <p>此处注意需要导入<code>EnumEnchantmentType</code>对应的头文件</p>
