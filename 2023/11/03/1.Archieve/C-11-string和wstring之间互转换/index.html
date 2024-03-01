@@ -285,7 +285,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>105</span>
+      <span>700</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -302,7 +302,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/C++/" rel="contents" data-pjax-state=""># C++</a></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="tags/C++/" rel="contents" data-pjax-state=""># C++</a></p>
 <p>C++11:string和wstring之间互转换</p>
 <p>今天打算做string到wstring转换时从哪里找来的，贴出代码，以防再忘记。C++11后UTF8编码转换还真是方便</p>
 <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;locale&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;codecvt&gt;</span></span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// convert string to wstring</span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::wstring <span class="title">to_wide_string</span><span class="params">(<span class="type">const</span> std::string&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">from_bytes</span>(input);</span><br><span class="line">	}</span><br><span class="line">	<span class="comment">// convert wstring to string </span></span><br><span class="line">	<span class="function"><span class="keyword">inline</span> std::string <span class="title">to_byte_string</span><span class="params">(<span class="type">const</span> std::wstring&amp; input)</span></span></span><br><span class="line"><span class="function">	</span>{</span><br><span class="line">		<span class="comment">//std::wstring_convert&lt;std::codecvt_utf8_utf16&lt;wchar_t&gt;&gt; converter;</span></span><br><span class="line">		std::wstring_convert&lt;std::codecvt_utf8&lt;<span class="type">wchar_t</span>&gt;&gt; converter;</span><br><span class="line">		<span class="keyword">return</span> converter.<span class="built_in">to_bytes</span>(input);</span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure>

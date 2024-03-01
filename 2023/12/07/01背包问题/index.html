@@ -257,14 +257,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>2.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -274,7 +274,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a></p>
 <h2 id="01背包问题详解"><a href="#01背包问题详解" class="headerlink" title="01背包问题详解"></a>01背包问题详解</h2><p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
 <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>01背包问题可描述为如下问题：<br>有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。<br>问：如何向背包装物体才能使背包中物体的总价值最大？</p>
 <h2 id="为什么不用贪心？"><a href="#为什么不用贪心？" class="headerlink" title="为什么不用贪心？"></a>为什么不用贪心？</h2><p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。<br>为什么这个问题不能用贪心呢？<br>举个例子<br>我的背包容量为10，而且有4个物体，它们的体积和价值分别为<br>w1 = 8, v1 = 9<br>w2 = 3, v2 = 3<br>w3 = 4, v3 = 4<br>w4 = 3, v4 = 3<br>贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体<br>c1 = v1/w1 = 1.125（最大）<br>c2 = v2/w2 = 1<br>c3 = v3/w3 = 1<br>c4 = v4/w4 = 1<br>所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。<br>但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！<br>所以这个问题不可以用贪心法来处理。</p>

@@ -280,7 +280,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>156</span>
+      <span>733</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -297,7 +297,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a class="btn" href="tags/JS/" rel="contents" data-pjax-state=""># JS</a></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="tags/JS/" rel="contents" data-pjax-state=""># JS</a></p>
 <h3 id="js-获取标签元素data-xxx属性值的方法"><a href="#js-获取标签元素data-xxx属性值的方法" class="headerlink" title="js-获取标签元素data-xxx属性值的方法"></a>js-获取标签元素data-xxx属性值的方法</h3><p>标签上有两个属性<code>data-id</code>&nbsp;和&nbsp;<code>data-user-name</code>, 需要通过js去获取</p>
 <p>个人认为较为好用的方法为：使用getAttribute/setAttribute/removeAttribute ，较为直观和易读。</p>
 <figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">"#user"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// 666</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(user.<span class="title function_">getAttribute</span>(<span class="string">"data-user-name"</span>)); <span class="comment">// Tom</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> user.<span class="title function_">getAttribute</span>(<span class="string">"data-id"</span>)); <span class="comment">// string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 赋值</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-id"</span>, <span class="number">777</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 新增属性</span></span><br><span class="line">user.<span class="title function_">setAttribute</span>(<span class="string">"data-age"</span>, <span class="number">23</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除属性</span></span><br><span class="line">user.<span class="title function_">removeAttribute</span>(<span class="string">"data-user-name"</span>);</span><br><span class="line"><span class="comment">// &lt;div id="user" data-id="777" data-age="23"&gt;&lt;/div&gt;</span></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
