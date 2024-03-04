@@ -89,7 +89,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">136</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">137</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -146,13 +146,13 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-count">137</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -249,7 +249,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -280,14 +280,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>564</span>
+      <span>223</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -305,10 +305,13 @@
 <h3 id="保持在当前对话框进行"><a href="#保持在当前对话框进行" class="headerlink" title="保持在当前对话框进行"></a>保持在当前对话框进行</h3><p>在start后面加上<code>/b</code>即可，此时start启动的应用会在其他进程运行，但是输出的结果会保持在同一对话框内</p>
 <h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2><h3 id="start伴随的进程随着当前进程一并终止"><a href="#start伴随的进程随着当前进程一并终止" class="headerlink" title="start伴随的进程随着当前进程一并终止"></a>start伴随的进程随着当前进程一并终止</h3><p>可以考虑间接调用：</p>
 <figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">%a.bat%</span></span><br><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">start</span> /b "" E:\AgencyProxyTools\openClash.bat</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></tbody></table></figure>
+
 <figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">%openClash.bat%</span></span><br><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">start</span> /min "" "E:\!TOOLS\PC\Clash\Clash.exe"</span><br><span class="line"></span><br><span class="line"><span class="keyword">Exit</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>a.bat -&gt; openClash.bat -&gt; clash.exe</p>
 <p>这样的话clash就不会随着a.bat而结束了</p>
 <span id="more"></span>
+
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

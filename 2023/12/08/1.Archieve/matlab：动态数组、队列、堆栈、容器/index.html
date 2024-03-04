@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">136</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">137</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -145,13 +145,13 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-count">137</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,7 +248,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -279,14 +279,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>648</span>
+      <span>243</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -301,11 +301,17 @@
 <p>一直以为matlab中没有动态数组，或者类似C++的vector容器的数据结构。其实不然，matlab的数组就是一个动态数组，它可以当作vector，或者队列等数据结构使用。</p>
 </blockquote>
 <span id="more"></span>
+
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">array = 1:10;</span><br><span class="line">array =1     2     3     4     5     6     7     8     9    10</span><br><span class="line">array(1) = [];</span><br><span class="line">array =2     3     4     5     6     7     8     9    10</span><br><span class="line">array(end) = [];</span><br><span class="line">array =2     3     4     5     6     7     8     9</span><br><span class="line">array(end+1) = 10;</span><br><span class="line">array =2     3     4     5     6     7     8     9    10</span><br></pre></td></tr></tbody></table></figure>
-<p>上面的例子可以看出，只要令数组的某一个元素为[]，就相当于删除了数组中该元素。array(1) = [] 这条语句，就类似于队列的pop()操作，array(end) = [] 相当于堆栈的pop()操作，而array(end+1)  = 10 就相当于push()操作。</p>
+
+<p>上面的例子可以看出，只要令数组的某一个元素为[]，就相当于删除了数组中该元素。array(1) = [] 这条语句，就类似于队列的pop()操作，array(end) = [] 相当于堆栈的pop()操作，而array(end+1)&nbsp; = 10 就相当于push()操作。</p>
 <p>2. 数组的一些操作技巧</p>
 <p>2.1 在数组中找到某个特定元素的索引</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = [1 2 3 3 4 5];</span><br><span class="line">i = find(a==3)</span><br><span class="line">i =</span><br><span class="line">	2     3</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tyl532667325/article/details/98473750">matlab动态数组、队列、堆栈、容器_matlab 堆栈-CSDN博客</a></p>
 

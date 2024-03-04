@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">136</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">137</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -145,13 +145,13 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-count">137</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,7 +248,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -285,14 +285,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>575</span>
+      <span>214</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -302,7 +302,9 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br><span id="more"></span></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
+<span id="more"></span>
+
 <h3 id="一、下载工具"><a href="#一、下载工具" class="headerlink" title="一、下载工具"></a>一、下载工具</h3><ul>
 <li>用于绘制像素图的软件</li>
 <li>Lua（SciTe）</li>
@@ -315,8 +317,12 @@
 <li>贴图（材质）</li>
 <li>json：模型</li>
 </ul>
-<h4 id="名字"><a href="#名字" class="headerlink" title="名字"></a>名字</h4><p>在lang文件更改名称：<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">item.testmod_item.name=display testmod_item  #显示名称</span><br><span class="line">item.testmod_item.desc=display testmod_item desc   #描述功能</span><br><span class="line"></span><br><span class="line">#item是物品</span><br><span class="line">#tile是方块*方块不自带描述功能</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h4 id="材质（贴图）"><a href="#材质（贴图）" class="headerlink" title="材质（贴图）"></a>材质（贴图）</h4><p>在ModItems、ModBlock中添加<br></p><figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Item</span> <span class="variable">testmod_block</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ItemBase</span>(<span class="string">"test_block"</span>);</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Block</span> <span class="variable">testmod_item</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BlockBase</span>(<span class="string">"test_item"</span>,Material.材质之一);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h4 id="名字"><a href="#名字" class="headerlink" title="名字"></a>名字</h4><p>在lang文件更改名称：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">item.testmod_item.name=display testmod_item  #显示名称</span><br><span class="line">item.testmod_item.desc=display testmod_item desc   #描述功能</span><br><span class="line"></span><br><span class="line">#item是物品</span><br><span class="line">#tile是方块*方块不自带描述功能</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="材质（贴图）"><a href="#材质（贴图）" class="headerlink" title="材质（贴图）"></a>材质（贴图）</h4><p>在ModItems、ModBlock中添加</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Item</span> <span class="variable">testmod_block</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ItemBase</span>(<span class="string">"test_block"</span>);</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Block</span> <span class="variable">testmod_item</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BlockBase</span>(<span class="string">"test_item"</span>,Material.材质之一);</span><br></pre></td></tr></tbody></table></figure>
+
 <h4 id="json"><a href="#json" class="headerlink" title="json"></a>json</h4><p>IDF提供了一个较为便捷的一键生成功能，你只需要在GenBlockJson.lua中填好你的modid 和物品的名称并且调用相关函数即可自动化生成</p>
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
