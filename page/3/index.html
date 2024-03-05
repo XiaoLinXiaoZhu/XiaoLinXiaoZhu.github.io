@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">42</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">137</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">43</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">138</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,13 +147,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">137</span>
+          <span class="site-state-item-count">138</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-count">43</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,113 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/15/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/" class="post-title-link" itemprop="url">C++：生成的exe文件如何传参数到main中</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-15 22:16:00 / 修改时间：22:22:29" itemprop="dateCreated datePublished" datetime="2024-02-15T22:16:00+08:00">2024-02-15</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>233</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br>### argc和argv是什么</p>
+<p>C/C++语言中的main函数，经常带有参数argc，argv，如下：&nbsp;</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这两个参数的作用是什么呢？argc 是指命令行输入参数的个数，argv存储了所有的命令行参数。假如你的程序是hello.exe，如果在命令行运行该程序，运行命令为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello.exe Shiqi Yu  </span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么，argc的值是 3，argv[0]是”hello.exe”，argv[1]是”Shiqi”，argv[2]是”Yu”。 &nbsp;&nbsp;  </p>
+<h3 id="argc和argv的使用"><a href="#argc和argv的使用" class="headerlink" title="argc和argv的使用"></a>argc和argv的使用</h3><p>下面的程序演示argc和argv的使用：&nbsp;&nbsp;</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> ** argv)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i &lt; argc; i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Argument %d is %s.\n"</span>, i, argv[i]);<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>假如上述代码编译为hello.exe，那么运行&nbsp;  </p>
+<p>hello.exe a b c d e<br>将得到&nbsp;&nbsp; </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Argument 0 is hello.exe.  </span><br><span class="line">Argument 1 is a.  </span><br><span class="line">Argument 2 is b.  </span><br><span class="line">Argument 3 is c.  </span><br><span class="line">Argument 4 is d.  </span><br><span class="line">Argument 5 is e.  </span><br></pre></td></tr></tbody></table></figure>
+
+<p>运行<br>hello.exe lena.jpg<br>将得到&nbsp;&nbsp;  </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Argument 0 is hello.exe.</span><br><span class="line">Argument 1 is lena.jpg.</span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/15/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1134,92 +1241,6 @@
             </div>
           <!--/noindex-->
         
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/02/%E6%94%B6%E5%AE%B9%EF%BC%9A%E7%A7%98%E5%AF%86%E6%A1%A3%E6%A1%88/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/02/%E6%94%B6%E5%AE%B9%EF%BC%9A%E7%A7%98%E5%AF%86%E6%A1%A3%E6%A1%88/" class="post-title-link" itemprop="url">收容：秘密档案</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-02 18:11:00 / 修改时间：18:15:50" itemprop="dateCreated datePublished" datetime="2024-02-02T18:11:00+08:00">2024-02-02</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>9</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
-<p>有机会去玩玩</p>
-
       
     </div>
 
