@@ -229,14 +229,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>474</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -247,33 +247,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
-python</a>
-<br><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
-未完成</a> <br> </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我的pyinstaller并没有调试好，</span><br><span class="line"></span><br><span class="line">在这样的一通操作后生成的exe并不能正常运行</span><br><span class="line"></span><br><span class="line">我没有找到解决的办法，似乎是pyinstaller默认安装到了系统内部的python上，而不是conda的虚拟环境内，导致虚拟环境内的包并没有被打包进exe</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a> <br><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br><br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我的pyinstaller并没有调试好，</span><br><span class="line"></span><br><span class="line">在这样的一通操作后生成的exe并不能正常运行</span><br><span class="line"></span><br><span class="line">我没有找到解决的办法，似乎是pyinstaller默认安装到了系统内部的python上，而不是conda的虚拟环境内，导致虚拟环境内的包并没有被打包进exe</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>为了方便py代码可以在其他没有python环境的设备上运行，使用pyinstall将其打包为exe格式是一种十分简单的方法。但是在安装并使用pyinstall的过程中，本人遇到了不少麻烦，而后摸索出了正确的路，下面记录以下我的历程。</p>
-<h2 id="背景">背景</h2>
-<p>win11，安装了anaconda和vs，这两个不共用一个python</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>win11，安装了anaconda和vs，这两个不共用一个python</p>
 <p>所以说在安装之前还需呀将anaconda的python设置为首选的python，将其在环境变量中的优先级提高。</p>
-<h2 id="安装历程">安装历程</h2>
-<h3 id="安装pyinstall">安装pyinstall</h3>
-<p>使用：</p>
-<pre><code>pip install pyinstaller</code></pre>
-<p>来安装pyinstall</p>
-<h3 id="执行pyinstall">执行pyinstall</h3>
-<p>正常执行<code>pyinstaller -c -F textMessage.py</code>就可以在显示打包进程的前提之下打包py文件了。<br>
-但是这个时候会报错:</p>
+<h2 id="安装历程"><a href="#安装历程" class="headerlink" title="安装历程"></a>安装历程</h2><h3 id="安装pyinstall"><a href="#安装pyinstall" class="headerlink" title="安装pyinstall"></a>安装pyinstall</h3><p>使用：  </p>
+<pre><code>pip install pyinstaller
+</code></pre><p>来安装pyinstall</p>
+<h3 id="执行pyinstall"><a href="#执行pyinstall" class="headerlink" title="执行pyinstall"></a>执行pyinstall</h3><p>正常执行<code>pyinstaller -c -F textMessage.py</code>就可以在显示打包进程的前提之下打包py文件了。<br>但是这个时候会报错:  </p>
 <blockquote>
-<p>'pyinstaller' 不是内部或外部命令，也不是可运行的程序
-或批处理文件。</p>
+<p>‘pyinstaller’ 不是内部或外部命令，也不是可运行的程序 或批处理文件。</p>
 </blockquote>
-<p>这个时候就需要将pyinstall.exe添加置系统变量里面的PATH，但是anconda的文件十分的杂乱，我找了半天都没有找到，最后是使用everything<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>来对电脑文件进行检索找到的。下面是我的路径：</p>
-<pre><code>C:\Users\Lenovo\AppData\Roaming\Python\Python310\scripts\pyinstaller.exe</code></pre>
-<h3 id="pyinstall报错">pyinstall报错</h3>
-<p>在能运行pyinstall之后，pyinstall报错了：<code>The 'pathlib' package is an obsolete backport of a standard library package and is incompatible with PyInstaller.</code></p>
+<p>这个时候就需要将pyinstall.exe添加置系统变量里面的PATH，但是anconda的文件十分的杂乱，我找了半天都没有找到，最后是使用everything^[1]来对电脑文件进行检索找到的。下面是我的路径：</p>
+<pre><code>C:\Users\Lenovo\AppData\Roaming\Python\Python310\scripts\pyinstaller.exe
+</code></pre><h3 id="pyinstall报错"><a href="#pyinstall报错" class="headerlink" title="pyinstall报错"></a>pyinstall报错</h3><p>在能运行pyinstall之后，pyinstall报错了：<code>The 'pathlib' package is an obsolete backport of a standard library package and is incompatible with PyInstaller.</code></p>
 <p>pathlib是一个anaconda自带的过时的包，pyinstall不支持这个包，将这个包删除即可：<code>python -m pip install pathlib</code></p>
-<p>[1]:"<em>Everything</em>" 是 Windows 上文件名搜索引擎。<a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/support/everything/command_line_interface/">Command
-Line Interface - voidtools</a></p>
+<p>[1]:”_Everything_” 是 Windows 上文件名搜索引擎。<a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/support/everything/command_line_interface/">Command Line Interface - voidtools</a></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/15/python%EF%BC%9A%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86py%E8%BD%AC%E5%8C%96%E4%B8%BAexe/#more" rel="contents">
@@ -353,14 +342,14 @@ Line Interface - voidtools</a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>875</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -371,31 +360,25 @@ Line Interface - voidtools</a></p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
-<br><a href="/tags/游戏体验日记/" rel="contents" data-pjax-state="">#
-游戏体验日记</a> <br> ## 背景</p>
-<p>除了制作十分精良的独立游戏和所谓的商业游戏之外，我常常也会游玩一些二次元游戏以达到我对于可爱妹子的摄入需求，那么为了开荒一款游戏，常常是需要十分大的时间成本的。<br>
-想要解决游玩游戏的时间成本，又想要获得良好的游戏体验（因为二次元游戏常常会包含或多或少的养成元素，养成程度会影响到游戏的体验），最好的选择就是花钱。</p>
-<p>同时对于那种可能只是想要玩一段时间的游戏，也可以考虑将账号卖出，从而使得自己花费的时间转化为金钱作为补偿。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/游戏体验日记/" rel="contents" data-pjax-state=""># 游戏体验日记</a> <br></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>除了制作十分精良的独立游戏和所谓的商业游戏之外，我常常也会游玩一些二次元游戏以达到我对于可爱妹子的摄入需求，那么为了开荒一款游戏，常常是需要十分大的时间成本的。<br>想要解决游玩游戏的时间成本，又想要获得良好的游戏体验（因为二次元游戏常常会包含或多或少的养成元素，养成程度会影响到游戏的体验），最好的选择就是花钱。  </p>
+<p>同时对于那种可能只是想要玩一段时间的游戏，也可以考虑将账号卖出，从而使得自己花费的时间转化为金钱作为补偿。  </p>
 <p>实际上，游戏账号交易已经是一个较为普遍的市场，甚至有人以此牟利。</p>
-<h2 id="账号买卖注意事项">账号买卖注意事项</h2>
-<p>通常来说，为了体验自己抽和通关的乐趣，我们常常会选择购买初始号。</p>
+<h2 id="账号买卖注意事项"><a href="#账号买卖注意事项" class="headerlink" title="账号买卖注意事项"></a>账号买卖注意事项</h2><p>通常来说，为了体验自己抽和通关的乐趣，我们常常会选择购买初始号。</p>
 <p>初始号指的是没有推剧情和代充，只是通过一些活动和通关一些基本的关卡来获得资源，且获得了一定的抽卡资源的账号。购买此类账号的时候需要注意以下几点：</p>
-<h3 id="选择信用度高的商家">1. 选择信用度高的商家</h3>
-<p>购买之前先确认商家是否可信，在较为小的性价比的提升之下并不需要去贪图那点蝇头小利。多花点钱在较为可信任的商家购买可以省下很多烦恼</p>
-<h3 id="确认账号信息">2. 确认账号信息</h3>
-<p>在购买之前，请务必核对账号信息，比如： 1. 账号是否已经首充？ 2.
-账号是否可以更换绑定信息？ 3. 等等等等</p>
+<h3 id="1-选择信用度高的商家"><a href="#1-选择信用度高的商家" class="headerlink" title="1. 选择信用度高的商家"></a>1. 选择信用度高的商家</h3><p>购买之前先确认商家是否可信，在较为小的性价比的提升之下并不需要去贪图那点蝇头小利。多花点钱在较为可信任的商家购买可以省下很多烦恼</p>
+<h3 id="2-确认账号信息"><a href="#2-确认账号信息" class="headerlink" title="2. 确认账号信息"></a>2. 确认账号信息</h3><p>在购买之前，请务必核对账号信息，比如：</p>
+<ol>
+<li>账号是否已经首充？</li>
+<li>账号是否可以更换绑定信息？</li>
+<li>等等等等</li>
+</ol>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">账号一般分为活绑和死绑定两种，其中死绑指的是无法更换绑定的账号或者说是手机号（使用的是一次性的验证码注册的手机号）。</span><br><span class="line"></span><br><span class="line">死绑的账号无法更换密码，且较为容易被二次售卖，价格也相较来说更为便宜。一般只是作为抽卡找个乐子玩。</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="确认游戏是否存在找回方式">3.确认游戏是否存在找回方式</h3>
-<p>有一些游戏可以通过其他的手段来将账号找回，购买账号的时候需要注意是否存在其他的找回方式，并且加以防范。</p>
+<h3 id="3-确认游戏是否存在找回方式"><a href="#3-确认游戏是否存在找回方式" class="headerlink" title="3.确认游戏是否存在找回方式"></a>3.确认游戏是否存在找回方式</h3><p>有一些游戏可以通过其他的手段来将账号找回，购买账号的时候需要注意是否存在其他的找回方式，并且加以防范。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title:案例</span><br><span class="line"></span><br><span class="line">碧蓝航线可以通过举报账号违规封号，然后使用实名认证的身份证来找回的方式。</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="确认是否划算">4.确认是否划算</h3>
-<p>理清楚自己的目标，检验是否划算。</p>
-<p>举个例子，我想要购买战双新出的皮肤，且实际上其他的东西对我的影响不大。如果使用我自己原本的号进行氪金购买的话，至少需要氪金250￥（算上首充的翻倍）。<br>
-但是如果我选择购买账号的话，可以获得一堆资源和部分限定道具（概率），还可以拥有足够抽出新皮肤的黑卡。而这样的账号才50￥</p>
-<h2 id="实际购买经验">实际购买经验</h2>
-<p>实际购买过一次战双的账号之后，就目前来说，体验良好。花费50获得了我期望中的东西，且剧本通关程度和我原本的账号相近，所以说体验剧情也是不会差太多的。</p>
+<h3 id="4-确认是否划算"><a href="#4-确认是否划算" class="headerlink" title="4.确认是否划算"></a>4.确认是否划算</h3><p>理清楚自己的目标，检验是否划算。  </p>
+<p>举个例子，我想要购买战双新出的皮肤，且实际上其他的东西对我的影响不大。如果使用我自己原本的号进行氪金购买的话，至少需要氪金250￥（算上首充的翻倍）。<br>但是如果我选择购买账号的话，可以获得一堆资源和部分限定道具（概率），还可以拥有足够抽出新皮肤的黑卡。而这样的账号才50￥  </p>
+<h2 id="实际购买经验"><a href="#实际购买经验" class="headerlink" title="实际购买经验"></a>实际购买经验</h2><p>实际购买过一次战双的账号之后，就目前来说，体验良好。花费50获得了我期望中的东西，且剧本通关程度和我原本的账号相近，所以说体验剧情也是不会差太多的。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/14/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%B8%B8%E6%88%8F%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3/#more" rel="contents">
@@ -475,14 +458,14 @@ Line Interface - voidtools</a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -493,10 +476,7 @@ Line Interface - voidtools</a></p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state="">#
-游戏策划</a>
-<br><a href="/tags/灵感/" rel="contents" data-pjax-state=""># 灵感</a>
-<br>原文来自于</p>
+          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state=""># 游戏策划</a> <br><a href="/tags/灵感/" rel="contents" data-pjax-state=""># 灵感</a> <br>原文来自于</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv15975040/">【非人学园/第五人格】自制联动英雄——爱哭鬼|-|哔哩哔哩|(bilibili.com)</a></p>
 <p>本篇在其基础上改了些东西，以达到本人的审美水准</p>
           <!--noindex-->
@@ -572,7 +552,7 @@ Line Interface - voidtools</a></p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>316</span>
+      <span>116</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -590,15 +570,10 @@ Line Interface - voidtools</a></p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
-python</a> <br> ### 背景
-python中hex内置函数无法将生成的16进制码自动补0，比如说：<br>
-</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br>
-</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="解决办法">解决办法</h3>
-<p>&nbsp;通过多次查资料和尝试，得到如下：<br>
-</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a> <br></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>python中hex内置函数无法将生成的16进制码自动补0，比如说：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p> 通过多次查资料和尝试，得到如下：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/02/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/#more" rel="contents">
@@ -672,7 +647,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>14</span>
+      <span>9</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -690,8 +665,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
-未完成</a> <br></p>
+          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
 <p>有机会去玩玩</p>
 
       
@@ -765,14 +739,14 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>420</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -783,9 +757,8 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
-<br> ### 背景
-最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
 <p>hmmm然后就发现了一件比较有意思的事情</p>
           <!--noindex-->
             <div class="post-button">
@@ -866,7 +839,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>90</span>
+      <span>59</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -884,9 +857,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
-1</a>
-<br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
 <p>实际上，只需要照着IDF框架给出的示例进行改编即可</p>
           <!--noindex-->
             <div class="post-button">
@@ -967,14 +938,14 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>476</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -985,8 +956,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
-1</a> <br> 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br>因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
 <p>首先肯定就是创建声明，使得我们的mod能够正常被挂载</p>
           <!--noindex-->
             <div class="post-button">
@@ -1067,7 +1037,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>605</span>
+      <span>214</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1085,8 +1055,7 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
-1</a> <br></p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/30/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/#more" rel="contents">
@@ -1166,14 +1135,14 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>518</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1184,11 +1153,9 @@ python中hex内置函数无法将生成的16进制码自动补0，比如说：<b
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
-1</a> <br></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC
-Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
-<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
+<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/29/mcMod%EF%BC%9A0.1%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/#more" rel="contents">
