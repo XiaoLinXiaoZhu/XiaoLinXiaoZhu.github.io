@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">47</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">146</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">48</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">151</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,13 +147,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">146</span>
+          <span class="site-state-item-count">151</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-count">48</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,507 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%95%B0%E7%BB%84/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">Matlab：数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:31:00 / 修改时间：07:36:43" itemprop="dateCreated datePublished" datetime="2023-12-08T07:31:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/matlab/" rel="contents" data-pjax-state=""># matlab</a> <br></p>
+<h2 id="（一）基本运算与矩阵输入"><a href="#（一）基本运算与矩阵输入" class="headerlink" title="（一）基本运算与矩阵输入"></a>（一）基本运算与矩阵输入</h2><h3 id="1-创建数组"><a href="#1-创建数组" class="headerlink" title="1 创建数组"></a>1 创建数组</h3><p>一维数组称为<strong>向量</strong>，二维数组称为<strong>矩阵</strong><br>可以使用中括号“[ ]”，直接输入数值来创建数组，也可以通过MATLAB内置函数来创建特殊数组</p>
+<h4 id="1-1-直接创建"><a href="#1-1-直接创建" class="headerlink" title="1.1 直接创建"></a>1.1 直接创建</h4><p>元素间使用<strong>空格</strong>或者<strong>英文逗号</strong>间隔，使用<strong>英文分号</strong>执行换行操作</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;A=[1 2 3;4 5 6;7 8 9]</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">     1     2     3</span><br><span class="line">     4     5     6</span><br><span class="line">     7     8     9</span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%95%B0%E7%BB%84/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">Matlab：条件与循环</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:24:00 / 修改时间：07:29:47" itemprop="dateCreated datePublished" datetime="2023-12-08T07:24:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>402</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/matlab/" rel="contents" data-pjax-state=""># matlab</a> <br><br>一、语法知识</p>
+<p>1、循环控制语句：</p>
+<p>1）for~end：用于要求重复多次执行for与end之间的程序语句。允许嵌套。其一般格式为</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for 变量 = 起始值 ：增量 ：终点</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 	%一般要输出循环运算结果，还应在end后加“，变量名”，运行时按enter键</span><br></pre></td></tr></tbody></table></figure>
+<p>2）while~end：与c++类似，while也不规定循环次数，其终止时刻由while后面的条件表达式决定，若条件成立，则重复执行while与end之间的程序语句，否则结束循环。其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">while 条件表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end 		&nbsp; %与for~end语句类似，要想输出运算结果，在end后加“，变量名”，再按enter键</span><br></pre></td></tr></tbody></table></figure><br>2、条件选择语句<p></p>
+<p>1）if~end：其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式</span><br><span class="line"></span><br><span class="line">	程序语句</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><br>2）if~elseif~···~else~end：elseif~else是进一步的if条件语句，其一般格式为<br><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if 逻辑表达式1</span><br><span class="line"></span><br><span class="line">&nbsp;&nbsp; 程序语句1</span><br><span class="line"></span><br><span class="line">elseif 逻辑表达式2</span><br><span class="line"></span><br><span class="line">  程序语句2</span><br><span class="line"></span><br><span class="line">······</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">  程序语句n</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【注意：在多分支条件选择语句中，if和elseif是互相独立且互相排斥的条件选择语句，else后的语句执行的条件是先前所有的条件语句均不成立】</span><br></pre></td></tr></tbody></table></figure>
+<p>3）switch~end：开关语句是一种多分支条件选择语句，他执行特定选择语句，当且仅当变量或表达式的值相符。其一般格式为<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch 表达式</span><br><span class="line">	</span><br><span class="line">	case值1</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	case值2</span><br><span class="line">	程序语句</span><br><span class="line">	</span><br><span class="line">	······</span><br><span class="line">	</span><br><span class="line">	otherwise</span><br><span class="line">	程序语句</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/" class="post-title-link" itemprop="url">Matlab：for循环</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:22:00 / 修改时间：07:56:34" itemprop="dateCreated datePublished" datetime="2023-12-08T07:22:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>470</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/matlab/" rel="contents" data-pjax-state=""># matlab</a> <br></p>
+<h3 id="简单for循环"><a href="#简单for循环" class="headerlink" title="简单for循环"></a>简单for循环</h3><p>for循环用来循环处理数据。<br>例：输出1~100的和</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:100</span><br><span class="line">       sum = sum +i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">        5050</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：i从1到100，每次增加一个，该共循环100次<br>注意：分号的位置；不能使用“+=”符号；每写一层循环，必须以end结尾</p>
+<h3 id="带有步长的for循环"><a href="#带有步长的for循环" class="headerlink" title="带有步长的for循环"></a>带有步长的for循环</h3><p>例：输出1到10之间的奇数和</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       sum = sum + i;</span><br><span class="line">   end</span><br><span class="line">&gt;&gt; sum</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    25</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：i = 1:2:10中间的2表示步长，表示从1到10，每次增加2，即1，3，5，7，9五个数之和；步长也可以为负数</p>
+<h3 id="对向量和矩阵的遍历"><a href="#对向量和矩阵的遍历" class="headerlink" title="对向量和矩阵的遍历"></a>对向量和矩阵的遍历</h3><ol>
+<li>对向量的遍历</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; clear</span><br><span class="line">&gt;&gt; A = rand(1,4);</span><br><span class="line">&gt;&gt; for i = A</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.9572</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.4854</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.8003</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    0.1419</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：rand函数用于随机生成0~1之间的数，rand(1,4)生成1*4的列向量。</p>
+<ol>
+<li>对矩阵的遍历</li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A = magic(4);</span><br><span class="line">&gt;&gt; A</span><br><span class="line"></span><br><span class="line">A =</span><br><span class="line"></span><br><span class="line">    16     2     3    13</span><br><span class="line">     5    11    10     8</span><br><span class="line">     9     7     6    12</span><br><span class="line">     4    14    15     1</span><br><span class="line"></span><br><span class="line">&gt;&gt; for i = A;</span><br><span class="line">       i</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    16</span><br><span class="line">     5</span><br><span class="line">     9</span><br><span class="line">     4</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line">    11</span><br><span class="line">     7</span><br><span class="line">    14</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line">    10</span><br><span class="line">     6</span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">i =</span><br><span class="line"></span><br><span class="line">    13</span><br><span class="line">     8</span><br><span class="line">    12</span><br><span class="line">     1</span><br></pre></td></tr></tbody></table></figure>
+<p>解释：magic(n)函数用于生成任意一行或一列或主副对角线之和相等的方阵，对矩阵的循环遍历是依次取出矩阵中的每一列元素</p>
+<h3 id="break和continue的使用"><a href="#break和continue的使用" class="headerlink" title="break和continue的使用"></a>break和continue的使用</h3><p>break用于终止离它最近的一层for循环；<br>continue用于跳过离它最近的一层for循环，接着执行下一次循环</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x = 1;</span><br><span class="line">&gt;&gt; for i = 1:2:10</span><br><span class="line">       if i &gt; 7</span><br><span class="line">          break</span><br><span class="line">       else</span><br><span class="line">          x = x* i</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x =</span><br><span class="line"></span><br><span class="line">   105</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; sum = 0;</span><br><span class="line">&gt;&gt; for i = 1:6</span><br><span class="line">       if i == 4</span><br><span class="line">          continue</span><br><span class="line">       else</span><br><span class="line">          sum = sum + i</span><br><span class="line">       end</span><br><span class="line">   end;</span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    11</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sum =</span><br><span class="line"></span><br><span class="line">    17</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="多层for循环"><a href="#多层for循环" class="headerlink" title="多层for循环"></a>多层for循环</h3><p>for循环可以按照需要进行嵌套。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; for i = 1:2:6</span><br><span class="line">       for j = 1:3</span><br><span class="line">           y = i * j</span><br><span class="line">       end</span><br><span class="line">   end</span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     6</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">     5</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    10</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y =</span><br><span class="line"></span><br><span class="line">    15</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9Afor%E5%BE%AA%E7%8E%AF/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Matlab：函数</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:18:00 / 修改时间：07:21:25" itemprop="dateCreated datePublished" datetime="2023-12-08T07:18:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/matlab/" rel="contents" data-pjax-state=""># matlab</a> <br></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>函数——是编程的核心概念之一，是能够完成相对独立功能的代码封装成的模块。</p>
+<p>在主程序中通过函数名和实参调用它，通过接口（即函数的输入、输出参数）来实现“通讯”。所以在调用函数时，你只要知道“被调用的函数是用来做什么的”，以及“如何对应它的输入、输出参数”就行了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/" class="post-title-link" itemprop="url">Matlab：函数返回多个值</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 07:14:00 / 修改时间：07:16:53" itemprop="dateCreated datePublished" datetime="2023-12-08T07:14:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>266</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/matlab/" rel="contents" data-pjax-state=""># matlab</a> <br></p>
+<h3 id="Matlab：函数返回多个值"><a href="#Matlab：函数返回多个值" class="headerlink" title="Matlab：函数返回多个值"></a>Matlab：函数返回多个值</h3><p>在 MATLAB 中，函数可以返回多个值。要返回多个值，可以使用中括号将它们括起来，并用逗号分隔。以下是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function [output1, output2] = myFunction(input1, input2)</span><br><span class="line">    % function code here</span><br><span class="line">    output1 = someValue1;</span><br><span class="line">    output2 = someValue2;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+<p>在这个例子中，函数 <code>myFunction</code> 接受两个输入参数 <code>input1</code> 和 <code>input2</code>，并返回两个输出值 <code>output1</code> 和 <code>output2</code>。在函数的结尾处，使用 <code>output1</code> 和 <code>output2</code> 变量来存储要返回的值。</p>
+<p>要调用这个函数并获取返回的值，可以使用以下语法：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[output1, output2] = myFunction(input1, input2);</span><br></pre></td></tr></tbody></table></figure>
+<p>这将调用函数 <code>myFunction</code> 并将输入参数 <code>input1</code> 和 <code>input2</code> 传递给它。函数将计算输出值 <code>output1</code> 和 <code>output2</code>，并将它们分别赋值给变量 <code>output1</code> 和 <code>output2</code>。</p>
+<h3 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h3><p>在 Matlab 中，可以通过在函数定义行中使用多个输入参数来实现函数接受多个输入。以下是一个简单的示例：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function output = myFunc(input1, input2, input3)</span><br><span class="line">    % 在函数体内处理输入参数</span><br><span class="line">    output = input1 + input2 + input3;</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/Matlab%EF%BC%9A%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%A4%9A%E4%B8%AA%E5%80%BC/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -754,515 +1255,8 @@ matrix(M,vector&lt;int&gt;(N));</p></td><td>二维数组初始化</td></tr></tbo
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++中string和int相互转换的常用方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-08 00:33:00 / 修改时间：00:45:09" itemprop="dateCreated datePublished" datetime="2023-12-08T00:33:00+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>600</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>字符串操作是各种算法题中的常客，很多数据常常以字符串形式给出，其中有的需要自己转化成整数，而一些整型数据有时转换成字符串处理起来更加方便，比如判断一个整数是否是回文数，所以字符串和整数的转换是一些问题处理的基础步骤，C++ 在处理这类问题时并不像 Python 那样方便，但是也有许多方法能够实现，为了今后查找方便，整理如下。</p>
-<h1 id="int-转-string"><a href="#int-转-string" class="headerlink" title="int 转 string"></a>int 转 string</h1><h2 id="通过-std-to-string-函数转换"><a href="#通过-std-to-string-函数转换" class="headerlink" title="通过 std::to_string() 函数转换"></a>通过 std::to_string() 函数转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::cout &lt;&lt; std::<span class="built_in">to_string</span>(num);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">这种方式在 C++<span class="number">11</span> 中才能使用，编译时记得加上 --std=c++<span class="number">11</span> 的选项</span><br><span class="line"></span><br><span class="line">## 通过 ostringstream 转换</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::ostringstream ss;</span><br><span class="line">    ss &lt;&lt; num;</span><br><span class="line">    std::cout &lt;&lt; ss.<span class="built_in">str</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>这是一种通过字符流的方式将整数转换成字符串，这种方式在C++11之前也可以使用</p>
-<h2 id="通过-sprintf-转换"><a href="#通过-sprintf-转换" class="headerlink" title="通过 sprintf 转换"></a>通过 sprintf 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(buffer, <span class="string">"%d"</span>, num);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, buffer);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>这是一种C语言中的转换方式，sprintf 也可以换成更安全的 snprintf 函数</p>
-<h1 id="string-转-int"><a href="#string-转-int" class="headerlink" title="string 转 int"></a>string 转 int</h1><h2 id="通过-istringstream-转换"><a href="#通过-istringstream-转换" class="headerlink" title="通过 istringstream 转换"></a>通过 istringstream 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">std::istringstream <span class="title">ss</span><span class="params">(str)</span></span>;</span><br><span class="line">    ss &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-<p>使用 istringstream 可以从字符流中读取整数，与 ostringstream 是一种相反的操作</p>
-<h2 id="使用-sscanf-来转化"><a href="#使用-sscanf-来转化" class="headerlink" title="使用 sscanf 来转化"></a>使用 sscanf 来转化</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sscanf</span>(str.<span class="built_in">c_str</span>(), <span class="string">"%d"</span>, &amp;num);</span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>注意 sscanf 函数的第一个参数类型是 const char *，string类型的参数需要转换一下</p>
-<h2 id="使用-atoi-转换"><a href="#使用-atoi-转换" class="headerlink" title="使用 atoi 转换"></a>使用 atoi 转换</h2><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">atoi</span>(str.<span class="built_in">c_str</span>());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>atoi 函数的头文件是 stdlib.h，同样是一个C语言中的函数</p>
-<h2 id="使用方法stod"><a href="#使用方法stod" class="headerlink" title="使用方法stod"></a>使用方法stod</h2><p>该方法在C++11中被支持，十分地方便，但是需要确保给定的string是否可以转化为double，不然会抛出错误。</p>
-<p>总结<br>itoa 不是c语言标准函数，在跨平台的整数转字符串的代码中不要使用这个函数<br>atoi 是一个标准函数，需要将它和 itoa 区别开来，这一点很容易记混的<br>如果是在C++环境中进行转换，推荐使用 stringstream 字符流的形式和 to_string 函数</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++：string的运用和相关方法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-08 00:30:00 / 修改时间：00:33:16" itemprop="dateCreated datePublished" datetime="2023-12-08T00:30:00+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>121</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>[[___C++]] </p>
-<h1 id="C-：string的运用和相关方法"><a href="#C-：string的运用和相关方法" class="headerlink" title="C++：string的运用和相关方法"></a>C++：string的运用和相关方法</h1><h2 id="一、删除std-string或std-wstring的最后一个字符："><a href="#一、删除std-string或std-wstring的最后一个字符：" class="headerlink" title="一、删除std::string或std::wstring的最后一个字符："></a>一、删除std::string或std::wstring的最后一个字符：</h2><h3 id="s-pop-back"><a href="#s-pop-back" class="headerlink" title="s.pop_back();"></a>s.pop_back();</h3><p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
-<h3 id="s-erase-s-end-1"><a href="#s-erase-s-end-1" class="headerlink" title="s.erase(s.end()-1);"></a>s.erase(s.end()-1);</h3><p>  删除s的最后一个字符</p>
-<h3 id="s-s-substr-0-s-length-1"><a href="#s-s-substr-0-s-length-1" class="headerlink" title="s=s.substr(0,s.length()-1);"></a>s=s.substr(0,s.length()-1);</h3><p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">C++的运算符重载</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-08 00:24:00 / 修改时间：00:27:51" itemprop="dateCreated datePublished" datetime="2023-12-08T00:24:00+08:00">2023-12-08</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br>[[___未完成]] </p>
-<h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>  运算符的重载，实际是一种特殊的函数重载，必须定义一个函数，并告诉C++编译器，当遇到该运算符时就调用此函数来行使运算符功能。这个函数叫做运算符重载函数（常为类的成员函数）。<br>  用函数的方式实现了（+ - * / []数组 &amp;&amp; || 逻辑 等）运算符的重载。根据需求决定重载那些运算符，用到的时候再百度案例即可。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">01背包问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-07 23:34:00" itemprop="dateCreated datePublished" datetime="2023-12-07T23:34:00+08:00">2023-12-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-01 09:51:05" itemprop="dateModified" datetime="2024-02-01T09:51:05+08:00">2024-02-01</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
-<h2 id="01背包问题详解"><a href="#01背包问题详解" class="headerlink" title="01背包问题详解"></a>01背包问题详解</h2><p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>01背包问题可描述为如下问题：<br>有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。<br>问：如何向背包装物体才能使背包中物体的总价值最大？</p>
-<h2 id="为什么不用贪心？"><a href="#为什么不用贪心？" class="headerlink" title="为什么不用贪心？"></a>为什么不用贪心？</h2><p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。<br>为什么这个问题不能用贪心呢？<br>举个例子<br>我的背包容量为10，而且有4个物体，它们的体积和价值分别为<br>w1 = 8, v1 = 9<br>w2 = 3, v2 = 3<br>w3 = 4, v3 = 4<br>w4 = 3, v4 = 3<br>贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体<br>c1 = v1/w1 = 1.125（最大）<br>c2 = v2/w2 = 1<br>c3 = v3/w3 = 1<br>c4 = v4/w4 = 1<br>所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。<br>但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！<br>所以这个问题不可以用贪心法来处理。</p>
-<h2 id="原始的-01背包"><a href="#原始的-01背包" class="headerlink" title="原始的 01背包"></a>原始的 01背包</h2><p>01背包的状态转移方程为<br>`f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]] + v[j])</p>
-<p>i代表对i件物体做决策，有两种方式—放入背包和不放入背包。<br>j表示当前背包剩余的容量。</p>
-<p>转移方程的解释：<br>创建一个状态矩阵f，横坐标 i 是物体编号，纵坐标 j 为背包容量。<br>首先将 f 第0行和第0列初始化为0 （代码里面将整个f初始化为0了，其实只初始化第0行和第0列就够了）。这个表示不放物体时最大价值为0 。（物体编号从1开始）<br>接下来依次遍历f的每一行。如下所示。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">{</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (j &gt;= w[i])<span class="comment">//如果背包装得下当前的物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//如果背包装不下当前物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>如果背包装得下当前的物体，在遍历过程中分别计算第i件物体放入和不放入背包的价值，取其中大的做为当前的最大价值。<br>如果背包装不下当前物体那么第i个物体只有不放入背包一种选择。</p>
-<p>不放入背包时:第i次决策后的最大价值和第i-1次决策时候的价值是一样的（还是原来的那些物体，没多没少）。<br>放入背包时:第i次决策后的价值为 第i-1次决策时候的价值 加上 当前物体的价值v[j]。物体放入背包后会使背包容量变为 j ，即没放物体之前背包的容量为j - w[i]。</p>
-<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> max(N1,N2) N1&gt;N2?N1:N2</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	第一行输入背包容量V和物体的个数n</span></span><br><span class="line"><span class="comment">	接下来有n行，每行包含两个数字，分别为该物体的花费和价值</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; w, v;<span class="comment">//w为花费，v为价值</span></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; f;<span class="comment">//f状态矩阵</span></span><br><span class="line">	<span class="type">int</span> V, n;<span class="comment">//V背包容量，n物体数</span></span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; V &gt;&gt; n)</span><br><span class="line">	{</span><br><span class="line">		w.<span class="built_in">clear</span>();</span><br><span class="line">		v.<span class="built_in">clear</span>();</span><br><span class="line">		f.<span class="built_in">clear</span>();</span><br><span class="line">		w.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		v.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输入原始数据</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="type">int</span> cur_w, cur_v;</span><br><span class="line">			cin &gt;&gt; cur_w &gt;&gt; cur_v;</span><br><span class="line">			w.<span class="built_in">push_back</span>(cur_w);</span><br><span class="line">			v.<span class="built_in">push_back</span>(cur_v);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//初始化状态矩阵</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">buff</span><span class="params">(V + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">			f.<span class="built_in">push_back</span>(buff);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//动态规划过程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">			{</span><br><span class="line">				<span class="keyword">if</span> (j &gt;= w[i])</span><br><span class="line">				{</span><br><span class="line">					f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">				}</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				{</span><br><span class="line">					f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="type">int</span> ans = f[n][V];</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/" class="post-title-link" itemprop="url">机械键盘初次选购</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-05 20:01:00" itemprop="dateCreated datePublished" datetime="2023-12-05T20:01:00+08:00">2023-12-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-17 09:52:13" itemprop="dateModified" datetime="2024-02-17T09:52:13+08:00">2024-02-17</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈]] [[___键盘/" rel="contents" data-pjax-state=""># 杂谈]] [[___键盘</a> <br></p>
-<blockquote>
-<p>今天是我初次选购机械键盘，有一说一就算是选择了茶轴，结果还是很吵……</p>
-<p>总的来说到手的键盘我很满意，手感、做工、rgb灯效都很棒</p>
-<p>但是就是有一个问题，那就是这个空格的手感相较于其他的按键来说，会有点过于拉跨，就是也不是说会发生晃动什么的，就是这个手感要比其他的按钮要烂一点，尤其是它的回弹，每次一按下去我都感觉是在按一个又沉又厚重的东西……</p>
-<p>其实也不是很难得出它这个样子的原因，实际上空格键因为加上了卫星轴的设计，加上本身的重量比较大，所以说会导致这样的问题。</p>
-<p>可能比较好的办法就是换一个弹簧？反正这件事情暂时没有解决。</p>
-</blockquote>
-<p><strong>接下来，我来总结一下这次购买的经验。</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/05/1.Archieve/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E5%88%9D%E6%AC%A1%E9%80%89%E8%B4%AD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">…</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/9/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">…</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">…</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/9/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

@@ -1,0 +1,443 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="#  #    题目要求我们求出一台主机的网络地址和主机地址，并判断是否存在子网划分。首先需要将IP地址和子网掩码转换为二进制并进行AND运算，得到网络地址。具体步骤如下：   将IP地址和子网掩码转换为二进制，并进行AND运算，得到网络地址。 将主机位全设为1，得到广播地址。 判断是否存在子网划分，即判断子网掩码中1的位数是否大于24位。   题目要求我们将一个C类IP地址划分为12个不同的子网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络技术：主机的ip地址，子网编码、子网掩码">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/03/15/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E4%B8%BB%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%AD%90%E7%BD%91%E7%BC%96%E7%A0%81%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="#  #    题目要求我们求出一台主机的网络地址和主机地址，并判断是否存在子网划分。首先需要将IP地址和子网掩码转换为二进制并进行AND运算，得到网络地址。具体步骤如下：   将IP地址和子网掩码转换为二进制，并进行AND运算，得到网络地址。 将主机位全设为1，得到广播地址。 判断是否存在子网划分，即判断子网掩码中1的位数是否大于24位。   题目要求我们将一个C类IP地址划分为12个不同的子网">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-15T02:22:00.000Z">
+<meta property="article:modified_time" content="2024-03-15T03:37:43.590Z">
+<meta property="article:author" content="XLXZ">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2024/03/15/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E4%B8%BB%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%AD%90%E7%BD%91%E7%BC%96%E7%A0%81%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2024/03/15/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E4%B8%BB%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%AD%90%E7%BD%91%E7%BC%96%E7%A0%81%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/","path":"2024/03/15/网络技术：主机的ip地址，子网编码、子网掩码/","title":"网络技术：主机的ip地址，子网编码、子网掩码"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网络技术：主机的ip地址，子网编码、子网掩码 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">48</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">151</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/03/15/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E4%B8%BB%E6%9C%BA%E7%9A%84ip%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%AD%90%E7%BD%91%E7%BC%96%E7%A0%81%E3%80%81%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网络技术：主机的ip地址，子网编码、子网掩码 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网络技术：主机的ip地址，子网编码、子网掩码
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-03-15 10:22:00 / 修改时间：11:37:43" itemprop="dateCreated datePublished" datetime="2024-03-15T10:22:00+08:00">2024-03-15</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags//" rel="contents" data-pjax-state=""># </a> <br><a href="/tags//" rel="contents" data-pjax-state=""># </a> <br></p>
+<ol>
+<li>题目要求我们求出一台主机的网络地址和主机地址，并判断是否存在子网划分。首先需要将IP地址和子网掩码转换为二进制并进行AND运算，得到网络地址。具体步骤如下：</li>
+</ol>
+<ul>
+<li>将IP地址和子网掩码转换为二进制，并进行AND运算，得到网络地址。</li>
+<li>将主机位全设为1，得到广播地址。</li>
+<li>判断是否存在子网划分，即判断子网掩码中1的位数是否大于24位。</li>
+</ul>
+<ol start="2">
+<li>题目要求我们将一个C类IP地址划分为12个不同的子网，每个子网主机数不超过14台。首先需要确定子网掩码的长度，然后根据子网掩码计算出每个子网的网络地址、广播地址和可用主机地址范围。具体步骤如下：</li>
+</ol>
+<ul>
+<li>确定子网掩码的长度，即2的几次方可以整除12且不超过28。</li>
+<li>根据子网掩码的长度计算出每个子网的网络地址和广播地址。</li>
+<li>计算每个子网的可用主机地址数量，并根据需要确定主机地址的分配方式。</li>
+<li>最后根据计算结果填写子网掩码。</li>
+</ul>
+<p>这两道题涉及的知识点包括IP地址、子网掩码、二进制运算、子网划分、子网掩码的计算等。其中，IP地址是互联网中的基本地址，用于标识网络中的设备；子网掩码用于区分IP地址中的网络地址和主机地址；二进制运算是计算网络地址的基础；子网划分是将一个大的网络划分为多个小的网络，以提高网络资源的利用率；子网掩码的计算是确定网络地址、广播地址和可用主机地址的关键。</p>
+<p>首先，我们分别解答这两道题目。</p>
+<p><strong>1. 题目一</strong><br>给定主机的IP地址是 <code>168.114.25.60</code>，子网掩码是 <code>255.255.224.0</code>。</p>
+<p>子网掩码 <code>255.255.224.0</code> 对应于二进制 <code>11111111.11111111.11100000.00000000</code>。这意味着前 21 位被用作网络部分，后 11 位被用作主机部分。</p>
+<ul>
+<li><p><strong>网络地址</strong>：为了得到网络地址，我们将主机IP地址与子网掩码进行逻辑“与”运算。将IP地址转换为二进制并与子网掩码做“与”操作：</p>
+ <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">10101000.01110010.00011001.00111100 (168.114.25.60)</span><br><span class="line">AND</span><br><span class="line">11111111.11111111.11100000.00000000 (255.255.224.0 的二进制)</span><br><span class="line">-----------------------------------</span><br><span class="line">10101000.01110000.00000000.00000000 (网络地址的二进制)</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 转换回十进制得到网络地址为 <code>168.112.0.0</code>。</p>
+</li>
+<li><p><strong>主机地址</strong>：由于子网掩码中最后11位表示主机部分，因此主机地址是IP地址除去网络地址的部分，即 <code>168.114.25.60 - 168.112.0.0 = 0.0.25.60</code>。但这并不是通常意义上的主机地址，因为在实际应用中主机地址不包含网络地址部分，这里只是指出主机ID部分为 <code>.25.60</code>。</p>
+</li>
+</ul>
+<p><strong>子网划分</strong>：由于子网掩码不是标准的C类地址（即非255.255.255.0），说明确实进行了子网划分，划分子网的具体数目和每个子网的主机数可以根据掩码长度得出。</p>
+<ul>
+<li><p><strong>子网编址位数</strong>：子网掩码从左向右数，第一个出现连续0的位置前面的比特数即为子网位数，这里是21位，所以有3位用于子网编址。</p>
+</li>
+<li><p><strong>子网数量</strong>：由于3位用于子网划分，2^3 = 8，理论上可以创建8个子网（但由于网络和广播地址不能分配给主机，所以实际上可用子网数会少于8个）。</p>
+</li>
+<li><p><strong>每个子网主机数</strong>：剩余的11位用于主机编码，但去掉全0子网和全1子网作为网络地址和广播地址，有效主机数为 (2^{11} - 2 = 2046)，不过这里的子网掩码只影响了最后一段，而题目并未明确要求计算每个子网的实际主机数，故具体到每个子网，实际可分配主机数取决于所选的子网号。</p>
+</li>
+</ul>
+<p><strong>2. 题目二</strong><br>给定的C类IP地址是 <code>211.98.246.0</code>，需划分为12个子网，每个子网主机数不超过14台。</p>
+<p>由于C类地址默认的子网掩码是 <code>255.255.255.0</code>，对应8位主机位。要划分出12个子网，我们需要借用主机位的一部分作为子网位。</p>
+<ul>
+<li><p><strong>所需子网位数</strong>：按照2^n &gt;= 12的要求，至少需要4位子网位（因为2^3 &lt; 12 &lt; 2^4）。</p>
+</li>
+<li><p><strong>新的子网掩码</strong>：原C类掩码基础上增加4位，变为 <code>255.255.255.192</code>，对应的二进制是 <code>11111111.11111111.11111111.11000000</code>，即 <code>/20</code>。</p>
+</li>
+</ul>
+<p>接下来，我们可以逐一分配这12个子网及其范围：</p>
+<ul>
+<li><p>子网1：网络地址 <code>211.98.246.0</code>，开始地址 <code>211.98.246.1</code>，结束地址 <code>211.98.246.126</code>，广播地址 <code>211.98.246.127</code>。</p>
+</li>
+<li><p>子网2：网络地址 <code>211.98.246.128</code>，开始地址 <code>211.98.246.129</code>，结束地址 <code>211.98.246.254</code>，广播地址 <code>211.98.246.255</code>。</p>
+</li>
+</ul>
+<p>依此类推，每次网络地址增加192（即 <code>11000000</code> 二进制），直到分配完所有12个子网。每个子网的有效主机数是 (2^{8-4-1} = 16) 台（减去全0和全1的主机地址）。</p>
+<p><strong>相关知识点讲解：</strong></p>
+<ol>
+<li><p><strong>IP地址</strong>：Internet Protocol Address，是由32位二进制数组成，通常被分为4个八位组，用点分十进制表示，例如 <code>168.114.25.60</code>。</p>
+</li>
+<li><p><strong>子网掩码</strong>：用于区分IP地址中网络部分和主机部分，相同的网络部分表示处于同一子网内的设备，而主机部分则是网络内唯一标识主机的。子网掩码中值为1的位对应IP地址中的网络部分，值为0的位对应主机部分。</p>
+</li>
+<li><p><strong>子网划分</strong>：通过借用主机位的一部分作为子网位，可以在原有IP地址的基础上进一步细分网络，以适应更多层次的网络组织结构需求。</p>
+</li>
+<li><p><strong>网络地址</strong>：通过IP地址和子网掩码按位与操作得到的结果，标识了一个特定子网。</p>
+</li>
+<li><p><strong>主机地址</strong>：IP地址中除去网络地址部分剩下的部分，用于唯一标识子网内的主机。</p>
+</li>
+<li><p><strong>广播地址</strong>：在一个子网中，主机发送给所有主机的消息使用的特殊地址，通常是将子网内主机位全置1后的IP地址。</p>
+</li>
+<li><p><strong>CIDR表示法</strong>：Classless Inter-Domain Routing，无类别域间路由，采用斜线记法，如 <code>/24</code> 表示前24位为网络位，后8位为主机位。</p>
+</li>
+</ol>
+<p>以上解释基于题目的描述，但请注意，在实际计算时，尤其是第二个问题中，需要正确计算每个子网的起止地址和广播地址，这里给出的仅是示意性的解析，真实情况需要对每个子网进行详细计算。</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/alipay.jpg" alt="XLXZ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/15/1.Archieve/%E5%B9%B3%E8%A1%8C%E8%BD%B4%E5%AE%9A%E7%90%86%E5%92%8C%E7%9B%B8%E4%BA%A4%E8%BD%B4%E5%AE%9A%E7%90%86/" rel="prev" title="平行轴定理和相交轴定理">
+                  <i class="fa fa-angle-left"></i> 平行轴定理和相交轴定理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/24/%E7%81%B5%E6%84%9F%EF%BC%9A%E5%8D%A1%E9%9D%A2+%E8%92%99%E7%89%88/" rel="next" title="灵感：卡面+蒙版">
+                  灵感：卡面+蒙版 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
