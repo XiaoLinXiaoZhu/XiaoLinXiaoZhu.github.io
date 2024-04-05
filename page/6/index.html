@@ -229,7 +229,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>300</span>
+      <span>116</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -247,10 +247,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a> <br></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>python中hex内置函数无法将生成的16进制码自动补0，比如说：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p> 通过多次查资料和尝试，得到如下：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a> <br> ### 背景
+python中hex内置函数无法将生成的16进制码自动补0，比如说：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="解决办法">解决办法</h3>
+<p>&nbsp;通过多次查资料和尝试，得到如下：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/02/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/#more" rel="contents">
@@ -324,7 +329,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>12</span>
+      <span>9</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -342,7 +347,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
+          <p><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <br></p>
 <p>有机会去玩玩</p>
 
       
@@ -416,14 +422,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>420</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -434,8 +440,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br> ### 背景
+最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
 <p>hmmm然后就发现了一件比较有意思的事情</p>
           <!--noindex-->
             <div class="post-button">
@@ -516,7 +523,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>85</span>
+      <span>59</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -534,7 +541,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a>
+<br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
 <p>实际上，只需要照着IDF框架给出的示例进行改编即可</p>
           <!--noindex-->
             <div class="post-button">
@@ -615,7 +624,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>575</span>
+      <span>214</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -633,7 +642,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br></p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/30/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/#more" rel="contents">
@@ -713,14 +723,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>476</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -731,7 +741,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br>因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br> 因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
 <p>首先肯定就是创建声明，使得我们的mod能够正常被挂载</p>
           <!--noindex-->
             <div class="post-button">
@@ -812,14 +823,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>518</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -830,9 +841,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
-<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑<br></p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC
+Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
+<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/29/mcMod%EF%BC%9A0.1%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/#more" rel="contents">
@@ -912,14 +925,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -930,7 +943,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/桌游/" rel="contents" data-pjax-state=""># 桌游</a> <br></p>
+          <p><a href="/tags/桌游/" rel="contents" data-pjax-state=""># 桌游</a>
+<br></p>
 <p>昨天和王仁喆一起去桌游店去体验了一款重策，名字叫做<strong>方舟动物园</strong></p>
 <p>总体来说，游戏给我带来的体验较为良好，整体游戏的设计较为良好</p>
 <p>我并不想过多复杂的介绍它的具体规则，这里挑几个我认为比较有讨论性的点进行分析。</p>
@@ -1013,7 +1027,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>249</span>
+      <span>184</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1031,20 +1045,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏设计/" rel="contents" data-pjax-state=""># 游戏设计</a> <br></p>
-<h3 id="COCOON：开关开-类机关"><a href="#COCOON：开关开-类机关" class="headerlink" title="COCOON：开关开-类机关"></a>COCOON：开关开-类机关</h3><p>这个可以说是COCOON中最基础的解密构成元素，最基础的结构。</p>
-<p>最本质的特征就是A控制甲的上下，甲的上下又可以在甲上控制，玩家需要先使用A将甲移动过来，之后就能够自由使用甲  </p>
+          <p><a href="/tags/游戏设计/" rel="contents" data-pjax-state="">#
+游戏设计</a> <br> ### COCOON：开关开-类机关</p>
+<p>这个可以说是COCOON中最基础的解密构成元素，最基础的结构。</p>
+<p>最本质的特征就是A控制甲的上下，甲的上下又可以在甲上控制，玩家需要先使用A将甲移动过来，之后就能够自由使用甲</p>
 <blockquote>
 <p>比如：</p>
-<p>————-=              —-甲—— =——————<br>—————-A-</p>
+<p>---------= ---甲---- =------------ -----------A-</p>
 </blockquote>
 <p>先使用a将甲移过来，然后就可以自由的使用甲。</p>
-<p>这样的机关的最大的优势就是</p>
-<ol>
-<li>首先，玩家知道这里有路。</li>
-<li>其次，玩家知道需要寻找一个A使得这个电梯启动。</li>
-<li>玩家在平台过来的时候也就一并知道了这个电梯能够去哪里。</li>
-</ol>
+<p>这样的机关的最大的优势就是 1. 首先，玩家知道这里有路。 2.
+其次，玩家知道需要寻找一个A使得这个电梯启动。 3.
+玩家在平台过来的时候也就一并知道了这个电梯能够去哪里。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/14/COCOON%EF%BC%9A%E5%BC%80%E5%85%B3%E5%BC%80-%E7%B1%BB%E6%9C%BA%E5%85%B3/#more" rel="contents">
@@ -1124,14 +1136,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 

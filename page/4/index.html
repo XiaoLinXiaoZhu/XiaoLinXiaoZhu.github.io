@@ -229,7 +229,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>306</span>
+      <span>164</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -247,15 +247,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/tag/" rel="contents" data-pjax-state=""># tag</a> <br><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a> <br></p>
-<h3 id="3-Source"><a href="#3-Source" class="headerlink" title="3.Source"></a>3.Source</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此文件不能被删除，是用于同步3.Source的关键post文件。</span><br></pre></td></tr></tbody></table></figure>
-<p>当 该文件存在 &amp;&amp; asscess_folder功能打开，hexo渲染网页的时候将会把与post名称相同的文件夹给同步加载。</p>
-<p>配合我自己编写的 hexo-xlxz-imageRedirect 插件，可以将所有的形如<code>![](/2024/03/01/3.Source/next.png)</code>的图片重定向到3.Source文件夹下，这样的话以后直接复制图片到obsidian中之后就可以同时在hexo上显示了～</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+          <p><a href="/tags/tag/" rel="contents" data-pjax-state=""># tag</a>
+<br><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a>
+<br></p>
+<h3 id="source">3.Source</h3>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">此文件不能被删除，是用于同步3.Source的关键post文件。</span><br></pre></td></tr></tbody></table></figure>
+<p>当 该文件存在 &amp;&amp;
+asscess_folder功能打开，hexo渲染网页的时候将会把与post名称相同的文件夹给同步加载。</p>
+<p>配合我自己编写的 hexo-xlxz-imageRedirect
+插件，可以将所有的形如<code>![](/2024/03/01/3.Source/next.png)</code>的图片重定向到3.Source文件夹下，这样的话以后直接复制图片到obsidian中之后就可以同时在hexo上显示了～</p>
+<h3 id="优点">优点</h3>
+<ul>
 <li>构建方便</li>
 <li>文件存在于本地，没有丢失的风险</li>
 </ul>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
+<h3 id="缺点">缺点</h3>
+<ul>
 <li>github在一些网络下图片加载速度较慢</li>
 </ul>
 
@@ -324,7 +331,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>911</span>
+      <span>323</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -342,12 +349,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/编程/" rel="contents" data-pjax-state=""># 编程</a> <br><br>unicode编码中从 \u0000 到 \u0020 是一些特殊的字符，用于控制字符格式或者一些特殊的东西，下面是一个表格，展示了那些字符：</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br><a href="/tags/编程/" rel="contents" data-pjax-state=""># 编程</a>
+<br> unicode编码中从 000 到 020
+是一些特殊的字符，用于控制字符格式或者一些特殊的东西，下面是一个表格，展示了那些字符：</p>
 <p><strong>unicode字符编码</strong></p>
-<div class="table-container">
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>字符编号</th>
 <th>字符代号</th>
 <th>字符功能</th>
@@ -355,187 +364,187 @@
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>0001</td>
 <td>SOH</td>
 <td>(start of handing)</td>
 <td>标题开始</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0002</td>
 <td>STX</td>
 <td>(start of text)</td>
 <td>正文开始</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0003</td>
 <td>ETX</td>
 <td>(end of text)</td>
 <td>正文结束</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0004</td>
 <td>EOT</td>
 <td>(end of transmission)</td>
 <td>传输结束</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0005</td>
 <td>ENQ</td>
 <td>(enquiry)</td>
 <td>请求</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0006</td>
 <td>ACK</td>
 <td>(acknowledge)</td>
 <td>收到通知</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0007</td>
 <td>BEL</td>
 <td>(bell)</td>
 <td>响铃</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0008</td>
 <td>BS</td>
 <td>(backspace)</td>
 <td>退格</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0009</td>
 <td>HT</td>
 <td>(horizontal tab)</td>
 <td>水平制表符</td>
 </tr>
-<tr>
+<tr class="even">
 <td>000A</td>
 <td>LF</td>
 <td>(NL line feed, new line)</td>
 <td>换行键</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>000B</td>
 <td>VT</td>
 <td>(vertical tab)</td>
 <td>垂直制表符</td>
 </tr>
-<tr>
+<tr class="even">
 <td>000C</td>
 <td>FF</td>
 <td>(NP form feed, new page)</td>
 <td>换页键</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>000D</td>
 <td>CR</td>
 <td>(carriage return)</td>
 <td>回车键</td>
 </tr>
-<tr>
+<tr class="even">
 <td>000E</td>
 <td>SO</td>
 <td>(shift out)</td>
 <td>不用切换</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>000F</td>
 <td>SI</td>
 <td>(shift in)</td>
 <td>启用切换</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0010</td>
 <td>DLE</td>
 <td>(data link escape)</td>
 <td>数据链路转义</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0011</td>
 <td>DC1</td>
 <td>(device control 1)</td>
 <td>设备控制1</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0012</td>
 <td>DC2</td>
 <td>(device control 2)</td>
 <td>设备控制2</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0013</td>
 <td>DC3</td>
 <td>(device control 3)</td>
 <td>设备控制3</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0014</td>
 <td>DC4</td>
 <td>(device control 4)</td>
 <td>设备控制4</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0015</td>
 <td>NAK</td>
 <td>(negative acknowledge)</td>
 <td>拒绝接收</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0016</td>
 <td>SYN</td>
 <td>(synchronous idle)</td>
 <td>同步空闲</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0017</td>
 <td>ETB</td>
 <td>(end of trans. block)</td>
 <td>传输块结束</td>
 </tr>
-<tr>
+<tr class="even">
 <td>0018</td>
 <td>CAN</td>
 <td>(cancel)</td>
 <td>取消</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>0019</td>
 <td>EM</td>
 <td>(end of medium)</td>
 <td>介质中断</td>
 </tr>
-<tr>
+<tr class="even">
 <td>001A</td>
 <td>SUB</td>
 <td>(substitute)</td>
 <td>替补</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>001B</td>
 <td>ESC</td>
 <td>(escape)</td>
 <td>溢出</td>
 </tr>
-<tr>
+<tr class="even">
 <td>001C</td>
 <td>FS</td>
 <td>(file separator)</td>
 <td>文件分割符</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>001D</td>
 <td>GS</td>
 <td>(group separator)</td>
 <td>分组符</td>
 </tr>
-<tr>
+<tr class="even">
 <td>001E</td>
 <td>RS</td>
 <td>(record separator)</td>
 <td>记录分离符</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>001F</td>
 <td>US</td>
 <td>(unit separator)</td>
@@ -543,7 +552,6 @@
 </tr>
 </tbody>
 </table>
-</div>
 
       
     </div>
@@ -616,7 +624,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>179</span>
+      <span>150</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -634,25 +642,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state=""># 效率工具</a> <br><a href="/tags/大学/" rel="contents" data-pjax-state=""># 大学</a> <br><br><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br><br>答辩论文ppt制作主要有以下几个方面：</p>
-<ol>
-<li>配色</li>
-<li>文字</li>
-<li>模板</li>
-<li>图表</li>
-</ol>
-<h2 id="一、配色"><a href="#一、配色" class="headerlink" title="一、配色"></a>一、配色</h2><p>配色最好是要简洁大方，可以考虑使用校徽配色：</p>
+          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state="">#
+效率工具</a>
+<br><a href="/tags/大学/" rel="contents" data-pjax-state=""># 大学</a>
+<br> <a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <br> 答辩论文ppt制作主要有以下几个方面： 1. 配色 2. 文字 3.
+模板 4. 图表</p>
+<h2 id="一配色">一、配色</h2>
+<p>配色最好是要简洁大方，可以考虑使用校徽配色：</p>
 <blockquote>
-<p>华中科技大学<br>红色 e02e1e</p>
-<p>蓝色 155da2<br><img src="/2024/03/01/3.Source/Pasted image 20240405100950.png" alt="Pasted image 20240405100950.png" align="right" width="450"></p>
+<p>华中科技大学 红色 e02e1e</p>
+<p>蓝色 155da2
+<img src="/2024/03/01/3.Source/Pasted image 20240405100950.png" alt="Pasted image 20240405100950.png" align="right" width="450"></p>
 </blockquote>
-<h2 id="二、字体颜色与背景颜色相反"><a href="#二、字体颜色与背景颜色相反" class="headerlink" title="二、字体颜色与背景颜色相反"></a>二、字体颜色与背景颜色相反</h2><h3 id="整体配色"><a href="#整体配色" class="headerlink" title="整体配色"></a>整体配色</h3><ul>
+<h2 id="二字体颜色与背景颜色相反">二、字体颜色与背景颜色相反</h2>
+<h3 id="整体配色">整体配色</h3>
+<ul>
 <li>一个主色</li>
 <li>加黑白灰</li>
 <li>背景建议使用白色</li>
 </ul>
-<h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p>分段处理</p>
-<h2 id="三、模板"><a href="#三、模板" class="headerlink" title="三、模板"></a>三、模板</h2><h3 id="分块"><a href="#分块" class="headerlink" title="分块"></a>分块</h3><h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><h2 id="四、图表"><a href="#四、图表" class="headerlink" title="四、图表"></a>四、图表</h2><p>增加图表，因为图表往往是比较易懂且直观的表达方式</p>
+<h2 id="文字">文字</h2>
+<p>分段处理</p>
+<h2 id="三模板">三、模板</h2>
+<h3 id="分块">分块</h3>
+<h3 id="分组">分组</h3>
+<h2 id="四图表">四、图表</h2>
+<p>增加图表，因为图表往往是比较易懂且直观的表达方式</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/28/%E7%AD%94%E8%BE%A9PPT%E5%88%B6%E4%BD%9C%E8%A6%81%E9%A2%86/#more" rel="contents">
@@ -726,7 +742,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>89</span>
+      <span>78</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -744,7 +760,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/网络技术/" rel="contents" data-pjax-state=""># 网络技术</a> <br><br>判断这个有一个技巧就是以网卡为分界线</p>
+          <p><a href="/tags/网络技术/" rel="contents" data-pjax-state="">#
+网络技术</a> <br> 判断这个有一个技巧就是以网卡为分界线</p>
 <ul>
 <li>网卡以外（包括网卡）就是<strong>网络信息设备</strong>（用于处理网络中信息的传递）</li>
 <li>网卡以内（比如软件）就是<strong>网络资源设备</strong>（用于处理网络所存储的信息）</li>
@@ -815,7 +832,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>198</span>
+      <span>155</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -833,16 +850,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/大学/" rel="contents" data-pjax-state=""># 大学</a> <br><a href="/tags/英语/" rel="contents" data-pjax-state=""># 英语</a> <br><br>分数构成如下：</p>
-<ol>
-<li>考试 <strong>15分</strong>（大学英语词汇5-8单元<em>不检查</em>）</li>
-<li>好策-课本任务完成 <strong>5分</strong>（可以使用网页端刷完3.11开放）7h1分，正确率80%4分</li>
-<li>小说阅读 <strong>10分</strong> 3.18-5.26 每周完成阅读任务 在6.2之前完成阅读</li>
+          <p><a href="/tags/大学/" rel="contents" data-pjax-state=""># 大学</a>
+<br><a href="/tags/英语/" rel="contents" data-pjax-state=""># 英语</a>
+<br> 分数构成如下：</p>
+<ol type="1">
+<li>考试
+<strong>15分</strong>（大学英语词汇5-8单元<em>不检查</em>）</li>
+<li>好策-课本任务完成
+<strong>5分</strong>（可以使用网页端刷完3.11开放）7h1分，正确率80%4分</li>
+<li>小说阅读 <strong>10分</strong> 3.18-5.26 每周完成阅读任务
+在6.2之前完成阅读</li>
 <li>口语对话 <strong>10分</strong></li>
 </ol>
 <p>一共40分，最后按比例折算为绩点。</p>
 <hr>
-<p>其实最主要的是需要考虑是否能够转变观念，将课堂要求的任务不在看做任务而是自主完成学习提升的途径。<br><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
+<p>其实最主要的是需要考虑是否能够转变观念，将课堂要求的任务不在看做任务而是自主完成学习提升的途径。
+<a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a>
+<br></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/26/1.Archieve/%E5%A4%A7%E5%AD%A6%EF%BC%9A%E5%A4%A7%E4%B8%80%E4%B8%8B%E8%8B%B1%E8%AF%AD%E5%88%86%E6%95%B0%E8%AE%A1%E7%AE%97/#more" rel="contents">
@@ -916,7 +940,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>9</span>
+      <span>2</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -936,7 +960,8 @@
     <div class="post-body" itemprop="articleBody">
           <span id="more"></span>
 <hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+<h3 id="reference">Reference</h3>
+
       
     </div>
 
@@ -1002,14 +1027,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>683</span>
+      <span>501</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1020,20 +1045,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><br>如题，分享（记录一下我使用的系统相关软件）</p>
-<h2 id="火绒"><a href="#火绒" class="headerlink" title="火绒"></a>火绒</h2><p>火绒是我用来挂在后台的杀毒软件，还算是能用就是了。有的时候也会对在网络上下载的文件进行杀毒预防一下。</p>
-<h2 id="Glary-Utilities"><a href="#Glary-Utilities" class="headerlink" title="Glary Utilities"></a>Glary Utilities</h2><p>Glary Utilities是一款功能强大的软件，尤其是在Glary Utilities 6之后ui界面得到了极大的改善。</p>
-<p>其里面有十分丰富的功能，但是我一般比较常用的就是分析磁盘文件占用情况以清理不需要的大文件。</p>
-<h3 id="分析磁盘文件占用"><a href="#分析磁盘文件占用" class="headerlink" title="分析磁盘文件占用"></a>分析磁盘文件占用</h3><p>Glary会自动扫描指定文件，然后展示每一个文件/文件夹所占用的当前文件所有文件的百分比，通过这个功能我们能快速锁定占用内存的罪魁祸首，从而对其实现精准打击。</p>
-<h2 id="CCleaner-Professional"><a href="#CCleaner-Professional" class="headerlink" title="CCleaner Professional"></a>CCleaner Professional</h2><p>CCleaner也有比较丰富的功能，其中比较强大的主要是其中的注册表清理以及驱动更新。</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv20920694/">CCleaner-pro（提供最新的破解方法） - 哔哩哔哩 (bilibili.com)</a></p>
-<h3 id="驱动更新"><a href="#驱动更新" class="headerlink" title="驱动更新"></a>驱动更新</h3><p>我之前在网络上找我的网络适配器的最新驱动更新没有找到……然后cc直接给我扫描了一下一键装好了。</p>
-<h3 id="注册表清理功能"><a href="#注册表清理功能" class="headerlink" title="注册表清理功能"></a>注册表清理功能</h3><p>ccleaner的注册表清理功能也很强大，面对无效的文件格式，可以一键将其清理</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br> 如题，分享（记录一下我使用的系统相关软件）</p>
+<h2 id="火绒">火绒</h2>
+<p>火绒是我用来挂在后台的杀毒软件，还算是能用就是了。有的时候也会对在网络上下载的文件进行杀毒预防一下。</p>
+<h2 id="glary-utilities">Glary Utilities</h2>
+<p>Glary Utilities是一款功能强大的软件，尤其是在Glary Utilities
+6之后ui界面得到了极大的改善。</p>
+<p>其里面有十分丰富的功能，但是我一般比较常用的就是分析磁盘文件占用情况以清理不需要的大文件。
+### 分析磁盘文件占用</p>
+<p>Glary会自动扫描指定文件，然后展示每一个文件/文件夹所占用的当前文件所有文件的百分比，通过这个功能我们能快速锁定占用内存的罪魁祸首，从而对其实现精准打击。</p>
+<h2 id="ccleaner-professional">CCleaner Professional</h2>
+<p>CCleaner也有比较丰富的功能，其中比较强大的主要是其中的注册表清理以及驱动更新。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv20920694/">CCleaner-pro（提供最新的破解方法）
+- 哔哩哔哩 (bilibili.com)</a></p>
+<h3 id="驱动更新">驱动更新</h3>
+<p>我之前在网络上找我的网络适配器的最新驱动更新没有找到……然后cc直接给我扫描了一下一键装好了。</p>
+<h3 id="注册表清理功能">注册表清理功能</h3>
+<p>ccleaner的注册表清理功能也很强大，面对无效的文件格式，可以一键将其清理</p>
 <blockquote>
 <p>比如bandzip会自动抢占.zip的默认打开方式，当你将bandzip默认打开取消掉之后，每次启动.zip都会询问要以何种方式打开，并且无法选择默认打开，只能选择仅一次。</p>
 <p>当然，你也可以手动将其在【默认应用】那里重新赋值，但是十分麻烦，因为压缩包的格式挺多的</p>
 </blockquote>
-<h2 id="Dism"><a href="#Dism" class="headerlink" title="Dism++"></a>Dism++</h2><p>dism++一般用来清理系统文件比较靠谱（但是同时也比较激进），它能更深层次地清理系统文件。</p>
+<h2 id="dism">Dism++</h2>
+<p>dism++一般用来清理系统文件比较靠谱（但是同时也比较激进），它能更深层次地清理系统文件。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/21/%E6%9D%82%E8%B0%88%EF%BC%9A%E5%88%86%E4%BA%AB%E4%B8%80%E4%B8%8B%E6%88%91%E7%94%A8%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E8%BD%AF%E4%BB%B6/#more" rel="contents">
@@ -1107,7 +1142,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>136</span>
+      <span>118</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1125,8 +1160,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state=""># 效率工具</a> <br><br>怀疑性认知的六条原则</p>
-<ol>
+          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state="">#
+效率工具</a> <br> 怀疑性认知的六条原则</p>
+<ol type="1">
 <li>我碰到的是什么内容?</li>
 <li>信息完整吗?假如不完整，缺少了什么?</li>
 <li>信源是谁/什么?我为什么要相信他们?</li>
@@ -1135,7 +1171,8 @@
 <li>我有必要知道这些信息吗?</li>
 </ol>
 <hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p>《真相：信息超载时代如何知道该相信什么》</p>
+<h3 id="reference">Reference</h3>
+<p>《真相：信息超载时代如何知道该相信什么》</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/17/%E6%80%80%E7%96%91%E6%80%A7%E8%AE%A4%E7%9F%A5%E7%9A%84%E5%85%AD%E6%9D%A1%E5%8E%9F%E5%88%99/#more" rel="contents">
@@ -1209,7 +1246,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>302</span>
+      <span>249</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1227,10 +1264,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/耳机/" rel="contents" data-pjax-state=""># 耳机</a> <br></p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br><a href="/tags/耳机/" rel="contents" data-pjax-state=""># 耳机</a>
+<br></p>
 <p>如果你的耳机在百元以下（蓝牙不清楚，不考虑蓝牙耳机），那么首推一定是换有线耳机，大约价格在500上下就可以，(300到700左右），选择国产的耳机性价比高，基本可以获得前80%的体验。</p>
 <p>再者，如果经常用手机或者平板听歌，请买一个解码器，注意，是带芯片的解码器，价格在50到100之间就可以，太便宜的容易坏。如果以上耳机加解码器都有了，听音乐就已经完成90%了。</p>
-<p>剩下的无损音频，加上四位数的耳机，还有几百上千的解码器都是在提升剩下的10%。总体下来 耳机十解码器一共在500元上下，就可以达到一个比较理想的音质了。50以下到几百的耳机提升真的很明显，50的耳机几乎没什么声场，解析力还差。</p>
+<p>剩下的无损音频，加上四位数的耳机，还有几百上千的解码器都是在提升剩下的10%。总体下来
+耳机十解码器一共在500元上下，就可以达到一个比较理想的音质了。50以下到几百的耳机提升真的很明显，50的耳机几乎没什么声场，解析力还差。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/17/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E8%80%B3%E6%9C%BA%E5%8F%91%E7%83%A7/#more" rel="contents">
@@ -1310,14 +1350,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>694</span>
+      <span>590</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1328,18 +1368,31 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/键盘/" rel="contents" data-pjax-state=""># 键盘</a> <br><br>正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。</p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br><a href="/tags/键盘/" rel="contents" data-pjax-state=""># 键盘</a>
+<br> 正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。</p>
+<h2 id="背景">背景</h2>
+<p>在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。</p>
 <p>遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。</p>
-<p>更为详细的内容可以参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/133532919">聊聊机械键盘的结构。 - 知乎 (zhihu.com)</a></p>
-<h2 id="键盘损坏的检修"><a href="#键盘损坏的检修" class="headerlink" title="键盘损坏的检修"></a>键盘损坏的检修</h2><h3 id="排查是否是电脑本身的问题"><a href="#排查是否是电脑本身的问题" class="headerlink" title="排查是否是电脑本身的问题"></a>排查是否是电脑本身的问题</h3><p>键盘损坏无非就是要么是电脑的驱动出了问题或者是该按键被应用占用了，优先排除电脑本身的问题。当有其他设备的时候，直接将键盘连接到其他设备上就知道是不是电脑的问题了，但是有的时候身边并没有其他设备，这个时候可以使用openArk来查询。</p>
+<p>更为详细的内容可以参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/133532919">聊聊机械键盘的结构。 -
+知乎 (zhihu.com)</a></p>
+<h2 id="键盘损坏的检修">键盘损坏的检修</h2>
+<h3 id="排查是否是电脑本身的问题">排查是否是电脑本身的问题</h3>
+<p>键盘损坏无非就是要么是电脑的驱动出了问题或者是该按键被应用占用了，优先排除电脑本身的问题。当有其他设备的时候，直接将键盘连接到其他设备上就知道是不是电脑的问题了，但是有的时候身边并没有其他设备，这个时候可以使用openArk来查询。</p>
 <p>openArk可以查询所有的快捷键占用情况，当然，它还有许多其他的功能，但是我并不熟悉。</p>
-<h3 id="排查键盘的驱动"><a href="#排查键盘的驱动" class="headerlink" title="排查键盘的驱动"></a>排查键盘的驱动</h3><p>有的键盘是可以添加配置设置的。当键盘配置不正确可能会导致键盘失灵的问题，这个时候需要尝试将键盘的配置重置为默认配置即可。</p>
-<h3 id="键盘设备的问题"><a href="#键盘设备的问题" class="headerlink" title="键盘设备的问题"></a>键盘设备的问题</h3><p>如果上述操作后，键盘仍然没有恢复正常的话，那就需要考虑是键盘设备的问题了。键盘设备的问题可以通过了解键盘的构造来了解，具体在下面键盘构造讲解。</p>
-<h2 id="键盘结构"><a href="#键盘结构" class="headerlink" title="键盘结构"></a>键盘结构</h2><p>本人键盘的结构为Bottom mount，即只有Plate被固定在盒体上，PCB和键轴为插栓结构固定在Plate上。</p>
-<p><img src="https://s1.imagehub.cc/images/2024/02/16/c026784cb092d7f463db9ca305e2b124.png" alt="c026784cb092d7f463db9ca305e2b124.png"></p>
+<h3 id="排查键盘的驱动">排查键盘的驱动</h3>
+<p>有的键盘是可以添加配置设置的。当键盘配置不正确可能会导致键盘失灵的问题，这个时候需要尝试将键盘的配置重置为默认配置即可。</p>
+<h3 id="键盘设备的问题">键盘设备的问题</h3>
+<p>如果上述操作后，键盘仍然没有恢复正常的话，那就需要考虑是键盘设备的问题了。键盘设备的问题可以通过了解键盘的构造来了解，具体在下面键盘构造讲解。</p>
+<h2 id="键盘结构">键盘结构</h2>
+<p>本人键盘的结构为Bottom
+mount，即只有Plate被固定在盒体上，PCB和键轴为插栓结构固定在Plate上。</p>
+<figure>
+<img src="https://s1.imagehub.cc/images/2024/02/16/c026784cb092d7f463db9ca305e2b124.png" alt="c026784cb092d7f463db9ca305e2b124.png">
+<figcaption aria-hidden="true">c026784cb092d7f463db9ca305e2b124.png</figcaption>
+</figure>
 <p>检查是键盘哪个部位的问题，可以按照以下步骤尝试：</p>
-<ol>
+<ol type="1">
 <li>直接短接PCB上面的开关，观察是否触发按键。如果没触发，恭喜你就是PCB有问题，这种问题很难自己修好……很不巧的是，我就是这种故障</li>
 <li>PCB正常，检查是否是键轴的问题。通过更换键轴就能够很方便地检修。</li>
 </ol>

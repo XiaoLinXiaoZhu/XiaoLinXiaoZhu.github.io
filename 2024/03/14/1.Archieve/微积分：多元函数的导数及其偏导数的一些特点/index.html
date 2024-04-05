@@ -18,12 +18,24 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# 微积分  二元偏导数的理解偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。 我们之前学了求函数在(0,0)的极限可以这么求得：\begin{split}&amp;\lim_{x\to0,y\to kx}f(x,kx)  \end{split} 这个公式实际上可以理解为f(x,y)沿着面 $y=kx$ 作一截面，沿着截面寻找f(0,0)的值。 显然，如果f(x)连续，$f(x\to0,">
+    <meta name="description" content="#
+ 微积分  ### 二元偏导数的理解
+ 偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。
+ 我们之前学了求函数在(0,0)的极限可以这么求得：\[ \begin{split}&amp;\lim_{x\to0,y\to
+ kx}f(x,kx)  \end{split}\]
+ 这个公式实际上可以理解为f(x,y)沿着面 \(y=kx\)
+ 作一截面，沿着截面寻找f(0,0)的值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微积分：多元函数的导数及其偏导数的一些特点">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/03/14/1.Archieve/%E5%BE%AE%E7%A7%AF%E5%88%86%EF%BC%9A%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E5%81%8F%E5%AF%BC%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E7%82%B9/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# 微积分  二元偏导数的理解偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。 我们之前学了求函数在(0,0)的极限可以这么求得：\begin{split}&amp;\lim_{x\to0,y\to kx}f(x,kx)  \end{split} 这个公式实际上可以理解为f(x,y)沿着面 $y=kx$ 作一截面，沿着截面寻找f(0,0)的值。 显然，如果f(x)连续，$f(x\to0,">
+<meta property="og:description" content="#
+ 微积分  ### 二元偏导数的理解
+ 偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。
+ 我们之前学了求函数在(0,0)的极限可以这么求得：\[ \begin{split}&amp;\lim_{x\to0,y\to
+ kx}f(x,kx)  \end{split}\]
+ 这个公式实际上可以理解为f(x,y)沿着面 \(y=kx\)
+ 作一截面，沿着截面寻找f(0,0)的值。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-14T11:07:00.000Z">
 <meta property="article:modified_time" content="2024-03-14T12:12:59.120Z">
@@ -136,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%81%8F%E5%AF%BC%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">二元偏导数的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E5%AF%BC%E6%95%B0%E4%B8%8D%E5%AD%98%E5%9C%A8"><span class="nav-number">2.</span> <span class="nav-text">偏导数不存在</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">复合函数微分法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">4.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%8F%E5%AF%BC%E6%95%B0%E4%B8%8D%E5%AD%98%E5%9C%A8"><span class="nav-number">1.</span> <span class="nav-text">偏导数不存在</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">复合函数微分法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -233,14 +245,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -250,24 +262,42 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/微积分/" rel="contents" data-pjax-state=""># 微积分</a> <br></p>
-<h3 id="二元偏导数的理解"><a href="#二元偏导数的理解" class="headerlink" title="二元偏导数的理解"></a>二元偏导数的理解</h3><p>偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。</p>
-<p>我们之前学了求函数在(0,0)的极限可以这么求得：</p>
-<p>这个公式实际上可以理解为f(x,y)沿着面 $y=kx$ 作一截面，沿着截面寻找f(0,0)的值。</p>
-<p>显然，如果f(x)连续，$f(x\to0,y\to 0)$ 结果必然是唯一的，即与k的取值无关，借此我们可以判断函数的连续性，并且求得函数的极限值。</p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/微积分/" rel="contents" data-pjax-state="">#
+微积分</a> <br> ### 二元偏导数的理解</p>
+<p>偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。</p>
+<p>我们之前学了求函数在(0,0)的极限可以这么求得：<span class="math display">\[ \begin{split}&amp;\lim_{x\to0,y\to
+kx}f(x,kx)  \end{split}\]</span></p>
+<p>这个公式实际上可以理解为f(x,y)沿着面 <span class="math inline">\(y=kx\)</span>
+作一截面，沿着截面寻找f(0,0)的值。</p>
+<p>显然，如果f(x)连续，<span class="math inline">\(f(x\to0,y\to
+0)\)</span>
+结果必然是唯一的，即与k的取值无关，借此我们可以判断函数的连续性，并且求得函数的极限值。</p>
 <p>其实二元函数的偏导数也可以这么理解，即选取与x轴平行的截面与与y轴平行的截面，然后求z受另外一个参数影响的变化率。</p>
 <p>说白了，就是将一个x或者y代入，然后看剩下的z-y函数或者z-x函数是如何变化的。</p>
-<h3 id="偏导数不存在"><a href="#偏导数不存在" class="headerlink" title="偏导数不存在"></a>偏导数不存在</h3><p>偏导数和全导数之间基本上没有任何的关系……一个函数的偏导数存在，全导数不一定存在；全导数存在，但是偏导数可能不存在……</p>
+<h3 id="偏导数不存在">偏导数不存在</h3>
+<p>偏导数和全导数之间基本上没有任何的关系……一个函数的偏导数存在，全导数不一定存在；全导数存在，但是偏导数可能不存在……</p>
 <p>如何证明偏导数不存在呢？我们可以看看ai的回答：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">title: AI</span><br><span class="line">二元函数的偏导数不存在意味着在某一方向上，函数的变化率不是唯一的或者说不稳定的。这通常意味着函数在该点附近的行为不是线性的，也就是说，函数在该点附近不能通过单一的切线来描述。</span><br><span class="line"></span><br><span class="line">要证明偏导数存在或不存在，可以按照以下步骤进行：</span><br><span class="line"></span><br><span class="line">1. **定义偏导数**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 对于二元函数 $f(x, y)$，其关于 $x$ 的偏导数定义为 $\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x}$。</span><br><span class="line">	* 关于 $y$ 的偏导数定义为 $\frac{\partial f}{\partial y} = \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}$。</span><br><span class="line">2. **计算极限**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 尝试计算上述两个极限。如果极限存在（即为一个具体的数值），则偏导数存在。</span><br><span class="line">	* 如果极限不存在（例如，极限值随着 $\Delta x$ 或 $\Delta y$ 的趋近方式而改变），则偏导数不存在。</span><br><span class="line">3. **使用导数定义**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 另一种方法是直接使用导数的定义。例如，对于 $\frac{\partial f}{\partial x}$，考虑函数在 $x$ 方向上的变化，并观察这种变化是否可以用一个唯一的数来描述。</span><br><span class="line">	* ==实际上就是尝试 $\lim_{x\to x_0} \frac{f(x_0,y_0)-f(x,y_0)}{x}=0$是否成立==，y的话同理。</span><br><span class="line">1. **利用已知函数性质**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 如果函数在某些点处具有特定的性质（如间断点、尖点等），则可以直接判断其偏导数是否存在。</span><br><span class="line">	* 例如，如果函数在某点处不连续，那么该点的偏导数一定不存在。</span><br><span class="line">2. **利用偏导数的几何意义**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 偏导数可以解释为函数图像在某一点处沿某一坐标轴方向的切线斜率。因此，如果函数在某一点沿某一方向的切线不存在（例如，函数在该点处有一个尖角），那么该方向的偏导数就不存在。</span><br><span class="line"></span><br><span class="line">总之，要证明偏导数存在或不存在，关键在于计算相应的极限并观察其性质。如果极限存在且唯一，则偏导数存在；如果极限不存在或不是唯一的，则偏导数不存在。</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 <p>（ai倒是省的我打字了）</p>
-<h3 id="复合函数微分法"><a href="#复合函数微分法" class="headerlink" title="复合函数微分法"></a>复合函数微分法</h3><p>下面是最基本的公式：</p>
-<p>二元复合函数微分法的基本微分公式是：如果函数 $F(u,v)$ 相对于 $u$ 和 $v$ 的微分分别为 $F_u(u,v)$ 和 $F_v(u,v)$，则对于复合函数 $F(u(x),v(y))$，其微分可以表示为：$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial x}$，以及$\frac{\partial F}{\partial y} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial y}+\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial y}$</p>
-<p>实际上也不难理解，就是 F对于u和v分别求一次导数，然后再分别乘上uv对于xy的导数作为修正。其实用这个将x=x和y=y看做是u，v函数代入一下就会变得更加清楚：</p>
-<p>$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial x}$ ，其中 $\frac{\partial u}{\partial x}=\frac{\partial x}{\partial x}=1$ ， $\frac{\partial v}{\partial x}=\frac{\partial y}{\partial x}=0$ ，所以说只有第一项了，清晰明了</p>
+<h3 id="复合函数微分法">复合函数微分法</h3>
+<p>下面是最基本的公式：</p>
+<p>二元复合函数微分法的基本微分公式是：如果函数 <span class="math inline">\(F(u,v)\)</span> 相对于 <span class="math inline">\(u\)</span> 和 <span class="math inline">\(v\)</span> 的微分分别为 <span class="math inline">\(F_u(u,v)\)</span> 和 <span class="math inline">\(F_v(u,v)\)</span>，则对于复合函数 <span class="math inline">\(F(u(x),v(y))\)</span>，其微分可以表示为：<span class="math inline">\(\frac{\partial F}{\partial x} = \frac{\partial
+F}{\partial u}*\frac{\partial u}{\partial x} +\frac{\partial F}{\partial
+v}*\frac{\partial v}{\partial x}\)</span>，以及<span class="math inline">\(\frac{\partial F}{\partial y} = \frac{\partial
+F}{\partial u}*\frac{\partial u}{\partial y}+\frac{\partial F}{\partial
+v}*\frac{\partial v}{\partial y}\)</span></p>
+<p>实际上也不难理解，就是
+F对于u和v分别求一次导数，然后再分别乘上uv对于xy的导数作为修正。其实用这个将x=x和y=y看做是u，v函数代入一下就会变得更加清楚：</p>
+<p><span class="math inline">\(\frac{\partial F}{\partial x} =
+\frac{\partial F}{\partial u}*\frac{\partial u}{\partial x}
++\frac{\partial F}{\partial v}*\frac{\partial v}{\partial x}\)</span>
+，其中 <span class="math inline">\(\frac{\partial u}{\partial
+x}=\frac{\partial x}{\partial x}=1\)</span> ， <span class="math inline">\(\frac{\partial v}{\partial x}=\frac{\partial
+y}{\partial x}=0\)</span> ，所以说只有第一项了，清晰明了</p>
 <span id="more"></span>
 <hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+<h3 id="reference">Reference</h3>
+
     </div>
 
     
@@ -379,6 +409,5 @@
 
 
 
-<script src="/bundle.js"></script><script>\begin{split}&\lim_{x\to0,y\to kx}f(x,kx)  \end{split};
-false;
+<script src="/bundle.js"></script><script>false;
 {"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
