@@ -259,7 +259,7 @@
 <li>将主机位全设为1，得到广播地址。</li>
 <li>判断是否存在子网划分，即判断子网掩码中1的位数是否大于24位。</li>
 </ul>
-<ol start="2">
+<ol>
 <li>题目要求我们将一个C类IP地址划分为12个不同的子网，每个子网主机数不超过14台。首先需要确定子网掩码的长度，然后根据子网掩码计算出每个子网的网络地址、广播地址和可用主机地址范围。具体步骤如下：</li>
 </ol>
 <ul>
@@ -275,7 +275,6 @@
 <ul>
 <li><p><strong>网络地址</strong>：为了得到网络地址，我们将主机IP地址与子网掩码进行逻辑“与”运算。将IP地址转换为二进制并与子网掩码做“与”操作：</p>
  <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">10101000.01110010.00011001.00111100 (168.114.25.60)</span><br><span class="line">AND</span><br><span class="line">11111111.11111111.11100000.00000000 (255.255.224.0 的二进制)</span><br><span class="line">-----------------------------------</span><br><span class="line">10101000.01110000.00000000.00000000 (网络地址的二进制)</span><br></pre></td></tr></tbody></table></figure>
-
 <p> 转换回十进制得到网络地址为 <code>168.112.0.0</code>。</p>
 </li>
 <li><p><strong>主机地址</strong>：由于子网掩码中最后11位表示主机部分，因此主机地址是IP地址除去网络地址的部分，即 <code>168.114.25.60 - 168.112.0.0 = 0.0.25.60</code>。但这并不是通常意义上的主机地址，因为在实际应用中主机地址不包含网络地址部分，这里只是指出主机ID部分为 <code>.25.60</code>。</p>
@@ -325,7 +324,6 @@
 </ol>
 <p>以上解释基于题目的描述，但请注意，在实际计算时，尤其是第二个问题中，需要正确计算每个子网的起止地址和广播地址，这里给出的仅是示意性的解析，真实情况需要对每个子网进行详细计算。</p>
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

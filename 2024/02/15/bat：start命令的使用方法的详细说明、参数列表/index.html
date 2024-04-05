@@ -300,7 +300,6 @@
     <div class="post-body" itemprop="articleBody"><p><a href="/tags/bat/" rel="contents" data-pjax-state=""># bat</a> <br></p>
 <h3 id="1-start-命令的使用方法"><a href="#1-start-命令的使用方法" class="headerlink" title="1. start 命令的使用方法"></a>1. start 命令的使用方法</h3><p>start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start ["title"] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /normal | /high | /realtime] [/wait] [/b] [command/program] [parameters]</span><br></pre></td></tr></tbody></table></figure>
-
 <p>其中，方括号表示可选参数。下面是各个参数的详细说明：</p>
 <ul>
 <li>“title”: 可选参数，指定窗口标题。</li>
@@ -318,41 +317,32 @@
 <li>启动记事本：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>启动计算器：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start calc.exe</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>启动 Internet Explorer：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start iexplore.exe "http://www.example.com"</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>启动 Windows Media Player：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start wmplayer.exe "C:\Users\UserName\Music\Sample.mp3"</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>启动命令提示符：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start cmd.exe</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li>启动 PowerShell：</li>
 </ul>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start powershell.exe</span><br></pre></td></tr></tbody></table></figure>
-
 <p>除了启动应用程序外，start 命令还可以启动批处理文件。例如，可以创建一个名为 “test.bat” 的批处理文件，其中包含以下命令：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
-
 <p>然后在<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6&amp;spm=1001.2101.3001.7020">命令提示符</a>中执行以下命令来运行该批处理文件：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.bat</span><br></pre></td></tr></tbody></table></figure>
-
 <p>这将启动记事本程序。</p>
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_47406832/article/details/130379434">【BAT】有关 Bat 中 start 命令的使用方法的详细说明、参数列表和示例_bat start-CSDN博客</a></p>
 

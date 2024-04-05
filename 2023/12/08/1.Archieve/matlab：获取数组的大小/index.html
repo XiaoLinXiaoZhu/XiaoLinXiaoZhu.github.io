@@ -296,7 +296,6 @@
 <h2 id="1-size"><a href="#1-size" class="headerlink" title="1 size()"></a>1 size()</h2><h3 id="1-1-功能"><a href="#1-1-功能" class="headerlink" title="1.1 功能"></a>1.1 功能</h3><p>主要用来获得矩阵的各个维数的大小，或者指定维数的大小。</p>
 <h3 id="1-2-语法"><a href="#1-2-语法" class="headerlink" title="1.2 语法"></a>1.2 语法</h3><p><code>size()</code>：获取矩阵的行数和列数</p>
 <figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="built_in">size</span>(X)</span><br><span class="line">[m,n] = <span class="built_in">size</span>(X)</span><br><span class="line">m = <span class="built_in">size</span>(X,dim)</span><br><span class="line">[d1,d2,d3,...,dn] = <span class="built_in">size</span>(X)</span><br></pre></td></tr></tbody></table></figure>
-
 <ol>
 <li><code>s = size(A)</code>,当只有一个输出参数时，返回一个行向量，该行向量的第一个元素是矩阵的行数<code>r</code>，第二个元素是矩阵的列数<code>c</code>。即<code>s = [r, c]</code></li>
 <li><code>[r, c] = size(A)</code>,当有两个输出参数时，size函数将矩阵的行数<code>r</code>返回到第一个输出变量，将矩阵的列数<code>c</code>返回到第二个输出变量。</li>
@@ -304,29 +303,18 @@
 </ol>
 <h2 id="2-length"><a href="#2-length" class="headerlink" title="2 length()"></a>2 length()</h2><h3 id="2-1-功能"><a href="#2-1-功能" class="headerlink" title="2.1 功能"></a>2.1 功能</h3><p>用来获得数组长度，即一维数组的长度或者多维数组中最大的维数行数或列数中的较大值</p>
 <h3 id="2-2-语法"><a href="#2-2-语法" class="headerlink" title="2.2 语法"></a>2.2 语法</h3><figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">numberOfElements = <span class="built_in">length</span>(array)</span><br></pre></td></tr></tbody></table></figure>
-
 <blockquote>
 <p><code>length()</code>和<code>size()</code>使用区别：一般情况下，<br>获取一维数组的长度用<code>length()</code>函数；<br>获取多维数组的维数大小用<code>size()</code>。</p>
 </blockquote>
 <h2 id="3-numel"><a href="#3-numel" class="headerlink" title="3 numel()"></a>3 numel()</h2><h3 id="3-1-功能"><a href="#3-1-功能" class="headerlink" title="3.1 功能"></a>3.1 功能</h3><p>计算一个数组所有的元素数或指定下标的元素总数。</p>
 <h3 id="3-2-语法"><a href="#3-2-语法" class="headerlink" title="3.2 语法"></a>3.2 语法</h3><figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">numel</span>(A)</span><br><span class="line">n = <span class="built_in">numel</span>(A, index1, index2, ...indexn)</span><br></pre></td></tr></tbody></table></figure>
-
 <h2 id="4-ndims"><a href="#4-ndims" class="headerlink" title="4 ndims()"></a>4 ndims()</h2><h3 id="4-1-功能"><a href="#4-1-功能" class="headerlink" title="4.1 功能"></a>4.1 功能</h3><p>获取矩阵的维数</p>
 <blockquote>
 <p>一般来说，多维数组我们用数学意义上的矩阵来理解。多维矩阵，从数学意义上来理解，即矩阵的元素不是数字。</p>
 </blockquote>
 <h3 id="4-2-语法"><a href="#4-2-语法" class="headerlink" title="4.2 语法"></a>4.2 语法</h3><figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = <span class="built_in">ndims</span>(A)</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="4-3-例子"><a href="#4-3-例子" class="headerlink" title="4.3 例子"></a>4.3 例子</h3><figure class="highlight matlab"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">n1 =  <span class="built_in">ndims</span>( [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>] );   <span class="comment">% n1 = 2  二维矩阵</span></span><br><span class="line"></span><br><span class="line">a = <span class="built_in">cat</span>( <span class="number">3</span>,[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>],[<span class="number">5</span> <span class="number">6</span> <span class="number">7</span>;<span class="number">8</span> <span class="number">9</span> <span class="number">10</span>] );</span><br><span class="line">n2 = <span class="built_in">ndims</span>(a)       <span class="comment">% n2 = 3 三维矩阵</span></span><br><span class="line"><span class="comment">% a 是构造的三维矩阵，第一层是[1 2 3;4 5 6]，第二层是[5 6 7;8 9 10]</span></span><br><span class="line"></span><br><span class="line">n3 = <span class="built_in">size</span>(a)        <span class="comment">% n3 = [2,3,2]，即2行3列2层。</span></span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-
-
-
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

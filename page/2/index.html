@@ -460,7 +460,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/微积分/" rel="contents" data-pjax-state=""># 微积分</a> <br></p>
 <h3 id="二元偏导数的理解"><a href="#二元偏导数的理解" class="headerlink" title="二元偏导数的理解"></a>二元偏导数的理解</h3><p>偏导数可以从代数的角度理解，但是我认为实际上从空间的角度更好理解。</p>
-<p>我们之前学了求函数在(0,0)的极限可以这么求得：$$ \begin{split}&amp;\lim_{x\to0,y\to kx}f(x,kx)  \end{split}$$</p>
+<p>我们之前学了求函数在(0,0)的极限可以这么求得：</p>
 <p>这个公式实际上可以理解为f(x,y)沿着面 $y=kx$ 作一截面，沿着截面寻找f(0,0)的值。</p>
 <p>显然，如果f(x)连续，$f(x\to0,y\to 0)$ 结果必然是唯一的，即与k的取值无关，借此我们可以判断函数的连续性，并且求得函数的极限值。</p>
 <p>其实二元函数的偏导数也可以这么理解，即选取与x轴平行的截面与与y轴平行的截面，然后求z受另外一个参数影响的变化率。</p>
@@ -468,12 +468,11 @@ mjx-container[display="true"] + br {
 <h3 id="偏导数不存在"><a href="#偏导数不存在" class="headerlink" title="偏导数不存在"></a>偏导数不存在</h3><p>偏导数和全导数之间基本上没有任何的关系……一个函数的偏导数存在，全导数不一定存在；全导数存在，但是偏导数可能不存在……</p>
 <p>如何证明偏导数不存在呢？我们可以看看ai的回答：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">title: AI</span><br><span class="line">二元函数的偏导数不存在意味着在某一方向上，函数的变化率不是唯一的或者说不稳定的。这通常意味着函数在该点附近的行为不是线性的，也就是说，函数在该点附近不能通过单一的切线来描述。</span><br><span class="line"></span><br><span class="line">要证明偏导数存在或不存在，可以按照以下步骤进行：</span><br><span class="line"></span><br><span class="line">1. **定义偏导数**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 对于二元函数 $f(x, y)$，其关于 $x$ 的偏导数定义为 $\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x, y) - f(x, y)}{\Delta x}$。</span><br><span class="line">	* 关于 $y$ 的偏导数定义为 $\frac{\partial f}{\partial y} = \lim_{\Delta y \to 0} \frac{f(x, y + \Delta y) - f(x, y)}{\Delta y}$。</span><br><span class="line">2. **计算极限**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 尝试计算上述两个极限。如果极限存在（即为一个具体的数值），则偏导数存在。</span><br><span class="line">	* 如果极限不存在（例如，极限值随着 $\Delta x$ 或 $\Delta y$ 的趋近方式而改变），则偏导数不存在。</span><br><span class="line">3. **使用导数定义**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 另一种方法是直接使用导数的定义。例如，对于 $\frac{\partial f}{\partial x}$，考虑函数在 $x$ 方向上的变化，并观察这种变化是否可以用一个唯一的数来描述。</span><br><span class="line">	* ==实际上就是尝试 $\lim_{x\to x_0} \frac{f(x_0,y_0)-f(x,y_0)}{x}=0$是否成立==，y的话同理。</span><br><span class="line">1. **利用已知函数性质**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 如果函数在某些点处具有特定的性质（如间断点、尖点等），则可以直接判断其偏导数是否存在。</span><br><span class="line">	* 例如，如果函数在某点处不连续，那么该点的偏导数一定不存在。</span><br><span class="line">2. **利用偏导数的几何意义**：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	* 偏导数可以解释为函数图像在某一点处沿某一坐标轴方向的切线斜率。因此，如果函数在某一点沿某一方向的切线不存在（例如，函数在该点处有一个尖角），那么该方向的偏导数就不存在。</span><br><span class="line"></span><br><span class="line">总之，要证明偏导数存在或不存在，关键在于计算相应的极限并观察其性质。如果极限存在且唯一，则偏导数存在；如果极限不存在或不是唯一的，则偏导数不存在。</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
 <p>（ai倒是省的我打字了）</p>
 <h3 id="复合函数微分法"><a href="#复合函数微分法" class="headerlink" title="复合函数微分法"></a>复合函数微分法</h3><p>下面是最基本的公式：</p>
-<p>二元复合函数微分法的基本微分公式是：如果函数 $F(u,v)$ 相对于 $u$ 和 $v$ 的微分分别为 $F_u(u,v)$ 和 $F_v(u,v)$，则对于复合函数 $F(u(x),v(y))$，其微分可以表示为：$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}*\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}*\frac{\partial v}{\partial x}$，以及$\frac{\partial F}{\partial y} = \frac{\partial F}{\partial u}*\frac{\partial u}{\partial y}+\frac{\partial F}{\partial v}*\frac{\partial v}{\partial y}$</p>
+<p>二元复合函数微分法的基本微分公式是：如果函数 $F(u,v)$ 相对于 $u$ 和 $v$ 的微分分别为 $F_u(u,v)$ 和 $F_v(u,v)$，则对于复合函数 $F(u(x),v(y))$，其微分可以表示为：$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial x}$，以及$\frac{\partial F}{\partial y} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial y}+\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial y}$</p>
 <p>实际上也不难理解，就是 F对于u和v分别求一次导数，然后再分别乘上uv对于xy的导数作为修正。其实用这个将x=x和y=y看做是u，v函数代入一下就会变得更加清楚：</p>
-<p>$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}*\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}*\frac{\partial v}{\partial x}$ ，其中 $\frac{\partial u}{\partial x}=\frac{\partial x}{\partial x}=1$ ， $\frac{\partial v}{\partial x}=\frac{\partial y}{\partial x}=0$ ，所以说只有第一项了，清晰明了</p>
+<p>$\frac{\partial F}{\partial x} = \frac{\partial F}{\partial u}<em>\frac{\partial u}{\partial x} +\frac{\partial F}{\partial v}</em>\frac{\partial v}{\partial x}$ ，其中 $\frac{\partial u}{\partial x}=\frac{\partial x}{\partial x}=1$ ， $\frac{\partial v}{\partial x}=\frac{\partial y}{\partial x}=0$ ，所以说只有第一项了，清晰明了</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/03/14/1.Archieve/%E5%BE%AE%E7%A7%AF%E5%88%86%EF%BC%9A%E5%A4%9A%E5%85%83%E5%87%BD%E6%95%B0%E7%9A%84%E5%AF%BC%E6%95%B0%E5%8F%8A%E5%85%B6%E5%81%8F%E5%AF%BC%E6%95%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E7%82%B9/#more" rel="contents">
@@ -664,7 +663,7 @@ mjx-container[display="true"] + br {
     
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/邪恶铭刻/" rel="contents" data-pjax-state=""># 邪恶铭刻</a> <br></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>![](/2024/03/01/3.Source/Pasted image 20240312225318.png)</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/2024/03/01/3.Source/Pasted image 20240312225318.png" alt=""></p>
 <p>今天花了大概三个小时，又重新玩了一遍邪恶铭刻，然后又是别有一番风味。我达成了不是死而是直接通关达到最后一关的成就。（左图门中间为点燃的庆祝我胜利的火烛）</p>
 <p>我仔细品味了一下游戏的内容，发掘游戏中存在一些小的瑕疵，以及很多值得学习的地方。</p>
 <p>下面想要简单地聊一聊，因为没有那么多的时间和精力去把每一个小点讲得十分清晰，所以说，我就默认看这篇文章的人是我自己以及其他深度体验过邪恶铭刻的人。</p>
@@ -695,7 +694,7 @@ mjx-container[display="true"] + br {
 <h3 id="小数字，而不是大数字"><a href="#小数字，而不是大数字" class="headerlink" title="小数字，而不是大数字"></a>小数字，而不是大数字</h3><p>游戏中所有的属性都是123456这样的数字，而游戏中的获胜条件也仅仅是伤害超出5点。</p>
 <p>我记得之前好像说是有过一个调查，玩家会对于低于10的加减法更为的敏感。</p>
 <p>游戏中的这一特点，也使得游戏更加具有策略意味。</p>
-<h4 id="Save-Load？随机？"><a href="#Save-Load？随机？" class="headerlink" title="Save&amp;Load？随机？"></a>Save&amp;Load？随机？</h4><p>游戏中的所有关卡都是利用“种子”生成的，从抽牌的时候的到底是哪些牌，再到每一局你的手牌，应该都是在一开始就定好了的。</p>
+<h4 id="Save-amp-Load？随机？"><a href="#Save-amp-Load？随机？" class="headerlink" title="Save&amp;Load？随机？"></a>Save&amp;Load？随机？</h4><p>游戏中的所有关卡都是利用“种子”生成的，从抽牌的时候的到底是哪些牌，再到每一局你的手牌，应该都是在一开始就定好了的。</p>
 <p>这一设计就使得玩家不能够取巧通过sl大法，通过刷抽牌或者说是刷初始牌的方式来通关，保证了游戏的难度，使其不会存在这样的一个取巧的办法，即SL就那么轻松的通关。</p>
 <h3 id="独特的美术风格"><a href="#独特的美术风格" class="headerlink" title="独特的美术风格"></a>独特的美术风格</h3><p>用的资源的分辨率并不高，但是却构建出了一股十分独特的美术风格。</p>
           <!--noindex-->
@@ -908,6 +907,7 @@ mjx-container[display="true"] + br {
 <h4 id="过于显著的上下位替代关系"><a href="#过于显著的上下位替代关系" class="headerlink" title="- 过于显著的上下位替代关系"></a>- 过于显著的上下位替代关系</h4><p>虽然说防御塔的种类变多了，但是实际上让我眼前一辆的也只有新增的“可以移动攻击者的位置”的远程攻击塔了，比如哥布林飞艇。哥布林飞艇的攻击方式是从上向下投掷炸弹，而飞艇的位置是可以人为改变的，这就解除了远程塔对于塔位的限制，玩家可以控制哥布林飞艇的位置从而实现准确的区位攻击。</p>
 <p>哦，还有两个也挺有意思的：一个是可以让周围死的敌人变成僵尸，另外一个是范围的地刺。</p>
 <p>但是除此之外，貌似并没有看到有什么有意思的设计，下面是防御塔的列表，说实话，很少有意思的塔。另外，没意思的点还在于“没用的技能升级”，并不是每个技能升级都是有用的，甚至有的的实际效果完全不能匹配它的价格。这就相当于你给了玩家一个<strong>必然不选的选项</strong>，那么实际上设计的这个选项就是有问题的，实际上，这种<strong>选项应该要是等效的，只应存在的是玩家对于局势的判断，不同技能的优先级不一样</strong>。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -915,7 +915,8 @@ mjx-container[display="true"] + br {
 <th>一言以蔽之</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>暗影射手塔</td>
 <td>最普通的射手</td>
 </tr>
@@ -987,14 +988,16 @@ mjx-container[display="true"] + br {
 <td>沼泽怪兽</td>
 <td>两个血特备厚实的民兵</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>因为存在替代关系，所以说我基本上了解了哪个塔强之后就没有换过塔……</p>
 <p>哥布林飞艇主输出，阴森墓地，生成僵尸拖住大量敌人，腐朽森林减速留人，精英骚扰者用来拦人和射飞行兵，回旋哥布林用来大批清理后排加上眩晕控制和射飞行兵。通关我根本没用法师塔……哥布林加上其他几个留人的基本上伤害足够了……</p>
 <p>而且这一套还不怕塔被禁用……主力哥布林飞艇是独立于塔的，阴森墓地生成僵尸是被动效果，腐朽森林主要吃的也是技能和效果……</p>
 <p>过于明显的上下位替代关系使得游戏没有那么有意思了。</p>
 <p>在设计塔的时候如果能够为每种塔设定一种特殊的需要应对的怪物，按照这种思路思考可以一定程度上减轻明显的上下位替代问题。</p>
 <h4 id="剧情节奏较快，关卡长度过长"><a href="#剧情节奏较快，关卡长度过长" class="headerlink" title="- 剧情节奏较快，关卡长度过长"></a>- 剧情节奏较快，关卡长度过长</h4><p>基本上每到一个地方，四五关就打通了区域boss，两关初见战，一关精英战，一关boss战，然后就立马换地方……每个地区的特色并没有凸显出来，每关的长度也十分的长，基本上都要半个小时，这对于玩家来说负担会比较大。</p>
-<p>如果能将原本的 4 * 30min 变为 6 * 20min，让玩家对于一关不至于疲劳，而对于每一个地区能够作较为深入的认识就好了。</p>
+<p>如果能将原本的 4 <em> 30min 变为 6 </em> 20min，让玩家对于一关不至于疲劳，而对于每一个地区能够作较为深入的认识就好了。</p>
 <p>导致关卡长度过长的原因还有就是现在的每种塔都有独立的123级，玩家并不能感受到普通的123级跳跃到4级的完成感，于是弱化了对于游戏前期和后期的区别，使得玩家感受到重复与疲倦。</p>
 <p>要我提出建议的话，就是砍掉1级的塔，而是使防御塔只有234，且在4级的解锁额外效果上下功夫，使得玩家能够明确的感知到塔的升级，且使整局游戏加快。</p>
 <h4 id="不明确的奖励体系"><a href="#不明确的奖励体系" class="headerlink" title="- 不明确的奖励体系"></a>- 不明确的奖励体系</h4><p>在前作中，升级技能树是使用通关关卡之后的星星，所以说为了提升自身强度，玩家会尽量在这关中达到三星通关。在着一作中，升级使用的是另外的一个点数，而每一关获得的点数奖励貌似是预先设定好的，而跟获得的星星并不一致，有的关卡给三个点数，有的却给4个。这样削弱了满星星通关关卡和提升强度之间的直观联系，从而削弱了游玩的时候追求满星的乐趣。</p>
@@ -1095,7 +1098,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a> <br></p>
 <h3 id="python：一套适用于Spyder的舒服配色"><a href="#python：一套适用于Spyder的舒服配色" class="headerlink" title="python：一套适用于Spyder的舒服配色"></a>python：一套适用于Spyder的舒服配色</h3><p>分享&amp;存档</p>
-<p>![](/2024/03/01/3.Source/Pasted image 20240307115031.png)</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20240307115031.png" alt=""></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#000000</span><br><span class="line">#2aa198</span><br><span class="line">#707ab0</span><br><span class="line">#cb4b16</span><br><span class="line">#859900</span><br><span class="line">#8a1894</span><br><span class="line">#268bd2</span><br><span class="line">#b58900</span><br><span class="line">#eee8d5</span><br><span class="line">#f5efdb</span><br><span class="line">#dcc59b</span><br><span class="line">#586e75</span><br><span class="line">#dc322f</span><br><span class="line">#d33682</span><br><span class="line">#fdf6e3</span><br><span class="line">#eee8d5</span><br></pre></td></tr></tbody></table></figure>
           <!--noindex-->
             <div class="post-button">
@@ -1189,7 +1192,7 @@ mjx-container[display="true"] + br {
     
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/网络技术/" rel="contents" data-pjax-state=""># 网络技术</a> <br></p>
-<h3 id="网络技术：CRC验证"><a href="#网络技术：CRC验证" class="headerlink" title="网络技术：CRC验证"></a>网络技术：CRC验证</h3><img src="/2024/03/01/3.Source/网络技术作业.png" alt="网络技术作业.png" align="right" width="1000">
+<h3 id="网络技术：CRC验证"><a href="#网络技术：CRC验证" class="headerlink" title="网络技术：CRC验证"></a>网络技术：CRC验证</h3><p><img src="/2024/03/01/3.Source/网络技术作业.png" alt="网络技术作业.png" align="right" width="1000"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/03/07/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9ACRC%E9%AA%8C%E8%AF%81/#more" rel="contents">
@@ -1284,8 +1287,8 @@ mjx-container[display="true"] + br {
           <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a> <br></p>
 <h3 id="杂谈：授课形式"><a href="#杂谈：授课形式" class="headerlink" title="杂谈：授课形式"></a>杂谈：授课形式</h3><p>比起后者，我更喜欢前者。前者更好，对学生的学习更有效用。这是我的观点。</p>
 <p>至于证明，懒得打，我还要求取知识呢~</p>
-<p>![](/2024/03/01/3.Source/Pasted image 20240306190449.png)</p>
-<p>![](/2024/03/01/3.Source/Pasted image 20240306190437.png)</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20240306190449.png" alt=""></p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20240306190437.png" alt=""></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/03/06/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8E%88%E8%AF%BE%E5%BD%A2%E5%BC%8F/#more" rel="contents">
@@ -1475,5 +1478,6 @@ mjx-container[display="true"] + br {
 
 
 
-<script src="/bundle.js"></script><script>true;
+<script src="/bundle.js"></script><script>\begin{split}&\lim_{x\to0,y\to kx}f(x,kx)  \end{split};
+true;
 {"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>

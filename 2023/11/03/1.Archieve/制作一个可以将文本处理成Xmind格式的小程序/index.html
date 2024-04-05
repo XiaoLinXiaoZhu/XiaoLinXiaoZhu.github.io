@@ -299,9 +299,7 @@
     <div class="post-body" itemprop="articleBody"><p><a href="/tags/编程/" rel="contents" data-pjax-state=""># 编程</a> <br></p>
 <h3 id="总而来说失败了。。"><a href="#总而来说失败了。。" class="headerlink" title="总而来说失败了。。"></a>总而来说失败了。。</h3><p>  我本来是想做一个自动将文本处理成xmind格式的小程序。<br>  但是我不知道为什么一对字符进行处理就会出现乱码。。。</p>
 <h3 id="收获："><a href="#收获：" class="headerlink" title="收获："></a>收获：</h3><h4 id="1-regex的使用"><a href="#1-regex的使用" class="headerlink" title="1.regex的使用"></a>1.regex的使用</h4><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;regex&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//通过这个设定 正则表达式</span></span><br><span class="line"><span class="function">regex <span class="title">pattern0</span><span class="params">(<span class="string">"([,，]+)"</span>)</span></span>;</span><br><span class="line"><span class="comment">//通过这个进行替换</span></span><br><span class="line"><span class="built_in">regex_replace</span>(原来的字符串,正则表达式,替换字符串);</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
 <span id="more"></span>
-
 <h4 id="2-有关于中文字符"><a href="#2-有关于中文字符" class="headerlink" title="2.有关于中文字符"></a>2.有关于中文字符</h4><p>  中文字符占两个字符位置，所以不可以用<code>'我'</code>，而是tm要用<code>"我"</code>。所以说所有基础原理是操作char类型的都需要重写。<br>  只能说是最不爱国的一集……</p>
 <h4 id="3-string的相关操作"><a href="#3-string的相关操作" class="headerlink" title="3.string的相关操作"></a>3.string的相关操作</h4><ul>
 <li>其实在开头和结尾的插入可以直接用加法减法写</li>

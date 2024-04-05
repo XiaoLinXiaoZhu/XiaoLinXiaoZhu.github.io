@@ -322,15 +322,12 @@
 <p><img src="https://s11.ax1x.com/2024/01/30/pFujqUI.png" alt="pFujqUI.png"></p>
 <h4 id="4-更改资源文件夹名称"><a href="#4-更改资源文件夹名称" class="headerlink" title="4.更改资源文件夹名称"></a>4.更改资源文件夹名称</h4><p><img src="https://s11.ax1x.com/2024/01/30/pFKwYUf.png" alt="pFKwYUf.png"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">这里有一个十分大的大坑，报错如下：</span><br><span class="line">~~~</span><br><span class="line">net.minecraftforge.fml.common.LoaderException: java.lang.ClassNotFoundException: ClientProxy</span><br><span class="line">~~~</span><br><span class="line">`ClientProxy`出现异常</span><br><span class="line"></span><br><span class="line">出现这个问题的原因是编译器在执行refactor的时候，如果你勾选了`Compact middle Package`的话，对于`com.作者名称.mod`名称的重命名会出现异常。</span><br><span class="line"></span><br><span class="line">具体而言就是`src\main\java\com\作者名\模组ID\util`里面的`CLIENT_PROXY_CLASS`不能被正确重命名</span><br><span class="line"></span><br><span class="line">建议去除勾选再次重命名即可</span><br><span class="line"></span><br><span class="line">![pFKyZVA.png](https://s11.ax1x.com/2024/01/30/pFKyZVA.png)</span><br><span class="line"></span><br><span class="line">&gt; 这个bug在后续的idea中被修复，属于编译器bug</span><br><span class="line"></span><br><span class="line">具体可以参考这个：[湖面群日常·传统头衔二 - 哔哩哔哩 (bilibili.com)](https://www.bilibili.com/read/cv17173344/)</span><br></pre></td></tr></tbody></table></figure>
-
-
 <h3 id="二、创建附魔"><a href="#二、创建附魔" class="headerlink" title="二、创建附魔"></a>二、创建附魔</h3><p>对着抄就可以了，对应的位置在：<br><code>IdeallandFramework-master\src\main\java\com\XLXZ\testmod\enchantments</code>  </p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//Example Enchant  </span><br><span class="line">//    public static final ModEnchantmentBase ANTI_VANILLA = new ModEnchantmentBase("testmod.anti_vanilla", Enchantment.Rarity.UNCOMMON, EnumEnchantmentType.WEAPON,  mainHand)  </span><br><span class="line">//            .setMaxLevel(10).setValue(0.3f, 0.3f);  </span><br><span class="line">  </span><br><span class="line">public static final ModEnchantmentBase test_Enchance = new ModEnchantmentBase("testmod.test_enchance", Enchantment.Rarity.UNCOMMON, EnumEnchantmentType.WEAPON,  mainHand);</span><br></pre></td></tr></tbody></table></figure>
-
 <ul>
 <li><code>Enchantment.Rarity.UNCOMMON</code>指的是稀有程度</li>
 <li><code>EnumEnchantmentType.WEAPON</code>指的是附魔类型</li>
-<li><code>mainHand</code>设置是主手还是副手效果</li>
+<li><code>mainHand</code>设置是主手还是副手效果  </li>
 </ul>
 <hr>
 <p>此处注意需要导入<code>EnumEnchantmentType</code>对应的头文件</p>

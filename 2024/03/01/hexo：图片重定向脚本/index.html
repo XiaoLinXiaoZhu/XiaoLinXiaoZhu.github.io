@@ -18,12 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# hexo # 效率工具  功能介绍基础功能本插件可以将 obsidian 或者其他软件中使用 wiki引用模式[^1] 转化为 markdown引用，从一个统一的文件夹里面读取图片。  [!info]hexo本身支持的通过assess_img 标签引用方式并不美观，并不能正常在obsidian中展示图片 即使通过插件 hexo-assess-img 修正，也需要在post文件夹下新建十分多的文">
+    <meta name="description" content="# hexo # 效率工具  功能介绍基础功能本插件可以将 obsidian 或者其他软件中使用 wiki引用模式1 转化为 markdown引用，从一个统一的文件夹里面读取图片。  [!info]hexo本身支持的通过assess_img 标签引用方式并不美观，并不能正常在obsidian中展示图片 即使通过插件 hexo-assess-img 修正，也需要在post文件夹下新建十分多的文件夹，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo：图片重定向脚本">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/03/01/hexo%EF%BC%9A%E5%9B%BE%E7%89%87%E9%87%8D%E5%AE%9A%E5%90%91%E8%84%9A%E6%9C%AC/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# hexo # 效率工具  功能介绍基础功能本插件可以将 obsidian 或者其他软件中使用 wiki引用模式[^1] 转化为 markdown引用，从一个统一的文件夹里面读取图片。  [!info]hexo本身支持的通过assess_img 标签引用方式并不美观，并不能正常在obsidian中展示图片 即使通过插件 hexo-assess-img 修正，也需要在post文件夹下新建十分多的文">
+<meta property="og:description" content="# hexo # 效率工具  功能介绍基础功能本插件可以将 obsidian 或者其他软件中使用 wiki引用模式1 转化为 markdown引用，从一个统一的文件夹里面读取图片。  [!info]hexo本身支持的通过assess_img 标签引用方式并不美观，并不能正常在obsidian中展示图片 即使通过插件 hexo-assess-img 修正，也需要在post文件夹下新建十分多的文件夹，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/next.png">
 <meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/next.png">
@@ -301,7 +301,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><p><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a> <br><a href="/tags/效率工具/" rel="contents" data-pjax-state=""># 效率工具</a> <br></p>
-<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><h4 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h4><p>本插件可以将 obsidian 或者其他软件中使用 wiki引用模式[^1] 转化为 markdown引用，从一个统一的文件夹里面读取图片。</p>
+<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><h4 id="基础功能"><a href="#基础功能" class="headerlink" title="基础功能"></a>基础功能</h4><p>本插件可以将 obsidian 或者其他软件中使用 wiki引用模式<sup><a href="#fn_1" id="reffn_1">1</a></sup> 转化为 markdown引用，从一个统一的文件夹里面读取图片。</p>
 <blockquote>
 <p>[!info]<br>hexo本身支持的通过assess_img 标签引用方式并不美观，并不能正常在obsidian中展示图片</p>
 <p>即使通过插件 hexo-assess-img 修正，也需要在post文件夹下新建十分多的文件夹，当post过多时不便于管理，而且也十分不美观</p>
@@ -312,41 +312,28 @@
 <h5 id="tag索引"><a href="#tag索引" class="headerlink" title="tag索引"></a>tag索引</h5><p>使用<code>[[___tagname]]</code> 创建索引到对应tag页面的链接，例如：<br>注意，后括号后面一定要是换行，在渲染的时候才会被正常识别（为了避免冲突）</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[___hexo]] </span><br></pre></td></tr></tbody></table></figure>
 <p><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a> <br></p>
-<h5 id="侧边图片"><a href="#侧边图片" class="headerlink" title="侧边图片"></a>侧边图片</h5><p>使用<code>![[imgname]]side</code>来创建</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]side</span><br></pre></td></tr></tbody></table></figure>
-
-<img src="/2024/03/01/3.Source/next.png" alt="next.png" align="right" width="450">
-测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
-
-<h5 id="指定宽度的侧边图片"><a href="#指定宽度的侧边图片" class="headerlink" title="指定宽度的侧边图片"></a>指定宽度的侧边图片</h5><p>使用<code>![[imgname]]side111</code>来创建</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]side200</span><br></pre></td></tr></tbody></table></figure>
-
-<img src="/2024/03/01/3.Source/next.png" alt="next.png" align="right" width="200">
-测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
-
-<h5 id="在下方显示图片名称"><a href="#在下方显示图片名称" class="headerlink" title="在下方显示图片名称"></a>在下方显示图片名称</h5><p>使用<code>![[imgname]]name</code>来创建（好像有一点点问题）</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]name</span><br></pre></td></tr></tbody></table></figure>
-
+<h5 id="侧边图片"><a href="#侧边图片" class="headerlink" title="侧边图片"></a>侧边图片</h5><p>使用<code>![[imgname]]side</code>来创建<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]side</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="/2024/03/01/3.Source/next.png" alt="next.png" align="right" width="450"><br>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+<h5 id="指定宽度的侧边图片"><a href="#指定宽度的侧边图片" class="headerlink" title="指定宽度的侧边图片"></a>指定宽度的侧边图片</h5><p>使用<code>![[imgname]]side111</code>来创建<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]side200</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="/2024/03/01/3.Source/next.png" alt="next.png" align="right" width="200"><br>测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</p>
+<h5 id="在下方显示图片名称"><a href="#在下方显示图片名称" class="headerlink" title="在下方显示图片名称"></a>在下方显示图片名称</h5><p>使用<code>![[imgname]]name</code>来创建（好像有一点点问题）<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![[imgname]]name</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="/2024/03/01/3.Source/next.png" alt="next"></p>
 <h3 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h3><ol>
 <li>将release中的压缩包解压到 <code>hexo根目录\node_modules</code> 下 </li>
 <li>在hexo根目录下打开 <code>_config.yml</code> ，修改如下：</li>
 </ol>
 <figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">render_drafts<span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span></span><br><span class="line">post_asset_folder<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span>  #将这个改为<span class="literal"><span class="keyword">true</span></span></span><br><span class="line">marked<span class="punctuation">:</span></span><br><span class="line">&nbsp; prependRoot<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">&nbsp; postAsset<span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></tbody></table></figure>
-
-<ol start="3">
+<ol>
 <li>在你的<code>_post</code>文件夹里面新建一个<code>3.Source</code>文件夹和一个名为<code>3.Source.md</code>的markdowm文件（这样的话构建hexo时会将3.Source文件夹一并上传）</li>
 <li>在hexo根目录打开git bash，输入以下代码，重新构建hexo：</li>
 </ol>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clear</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br><span class="line">$ hexo s</span><br></pre></td></tr></tbody></table></figure>
-
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
 <li>不可以删除 <code>3，Source.md</code>。 如果这么做，文件夹将不会被生成在hexo里面</li>
 <li>尽量不要使用npm更改包列表，因为本插件没有上传npm，所以说在更新包的时候会被删除。</li>
 <li>在使用obsidian构建笔记系统的时候，将图片默认保存位置改为<code>3.Source</code>文件夹，这样的话，就可以支持obsidian的图片直接同步到网页上</li>
 </ol>
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

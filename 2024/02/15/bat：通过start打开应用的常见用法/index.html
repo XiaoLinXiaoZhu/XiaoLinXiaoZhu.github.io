@@ -305,13 +305,10 @@
 <h3 id="保持在当前对话框进行"><a href="#保持在当前对话框进行" class="headerlink" title="保持在当前对话框进行"></a>保持在当前对话框进行</h3><p>在start后面加上<code>/b</code>即可，此时start启动的应用会在其他进程运行，但是输出的结果会保持在同一对话框内</p>
 <h2 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h2><h3 id="start伴随的进程随着当前进程一并终止"><a href="#start伴随的进程随着当前进程一并终止" class="headerlink" title="start伴随的进程随着当前进程一并终止"></a>start伴随的进程随着当前进程一并终止</h3><p>可以考虑间接调用：</p>
 <figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">%a.bat%</span></span><br><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">start</span> /b "" E:\AgencyProxyTools\openClash.bat</span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></tbody></table></figure>
-
 <figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">%openClash.bat%</span></span><br><span class="line"><span class="built_in">Echo</span> Off</span><br><span class="line"><span class="built_in">SetLocal</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">start</span> /min "" "E:\!TOOLS\PC\Clash\Clash.exe"</span><br><span class="line"></span><br><span class="line"><span class="keyword">Exit</span></span><br></pre></td></tr></tbody></table></figure>
-
 <p>a.bat -&gt; openClash.bat -&gt; clash.exe</p>
 <p>这样的话clash就不会随着a.bat而结束了</p>
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>

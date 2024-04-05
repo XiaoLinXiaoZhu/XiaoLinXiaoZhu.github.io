@@ -307,16 +307,13 @@
 </blockquote>
 <p>并且需要在你写的函数里面声明使用全局变量。</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">global x</span><br><span class="line">x=5;</span><br><span class="line"></span><br><span class="line">subfunc % 输出为5</span><br><span class="line"></span><br><span class="line">function output=subfunc</span><br><span class="line">global x % 在使用全局变量时, 要先声明</span><br><span class="line">output=x;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">clear global x % 清除全局变量</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
-
-<ol start="2">
+<ol>
 <li>使用子函数</li>
 </ol>
 <p>子函数默认可以调用其母函数中所有的变量</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> main</span><br><span class="line">x=5;</span><br><span class="line">subfunc</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> output=subfunc</span><br><span class="line"></span><br><span class="line">output=x;</span><br><span class="line">end</span><br><span class="line">end</span><br></pre></td></tr></tbody></table></figure>
-
 <p>执行 main, 输出5. 子函数共享父函数的变量</p>
 <span id="more"></span>
-
 <hr>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yq_forever/article/details/112284579">Matlab之在函数里使用外部变量:全局变量和嵌套函数_matlab function 模块如何引用外部变量_Regnaiq的博客-CSDN博客</a></p>
 
