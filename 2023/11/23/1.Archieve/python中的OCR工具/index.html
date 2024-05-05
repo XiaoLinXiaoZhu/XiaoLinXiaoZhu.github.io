@@ -18,12 +18,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# python # 图形处理  python中的OCR工具此内容是直接询问ai + 查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式 在python中可以很好地实现图片的处理以及进行OCR文字识别，所以说我们选择使用python进行文字的识别。 为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract OCR进行字符识别。 预备工作Tesseract OC">
+    <meta name="description" content="#
+ python
+ #
+ 图形处理  ### python中的OCR工具
+ 此内容是直接询问ai +
+ 查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式
+ 在python中可以很好地实现图片的处理以及进行OCR文字识别，所以说我们选择使用python进行文字的识别。
+ 为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract
+ OCR进行字符识别。
+ 预备">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python中的图像处理工具">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2023/11/23/1.Archieve/python%E4%B8%AD%E7%9A%84OCR%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# python # 图形处理  python中的OCR工具此内容是直接询问ai + 查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式 在python中可以很好地实现图片的处理以及进行OCR文字识别，所以说我们选择使用python进行文字的识别。 为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract OCR进行字符识别。 预备工作Tesseract OC">
+<meta property="og:description" content="#
+ python
+ #
+ 图形处理  ### python中的OCR工具
+ 此内容是直接询问ai +
+ 查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式
+ 在python中可以很好地实现图片的处理以及进行OCR文字识别，所以说我们选择使用python进行文字的识别。
+ 为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract
+ OCR进行字符识别。
+ 预备">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-23T14:29:00.000Z">
 <meta property="article:modified_time" content="2024-02-01T01:53:46.450Z">
@@ -90,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">199</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">184</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -139,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python%E4%B8%AD%E7%9A%84OCR%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">python中的OCR工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.1.</span> <span class="nav-text">预备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="nav-number">1.2.</span> <span class="nav-text">过程分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">代码如下：</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number"></span> <span class="nav-text">Reference</span></a></li></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">预备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">过程分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%A6%82%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text">代码如下：</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number"></span> <span class="nav-text">Reference</span></a></li></div>
         </div>
         <!--/noindex-->
 
@@ -153,7 +171,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">199</span>
+          <span class="site-state-item-count">184</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -186,15 +204,24 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/" rel="bookmark">
-      
-      </a>
-    </li>
-    <li class="popular-posts-item">
       <a class="popular-posts-link" href="/2023/12/05/1.Archieve/%E7%81%B5%E6%84%9F%EF%BC%9A%E4%BA%A4%E8%AD%A6%E6%B8%85%E8%B7%AF/" rel="bookmark">
         <time class="popular-posts-time">2023-12-05</time>
         <br>
       灵感：交警清路
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/03/07/1.Archieve/python%EF%BC%9A%E4%B8%80%E5%A5%97%E9%80%82%E7%94%A8%E4%BA%8ESpyder%E7%9A%84%E8%88%92%E6%9C%8D%E9%85%8D%E8%89%B2/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-07</time>
+        <br>
+      python：一套适用于Spyder的舒服配色
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/04/24/pytorch/" rel="bookmark">
+        <time class="popular-posts-time">2024-04-24</time>
+        <br>
+      pytorch
       </a>
     </li>
     <li class="popular-posts-item">
@@ -209,11 +236,6 @@
         <time class="popular-posts-time">2023-11-03</time>
         <br>
       C++11:string和wstring之间互转换
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/" rel="bookmark">
-      
       </a>
     </li>
   </ul>
@@ -300,22 +322,38 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/python/" rel="contents" data-pjax-state=""># python</a> <br><a href="/tags/图形处理/" rel="contents" data-pjax-state=""># 图形处理</a> <br></p>
-<h3 id="python中的OCR工具"><a href="#python中的OCR工具" class="headerlink" title="python中的OCR工具"></a>python中的OCR工具</h3><p><em>此内容是直接询问ai + 查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式</em></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a>
+<br><a href="/tags/图形处理/" rel="contents" data-pjax-state="">#
+图形处理</a> <br> ### python中的OCR工具</p>
+<p><em>此内容是直接询问ai +
+查询相关资料学习到的，只能说ai确实改变了原有的常规学习方式</em></p>
 <p>在python中可以很好地实现图片的处理以及进行OCR文字识别，所以说我们选择使用python进行文字的识别。</p>
-<p>为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract OCR进行字符识别。</p>
-<h4 id="预备工作"><a href="#预备工作" class="headerlink" title="预备工作"></a>预备工作</h4><p>Tesseract OCR 除了需要import还需要下载他们的本地工具，我们可以在他们的github上找到适用于window的安装程序</p>
-<p><a target="_blank" rel="noopener" href="https://pypi.org/project/pytesseract/">pytesseract · PyPI</a> | 查看python库详情</p>
+<p>为了实现我们的目标，我们需要使用到OpenCV库来处理图像，并使用Tesseract
+OCR进行字符识别。</p>
+<h4 id="预备工作">预备工作</h4>
+<p>Tesseract OCR
+除了需要import还需要下载他们的本地工具，我们可以在他们的github上找到适用于window的安装程序</p>
+<p><a target="_blank" rel="noopener" href="https://pypi.org/project/pytesseract/">pytesseract ·
+PyPI</a> | 查看python库详情</p>
 <p><code>pip import pytesseract</code> 安装库</p>
-<p>然后在  <a target="_blank" rel="noopener" href="https://tesseract-ocr.github.io/tessdoc/Installation.html">Introduction | tessdoc (tesseract-ocr.github.io)</a> 里面找到你想要的版本，会跳转到相应的下载位置。</p>
+<p>然后在 <a target="_blank" rel="noopener" href="https://tesseract-ocr.github.io/tessdoc/Installation.html">Introduction
+| tessdoc (tesseract-ocr.github.io)</a>
+里面找到你想要的版本，会跳转到相应的下载位置。</p>
 <p>下载完成之后将下载位置的基础目录加入PATH 然后重启电脑。</p>
-<p>关于的详细运用可以看看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pi4y157Eh/">tesseract-ocr，基本安装配置，以及python中如何使用？_哔哩哔哩_bilibili</a> </p>
-<h4 id="过程分析"><a href="#过程分析" class="headerlink" title="过程分析"></a>过程分析</h4><p>在这里我们的目标是将原有图片截取所需部分，然后进行文字的识别</p>
-<p>在这里先是使用<code>cv2</code> 进行图片处理，然后对于处理后的图片使用了<code>pytesseract</code> 作为文字识别的工具，调用了<code>pytesseract.image_to_string(img, lang='eng', config='--psm 6')</code> 进行文字识别</p>
-<h4 id="代码如下："><a href="#代码如下：" class="headerlink" title="代码如下："></a>代码如下：</h4><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt <span class="comment"># plt 用于显示图片</span></span><br><span class="line"><span class="comment"># 读取图片</span></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">'test.jpg'</span>)</span><br><span class="line"><span class="comment"># 定义要提取的区域，这里我们假设我们要从左上角开始，提取50x50的矩形区域</span></span><br><span class="line">top_left_x = <span class="number">100</span></span><br><span class="line">top_left_y = <span class="number">100</span></span><br><span class="line">dx = <span class="number">50</span></span><br><span class="line">dy = <span class="number">50</span></span><br><span class="line">bottom_right_x = top_left_x + dx</span><br><span class="line">bottom_right_y = top_left_y + dy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取区域</span></span><br><span class="line">crop_img = img[top_left_y:bottom_right_y, top_left_x:bottom_right_x]</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 将灰度转换为黑白，提高识别率</span></span><br><span class="line">gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">thresh = cv2.threshold(gray, <span class="number">0</span>, <span class="number">255</span>, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[<span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 使用Tesseract进行字符识别</span></span><br><span class="line">data = pytesseract.image_to_string(thresh, lang=<span class="string">'eng'</span>, config=<span class="string">'--psm 6'</span>)</span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(data)</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 如果有多个区域需要识别，可以将上述代码放在循环中</span></span><br></pre></td></tr></tbody></table></figure>
+<p>关于的详细运用可以看看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pi4y157Eh/">tesseract-ocr，基本安装配置，以及python中如何使用？_哔哩哔哩_bilibili</a></p>
+<h4 id="过程分析">过程分析</h4>
+<p>在这里我们的目标是将原有图片截取所需部分，然后进行文字的识别</p>
+<p>在这里先是使用<code>cv2</code>
+进行图片处理，然后对于处理后的图片使用了<code>pytesseract</code>
+作为文字识别的工具，调用了<code>pytesseract.image_to_string(img, lang='eng', config='--psm 6')</code>
+进行文字识别</p>
+<h4 id="代码如下">代码如下：</h4>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> pytesseract</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt <span class="comment"># plt 用于显示图片</span></span><br><span class="line"><span class="comment"># 读取图片</span></span><br><span class="line"></span><br><span class="line">img = cv2.imread(<span class="string">'test.jpg'</span>)</span><br><span class="line"><span class="comment"># 定义要提取的区域，这里我们假设我们要从左上角开始，提取50x50的矩形区域</span></span><br><span class="line">top_left_x = <span class="number">100</span></span><br><span class="line">top_left_y = <span class="number">100</span></span><br><span class="line">dx = <span class="number">50</span></span><br><span class="line">dy = <span class="number">50</span></span><br><span class="line">bottom_right_x = top_left_x + dx</span><br><span class="line">bottom_right_y = top_left_y + dy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取区域</span></span><br><span class="line">crop_img = img[top_left_y:bottom_right_y, top_left_x:bottom_right_x]</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 将灰度转换为黑白，提高识别率</span></span><br><span class="line">gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">thresh = cv2.threshold(gray, <span class="number">0</span>, <span class="number">255</span>, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[<span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 使用Tesseract进行字符识别</span></span><br><span class="line">data = pytesseract.image_to_string(thresh, lang=<span class="string">'eng'</span>, config=<span class="string">'--psm 6'</span>)</span><br><span class="line">        </span><br><span class="line"><span class="built_in">print</span>(data)</span><br><span class="line">        </span><br><span class="line"><span class="comment"># 如果有多个区域需要识别，可以将上述代码放在循环中</span></span><br></pre></td></tr></tbody></table></figure>
 <span id="more"></span>
 <hr>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pi4y157Eh/">tesseract-ocr，基本安装配置，以及python中如何使用？_哔哩哔哩_bilibili</a> </p>
+<h1 id="reference">Reference</h1>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pi4y157Eh/">tesseract-ocr，基本安装配置，以及python中如何使用？_哔哩哔哩_bilibili</a></p>
 
     </div>
 
