@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">184</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">187</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">184</span>
+          <span class="site-state-item-count">187</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,6 +180,460 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/24/1.Archieve/pytorch%EF%BC%9A%E5%BC%A0%E9%87%8F(tenser)/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/24/1.Archieve/pytorch%EF%BC%9A%E5%BC%A0%E9%87%8F(tenser)/" class="post-title-link" itemprop="url">pytorch：张量</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-24 18:53:00 / 修改时间：19:22:41" itemprop="dateCreated datePublished" datetime="2024-04-24T18:53:00+08:00">2024-04-24</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>776</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[pytorch]]</p>
+<h2 id="基础知识">基础知识</h2>
+<h4 id="导入">导入</h4>
+<p>首先，我们导入torch</p>
+<p><em>请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch</em></p>
+<pre><code>import torch</code></pre>
+<h4 id="定义">定义</h4>
+<p>张量表示一个由数值组成的数组，这个数组可能有多个维度</p>
+<ul>
+<li>具有一个轴的张量：向量（vector）</li>
+<li>具有两个轴的张量：矩阵（matrix）</li>
+<li>具有两个轴以上的张量没有特殊的数学名称</li>
+</ul>
+<h3 id="初始化声明">初始化声明</h3>
+<h4 id="torch提供的接口">torch提供的接口</h4>
+<h5 id="使用-arange-创建">使用 arange 创建</h5>
+<ul>
+<li><h1 id="section"></h1>
+<pre><code>  - x = torch.arange(12)
+
+  - x
+
+  - Copy to clipboard
+
+  - tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])</code></pre>
+<ul>
+<li><p>这个行向量包含以0开始的前12个整数，它们默认创建为整数</p></li>
+<li><p>也可指定创建类型为浮点数</p></li>
+<li><p>张量中的每个值都称为张量的 元素（element）</p>
+<ul>
+<li>例如，张量 x 中有 12 个元素</li>
+</ul></li>
+<li><p>除非额外指定，新的张量将存储在内存中，并采用基于CPU的计算</p></li>
+</ul></li>
+</ul>
+<h5 id="全1全0初始化张量">全1/全0初始化张量</h5>
+<ul>
+<li><h1 id="section-1"></h1>
+<ul>
+<li><p>全0</p>
+<pre><code>  - torch.zeros((2, 3, 4))
+
+  - __________________
+
+  - tensor([[[0., 0., 0., 0.],
+
+  -          [0., 0., 0., 0.],
+
+  -          [0., 0., 0., 0.]],
+
+  -         [[0., 0., 0., 0.],
+
+  -          [0., 0., 0., 0.],
+
+  -          [0., 0., 0., 0.]]])</code></pre></li>
+</ul></li>
+<li><h1 id="section-2"></h1>
+<ul>
+<li><p>全1</p>
+<pre><code>  - torch.ones((2, 3, 4))
+
+  - __________________
+
+  - tensor([[[1., 1., 1., 1.],
+
+  -          [1., 1., 1., 1.],
+
+  -          [1., 1., 1., 1.]],
+
+  -         [[1., 1., 1., 1.],
+
+  -          [1., 1., 1., 1.],
+
+  -          [1., 1., 1., 1.]]])</code></pre></li>
+</ul></li>
+</ul>
+<h5 id="随机概率分布-初始化张量">随机/概率分布 初始化张量</h5>
+<ul>
+<li><h1 id="section-3"></h1>
+<ul>
+<li><p>创建一个形状为（3,4）的张量，其中的每个元素都从均值为0、标准差为1的标准高斯分布（正态分布）中随机采样</p>
+<pre><code> - &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+
+ - torch.randn(3, 4)
+
+ - ______________________
+
+ - tensor([[-0.0135,  0.0665,  0.0912,  0.3212],
+
+ -         [ 1.4653,  0.1843, -1.6995, -0.3036],
+
+ -         [ 1.7646,  1.0450,  0.2457, -0.7732]])</code></pre></li>
+</ul></li>
+</ul>
+<h5 id="使用包含数值的python列表或嵌套列表来为所需张量中的每个元素赋予确定值">使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值</h5>
+<ul>
+<li><p>在这里，最外层的列表对应于轴0，内层的列表对应于轴1</p>
+<ul>
+<li><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote></li>
+<li><p>torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])</p></li>
+<li><hr></li>
+<li><p>tensor([[2, 1, 4, 3],</p></li>
+<li><pre><code>    [1, 2, 3, 4],</code></pre></li>
+<li><pre><code>    [4, 3, 2, 1]])</code></pre></li>
+</ul></li>
+</ul>
+<h4 id="属性">属性</h4>
+<h5 id="通过张量的shape属性来访问张量沿每个轴的长度">通过张量的shape属性来访问张量沿每个轴的长度</h5>
+<pre><code>- x.shape</code></pre>
+<h5 id="如果只想知道即形状的所有元素乘积可以检查它的大小size">如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）</h5>
+<ul>
+<li>因为这里在处理的是一个向量，所以它的shape与它的size相同</li>
+</ul>
+<h5 id="通过张量的numel属性来访问张量中元素的总数">通过张量的numel()属性来访问张量中元素的总数</h5>
+<pre><code>- x.numel()</code></pre>
+<h4 id="变换">变换</h4>
+<h5 id="调用reshape函数改变一个张量的形状而不改变元素数量和元素值">调用reshape函数改变一个张量的形状而不改变元素数量和元素值</h5>
+<ul>
+<li><h1 id="section-4"></h1>
+<ul>
+<li><p>例如，可以把张量x从形状为（12,）的行向量转换为形状为（3,4）的矩阵</p></li>
+<li><p>这个新的张量包含与转换前相同的值，但是它被看成一个3行4列的矩阵</p></li>
+<li><p>要重点说明一下，虽然张量的形状发生了改变，但其元素值并没有变</p></li>
+<li><p>注意，通过改变张量的形状，张量的大小不会改变</p></li>
+<li><p>X = x.reshape(3, 4)</p></li>
+<li><p>X</p></li>
+<li><p>Copy to clipboard</p></li>
+</ul></li>
+<li><ul>
+<li><ul>
+<li><p>我们不需要通过手动指定每个维度来改变形状</p>
+<ul>
+<li><p>幸运的是，我们可以通过-1来调用此自动计算出维度的功能</p></li>
+<li><p>即我们可以用x.reshape(-1,4)或x.reshape(3,-1)来取代
+x.reshape(3,4)</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="我的思考">我的思考</h2>
+<p>### tenser加法存在的问题 ![[tenser加法存在的问题]]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/24/1.Archieve/pytorch%EF%BC%9A%E5%BC%A0%E9%87%8F(tenser)/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/24/d2l-2.1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/24/d2l-2.1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">d2l-2.1基础知识-数据处理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-24 17:00:00 / 修改时间：17:00:37" itemprop="dateCreated datePublished" datetime="2024-04-24T17:00:00+08:00">2024-04-24</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>17</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[Dive Into Deep Learning]]</p>
+<h3 id="d2l-2.1基础知识-数据处理">d2l-2.1基础知识-数据处理</h3>
+<p>[[pytorch]]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/24/d2l-2.1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/24/pytorch/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/04/24/pytorch/" class="post-title-link" itemprop="url">pytorch</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-04-24 17:00:00 / 修改时间：18:54:52" itemprop="dateCreated datePublished" datetime="2024-04-24T17:00:00+08:00">2024-04-24</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a> <br><a href="/tags/d2l/" rel="contents" data-pjax-state="">#
+d2l</a> <br> [[pytorch：张量(tenser)]]</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/04/24/pytorch/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -334,7 +788,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -567,9 +1021,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-04-13 11:45:00 / 修改时间：11:46:15" itemprop="dateCreated datePublished" datetime="2024-04-13T11:45:00+08:00">2024-04-13</time>
+      <time title="创建时间：2024-04-13 11:45:00" itemprop="dateCreated datePublished" datetime="2024-04-13T11:45:00+08:00">2024-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-05 18:13:14" itemprop="dateModified" datetime="2024-05-05T18:13:14+08:00">2024-05-05</time>
     </span>
 
   
@@ -579,7 +1039,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>393</span>
+      <span>567</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -602,7 +1062,6 @@
 <p>https://bingyan.feishu.cn/wiki/M1YawzbfBiFsOMks7HmcFalsnPU</p>
 <p>LD55比赛题目</p>
 <h2 id="我的想法">我的想法</h2>
-<p><span class="citation" data-cites="朱槐麟">@朱槐麟</span></p>
 <p>说实话，看到summon，我的第一反应就是我的世界的summon指令……</p>
 <p>所以说我的想法也就十分的具体而明确： ### 想法一：刀剑神域</p>
 <p>角色扮演一个像是在【刀剑神域】里面的角色，然后通过summon指令来召唤自己需要的东西</p>
@@ -678,9 +1137,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-04-11 09:41:00 / 修改时间：09:41:26" itemprop="dateCreated datePublished" datetime="2024-04-11T09:41:00+08:00">2024-04-11</time>
+      <time title="创建时间：2024-04-11 09:41:00" itemprop="dateCreated datePublished" datetime="2024-04-11T09:41:00+08:00">2024-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-05 18:12:32" itemprop="dateModified" datetime="2024-05-05T18:12:32+08:00">2024-05-05</time>
     </span>
 
   
@@ -690,7 +1155,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>13</span>
+      <span>28</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -709,7 +1174,9 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/游戏设计/" rel="contents" data-pjax-state="">#
-游戏设计</a> <br> ## 灵感来源</p>
+游戏设计</a>
+<br><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <br> ## 灵感来源</p>
 <h2 id="我的想法">我的想法</h2>
           <!--noindex-->
             <div class="post-button">
@@ -870,9 +1337,15 @@ https://www.bilibili.com/video/BV1yf421f73K/?share_source=copy_web&amp;vd_source
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-04-06 16:20:00 / 修改时间：16:26:13" itemprop="dateCreated datePublished" datetime="2024-04-06T16:20:00+08:00">2024-04-06</time>
+      <time title="创建时间：2024-04-06 16:20:00" itemprop="dateCreated datePublished" datetime="2024-04-06T16:20:00+08:00">2024-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-05 18:13:01" itemprop="dateModified" datetime="2024-05-05T18:13:01+08:00">2024-05-05</time>
     </span>
 
   
@@ -882,7 +1355,7 @@ https://www.bilibili.com/video/BV1yf421f73K/?share_source=copy_web&amp;vd_source
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>362</span>
+      <span>435</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -901,7 +1374,9 @@ https://www.bilibili.com/video/BV1yf421f73K/?share_source=copy_web&amp;vd_source
     
     <div class="post-body" itemprop="articleBody">
           <p><a href="/tags/游戏设计/" rel="contents" data-pjax-state="">#
-游戏设计</a> <br> ## 灵感来源</p>
+游戏设计</a>
+<br><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <br> ## 灵感来源</p>
 <p>空洞骑士中的类似设计</p>
 <h2 id="我的想法">我的想法</h2>
 <p>Ting：“只是在虚构层上做点手脚，本质上倒没太大创新。”
@@ -994,7 +1469,7 @@ Ting：“这确实。”</p>
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -1022,306 +1497,6 @@ Ting：“这确实。”</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/04/06/%E7%81%B5%E6%84%9F%EF%BC%9A%E7%BF%BB%E9%A1%B5%E4%B8%8E%E5%8D%87%E7%BA%A7/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/05/1.Archieve/%E5%86%B0%E5%B2%A9%E3%80%8A%E6%A0%B9%E5%8D%87%E3%80%8B%EF%BC%9A%E6%89%80%E4%BB%A5%E8%AF%B4%E4%BD%A0%E5%88%B0%E5%BA%95%E6%83%B3%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%B8%B8%E6%88%8F%EF%BC%9F/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/05/1.Archieve/%E5%86%B0%E5%B2%A9%E3%80%8A%E6%A0%B9%E5%8D%87%E3%80%8B%EF%BC%9A%E6%89%80%E4%BB%A5%E8%AF%B4%E4%BD%A0%E5%88%B0%E5%BA%95%E6%83%B3%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%B8%B8%E6%88%8F%EF%BC%9F/" class="post-title-link" itemprop="url">冰岩《根升》：所以说你到底想设计一个什么样的游戏？</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-04-05 11:22:00 / 修改时间：21:11:46" itemprop="dateCreated datePublished" datetime="2024-04-05T11:22:00+08:00">2024-04-05</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>7 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/冰岩游戏/" rel="contents" data-pjax-state="">#
-冰岩游戏</a> <br>
-冰岩作坊的《根升》这款游戏让我感到困惑，不仅仅是对于核心机制的困惑，还有对于游戏类型的疑问，我忍不住吐槽：“所以说你到底想设计一个什么样的游戏？”</p>
-<p>下面聊聊我的看法，游戏的问题主要出在以下三点上： 1.
-游戏驱动性上，游戏并没有设计足够的正反馈。 2.
-游戏机制带给玩家的体验并不好。 3.
-游戏的实际效果与策划预期的效果并不一致。</p>
-<p>下面我会依次展开来讲讲：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/05/1.Archieve/%E5%86%B0%E5%B2%A9%E3%80%8A%E6%A0%B9%E5%8D%87%E3%80%8B%EF%BC%9A%E6%89%80%E4%BB%A5%E8%AF%B4%E4%BD%A0%E5%88%B0%E5%BA%95%E6%83%B3%E8%AE%BE%E8%AE%A1%E4%B8%80%E4%B8%AA%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E6%B8%B8%E6%88%8F%EF%BC%9F/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/03/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8F%90%E7%81%AF%E5%AE%9A%E6%8D%9F/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/03/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8F%90%E7%81%AF%E5%AE%9A%E6%8D%9F/" class="post-title-link" itemprop="url">杂谈：提灯定损</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-04-03 22:40:00 / 修改时间：23:08:21" itemprop="dateCreated datePublished" datetime="2024-04-03T22:40:00+08:00">2024-04-03</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>121</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/寒心/" rel="contents" data-pjax-state=""># 寒心</a>
-<br> # 背景</p>
-<p>3月28日，江西省上饶市一女子发视频称，她租住在上饶玉山县一处自建房，退租时房东拿着灯一点一点检查，最后列出清单要求赔偿一万余元，“<a target="_blank" rel="noopener" href="https://www.zhihu.com/search?q=%E6%8F%90%E7%81%AF%E5%AE%9A%E6%8D%9F&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3451546489%7D">提灯定损</a>”迅速引来舆论关注。</p>
-<h1 id="看法">看法</h1>
-<p>冰冻三尺，非一日之寒。江西这个省市多次被揭发出类似事件，实际上是地方机构，管理层面的“沆瀣一气”。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/03/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8F%90%E7%81%AF%E5%AE%9A%E6%8D%9F/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/04/03/1.Archieve/%E5%A6%82%E4%BD%95%E8%AF%84%E5%88%A4%E4%B8%80%E4%B8%AA%E6%9C%BA%E5%88%B6%E7%9A%84%E5%A5%BD%E5%9D%8F%EF%BC%9F%E7%8E%A9%E5%AE%B6-%E6%B8%B8%E6%88%8F-%E7%AD%96%E5%88%92%EF%BC%8C%E4%BB%8E%E4%B8%89%E4%B8%AA%E8%A7%86%E8%A7%92%E7%9C%8B%E9%97%AE%E9%A2%98%E3%80%82/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/03/1.Archieve/%E5%A6%82%E4%BD%95%E8%AF%84%E5%88%A4%E4%B8%80%E4%B8%AA%E6%9C%BA%E5%88%B6%E7%9A%84%E5%A5%BD%E5%9D%8F%EF%BC%9F%E7%8E%A9%E5%AE%B6-%E6%B8%B8%E6%88%8F-%E7%AD%96%E5%88%92%EF%BC%8C%E4%BB%8E%E4%B8%89%E4%B8%AA%E8%A7%86%E8%A7%92%E7%9C%8B%E9%97%AE%E9%A2%98%E3%80%82/" class="post-title-link" itemprop="url">如何评判一个机制的好坏？玩家-游戏-策划，从三个视角看问题。</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-04-03 07:05:00 / 修改时间：07:22:58" itemprop="dateCreated datePublished" datetime="2024-04-03T07:05:00+08:00">2024-04-03</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>572</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state="">#
-游戏策划</a> <br> # 背景</p>
-<p>一般游戏会经历：【策划设计】，之后【玩家游玩】 的
-两个核心环节。如何判断一个机制的好坏可以通过这两个节点以及从游戏到玩家的过程来分析来分析。</p>
-<h1 id="如何评判一个机制的好坏">如何评判一个机制的好坏？</h1>
-<h2 id="游戏从策划传递到玩家">游戏：从策划传递到玩家</h2>
-<p>首先游戏既然作为游戏，就必须是得要吸引玩家去游玩的，换句话说，游戏应该需要拥有内在的驱动力，去驱动玩家在游戏中的行为。如果说，一个机制的核心，不能让人通过某一形式收获快乐，不能够支撑起玩家游玩的动机，那么我们会认为，这个游戏的机制设计是失败的。</p>
-<p>游戏无法吸引玩家游玩，游戏的设计再怎么样也难以展现，从而从根本上导致了游戏必定不会好玩。</p>
-<h2 id="玩家玩家体验">玩家：玩家体验</h2>
-<p>机制，在能驱动玩家游玩的基础之上，需要提供给玩家良好的游戏体验，这一点主要是强调游戏中的机制的设计的合理性。</p>
-<p>如果在游戏中，某一机制并不能参与游戏的循环，那么就可以认定其实际上不具有机制的优越性，即使游戏可能也能够在其他地方驱动玩家去体验游戏，但是同时，较差的游戏体验也会将游戏的水准拉低一个档次。</p>
-<h2 id="策划设计目标">策划：设计目标</h2>
-<p>如果说，策划期望让游戏达到某一效果，但是实际上却达到了另外一个效果，那么实际上，这个机制也是失败的。当然，也不排除有些时候设计目标本身就比较模糊或者存在即使是没有达到目标，但是设计的机制却在另外一方面得到了很大的效果。</p>
-<p>但是一般而言，锚定着设计目标就可以避免出现，设计到最后，本身是<strong>为了休闲</strong>的游戏，是7分解密、轻松，3分动作类的游戏，变成了1：9的直接就是掘地求生类型的游戏，我认为这是没有必要的。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/04/03/1.Archieve/%E5%A6%82%E4%BD%95%E8%AF%84%E5%88%A4%E4%B8%80%E4%B8%AA%E6%9C%BA%E5%88%B6%E7%9A%84%E5%A5%BD%E5%9D%8F%EF%BC%9F%E7%8E%A9%E5%AE%B6-%E6%B8%B8%E6%88%8F-%E7%AD%96%E5%88%92%EF%BC%8C%E4%BB%8E%E4%B8%89%E4%B8%AA%E8%A7%86%E8%A7%92%E7%9C%8B%E9%97%AE%E9%A2%98%E3%80%82/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
