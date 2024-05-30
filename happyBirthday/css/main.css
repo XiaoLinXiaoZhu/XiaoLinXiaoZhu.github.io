@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: #b5d8d2;
+  background-size: 100%;
+  position: relative;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/final-background.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+.content {
+  width: 100%;
+  max-width: 650px;
+  min-height: 80vh;
+  margin-top: 200px;
+}
+
+.text {
+  padding: 20px;
+  padding-top: 10px;
+  background-color: #fef7e0;
+  border-radius: 10px;
+  min-height: 150px;
+  font-size: 23px;
+  position: relative;
+  font-weight: 600;
+  color: #76654d;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:before {
+    content: "";
+    width: 120px;
+    height: 70px;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/title-text.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -40px;
+    left: -30px;
+  }
+
+  // Blathers
+  &:after {
+    content: "";
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/blathers.png);
+    background-size: 100%;
+    height: 140px;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    z-index: -1;
+  }
+}
+
+audio {
+  display: none;
+}
+
+.answer a {
+  background-color: white;
+  color: #76654d;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #4099b9;
+    color: white;
+  }
+}
+
+
+tw-story {
+  display: block;
+  position: relative;
+  padding: 20px;
+  padding-top: 10px;
+  background-color: #fef7e0;
+  border-radius: 10px;
+  min-height: 150px;
+  font-size: 23px;
+  position: relative;
+  font-weight: 600;
+  color: #76654d;
+  width: 100%;
+  margin-bottom: 10px;
+}
+  
+tw-story:before {
+  content: "";
+  width: 120px;
+  height: 70px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/title-text.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+
+tw-story:after {
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/blathers.png);
+  background-size: 100%;
+  height: 140px;
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: -80px;
+  z-index: -1;
+}
+
+tw-expression {
+  position: absolute;
+  bottom: -50px;
+  background-color: white;
+  color: #76654d;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 19px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+  
+tw-expression:hover {
+    background-color: #4099b9;
+    color: white;
+}
