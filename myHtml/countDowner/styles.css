@@ -1,11 +1,12 @@
 /* styles.css */
+
 body {
     display: flex;
-    overflow: hidden;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    overflow: hidden;
 }
 
 .timer-container {
@@ -16,7 +17,7 @@ body {
 
 .progress-bar {
     position: absolute;
-    top: 60%;
+
     height: 40px;
     background-color: #ddd;
     border-radius: 5px;
@@ -28,23 +29,24 @@ body {
     width: 0;
     align-self: start;
     height: 40px;
-    background-color: rgba(46, 174, 153, 0.5);
+    background-color: rgba(17, 134, 115, 0.702);
     transform-origin: left center;
     transition: width 0.5s ease-in-out;
     z-index: 1;
+    right: 0;
 }
 
 .event-marker {
     position: absolute;
     top: 0;
-    height: 100%;
+    height: 38%;
     background-color: orange;
     z-index: 2;
 }
 
 #currentTimeDisplay {
     position: absolute;
-    top: calc(50% - 60px);
+    top: calc(50% - 100px);
     align-self: center bottom;
     text-align: center bottom;
 
@@ -55,22 +57,10 @@ body {
 }
 
 
-.eventTitle {
-    position: absolute;
-    display: inline-block;
-    padding: 6px 16px;
-    background: #d1e4dd;
-    color: #000;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .during-setting {
     position: relative;
-    padding: 0px;
     height: 60px;
-    width: 100%;
-    margin-bottom: 20px;
+    margin: 30px;
     /* 设置阴影 */
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
@@ -87,8 +77,8 @@ body {
 
 .timer-self{
     position: relative;
-    height: 200px;
-    margin-top: 20px;
+    height: 300px;
+
     /* 设置阴影 */
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -101,10 +91,6 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
-}
-
-.event-setting{
-    margin-left: 5%;
 }
 
 
@@ -143,4 +129,15 @@ button {
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.eventTitle {
+    position: absolute;
+    display: block;
+    padding: 6px 16px;
+    background: #d1e4dd;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0px 0px;
 }

@@ -8,12 +8,12 @@
 <div class="timer-container">
     <div class="during-setting">
         <label for="startTimeInput">Start Time:</label>
-        <input type="time" id="startTimeInput" value="21:00">
+        <input type="time" id="startTimeInput" value="00:00">
         <label for="endTimeInput">End Time:</label>
         <input type="time" id="endTimeInput" value="23:59">
         <button id="setTimerRange">Set Time Range</button>
     </div>
-    <hr>
+
     <div class="timer-self">
         <div id="currentTimeDisplay"></div>
         <br>
@@ -26,7 +26,7 @@
     <br>
     <hr>
     <br>
-    <div class="event-setting">
+    <div>
         <label for="eventNameInput">Event Name:</label>
         <input type="text" id="eventNameInput" value="Event Title">
         <br>
@@ -36,6 +36,8 @@
         <input type="time" id="eventEndTimeInput" value="22:10">
         <button id="addEvent">Add Event</button>
     </div>
+    <br>
+    <button id="clearEvents">clear Events</button>
 </div>
 
 <div class="events-title">
