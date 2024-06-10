@@ -1,9 +1,7 @@
-<html>
-
-<head>
-  <link rel="stylesheet" href="//codepen.io/CodePenTemplates/pen/GNoNGy.css" />
-  <link rel="stylesheet" href="//codepen.io/CodePenTemplates/pen/XNXpgM.css" />
-</head>
+<html><head>
+  
+  
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('//codepen.io/CodePenTemplates/pen/GNoNGy.css');loadCss('//codepen.io/CodePenTemplates/pen/XNXpgM.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="//codepen.io/CodePenTemplates/pen/GNoNGy.css"><link rel="stylesheet" href="//codepen.io/CodePenTemplates/pen/XNXpgM.css"></noscript></head>
 
 <body>
   <section class="markdown-body">
@@ -22,8 +20,8 @@ table of contents</a></p>
     <h2 id="-gitignore">.gitignore</h2>
     <p>HTML5 Boilerplate includes a basic project-level <code>.gitignore</code>. This should primarily be used to avoid certain project-level files and directories from being kept under source control. Different development-environments will benefit from
       different collections of ignores.</p>
-    <p>OS-specific and editor-specific files should be ignored using a &quot;global ignore&quot; that applies to all repositories on your system.</p>
-    <p>For example, add the following to your <code>~/.gitconfig</code>, where the <code>.gitignore</code> in your HOME directory contains the files and directories you&#39;d like to globally ignore:</p>
+    <p>OS-specific and editor-specific files should be ignored using a "global ignore" that applies to all repositories on your system.</p>
+    <p>For example, add the following to your <code>~/.gitconfig</code>, where the <code>.gitignore</code> in your HOME directory contains the files and directories you'd like to globally ignore:</p>
     <pre><code class="lang-gitignore"><span class="hljs-string">[core]</span>
     excludesfile = ~/.gitignore
 </code></pre>
@@ -39,7 +37,7 @@ table of contents</a></p>
       <a href="http://editorconfig.org/#supported-properties">properties</a> from the
       <code>.editorconfig</code> file, you will need to <a href="http://editorconfig.org/#download">install a
 plugin</a>.</p>
-    <p><strong>N.B.</strong> If you aren&#39;t using the server configurations provided by HTML5 Boilerplate, we highly encourage you to configure your server to block access to <code>.editorconfig</code> files, as they can disclose sensitive information!</p>
+    <p><strong>N.B.</strong> If you aren't using the server configurations provided by HTML5 Boilerplate, we highly encourage you to configure your server to block access to <code>.editorconfig</code> files, as they can disclose sensitive information!</p>
     <p>For more details, please refer to the <a href="http://editorconfig.org/">EditorConfig
 project</a>.</p>
     <h2 id="server-configuration">Server Configuration</h2>
@@ -58,7 +56,7 @@ configuration file</a>. The <code>.htaccess</code> file is mostly used for:</p>
     </ul>
     <p>If you have access to the main server configuration file (usually called
       <code>httpd.conf</code>), you should add the logic from the <code>.htaccess</code> file in, for example, a
-      <Directory> section in the main configuration file. This is usually the recommended way, as using .htaccess files slows down Apache!</p>
+      <directory> section in the main configuration file. This is usually the recommended way, as using .htaccess files slows down Apache!</directory></p>
     <p>To enable Apache modules locally, please see:
       <a href="https://github.com/h5bp/server-configs-apache/wiki/How-to-enable-Apache-modules">https://github.com/h5bp/server-configs-apache/wiki/How-to-enable-Apache-modules</a>.</p>
     <p>In the repo the <code>.htaccess</code> is used for:</p>
@@ -74,7 +72,7 @@ configuration file</a>. The <code>.htaccess</code> file is mostly used for:</p>
       <li>It blocks access to files that can expose sensitive information.</li>
       <li>It reduces MIME type security risks</li>
       <li>It forces compressing (gzipping)</li>
-      <li>It tells the browser whether they should request a specific file from the server or whether they should grab it from the browser&#39;s cache</li>
+      <li>It tells the browser whether they should request a specific file from the server or whether they should grab it from the browser's cache</li>
     </ul>
     <p>When using <code>.htaccess</code> we recommend reading all inline comments (the rules after a <code>#</code>) in the file once. There is a bunch of optional stuff in it.</p>
     <p>If you want to know more about the <code>.htaccess</code> file check out the
@@ -91,7 +89,7 @@ one</a>.</p>
     </ul>
     <p><strong>e.g.</strong> If a client hosts content from a particular source domain and that content makes requests directed towards a domain other than its own, the remote domain would need to host a cross-domain policy file in order to grant access
       to the source domain and allow the client to continue with the transaction.</p>
-    <p>For more in-depth information, please see Adobe&#39;s <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">cross-domain policy file
+    <p>For more in-depth information, please see Adobe's <a href="https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html">cross-domain policy file
 specification</a>.</p>
     <h2 id="robots-txt">robots.txt</h2>
     <p>The <code>robots.txt</code> file is used to give instructions to web robots on what can be crawled from the website.</p>
@@ -102,7 +100,7 @@ specification</a>.</p>
     </ul>
     <p>If you want to disallow certain pages you will need to specify the path in a
       <code>Disallow</code> directive (e.g.: <code>Disallow: /path</code>) or, if you want to disallow crawling of all content, use <code>Disallow: /</code>.</p>
-    <p>The <code>/robots.txt</code> file is not intended for access control, so don&#39;t try to use it as such. Think of it as a &quot;No Entry&quot; sign, rather than a locked door. URLs disallowed by the <code>robots.txt</code> file might still be indexed
+    <p>The <code>/robots.txt</code> file is not intended for access control, so don't try to use it as such. Think of it as a "No Entry" sign, rather than a locked door. URLs disallowed by the <code>robots.txt</code> file might still be indexed
       without being crawled, and the content from within the <code>robots.txt</code> file can be viewed by anyone, potentially disclosing the location of your private content! So, if you want to block access to private content, use proper authentication
       instead.</p>
     <p>For more information about <code>robots.txt</code>, please see:</p>
@@ -121,6 +119,6 @@ specification</a>.</p>
     <p>For more in-depth information about the <code>browserconfig.xml</code> file, please see <a href="https://msdn.microsoft.com/en-us/library/ie/dn320426.aspx">MSDN</a>.</p>
 
   </section>
-</body>
 
-</html>
+
+<script src="/bundle.js"></script></body></html>
