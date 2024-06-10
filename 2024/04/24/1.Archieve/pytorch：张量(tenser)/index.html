@@ -18,40 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[pytorch]]
- 基础知识
- 导入
- 首先，我们导入torch
- 请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch
- import torch
- 定义
- 张量表示一个由数值组成的数组，这个数组可能有多个维度
- 
- 具有一个轴的张量：向量（vector）
- 具有两个轴的张量：矩阵（matrix）
- 具有两个轴以上的张量没有特殊的数学名称
- 
- 初始化声明
- t">
+    <meta name="description" content="[[pytorch]] 基础知识导入首先，我们导入torch 请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch import torch  定义张量表示一个由数值组成的数组，这个数组可能有多个维度  具有一个轴的张量：向量（vector） 具有两个轴的张量：矩阵（matrix） 具有两个轴以上的张量没有特殊的数学名称  初始化声明torch提供的接口使用 arang">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pytorch：张量">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/04/24/1.Archieve/pytorch%EF%BC%9A%E5%BC%A0%E9%87%8F(tenser)/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[pytorch]]
- 基础知识
- 导入
- 首先，我们导入torch
- 请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch
- import torch
- 定义
- 张量表示一个由数值组成的数组，这个数组可能有多个维度
- 
- 具有一个轴的张量：向量（vector）
- 具有两个轴的张量：矩阵（matrix）
- 具有两个轴以上的张量没有特殊的数学名称
- 
- 初始化声明
- t">
+<meta property="og:description" content="[[pytorch]] 基础知识导入首先，我们导入torch 请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch import torch  定义张量表示一个由数值组成的数组，这个数组可能有多个维度  具有一个轴的张量：向量（vector） 具有两个轴的张量：矩阵（matrix） 具有两个轴以上的张量没有特殊的数学名称  初始化声明torch提供的接口使用 arang">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-24T10:53:00.000Z">
 <meta property="article:modified_time" content="2024-04-24T11:22:41.605Z">
@@ -165,7 +137,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5"><span class="nav-number">1.0.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.2.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A3%B0%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">初始化声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#torch%E6%8F%90%E4%BE%9B%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.1.1.</span> <span class="nav-text">torch提供的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-arange-%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">使用 arange 创建</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#section"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%A81%E5%85%A80%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BC%A0%E9%87%8F"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">全1/全0初始化张量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#section-1"><span class="nav-number"></span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#section-2"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BC%A0%E9%87%8F"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">随机/概率分布 初始化张量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#section-3"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%8C%85%E5%90%AB%E6%95%B0%E5%80%BC%E7%9A%84python%E5%88%97%E8%A1%A8%E6%88%96%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8%E6%9D%A5%E4%B8%BA%E6%89%80%E9%9C%80%E5%BC%A0%E9%87%8F%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E8%B5%8B%E4%BA%88%E7%A1%AE%E5%AE%9A%E5%80%BC"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">0.0.1.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%BC%A0%E9%87%8F%E7%9A%84shape%E5%B1%9E%E6%80%A7%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%BC%A0%E9%87%8F%E6%B2%BF%E6%AF%8F%E4%B8%AA%E8%BD%B4%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="nav-number">0.0.1.1.</span> <span class="nav-text">通过张量的shape属性来访问张量沿每个轴的长度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E5%8F%AA%E6%83%B3%E7%9F%A5%E9%81%93%E5%8D%B3%E5%BD%A2%E7%8A%B6%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E4%B9%98%E7%A7%AF%E5%8F%AF%E4%BB%A5%E6%A3%80%E6%9F%A5%E5%AE%83%E7%9A%84%E5%A4%A7%E5%B0%8Fsize"><span class="nav-number">0.0.1.2.</span> <span class="nav-text">如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%BC%A0%E9%87%8F%E7%9A%84numel%E5%B1%9E%E6%80%A7%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%BC%A0%E9%87%8F%E4%B8%AD%E5%85%83%E7%B4%A0%E7%9A%84%E6%80%BB%E6%95%B0"><span class="nav-number">0.0.1.3.</span> <span class="nav-text">通过张量的numel()属性来访问张量中元素的总数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E6%8D%A2"><span class="nav-number">0.0.2.</span> <span class="nav-text">变换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B0%83%E7%94%A8reshape%E5%87%BD%E6%95%B0%E6%94%B9%E5%8F%98%E4%B8%80%E4%B8%AA%E5%BC%A0%E9%87%8F%E7%9A%84%E5%BD%A2%E7%8A%B6%E8%80%8C%E4%B8%8D%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F%E5%92%8C%E5%85%83%E7%B4%A0%E5%80%BC"><span class="nav-number">0.0.2.1.</span> <span class="nav-text">调用reshape函数改变一个张量的形状而不改变元素数量和元素值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#section-4"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">我的思考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">1.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></li></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5"><span class="nav-number">1.0.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.2.</span> <span class="nav-text">定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%A3%B0%E6%98%8E"><span class="nav-number">1.1.</span> <span class="nav-text">初始化声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#torch%E6%8F%90%E4%BE%9B%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.1.1.</span> <span class="nav-text">torch提供的接口</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-arange-%E5%88%9B%E5%BB%BA"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">使用 arange 创建</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%A81-%E5%85%A80%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BC%A0%E9%87%8F"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">全1/全0初始化张量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number"></span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-2"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA-%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%BC%A0%E9%87%8F"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">随机/概率分布 初始化张量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-3"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%8C%85%E5%90%AB%E6%95%B0%E5%80%BC%E7%9A%84Python%E5%88%97%E8%A1%A8%EF%BC%88%E6%88%96%E5%B5%8C%E5%A5%97%E5%88%97%E8%A1%A8%EF%BC%89%EF%BC%8C%E6%9D%A5%E4%B8%BA%E6%89%80%E9%9C%80%E5%BC%A0%E9%87%8F%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E8%B5%8B%E4%BA%88%E7%A1%AE%E5%AE%9A%E5%80%BC"><span class="nav-number">0.0.0.1.</span> <span class="nav-text">使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">0.0.1.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%BC%A0%E9%87%8F%E7%9A%84shape%E5%B1%9E%E6%80%A7%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%BC%A0%E9%87%8F%E6%B2%BF%E6%AF%8F%E4%B8%AA%E8%BD%B4%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="nav-number">0.0.1.1.</span> <span class="nav-text">通过张量的shape属性来访问张量沿每个轴的长度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E5%8F%AA%E6%83%B3%E7%9F%A5%E9%81%93%EF%BC%8C%E5%8D%B3%E5%BD%A2%E7%8A%B6%E7%9A%84%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E4%B9%98%E7%A7%AF%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%A3%80%E6%9F%A5%E5%AE%83%E7%9A%84%E5%A4%A7%E5%B0%8F%EF%BC%88size%EF%BC%89"><span class="nav-number">0.0.1.2.</span> <span class="nav-text">如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E5%BC%A0%E9%87%8F%E7%9A%84numel-%E5%B1%9E%E6%80%A7%E6%9D%A5%E8%AE%BF%E9%97%AE%E5%BC%A0%E9%87%8F%E4%B8%AD%E5%85%83%E7%B4%A0%E7%9A%84%E6%80%BB%E6%95%B0"><span class="nav-number">0.0.1.3.</span> <span class="nav-text">通过张量的numel()属性来访问张量中元素的总数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%98%E6%8D%A2"><span class="nav-number">0.0.2.</span> <span class="nav-text">变换</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B0%83%E7%94%A8reshape%E5%87%BD%E6%95%B0%E6%94%B9%E5%8F%98%E4%B8%80%E4%B8%AA%E5%BC%A0%E9%87%8F%E7%9A%84%E5%BD%A2%E7%8A%B6%E8%80%8C%E4%B8%8D%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E6%95%B0%E9%87%8F%E5%92%8C%E5%85%83%E7%B4%A0%E5%80%BC"><span class="nav-number">0.0.2.1.</span> <span class="nav-text">调用reshape函数改变一个张量的形状而不改变元素数量和元素值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-4"><span class="nav-number"></span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%80%9D%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">我的思考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tenser%E5%8A%A0%E6%B3%95%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">tenser加法存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></li></div>
         </div>
         <!--/noindex-->
 
@@ -300,7 +272,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -311,44 +283,42 @@
     
     
     <div class="post-body" itemprop="articleBody"><p>[[pytorch]]</p>
-<h2 id="基础知识">基础知识</h2>
-<h4 id="导入">导入</h4>
-<p>首先，我们导入torch</p>
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><p>首先，我们导入torch</p>
 <p><em>请注意，虽然它被称为PyTorch，但是代码中使用torch而不是pytorch</em></p>
-<pre><code>import torch</code></pre>
-<h4 id="定义">定义</h4>
-<p>张量表示一个由数值组成的数组，这个数组可能有多个维度</p>
+<pre><code>import torch
+</code></pre>
+<h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>张量表示一个由数值组成的数组，这个数组可能有多个维度</p>
 <ul>
 <li>具有一个轴的张量：向量（vector）</li>
 <li>具有两个轴的张量：矩阵（matrix）</li>
 <li>具有两个轴以上的张量没有特殊的数学名称</li>
 </ul>
-<h3 id="初始化声明">初始化声明</h3>
-<h4 id="torch提供的接口">torch提供的接口</h4>
-<h5 id="使用-arange-创建">使用 arange 创建</h5>
-<ul>
-<li><h1 id="section"></h1>
-<pre><code>  - x = torch.arange(12)
+<h3 id="初始化声明"><a href="#初始化声明" class="headerlink" title="初始化声明"></a>初始化声明</h3><h4 id="torch提供的接口"><a href="#torch提供的接口" class="headerlink" title="torch提供的接口"></a>torch提供的接口</h4><h5 id="使用-arange-创建"><a href="#使用-arange-创建" class="headerlink" title="使用 arange 创建"></a>使用 arange 创建</h5><ul>
+<li><h1 id=""><a href="#" class="headerlink" title=""></a></h1><pre><code>  - x = torch.arange(12)
 
   - x
 
   - Copy to clipboard
 
-  - tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])</code></pre>
+  - tensor([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+</code></pre>
 <ul>
-<li><p>这个行向量包含以0开始的前12个整数，它们默认创建为整数</p></li>
-<li><p>也可指定创建类型为浮点数</p></li>
+<li><p>这个行向量包含以0开始的前12个整数，它们默认创建为整数</p>
+</li>
+<li><p>也可指定创建类型为浮点数</p>
+</li>
 <li><p>张量中的每个值都称为张量的 元素（element）</p>
 <ul>
 <li>例如，张量 x 中有 12 个元素</li>
-</ul></li>
-<li><p>除非额外指定，新的张量将存储在内存中，并采用基于CPU的计算</p></li>
-</ul></li>
 </ul>
-<h5 id="全1全0初始化张量">全1/全0初始化张量</h5>
-<ul>
-<li><h1 id="section-1"></h1>
-<ul>
+</li>
+<li><p>除非额外指定，新的张量将存储在内存中，并采用基于CPU的计算</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="全1-全0初始化张量"><a href="#全1-全0初始化张量" class="headerlink" title="全1/全0初始化张量"></a>全1/全0初始化张量</h5><ul>
+<li><h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><ul>
 <li><p>全0</p>
 <pre><code>  - torch.zeros((2, 3, 4))
 
@@ -364,10 +334,12 @@
 
   -          [0., 0., 0., 0.],
 
-  -          [0., 0., 0., 0.]]])</code></pre></li>
-</ul></li>
-<li><h1 id="section-2"></h1>
-<ul>
+  -          [0., 0., 0., 0.]]])
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h1 id="-2"><a href="#-2" class="headerlink" title=""></a></h1><ul>
 <li><p>全1</p>
 <pre><code>  - torch.ones((2, 3, 4))
 
@@ -383,13 +355,14 @@
 
   -          [1., 1., 1., 1.],
 
-  -          [1., 1., 1., 1.]]])</code></pre></li>
-</ul></li>
+  -          [1., 1., 1., 1.]]])
+</code></pre>
+</li>
 </ul>
-<h5 id="随机概率分布-初始化张量">随机/概率分布 初始化张量</h5>
-<ul>
-<li><h1 id="section-3"></h1>
-<ul>
+</li>
+</ul>
+<h5 id="随机-概率分布-初始化张量"><a href="#随机-概率分布-初始化张量" class="headerlink" title="随机/概率分布 初始化张量"></a>随机/概率分布 初始化张量</h5><ul>
+<li><h1 id="-3"><a href="#-3" class="headerlink" title=""></a></h1><ul>
 <li><p>创建一个形状为（3,4）的张量，其中的每个元素都从均值为0、标准差为1的标准高斯分布（正态分布）中随机采样</p>
 <pre><code> - &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
 
@@ -401,11 +374,13 @@
 
  -         [ 1.4653,  0.1843, -1.6995, -0.3036],
 
- -         [ 1.7646,  1.0450,  0.2457, -0.7732]])</code></pre></li>
-</ul></li>
+ -         [ 1.7646,  1.0450,  0.2457, -0.7732]])
+</code></pre>
+</li>
 </ul>
-<h5 id="使用包含数值的python列表或嵌套列表来为所需张量中的每个元素赋予确定值">使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值</h5>
-<ul>
+</li>
+</ul>
+<h5 id="使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值"><a href="#使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值" class="headerlink" title="使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值"></a>使用包含数值的Python列表（或嵌套列表），来为所需张量中的每个元素赋予确定值</h5><ul>
 <li><p>在这里，最外层的列表对应于轴0，内层的列表对应于轴1</p>
 <ul>
 <li><blockquote>
@@ -425,7 +400,6 @@
 <blockquote>
 <blockquote>
 <blockquote>
-
 </blockquote>
 </blockquote>
 </blockquote>
@@ -442,53 +416,68 @@
 </blockquote>
 </blockquote>
 </blockquote>
-</blockquote></li>
-<li><p>torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])</p></li>
-<li><hr></li>
-<li><p>tensor([[2, 1, 4, 3],</p></li>
-<li><pre><code>    [1, 2, 3, 4],</code></pre></li>
-<li><pre><code>    [4, 3, 2, 1]])</code></pre></li>
-</ul></li>
+</blockquote>
+</li>
+<li><p>torch.tensor([[2, 1, 4, 3], [1, 2, 3, 4], [4, 3, 2, 1]])</p>
+</li>
+<li><hr>
+</li>
+<li><p>tensor([[2, 1, 4, 3],</p>
+</li>
+<li><pre><code>    [1, 2, 3, 4],
+</code></pre>
+</li>
+<li><pre><code>    [4, 3, 2, 1]])
+</code></pre>
+</li>
 </ul>
-<h4 id="属性">属性</h4>
-<h5 id="通过张量的shape属性来访问张量沿每个轴的长度">通过张量的shape属性来访问张量沿每个轴的长度</h5>
-<pre><code>- x.shape</code></pre>
-<h5 id="如果只想知道即形状的所有元素乘积可以检查它的大小size">如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）</h5>
-<ul>
+</li>
+</ul>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><h5 id="通过张量的shape属性来访问张量沿每个轴的长度"><a href="#通过张量的shape属性来访问张量沿每个轴的长度" class="headerlink" title="通过张量的shape属性来访问张量沿每个轴的长度"></a>通过张量的shape属性来访问张量沿每个轴的长度</h5><pre><code>- x.shape
+</code></pre>
+<h5 id="如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）"><a href="#如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）" class="headerlink" title="如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）"></a>如果只想知道，即形状的所有元素乘积，可以检查它的大小（size）</h5><ul>
 <li>因为这里在处理的是一个向量，所以它的shape与它的size相同</li>
 </ul>
-<h5 id="通过张量的numel属性来访问张量中元素的总数">通过张量的numel()属性来访问张量中元素的总数</h5>
-<pre><code>- x.numel()</code></pre>
-<h4 id="变换">变换</h4>
-<h5 id="调用reshape函数改变一个张量的形状而不改变元素数量和元素值">调用reshape函数改变一个张量的形状而不改变元素数量和元素值</h5>
-<ul>
-<li><h1 id="section-4"></h1>
-<ul>
-<li><p>例如，可以把张量x从形状为（12,）的行向量转换为形状为（3,4）的矩阵</p></li>
-<li><p>这个新的张量包含与转换前相同的值，但是它被看成一个3行4列的矩阵</p></li>
-<li><p>要重点说明一下，虽然张量的形状发生了改变，但其元素值并没有变</p></li>
-<li><p>注意，通过改变张量的形状，张量的大小不会改变</p></li>
-<li><p>X = x.reshape(3, 4)</p></li>
-<li><p>X</p></li>
-<li><p>Copy to clipboard</p></li>
-</ul></li>
+<h5 id="通过张量的numel-属性来访问张量中元素的总数"><a href="#通过张量的numel-属性来访问张量中元素的总数" class="headerlink" title="通过张量的numel()属性来访问张量中元素的总数"></a>通过张量的numel()属性来访问张量中元素的总数</h5><pre><code>- x.numel()
+</code></pre>
+<h4 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h4><h5 id="调用reshape函数改变一个张量的形状而不改变元素数量和元素值"><a href="#调用reshape函数改变一个张量的形状而不改变元素数量和元素值" class="headerlink" title="调用reshape函数改变一个张量的形状而不改变元素数量和元素值"></a>调用reshape函数改变一个张量的形状而不改变元素数量和元素值</h5><ul>
+<li><h1 id="-4"><a href="#-4" class="headerlink" title=""></a></h1><ul>
+<li><p>例如，可以把张量x从形状为（12,）的行向量转换为形状为（3,4）的矩阵</p>
+</li>
+<li><p>这个新的张量包含与转换前相同的值，但是它被看成一个3行4列的矩阵</p>
+</li>
+<li><p>要重点说明一下，虽然张量的形状发生了改变，但其元素值并没有变</p>
+</li>
+<li><p>注意，通过改变张量的形状，张量的大小不会改变</p>
+</li>
+<li><p>X = x.reshape(3, 4)</p>
+</li>
+<li><p>X</p>
+</li>
+<li><p>Copy to clipboard</p>
+</li>
+</ul>
+</li>
 <li><ul>
-<li><ul>
+<li></li>
+</ul>
+<ul>
 <li><p>我们不需要通过手动指定每个维度来改变形状</p>
 <ul>
-<li><p>幸运的是，我们可以通过-1来调用此自动计算出维度的功能</p></li>
-<li><p>即我们可以用x.reshape(-1,4)或x.reshape(3,-1)来取代
-x.reshape(3,4)</p></li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li><p>幸运的是，我们可以通过-1来调用此自动计算出维度的功能</p>
+</li>
+<li><p>即我们可以用x.reshape(-1,4)或x.reshape(3,-1)来取代		x.reshape(3,4)</p>
+</li>
 </ul>
-<h2 id="我的思考">我的思考</h2>
-<p>### tenser加法存在的问题 ![[tenser加法存在的问题]]</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="我的思考"><a href="#我的思考" class="headerlink" title="我的思考"></a>我的思考</h2><h3 id="tenser加法存在的问题"><a href="#tenser加法存在的问题" class="headerlink" title="tenser加法存在的问题"></a>tenser加法存在的问题</h3><p> ![[tenser加法存在的问题]]</p>
 <span id="more"></span>
-<hr>
-<h3 id="reference">Reference</h3>
 
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>
 
     
@@ -518,8 +507,8 @@ x.reshape(3,4)</p></li>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/04/24/pytorch/" rel="prev" title="pytorch">
-                  <i class="fa fa-angle-left"></i> pytorch
+                <a href="/2024/04/24/d2l-2.1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="prev" title="d2l-2.1基础知识-数据处理">
+                  <i class="fa fa-angle-left"></i> d2l-2.1基础知识-数据处理
                 </a>
             </div>
             <div class="post-nav-item">

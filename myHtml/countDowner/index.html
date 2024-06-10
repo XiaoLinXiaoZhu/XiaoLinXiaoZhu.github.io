@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Timer with Progress Bar</title>
+ <!-- 引入CSS样式 -->
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('styles.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="styles.css"></noscript></head>
+<body>
+<div class="timer-container">
+    <div class="during-setting">
+        <label for="startTimeInput">Start Time:</label>
+        <input type="time" id="startTimeInput" value="21:00">
+        <label for="endTimeInput">End Time:</label>
+        <input type="time" id="endTimeInput" value="23:59">
+        <button id="setTimerRange">Set Time Range</button>
+    </div>
+    <hr>
+    <div class="timer-self">
+        <div id="currentTimeDisplay"></div>
+        <br>
+        <div class="progress-bar">
+            <div class="current-time-marker"></div>
+            <div class="event-marker"></div>
+        </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+    <div class="event-setting">
+        <label for="eventNameInput">Event Name:</label>
+        <input type="text" id="eventNameInput" value="Event Title">
+        <br>
+        <label for="eventStartTimeInput">Start Time:</label>
+        <input type="time" id="eventStartTimeInput" value="22:00">
+        <label for="eventEndTimeInput">End Time:</label>
+        <input type="time" id="eventEndTimeInput" value="22:10">
+        <button id="addEvent">Add Event</button>
+    </div>
+</div>
+
+<div class="events-title">
+</div>
+
+<script src="script.js"></script> <!-- 引入JavaScript脚本 -->
+
+<script src="/bundle.js"></script></body></html>
