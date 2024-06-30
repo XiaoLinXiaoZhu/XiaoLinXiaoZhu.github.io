@@ -18,26 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="[[pytorch：张量(tenser)]] #### 问题阐述
- python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：
- 
- 创建变量的时候，先申请分配内存，然后再将变量指向其存储tensor的位置
- 计算的时候，实际上是不是将其对应的值赋予过去，而是将位置赋予过去。
- 
- 这就导致了一个问题：
- 123before = id(x)x =">
+    <meta name="description" content="[[pytorch：张量(tenser)]] 问题阐述python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：  创建变量的时候，先申请分配内存，然后再将变量指向其存储tensor的位置 计算的时候，实际上是不是将其对应的值赋予过去，而是将位置赋予过去。  这就导致了一个问题： 123before = id(x)x = x + ybefore =">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tensor加法存在的问题">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/04/24/1.Archieve/tenser%E5%8A%A0%E6%B3%95%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="[[pytorch：张量(tenser)]] #### 问题阐述
- python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：
- 
- 创建变量的时候，先申请分配内存，然后再将变量指向其存储tensor的位置
- 计算的时候，实际上是不是将其对应的值赋予过去，而是将位置赋予过去。
- 
- 这就导致了一个问题：
- 123before = id(x)x =">
+<meta property="og:description" content="[[pytorch：张量(tenser)]] 问题阐述python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：  创建变量的时候，先申请分配内存，然后再将变量指向其存储tensor的位置 计算的时候，实际上是不是将其对应的值赋予过去，而是将位置赋予过去。  这就导致了一个问题： 123before = id(x)x = x + ybefore =">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-24T11:20:00.000Z">
 <meta property="article:modified_time" content="2024-04-24T11:20:53.001Z">
@@ -150,7 +136,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E9%98%90%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题阐述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -288,8 +274,8 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>[[pytorch：张量(tenser)]] #### 问题阐述</p>
-<p>python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：</p>
+    <div class="post-body" itemprop="articleBody"><p>[[pytorch：张量(tenser)]]</p>
+<h4 id="问题阐述"><a href="#问题阐述" class="headerlink" title="问题阐述"></a>问题阐述</h4><p>python的实现逻辑和内存回收机制挺奇怪的。实际上，当使用tensor类型的时候，其更像是存储了一个指针：</p>
 <ul>
 <li>创建变量的时候，先申请分配内存，然后再将变量指向其存储tensor的位置</li>
 <li>计算的时候，实际上是不是将其对应的值赋予过去，而是将位置赋予过去。</li>
@@ -297,14 +283,18 @@
 <p>这就导致了一个问题：</p>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">before = <span class="built_in">id</span>(x)</span><br><span class="line">x = x + y</span><br><span class="line">before == <span class="built_in">id</span>(x)</span><br></pre></td></tr></tbody></table></figure>
 <p>输出：false</p>
-<p>实际上，计算x+y的时候，系统先申请了一个内存空间，然后将计算结果放在这个空间内，最后将
-x存储的位置改为这个内存空间的地址……</p>
+<p>实际上，计算x+y的时候，系统先申请了一个内存空间，然后将计算结果放在这个空间内，最后将 x存储的位置改为这个内存空间的地址……</p>
 <p>所有的变量都是存储在内存中的，如果x释放出来的内存没有被及时释放，这样就会带来很大的内存占用冗余，而这在本就对内存占用需求比较大的深度学习来说是致命的。</p>
-<h4 id="解决办法">解决办法</h4>
-<p>所以说可以换一种写法，就可以使得其代码效率优化： </p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z[:] = x + y</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>所以说可以换一种写法，就可以使得其代码效率优化：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z[:] = x + y</span><br></pre></td></tr></tbody></table></figure>
+
 <p>这样的话，相当于将值进行了复写，而不是重复申请更换空间。而x+y产生的临时内存占用将会被赋值完之后被释放。</p>
-<p>如果说，我们知道后面x中存储的数据不再会被使用了，也可以使用下面的写法：
-</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x += y</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>如果说，我们知道后面x中存储的数据不再会被使用了，也可以使用下面的写法：</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x += y</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+
 
     </div>
 
