@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">59</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">193</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">61</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">196</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,13 +147,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">193</span>
+          <span class="site-state-item-count">196</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-count">61</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,493 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/29/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9Aunicode%E7%9A%84%E7%89%B9%E6%AE%8A%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/29/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9Aunicode%E7%9A%84%E7%89%B9%E6%AE%8A%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6/" class="post-title-link" itemprop="url">杂谈：unicode的特殊控制字符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-29 15:53:00 / 修改时间：19:02:15" itemprop="dateCreated datePublished" datetime="2024-02-29T15:53:00+08:00">2024-02-29</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>323</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><a href="/tags/编程/" rel="contents" data-pjax-state=""># 编程</a> <br><br>unicode编码中从 \u0000 到 \u0020 是一些特殊的字符，用于控制字符格式或者一些特殊的东西，下面是一个表格，展示了那些字符：</p>
+<p><strong>unicode字符编码</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符编号</th>
+<th>字符代号</th>
+<th>字符功能</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0001</td>
+<td>SOH</td>
+<td>(start of handing)</td>
+<td>标题开始</td>
+</tr>
+<tr>
+<td>0002</td>
+<td>STX</td>
+<td>(start of text)</td>
+<td>正文开始</td>
+</tr>
+<tr>
+<td>0003</td>
+<td>ETX</td>
+<td>(end of text)</td>
+<td>正文结束</td>
+</tr>
+<tr>
+<td>0004</td>
+<td>EOT</td>
+<td>(end of transmission)</td>
+<td>传输结束</td>
+</tr>
+<tr>
+<td>0005</td>
+<td>ENQ</td>
+<td>(enquiry)</td>
+<td>请求</td>
+</tr>
+<tr>
+<td>0006</td>
+<td>ACK</td>
+<td>(acknowledge)</td>
+<td>收到通知</td>
+</tr>
+<tr>
+<td>0007</td>
+<td>BEL</td>
+<td>(bell)</td>
+<td>响铃</td>
+</tr>
+<tr>
+<td>0008</td>
+<td>BS</td>
+<td>(backspace)</td>
+<td>退格</td>
+</tr>
+<tr>
+<td>0009</td>
+<td>HT</td>
+<td>(horizontal tab)</td>
+<td>水平制表符</td>
+</tr>
+<tr>
+<td>000A</td>
+<td>LF</td>
+<td>(NL line feed, new line)</td>
+<td>换行键</td>
+</tr>
+<tr>
+<td>000B</td>
+<td>VT</td>
+<td>(vertical tab)</td>
+<td>垂直制表符</td>
+</tr>
+<tr>
+<td>000C</td>
+<td>FF</td>
+<td>(NP form feed, new page)</td>
+<td>换页键</td>
+</tr>
+<tr>
+<td>000D</td>
+<td>CR</td>
+<td>(carriage return)</td>
+<td>回车键</td>
+</tr>
+<tr>
+<td>000E</td>
+<td>SO</td>
+<td>(shift out)</td>
+<td>不用切换</td>
+</tr>
+<tr>
+<td>000F</td>
+<td>SI</td>
+<td>(shift in)</td>
+<td>启用切换</td>
+</tr>
+<tr>
+<td>0010</td>
+<td>DLE</td>
+<td>(data link escape)</td>
+<td>数据链路转义</td>
+</tr>
+<tr>
+<td>0011</td>
+<td>DC1</td>
+<td>(device control 1)</td>
+<td>设备控制1</td>
+</tr>
+<tr>
+<td>0012</td>
+<td>DC2</td>
+<td>(device control 2)</td>
+<td>设备控制2</td>
+</tr>
+<tr>
+<td>0013</td>
+<td>DC3</td>
+<td>(device control 3)</td>
+<td>设备控制3</td>
+</tr>
+<tr>
+<td>0014</td>
+<td>DC4</td>
+<td>(device control 4)</td>
+<td>设备控制4</td>
+</tr>
+<tr>
+<td>0015</td>
+<td>NAK</td>
+<td>(negative acknowledge)</td>
+<td>拒绝接收</td>
+</tr>
+<tr>
+<td>0016</td>
+<td>SYN</td>
+<td>(synchronous idle)</td>
+<td>同步空闲</td>
+</tr>
+<tr>
+<td>0017</td>
+<td>ETB</td>
+<td>(end of trans. block)</td>
+<td>传输块结束</td>
+</tr>
+<tr>
+<td>0018</td>
+<td>CAN</td>
+<td>(cancel)</td>
+<td>取消</td>
+</tr>
+<tr>
+<td>0019</td>
+<td>EM</td>
+<td>(end of medium)</td>
+<td>介质中断</td>
+</tr>
+<tr>
+<td>001A</td>
+<td>SUB</td>
+<td>(substitute)</td>
+<td>替补</td>
+</tr>
+<tr>
+<td>001B</td>
+<td>ESC</td>
+<td>(escape)</td>
+<td>溢出</td>
+</tr>
+<tr>
+<td>001C</td>
+<td>FS</td>
+<td>(file separator)</td>
+<td>文件分割符</td>
+</tr>
+<tr>
+<td>001D</td>
+<td>GS</td>
+<td>(group separator)</td>
+<td>分组符</td>
+</tr>
+<tr>
+<td>001E</td>
+<td>RS</td>
+<td>(record separator)</td>
+<td>记录分离符</td>
+</tr>
+<tr>
+<td>001F</td>
+<td>US</td>
+<td>(unit separator)</td>
+<td>单元分隔符</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/28/1.Archieve/%E7%AD%94%E8%BE%A9PPT%E5%88%B6%E4%BD%9C%E8%A6%81%E9%A2%86/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/28/1.Archieve/%E7%AD%94%E8%BE%A9PPT%E5%88%B6%E4%BD%9C%E8%A6%81%E9%A2%86/" class="post-title-link" itemprop="url">答辩PPT制作要领</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-28 15:16:00" itemprop="dateCreated datePublished" datetime="2024-02-28T15:16:00+08:00">2024-02-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-05 11:04:02" itemprop="dateModified" datetime="2024-04-05T11:04:02+08:00">2024-04-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>147</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state=""># 效率工具</a> <br><a href="/tags/大学/" rel="contents" data-pjax-state=""># 大学</a> <br><br>答辩论文ppt制作主要有以下几个方面：</p>
+<ol>
+<li>配色</li>
+<li>文字</li>
+<li>模板</li>
+<li>图表</li>
+</ol>
+<h2 id="一、配色"><a href="#一、配色" class="headerlink" title="一、配色"></a>一、配色</h2><p>配色最好是要简洁大方，可以考虑使用校徽配色：</p>
+<blockquote>
+<p>华中科技大学<br>红色 e02e1e</p>
+<p>蓝色 155da2<br><img src="/2024/03/01/3.Source/Pasted image 20240405100950.png" alt="Pasted image 20240405100950.png" align="right" width="450"></p>
+</blockquote>
+<h2 id="二、字体颜色与背景颜色相反"><a href="#二、字体颜色与背景颜色相反" class="headerlink" title="二、字体颜色与背景颜色相反"></a>二、字体颜色与背景颜色相反</h2><h3 id="整体配色"><a href="#整体配色" class="headerlink" title="整体配色"></a>整体配色</h3><ul>
+<li>一个主色</li>
+<li>加黑白灰</li>
+<li>背景建议使用白色</li>
+</ul>
+<h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><p>分段处理</p>
+<h2 id="三、模板"><a href="#三、模板" class="headerlink" title="三、模板"></a>三、模板</h2><h3 id="分块"><a href="#分块" class="headerlink" title="分块"></a>分块</h3><h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><h2 id="四、图表"><a href="#四、图表" class="headerlink" title="四、图表"></a>四、图表</h2><p>增加图表，因为图表往往是比较易懂且直观的表达方式</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/28/1.Archieve/%E7%AD%94%E8%BE%A9PPT%E5%88%B6%E4%BD%9C%E8%A6%81%E9%A2%86/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/26/1.Archieve/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E5%88%A4%E6%96%AD%E6%98%AF%E8%B5%84%E6%BA%90%E8%AE%BE%E5%A4%87%E8%BF%98%E6%98%AF%E9%80%9A%E8%AE%AF%E8%AE%BE%E5%A4%87/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/26/1.Archieve/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%EF%BC%9A%E5%88%A4%E6%96%AD%E6%98%AF%E8%B5%84%E6%BA%90%E8%AE%BE%E5%A4%87%E8%BF%98%E6%98%AF%E9%80%9A%E8%AE%AF%E8%AE%BE%E5%A4%87/" class="post-title-link" itemprop="url">网络技术：判断是资源设备还是通讯设备</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-26 20:44:00 / 修改时间：20:48:21" itemprop="dateCreated datePublished" datetime="2024-02-26T20:44:00+08:00">2024-02-26</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>78</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/网络技术/" rel="contents" data-pjax-state=""># 网络技术</a> <br><br>判断这个有一个技巧就是以网卡为分界线</p>
+<ul>
+<li>网卡以外（包括网卡）就是<strong>网络信息设备</strong>（用于处理网络中信息的传递）</li>
+<li>网卡以内（比如软件）就是<strong>网络资源设备</strong>（用于处理网络所存储的信息）</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -929,378 +1416,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/02/16/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E5%85%B3%E4%BA%8E%E4%B8%AD%E7%BE%8E%E7%9A%84%E8%B4%B8%E6%98%93%E5%86%B2%E7%AA%81/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/1.Archieve/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/15/1.Archieve/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">C++：windows消息windowsToast的使用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-15 22:23:00 / 修改时间：22:43:57" itemprop="dateCreated datePublished" datetime="2024-02-15T22:23:00+08:00">2024-02-15</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>807</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>windowsToast是一个集成了window的toast消息提醒的第三方c++库，可以十分便捷地在windows下显示toast消息提醒。</p>
-<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><h3 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h3><p>如果担心冲突的话就导入之后在每一条wintoast的命令前面加上<code>wintoastlib::</code> 即可，但是我无所谓，所以说直接导入后加<code>using namespace std;</code></p>
-<p>一般还需要包含windows库，所以说一并加入</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;string&gt;</span><br><span class="line">#include "wintoastlib.h"</span><br><span class="line">#include &lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line">using namespace WinToastLib;</span><br></pre></td></tr></tbody></table></figure>
-
-
-<h3 id="定义ToastHandler"><a href="#定义ToastHandler" class="headerlink" title="定义ToastHandler"></a>定义ToastHandler</h3><p>ToastHandler定义了当展示的toast消息接受不同的响应之后所执行的命令，通过继承<code>IWinToastHandler</code> 我们可以自定义自己想要的响应程序。</p>
-<p>查看<code>IWinToastHandler</code> 的定义我们得知其有以下几种状态：</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">IWinToastHandler</span> {</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="keyword">enum</span> <span class="title class_">WinToastDismissalReason</span> {</span><br><span class="line">            UserCanceled      = ToastDismissalReason::ToastDismissalReason_UserCanceled,</span><br><span class="line">            ApplicationHidden = ToastDismissalReason::ToastDismissalReason_ApplicationHidden,</span><br><span class="line">            TimedOut          = ToastDismissalReason::ToastDismissalReason_TimedOut</span><br><span class="line">        };</span><br><span class="line"></span><br><span class="line">        <span class="keyword">virtual</span> ~<span class="built_in">IWinToastHandler</span>()                                      = <span class="keyword">default</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastActivated</span><span class="params">()</span> <span class="type">const</span>                              </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastActivated</span><span class="params">(<span class="type">int</span> actionIndex)</span> <span class="type">const</span>               </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastDismissed</span><span class="params">(WinToastDismissalReason state)</span> <span class="type">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">toastFailed</span><span class="params">()</span> <span class="type">const</span>                                 </span>= <span class="number">0</span>;</span><br><span class="line">    };</span><br></pre></td></tr></tbody></table></figure>
-
-<p>对于这些未定义的虚函数，我们对其继承并且加以定义：</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyToastHandler</span> : <span class="keyword">public</span> WinToastLib::IWinToastHandler {</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastActivated</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"The user clicked in this toast"</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastActivated</span><span class="params">(<span class="type">int</span> actionIndex)</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::cout &lt;&lt; <span class="string">"The user clicked on action #"</span> &lt;&lt; actionIndex &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">16</span> + actionIndex);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastDismissed</span><span class="params">(WinToastDismissalReason state)</span> <span class="type">const</span> </span>{</span><br><span class="line">        <span class="keyword">switch</span> (state) {</span><br><span class="line">            <span class="keyword">case</span> UserCanceled:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The user dismissed this toast"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> TimedOut:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The toast has timed out"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">2</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> ApplicationHidden:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"The application hid the toast using ToastNotifier.hide()"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">3</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                std::cout &lt;&lt; <span class="string">"Toast not activated"</span> &lt;&lt; std::endl;</span><br><span class="line">                <span class="built_in">exit</span>(<span class="number">4</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">toastFailed</span><span class="params">()</span> <span class="type">const</span> </span>{</span><br><span class="line">        std::wcout &lt;&lt; <span class="string">L"Error showing current toast"</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">5</span>);</span><br><span class="line">    }</span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
-
-<p>我们也可以对于这些响应写出更为复杂的交互逻辑，但是在这里仅仅展示不同情况输出不同内容提示的代码。</p>
-<h3 id="定义WinToastTemplate"><a href="#定义WinToastTemplate" class="headerlink" title="定义WinToastTemplate"></a>定义WinToastTemplate</h3><p><code>WinToastTemplate</code> 可以理解为所需要展示的消息提示的具体内容，下面是一个简单的函数示例，包含了从初始化定义到自定义格式和内容</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">ShowNotification</span><span class="params">(std::wstring&amp; appName, std::wstring&amp; firstLine, std::wstring&amp; secondLine, std::wstring&amp; imagePath,std::wstring&amp; hero_imagePath)</span> </span>{</span><br><span class="line">    std::wstring appUserModelID = <span class="string">L"SystemProxy_Agency_Tool"</span>;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">//这里是初始化消息提示的appnamde和appID</span></span><br><span class="line">	<span class="comment">//appname不能包含特殊字符，appname中的_会被转化为空格</span></span><br><span class="line">    WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">setAppName</span>(appName);</span><br><span class="line">    WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">setAppUserModelId</span>(appUserModelID);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//这里是设定格式为ImageAndText02</span></span><br><span class="line">    WinToastTemplate templ = <span class="built_in">WinToastTemplate</span>(WinToastTemplate::ImageAndText02);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//设定具体的文本内容和图片路径</span></span><br><span class="line">	<span class="comment">//WinToastTemplate::CropHint::Square指的是将图片裁剪为正方形</span></span><br><span class="line">	</span><br><span class="line">    templ.<span class="built_in">setTextField</span>(firstLine, WinToastTemplate::FirstLine);</span><br><span class="line">    templ.<span class="built_in">setTextField</span>(secondLine, WinToastTemplate::SecondLine);</span><br><span class="line">    <span class="comment">//展示小图片</span></span><br><span class="line">    templ.<span class="built_in">setImagePath</span>(imagePath, WinToastTemplate::CropHint::Square);</span><br><span class="line">    <span class="comment">//展示大图片</span></span><br><span class="line">    templ.<span class="built_in">setHeroImagePath</span>(hero_imagePath);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//展示toast，样式为我们设定好了的templ，返回函数为我们指定的MyToastHandler</span></span><br><span class="line">    <span class="keyword">if</span> (WinToastLib::WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">initialize</span>()) {</span><br><span class="line">        WinToastLib::WinToast::<span class="built_in">instance</span>()-&gt;<span class="built_in">showToast</span>(templ, <span class="keyword">new</span> <span class="built_in">MyToastHandler</span>());</span><br><span class="line">        <span class="comment">//消息延时5s后自动退出</span></span><br><span class="line">        <span class="built_in">Sleep</span>(<span class="number">5000</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>更多的消息提示样式可以看看作者的库里面写的说明：<br><a target="_blank" rel="noopener" href="https://github.com/mohabouje/WinToast">mohabouje/WinToast(github.com)</a></p>
-<p>或者可以看看这位大佬写的示例：<br><a target="_blank" rel="noopener" href="https://www.codeproject.com/Articles/5286393/Cplusplus-Windows-Toast-Notification">C++: Windows Toast Notification - CodeProject</a></p>
-<h3 id="调用消息提醒"><a href="#调用消息提醒" class="headerlink" title="调用消息提醒"></a>调用消息提醒</h3><p>使用这种方式创建消息提醒有一个缺点，就是创建出来的命令提示符的黑框会一直保持到消息消失，十分的丑。</p>
-<p>所以说可以选择使用bat的<code>start /b</code>间接启动，来使得黑框最小化：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start /b "" E:\AgencyProxyTools\messageBox.exe</span><br></pre></td></tr></tbody></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/02/15/1.Archieve/C++%EF%BC%9Awindows%E6%B6%88%E6%81%AFwindowsToast%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/1.Archieve/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/15/1.Archieve/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/" class="post-title-link" itemprop="url">C++：生成的exe文件如何传参数到main中</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-02-15 22:16:00" itemprop="dateCreated datePublished" datetime="2024-02-15T22:16:00+08:00">2024-02-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-04-05 11:18:44" itemprop="dateModified" datetime="2024-04-05T11:18:44+08:00">2024-04-05</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>233</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br></p>
-<h3 id="argc和argv是什么"><a href="#argc和argv是什么" class="headerlink" title="argc和argv是什么"></a>argc和argv是什么</h3><p>C/C++语言中的main函数，经常带有参数argc，argv，如下：&nbsp;</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span>* argv[])</span></span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>这两个参数的作用是什么呢？argc 是指命令行输入参数的个数，argv存储了所有的命令行参数。假如你的程序是hello.exe，如果在命令行运行该程序，运行命令为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello.exe Shiqi Yu  </span><br></pre></td></tr></tbody></table></figure>
-
-<p>那么，argc的值是 3，argv[0]是”hello.exe”，argv[1]是”Shiqi”，argv[2]是”Yu”。 &nbsp;&nbsp;  </p>
-<h3 id="argc和argv的使用"><a href="#argc和argv的使用" class="headerlink" title="argc和argv的使用"></a>argc和argv的使用</h3><p>下面的程序演示argc和argv的使用：&nbsp;&nbsp;</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> ** argv)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="type">int</span> i;</span><br><span class="line">	<span class="keyword">for</span> (i=<span class="number">0</span>; i &lt; argc; i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Argument %d is %s.\n"</span>, i, argv[i]);<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>假如上述代码编译为hello.exe，那么运行&nbsp;  </p>
-<p>hello.exe a b c d e<br>将得到&nbsp;&nbsp; </p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Argument 0 is hello.exe.  </span><br><span class="line">Argument 1 is a.  </span><br><span class="line">Argument 2 is b.  </span><br><span class="line">Argument 3 is c.  </span><br><span class="line">Argument 4 is d.  </span><br><span class="line">Argument 5 is e.  </span><br></pre></td></tr></tbody></table></figure>
-
-<p>运行<br>hello.exe lena.jpg<br>将得到&nbsp;&nbsp;  </p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Argument 0 is hello.exe.</span><br><span class="line">Argument 1 is lena.jpg.</span><br></pre></td></tr></tbody></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/02/15/1.Archieve/C++%EF%BC%9A%E7%94%9F%E6%88%90%E7%9A%84exe%E6%96%87%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BC%A0%E5%8F%82%E6%95%B0%E5%88%B0main%E4%B8%AD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/1.Archieve/bat%EF%BC%9Astart%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E3%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/02/15/1.Archieve/bat%EF%BC%9Astart%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E3%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/" class="post-title-link" itemprop="url">bat：start命令的使用方法的详细说明、参数列表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2024-02-15 22:12:00 / 修改时间：22:14:38" itemprop="dateCreated datePublished" datetime="2024-02-15T22:12:00+08:00">2024-02-15</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>520</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/bat/" rel="contents" data-pjax-state=""># bat</a> <br></p>
-<h3 id="1-start-命令的使用方法"><a href="#1-start-命令的使用方法" class="headerlink" title="1. start 命令的使用方法"></a>1. start 命令的使用方法</h3><p>start 命令用于在新窗口中启动应用程序、命令或批处理文件。使用 start 命令时，可以指定要启动的程序的路径和命令行参数。下面是 start 命令的基本语法：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start ["title"] [/d path] [/i] [/min] [/max] [/separate | /shared] [/low | /normal | /high | /realtime] [/wait] [/b] [command/program] [parameters]</span><br></pre></td></tr></tbody></table></figure>
-
-<p>其中，方括号表示可选参数。下面是各个参数的详细说明：</p>
-<ul>
-<li>“title”: 可选参数，指定窗口标题。</li>
-<li>/d path: 可选参数，指定启动程序的工作目录。</li>
-<li>/i: 可选参数，以新窗口中的分离模式启动程序。</li>
-<li>/min: 可选参数，启动程序时最小化窗口。</li>
-<li>/max: 可选参数，启动程序时最大化窗口。</li>
-<li>/separate | /shared: 可选参数，指定启动程序时使用的窗口类型。/separate 表示在新的独立窗口中启动程序（默认值），/shared 表示在共享控制台窗口中启动程序。</li>
-<li>/low | /normal | /high | /realtime: 可选参数，指定启动程序时使用的进程优先级。/low 表示低优先级，/normal 表示正常优先级（默认值），/high 表示高优先级，/realtime 表示实时优先级。</li>
-<li>/wait: 可选参数，等待程序结束后再退出。</li>
-<li>/b: 可选参数，以后台模式启动程序。</li>
-</ul>
-<h3 id="2-示例"><a href="#2-示例" class="headerlink" title="2. 示例"></a>2. 示例</h3><p>下面是一些示例，演示如何使用 start 命令启动不同类型的应用程序：</p>
-<ul>
-<li>启动记事本：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>启动计算器：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start calc.exe</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>启动 Internet Explorer：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start iexplore.exe "http://www.example.com"</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>启动 Windows Media Player：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start wmplayer.exe "C:\Users\UserName\Music\Sample.mp3"</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>启动命令提示符：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start cmd.exe</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>启动 PowerShell：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start powershell.exe</span><br></pre></td></tr></tbody></table></figure>
-
-<p>除了启动应用程序外，start 命令还可以启动批处理文件。例如，可以创建一个名为 “test.bat” 的批处理文件，其中包含以下命令：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start notepad.exe</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后在<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6&amp;spm=1001.2101.3001.7020">命令提示符</a>中执行以下命令来运行该批处理文件：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test.bat</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这将启动记事本程序。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/02/15/1.Archieve/bat%EF%BC%9Astart%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%E3%80%81%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
