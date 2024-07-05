@@ -1,0 +1,1655 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="# 游戏策划 # 我的策划  Introducing这是我参加冰岩作坊的实习的时候所创作的一款桌游，这款游戏有着十分优秀的设计，精妙的架构，平衡的数值。 虽然只是使用7天构建的游戏，但是其拥有惊人的简洁、自洽、深度…… 我认为在开头的地方应该感谢一下我的好友 @Ting（汤俊）@?（王仁喆）@画上蓝（南仔龙），是他们为我的灵感赋能、帮我测试了核心玩法的可行性、探讨了机制的合理性、探索了游戏可能的复">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《能源矩阵》规则说明书">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/03/24/1.Archieve/%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E%E4%B9%A6/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="# 游戏策划 # 我的策划  Introducing这是我参加冰岩作坊的实习的时候所创作的一款桌游，这款游戏有着十分优秀的设计，精妙的架构，平衡的数值。 虽然只是使用7天构建的游戏，但是其拥有惊人的简洁、自洽、深度…… 我认为在开头的地方应该感谢一下我的好友 @Ting（汤俊）@?（王仁喆）@画上蓝（南仔龙），是他们为我的灵感赋能、帮我测试了核心玩法的可行性、探讨了机制的合理性、探索了游戏可能的复">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image018%201.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image002.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image004.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image006.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image008.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image010.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image012.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image014.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image016.jpg">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image018.jpg">
+<meta property="article:published_time" content="2024-03-24T14:16:00.000Z">
+<meta property="article:modified_time" content="2024-04-05T02:02:30.825Z">
+<meta property="article:author" content="XLXZ">
+<meta property="article:tag" content="游戏策划">
+<meta property="article:tag" content="我的策划">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/clip_image018%201.jpg">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2024/03/24/1.Archieve/%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E%E4%B9%A6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2024/03/24/1.Archieve/%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E%E4%B9%A6/","path":"2024/03/24/1.Archieve/《能源矩阵》规则说明书/","title":"《能源矩阵》规则说明书"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《能源矩阵》规则说明书 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">61</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">196</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introducing"><span class="nav-number">1.</span> <span class="nav-text">Introducing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E%E4%B9%A6"><span class="nav-number">2.</span> <span class="nav-text">《能源矩阵》规则说明书</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E6%95%85%E4%BA%8B"><span class="nav-number">2.1.</span> <span class="nav-text">背景故事</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%B8%E6%88%8F%E6%A6%82%E8%BF%B0"><span class="nav-number">2.2.</span> <span class="nav-text">游戏概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">核心组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%A1%E7%89%8C%E5%8A%9F%E8%83%BD"><span class="nav-number">2.4.</span> <span class="nav-text">卡牌功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E4%BA%BA%E6%B8%B8%E6%88%8F%E6%B5%81%E7%A8%8B"><span class="nav-number">2.5.</span> <span class="nav-text">双人游戏流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E4%BA%BA%E6%B8%B8%E6%88%8F%E6%B5%81%E7%A8%8B"><span class="nav-number">2.6.</span> <span class="nav-text">多人游戏流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2v2%E6%B8%B8%E6%88%8F%E6%B5%81%E7%A8%8B"><span class="nav-number">2.7.</span> <span class="nav-text">2v2游戏流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">Tips：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%A1%E9%9D%A2%E4%BF%A1%E6%81%AF%E5%8F%8A%E6%95%B0%E7%9B%AE%E4%B8%80%E8%A7%88%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">卡面信息及数目一览：</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">196</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">61</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/04/01/1.Archieve/%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%AE%BE%E8%AE%A1%E6%97%A5%E5%BF%97/" rel="bookmark">
+        <time class="popular-posts-time">2024-04-01</time>
+        <br>
+      《能源矩阵》设计日志
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/03/24/1.Archieve/%E3%80%8A%E8%83%BD%E6%BA%90%E7%9F%A9%E9%98%B5%E3%80%8B%E8%A7%84%E5%88%99%E8%AF%B4%E6%98%8E%E4%B9%A6/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="《能源矩阵》规则说明书 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《能源矩阵》规则说明书
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-03-24 22:16:00" itemprop="dateCreated datePublished" datetime="2024-03-24T22:16:00+08:00">2024-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-05 10:02:30" itemprop="dateModified" datetime="2024-04-05T10:02:30+08:00">2024-04-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>21 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/游戏策划/" rel="contents" data-pjax-state=""># 游戏策划</a> <br><br><a href="/tags/我的策划/" rel="contents" data-pjax-state=""># 我的策划</a> <br></p>
+<h1 id="Introducing"><a href="#Introducing" class="headerlink" title="Introducing"></a>Introducing</h1><p>这是我参加冰岩作坊的实习的时候所创作的一款桌游，这款游戏有着十分优秀的设计，精妙的架构，平衡的数值。</p>
+<p>虽然只是使用7天构建的游戏，但是其拥有惊人的简洁、自洽、深度……</p>
+<p>我认为在开头的地方应该感谢一下我的好友 @Ting（汤俊）@?（王仁喆）@画上蓝（南仔龙），是他们为我的灵感赋能、帮我测试了核心玩法的可行性、探讨了机制的合理性、探索了游戏可能的复杂性，并且协助我最后一步步将游戏打磨成现在的这个样子。</p>
+<p>下面我将介绍这款桌游：</p>
+<h1 id="《能源矩阵》规则说明书"><a href="#《能源矩阵》规则说明书" class="headerlink" title="《能源矩阵》规则说明书"></a>《能源矩阵》规则说明书</h1><h2 id="背景故事"><a href="#背景故事" class="headerlink" title="背景故事"></a>背景故事</h2><p>在不远的未来，地球能源危机愈发严重，传统的能源供应方式已无法满足人类社会的需求。两大顶尖科技集团，分别由两位天才工程师领导，他们在一场前所未有的能源竞赛中展开对决。这场竞赛采用的是全新的能源采集技术——量子能流动力学。</p>
+<p>在名为“量子脉冲”的项目中，工程师们通过研发能够产生和转换不同等级量子能量的微型机器，试图创建出高效的能源生态系统。这些微型机器只有在精密搭建的能源矩阵——一块4x4的微缩空间内运作时，才能最大化地采集和转换能源。</p>
+<p>游戏中的每一张卡牌代表着不同的技术和事件，例如电池卡代表了能源储存技术，机器卡则是不同类型的能源生成器或转化器，而强化框架卡则代表着先进的辅助技术模块。玩家扮演其中一名工程师，通过智慧和策略，在这个微观世界中构建属于自己的能源帝国。</p>
+<h2 id="游戏概述"><a href="#游戏概述" class="headerlink" title="游戏概述"></a>游戏概述</h2><p>《能源矩阵》是一款<strong>双人对决</strong>、同时也<strong>最多兼容4人游玩</strong>的桌面游戏，玩家通过构建和管理能源矩阵上的机器来积累能源（分为ABC三个等级）。游戏目标是在资源产出与对手的竞争中，使自己任一等级资源达到对手相应资源积累值的阈值（A高出12格，B高出8格，C高出4格），从而造成伤害并削减对方血量。每位玩家初始有3点血量，血量归零视为败北。</p>
+<p>积分器样式：<img src="/2024/03/01/3.Source/clip_image018 1.jpg" alt="clip_image018 1.jpg" align="right" width="450"></p>
+<p>注意，记分规则在双人模式和多人模式有所不同，在双人模式为对抗制度，在多人模式为积分制度，同时，游戏获胜条件也有所不同。（实际上，比较推荐双人对战或者2v2。）</p>
+<h2 id="核心组件"><a href="#核心组件" class="headerlink" title="核心组件"></a>核心组件</h2><p><strong>手牌</strong> - 包括机器卡、事件卡和强化框架卡，所有卡牌背面统一为电池标志。</p>
+<p><strong>4x4放置板（能源矩阵）</strong> - 玩家在其上布局和激活机器。</p>
+<p><strong>事件队列</strong> – 用于放置并触发事件牌。</p>
+<h2 id="卡牌功能"><a href="#卡牌功能" class="headerlink" title="卡牌功能"></a>卡牌功能</h2><p><strong>电池</strong></p>
+<ul>
+<li><p>所有的牌，背面朝上都可以作为电池使用。</p>
+</li>
+<li><p>覆盖在4*4能源矩阵上，为所在行或者列提供电压，多张电池可叠加提高电压等级。</p>
+</li>
+</ul>
+<p>示例：<img src="/2024/03/01/3.Source/clip_image002.jpg" alt=""></p>
+<p><strong>机器</strong></p>
+<ul>
+<li><p>分为产出机器和转化机器，需放置在与自身电压需求匹配的格子上才能工作。</p>
+</li>
+<li><p>产出机器直接产出资源A、B、C。</p>
+</li>
+<li><p>转化机器除了电压需求外，还需要<strong>相邻格子</strong>上有特定资源才能启动。</p>
+</li>
+</ul>
+<p>左图：产出机器；右图：转化机器。上面的是功能说明，下面的是需要的电压等级。</p>
+<p><img src="/2024/03/01/3.Source/clip_image004.jpg" alt="clip_image004.jpg" align="right" width="450"></p>
+<p>举例：</p>
+<ol>
+<li><p>产出机器：<img src="/2024/03/01/3.Source/clip_image006.jpg" alt=""></p>
+</li>
+<li><p>转化机器：<img src="/2024/03/01/3.Source/clip_image008.jpg" alt=""></p>
+</li>
+</ol>
+<p><strong>事件牌</strong></p>
+<ul>
+<li>通过“事件队列”机制触发。玩家每回合从手中选择一定数量的牌放入事件队列尾部，并在事件队列头部翻开同样数量的牌，最后一个翻开的牌所展示的事件生效，如果不为事件牌，则无事发生。</li>
+</ul>
+<p>图解：选择放入一张：</p>
+<p><img src="/2024/03/01/3.Source/clip_image010.jpg" alt=""></p>
+<p>选择放入两张：</p>
+<p><img src="/2024/03/01/3.Source/clip_image012.jpg" alt=""></p>
+<p>图例：</p>
+<p><img src="/2024/03/01/3.Source/clip_image014.jpg" alt=""></p>
+<p><strong>强化框架</strong></p>
+<ul>
+<li><p>提供额外效果，增强机器性能，如月亮框架在月光事件下增加产能，超频框架提高电压需求同时增加产能。</p>
+</li>
+<li><p>图例：<img src="/2024/03/01/3.Source/clip_image016.jpg" alt=""></p>
+</li>
+</ul>
+<h2 id="双人游戏流程"><a href="#双人游戏流程" class="headerlink" title="双人游戏流程"></a>双人游戏流程</h2><p>游戏时长20min</p>
+<p><strong>1.</strong>     <strong>初始化</strong> - 双方各自准备3张牌作为血条置于能源矩阵边缘，并抓取7张起始手牌，<strong>抽到强化框架则额外再抽相同数量的牌。</strong>确定先手玩家，从先手玩家起顺时针进行游戏。</p>
+<p><strong>2.</strong>     <strong>回合开始</strong> - 先手玩家开始，依次放置4张牌（各两张）至事件队列，然后将第一张移入弃牌堆。</p>
+<p><strong>3.</strong>     <strong>抽牌阶段</strong> - 每回合抽2张牌，若<strong>抽到强化框架则额外再抽相同数量的牌</strong>，先手玩家首回合仅抽1张。</p>
+<p><strong>4.</strong>     <strong>事件阶段</strong> – 选择在事件队列队尾依次加入n张手牌（n不小于一），然后翻开事件堆顶部n张牌，执行最后一张翻开的事件效果作为你的回合发生的事件，若不为事件牌则视为无事发生。</p>
+<p><strong>5.</strong>     <strong>构建阶段</strong> - 玩家有三个行动点，下面行动都会消耗行动点：</p>
+<p>a)      布置电池作为电源。</p>
+<p>b)      将机械放置在能源矩阵上。</p>
+<p>c)      给机器添加强化框架。</p>
+<p>d)      拆除机械、强化框架或者电池，其中，拆除的机械回到手牌，拆除的电池和强化框架移入弃牌堆。</p>
+<p><strong>6.</strong>     <strong>结算阶段</strong> – 玩家可以按任意顺序触发并结算已正确连接和供电的机器，推进相应的资源计分标志。</p>
+<p>a)      <strong>计分工具为三个“尺”和三个标识物，分别对应ABC三种等级的能源，游戏开始时标识物摆放在刻度0处，当你产生能源时，将标识物往对方推动相对应的格子数目，当标识物推到刻度外时，视为达到阈值。</strong></p>
+<p>比如c的积分器长这样：<img src="/2024/03/01/3.Source/clip_image018.jpg" alt=""></p>
+<p><strong>7.</strong>     <strong>回合结束</strong> - 若某项资源达到阈值，则对手从代表血条的卡中抽走其1张手牌并从牌堆摸1张牌；若获得强化框架，则再次抽相应数量的牌。然后将标识物移回0刻度处，多余的能源将不会再使其移动。</p>
+<p>当一方血条耗尽，另一方即为胜者。</p>
+<h2 id="多人游戏流程"><a href="#多人游戏流程" class="headerlink" title="多人游戏流程"></a>多人游戏流程</h2><p>游戏时长30+min</p>
+<p><strong>1.</strong>     <strong>初始化</strong> – 所有玩家各自准备2张牌作为血条置于能源矩阵边缘，然后抓取8张起始手牌，<strong>抽到强化框架则额外再抽相同数量的牌。</strong>确定先手玩家，从先手玩家起顺时针进行游戏。</p>
+<p><strong>2.</strong>     <strong>回合开始</strong> - 先手玩家开始，依次放置2n张牌（每名玩家各两张）至事件队列，然后将第一张移入弃牌堆。</p>
+<p><strong>3.</strong>     <strong>抽牌阶段</strong> - 每回合抽2张牌，若<strong>抽到强化框架则额外再抽相同数量的牌</strong>，先手玩家首回合仅抽1张。</p>
+<p><strong>4.</strong>     <strong>事件阶段</strong> – 选择在事件队列队尾依次加入n张手牌（n不小于一），然后翻开事件堆顶部n张牌，执行最后一张翻开的事件效果作为你的回合发生的事件，若不为事件牌则视为无事发生。</p>
+<p><strong>5.</strong>     <strong>构建阶段</strong> - 玩家有三个行动点，下面行动都会消耗行动点：</p>
+<p>a)      布置电池作为电源。</p>
+<p>b)      将机械放置在能源矩阵上。</p>
+<p>c)      给机器添加强化框架。</p>
+<p>d)      拆除机械、强化框架或者电池，其中，拆除的机械回到手牌，拆除的电池和强化框架移入弃牌堆。</p>
+<p><strong>6.</strong>     <strong>结算阶段</strong> – 玩家可以按任意顺序触发并结算已正确连接和供电的机器，推进相应的资源计分标志。</p>
+<p>a)      <strong>每名玩家都有计分工具为三个“尺”和三个标识物，分别对应ABC三种等级的能源，游戏开始时标识物摆放在刻度0处，当你产生能源时，将标识物朝终点推动相对应的格子数目，当标识物推到刻度外时，视为达到阈值。</strong></p>
+<p><strong>7.</strong>     <strong>回合结束</strong> - 若某项资源达到阈值，则对手从代表血条的卡中抽走其1张手牌并从牌堆摸2张牌；若获得强化框架，则再次抽相应数量的牌。然后将标识物移回0刻度处，多余的能源将不会再使其移动。</p>
+<p>a)      <strong>在多人模式中，每将一种能源达到阈值，都将会使得其阈值线提高至下面的点数</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>能源等级\次数</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>A</td>
+<td>24</td>
+<td>30</td>
+<td>36</td>
+<td>42</td>
+</tr>
+<tr>
+<td>B</td>
+<td>16</td>
+<td>20</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>10</td>
+<td>12</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>最先达到三次阈值的人获得胜利。</p>
+<h2 id="2v2游戏流程"><a href="#2v2游戏流程" class="headerlink" title="2v2游戏流程"></a>2v2游戏流程</h2><p>游戏时长30+min</p>
+<p><strong>1.</strong>     <strong>初始化</strong> – 两队各自准备4张牌作为血条置于能源矩阵边缘，然后每名抓取8张起始手牌，<strong>抽到强化框架则额外再抽相同数量的牌。</strong>确定先手队伍，从先手队伍起按照1324顺序两队交替进行游戏。同时，每名玩家还会拥有一张“虫洞”卡，虫洞卡不需要考虑耗电也不能作为电池，连接在虫洞上的同队的机器视为相邻，虫洞的放置和拆卸都需要消耗行动点。</p>
+<p><strong>2.</strong>     <strong>回合开始</strong> - 先手玩家开始，依次放置2n张牌（每名玩家各两张）至事件队列，然后将第一张移入弃牌堆。</p>
+<p><strong>3.</strong>     <strong>抽牌阶段</strong> - 每回合抽2张牌，若<strong>抽到强化框架则额外再抽相同数量的牌</strong>，先手玩家首回合仅抽1张。</p>
+<p><strong>4.</strong>     <strong>事件阶段</strong> – 选择在事件队列队尾依次加入n张手牌（n不小于一），然后翻开事件堆顶部n张牌，执行最后一张翻开的事件效果作为你的回合发生的事件，若不为事件牌则视为无事发生。</p>
+<p><strong>5.</strong>     <strong>构建阶段</strong> - 玩家有三个行动点，下面行动都会消耗行动点：</p>
+<p>a)      布置电池作为电源。</p>
+<p>b)      将机械放置在能源矩阵上。</p>
+<p>c)      给机器添加强化框架。</p>
+<p>d)      拆除机械、强化框架或者电池，其中，拆除的机械回到手牌，拆除的电池和强化框架移入弃牌堆。</p>
+<p><strong>6.</strong>     <strong>结算阶段</strong> – 玩家可以按任意顺序触发并结算已正确连接和供电的机器，推进相应的资源计分标志。</p>
+<p>a)      <strong>计分工具为三个“尺”和三个标识物，分别对应ABC三种等级的能源，同队的两个人产出的能源在同一个积分器上结算。游戏开始时标识物摆放在刻度0处，当你产生能源时，将标识物往对方推动相对应的格子数目，当标识物推到刻度外时，视为达到阈值。</strong></p>
+<p>b)      <strong>在2v2模式中，阈值更改为1v1中的两倍。</strong></p>
+<p><strong>8.</strong>     <strong>回合结束</strong> - 若某项资源达到阈值，则对方队伍从代表血条的卡中抽走其1张手牌并从牌堆摸1张牌；若获得强化框架，则再次抽相应数量的牌。然后将标识物移回0刻度处，多余的能源将不会再使其移动。</p>
+<p>当一方血条耗尽，另一方即为胜者。</p>
+<h1 id="Tips："><a href="#Tips：" class="headerlink" title="Tips："></a>Tips：</h1><ol>
+<li><p>需要为长远考虑得规划格子的使用以及电池的拜访，不然你后期可是会很难受的hh</p>
+</li>
+<li><p>使用转化牌收益往往比直接产出能源更高</p>
+</li>
+<li><p>合理使用事件牌 ，将差的事件推给对面，将好的事件卡给自己（当然，你也可以豪赌“我要截胡对面的正面事件牌”）</p>
+</li>
+<li><p>事件牌的机制实际上暗示着，你可以通过塞两张牌来跳过一张你不想要的牌……</p>
+</li>
+<li><p>大部分强化框架需要搭配事件才能产生作用，注意你手中的牌，看看能不能创造这个机会。</p>
+</li>
+<li><p>被扣一点血之后可以瞬间拿到两张牌，加上自己的回合开始拿牌，一共是4张，抓住这个机会！反超对面！</p>
+</li>
+<li><p>超出阈值之后的多出来的能源并不会继续将标志物向前推进，或许可以通过某些微操使得本应该多出来的这部分转化为别的东西……</p>
+</li>
+<li><p>具有负面效果的牌不一定永远是负面的，比如说磁暴牌，当对面机器成型了之后甩给别人这张牌，那可是致命的……但是如果你在前期将其对自己使用，那么就省去了很多摆放电池的功夫</p>
+</li>
+<li><p>强拆建筑不一定是差的，思考将其甩给自己能有什么妙用——能够直接拆除我不想要的机器和蒙版！而这可是本来需要两个行动点才能干的事情……用来升级设备再合适不过了。</p>
+</li>
+</ol>
+<span id="more"></span>  
+<hr>
+<h1 id="卡面信息及数目一览："><a href="#卡面信息及数目一览：" class="headerlink" title="卡面信息及数目一览："></a>卡面信息及数目一览：</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>积分种类</th>
+<th>total</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>基础供电价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>等效价值</td>
+<td>216</td>
+<td>18</td>
+<td>27</td>
+<td>54</td>
+<td>18</td>
+</tr>
+<tr>
+<td>胜利条件</td>
+<td></td>
+<td>12</td>
+<td>8</td>
+<td>4</td>
+<td>12</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>耗电</td>
+<td>卡牌类型</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>特殊效果哦</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>节能</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>增产</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>阴雨加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天加强</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>强化框架</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>特制电池</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>晴天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雨天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雨天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雨天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雨天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雨天</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>强制拆卸</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>强制拆卸</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>强制拆卸</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>强制拆卸</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>强制拆卸</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>加一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>加一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>加一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>加一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>减一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>减一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>减一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>减一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>减一行动力</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雷暴</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雷暴</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雷暴</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雷暴</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>雷暴</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>摸两张牌</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>摸两张牌</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>摸两张牌</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>摸两张牌</td>
+</tr>
+<tr>
+<td>0</td>
+<td>事件牌</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>摸两张牌</td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>基础产出牌</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-2</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-2</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-2</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>转化牌</td>
+<td>0</td>
+<td>3</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>转化牌</td>
+<td>0</td>
+<td>3</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-2</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-4</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-4</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>转化牌</td>
+<td>-4</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>基础产出牌</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>转化牌</td>
+<td>4</td>
+<td>2</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>转化牌</td>
+<td>4</td>
+<td>2</td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>转化牌</td>
+<td>-1</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>转化牌</td>
+<td>-1</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>转化牌</td>
+<td>-1</td>
+<td>-1</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>基础产出牌</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>基础产出牌</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>基础产出牌</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>耗电       卡牌类型       A     B     C     特殊效果</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     节能</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     增产</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     阴雨加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     晴天加强</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     强化框架       0     0     0     特制电池</p>
+<p>0     事件牌    0     0     0     晴天</p>
+<p>0     事件牌    0     0     0     晴天</p>
+<p>0     事件牌    0     0     0     晴天</p>
+<p>0     事件牌    0     0     0     晴天</p>
+<p>0     事件牌    0     0     0     晴天</p>
+<p>0     事件牌    0     0     0     雨天</p>
+<p>0     事件牌    0     0     0     雨天</p>
+<p>0     事件牌    0     0     0     雨天</p>
+<p>0     事件牌    0     0     0     雨天</p>
+<p>0     事件牌    0     0     0     雨天</p>
+<p>0     事件牌    0     0     0     强制拆卸</p>
+<p>0     事件牌    0     0     0     强制拆卸</p>
+<p>0     事件牌    0     0     0     强制拆卸</p>
+<p>0     事件牌    0     0     0     强制拆卸</p>
+<p>0     事件牌    0     0     0     强制拆卸</p>
+<p>0     事件牌    0     0     0     加一行动力</p>
+<p>0     事件牌    0     0     0     加一行动力</p>
+<p>0     事件牌    0     0     0     加一行动力</p>
+<p>0     事件牌    0     0     0     加一行动力</p>
+<p>0     事件牌    0     0     0     减一行动力</p>
+<p>0     事件牌    0     0     0     减一行动力</p>
+<p>0     事件牌    0     0     0     减一行动力</p>
+<p>0     事件牌    0     0     0     减一行动力</p>
+<p>0     事件牌    0     0     0     减一行动力</p>
+<p>0     事件牌    0     0     0     雷暴</p>
+<p>0     事件牌    0     0     0     雷暴</p>
+<p>0     事件牌    0     0     0     雷暴</p>
+<p>0     事件牌    0     0     0     雷暴</p>
+<p>0     事件牌    0     0     0     雷暴</p>
+<p>0     事件牌    0     0     0     摸两张牌</p>
+<p>0     事件牌    0     0     0     摸两张牌</p>
+<p>0     事件牌    0     0     0     摸两张牌</p>
+<p>0     事件牌    0     0     0     摸两张牌</p>
+<p>0     事件牌    0     0     0     摸两张牌</p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     基础产出牌    1     0     0    </p>
+<p>1     转化牌    -2    -2    2    </p>
+<p>1     转化牌    -2    -2    2    </p>
+<p>1     转化牌    -2    -2    2    </p>
+<p>1     转化牌    0     3     -1   </p>
+<p>1     转化牌    0     3     -1   </p>
+<p>2     基础产出牌    2     0     0    </p>
+<p>2     基础产出牌    2     0     0    </p>
+<p>2     基础产出牌    2     0     0    </p>
+<p>2     基础产出牌    2     0     0    </p>
+<p>2     基础产出牌    2     0     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     基础产出牌    0     1     0    </p>
+<p>2     转化牌    -2    -1    2    </p>
+<p>2     转化牌    -2    -1    2    </p>
+<p>2     转化牌    -2    -1    2    </p>
+<p>2     转化牌    -4    0     2    </p>
+<p>2     转化牌    -4    0     2    </p>
+<p>2     转化牌    -4    0     2    </p>
+<p>3     基础产出牌    0     0     1    </p>
+<p>3     基础产出牌    0     0     1    </p>
+<p>3     基础产出牌    0     0     1    </p>
+<p>3     基础产出牌    0     0     1    </p>
+<p>3     基础产出牌    0     2     0    </p>
+<p>3     基础产出牌    0     2     0    </p>
+<p>3     基础产出牌    0     2     0    </p>
+<p>3     基础产出牌    0     2     0    </p>
+<p>3     基础产出牌    3     0     0    </p>
+<p>3     基础产出牌    3     0     0    </p>
+<p>3     基础产出牌    3     0     0    </p>
+<p>3     转化牌    4     2     -1   </p>
+<p>3     转化牌    4     2     -1   </p>
+<p>3     转化牌    -1    -1    2    </p>
+<p>3     转化牌    -1    -1    2    </p>
+<p>3     转化牌    -1    -1    2    </p>
+<p>4     基础产出牌    0     0     2    </p>
+<p>4     基础产出牌    0     0     2    </p>
+<p>4     基础产出牌    5     0     0    </p>
+<p>4     基础产出牌    5     0     0</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/alipay.jpg" alt="XLXZ 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" rel="tag"># 游戏策划</a>
+              <a href="/tags/%E6%88%91%E7%9A%84%E7%AD%96%E5%88%92/" rel="tag"># 我的策划</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/24/1.Archieve/%E7%94%BB%E4%B8%AD%E4%B8%96%E7%95%8C%EF%BC%9A%E5%B7%A7%E5%A6%99%E7%9A%84%EF%BC%8C%E9%80%9A%E8%BF%87%E6%8B%BC%E6%8E%A5%E7%9A%84%E8%A7%A3%E5%AF%86%E6%B8%B8%E6%88%8F/" rel="prev" title="画中世界：巧妙的，通过拼接的解密游戏">
+                  <i class="fa fa-angle-left"></i> 画中世界：巧妙的，通过拼接的解密游戏
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/03/26/1.Archieve/%E6%B1%82%E6%9B%B2%E9%9D%A2%E6%9F%90%E7%82%B9%E7%9A%84%E6%B3%95%E5%90%91%E9%87%8F/" rel="next" title="求曲面某点的法向量">
+                  求曲面某点的法向量 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
