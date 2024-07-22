@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">61</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">196</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">61</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">200</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">196</span>
+          <span class="site-state-item-count">200</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,6 +180,454 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/15/python%EF%BC%9A%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86py%E8%BD%AC%E5%8C%96%E4%B8%BAexe/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/15/python%EF%BC%9A%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86py%E8%BD%AC%E5%8C%96%E4%B8%BAexe/" class="post-title-link" itemprop="url">python：使用pyinstall将py转化为exe</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-15 13:48:00 / 修改时间：21:52:05" itemprop="dateCreated datePublished" datetime="2024-02-15T13:48:00+08:00">2024-02-15</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a> <br>
+<a href="/tags/未完成/" rel="contents" data-pjax-state=""># 未完成</a>
+<br></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我的pyinstaller并没有调试好，</span><br><span class="line"></span><br><span class="line">在这样的一通操作后生成的exe并不能正常运行</span><br><span class="line"></span><br><span class="line">我没有找到解决的办法，似乎是pyinstaller默认安装到了系统内部的python上，而不是conda的虚拟环境内，导致虚拟环境内的包并没有被打包进exe</span><br></pre></td></tr></tbody></table></figure>
+<p>为了方便py代码可以在其他没有python环境的设备上运行，使用pyinstall将其打包为exe格式是一种十分简单的方法。但是在安装并使用pyinstall的过程中，本人遇到了不少麻烦，而后摸索出了正确的路，下面记录以下我的历程。</p>
+<h2 id="背景">背景</h2>
+<p>win11，安装了anaconda和vs，这两个不共用一个python</p>
+<p>所以说在安装之前还需呀将anaconda的python设置为首选的python，将其在环境变量中的优先级提高。</p>
+<h2 id="安装历程">安装历程</h2>
+<h3 id="安装pyinstall">安装pyinstall</h3>
+<p>使用：</p>
+<pre><code>pip install pyinstaller</code></pre>
+<p>来安装pyinstall</p>
+<h3 id="执行pyinstall">执行pyinstall</h3>
+<p>正常执行<code>pyinstaller -c -F textMessage.py</code>就可以在显示打包进程的前提之下打包py文件了。<br>
+但是这个时候会报错:</p>
+<blockquote>
+<p>'pyinstaller' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。</p>
+</blockquote>
+<p>这个时候就需要将pyinstall.exe添加置系统变量里面的PATH，但是anconda的文件十分的杂乱，我找了半天都没有找到，最后是使用everything<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>来对电脑文件进行检索找到的。下面是我的路径：</p>
+<pre><code>C:\Users\Lenovo\AppData\Roaming\Python\Python310\scripts\pyinstaller.exe</code></pre>
+<h3 id="pyinstall报错">pyinstall报错</h3>
+<p>在能运行pyinstall之后，pyinstall报错了：<code>The 'pathlib' package is an obsolete backport of a standard library package and is incompatible with PyInstaller.</code></p>
+<p>pathlib是一个anaconda自带的过时的包，pyinstall不支持这个包，将这个包删除即可：<code>python -m pip install pathlib</code></p>
+<p>[1]:"<em>Everything</em>" 是 Windows 上文件名搜索引擎。<a target="_blank" rel="noopener" href="https://www.voidtools.com/zh-cn/support/everything/command_line_interface/">Command
+Line Interface - voidtools</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/15/python%EF%BC%9A%E4%BD%BF%E7%94%A8pyinstall%E5%B0%86py%E8%BD%AC%E5%8C%96%E4%B8%BAexe/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/14/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%B8%B8%E6%88%8F%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/14/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%B8%B8%E6%88%8F%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3/" class="post-title-link" itemprop="url">杂谈：游戏账号相关</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-14 22:00:00" itemprop="dateCreated datePublished" datetime="2024-02-14T22:00:00+08:00">2024-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-03-06 09:09:59" itemprop="dateModified" datetime="2024-03-06T09:09:59+08:00">2024-03-06</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br> <a href="/tags/游戏体验日记/" rel="contents" data-pjax-state="">#
+游戏体验日记</a> <br></p>
+<h2 id="背景">背景</h2>
+<p>除了制作十分精良的独立游戏和所谓的商业游戏之外，我常常也会游玩一些二次元游戏以达到我对于可爱妹子的摄入需求，那么为了开荒一款游戏，常常是需要十分大的时间成本的。<br>
+想要解决游玩游戏的时间成本，又想要获得良好的游戏体验（因为二次元游戏常常会包含或多或少的养成元素，养成程度会影响到游戏的体验），最好的选择就是花钱。</p>
+<p>同时对于那种可能只是想要玩一段时间的游戏，也可以考虑将账号卖出，从而使得自己花费的时间转化为金钱作为补偿。</p>
+<p>实际上，游戏账号交易已经是一个较为普遍的市场，甚至有人以此牟利。</p>
+<h2 id="账号买卖注意事项">账号买卖注意事项</h2>
+<p>通常来说，为了体验自己抽和通关的乐趣，我们常常会选择购买初始号。</p>
+<p>初始号指的是没有推剧情和代充，只是通过一些活动和通关一些基本的关卡来获得资源，且获得了一定的抽卡资源的账号。购买此类账号的时候需要注意以下几点：</p>
+<h3 id="选择信用度高的商家">1. 选择信用度高的商家</h3>
+<p>购买之前先确认商家是否可信，在较为小的性价比的提升之下并不需要去贪图那点蝇头小利。多花点钱在较为可信任的商家购买可以省下很多烦恼</p>
+<h3 id="确认账号信息">2. 确认账号信息</h3>
+<p>在购买之前，请务必核对账号信息，比如： 1. 账号是否已经首充？ 2.
+账号是否可以更换绑定信息？ 3. 等等等等</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">账号一般分为活绑和死绑定两种，其中死绑指的是无法更换绑定的账号或者说是手机号（使用的是一次性的验证码注册的手机号）。</span><br><span class="line"></span><br><span class="line">死绑的账号无法更换密码，且较为容易被二次售卖，价格也相较来说更为便宜。一般只是作为抽卡找个乐子玩。</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="确认游戏是否存在找回方式">3.确认游戏是否存在找回方式</h3>
+<p>有一些游戏可以通过其他的手段来将账号找回，购买账号的时候需要注意是否存在其他的找回方式，并且加以防范。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title:案例</span><br><span class="line"></span><br><span class="line">碧蓝航线可以通过举报账号违规封号，然后使用实名认证的身份证来找回的方式。</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="确认是否划算">4.确认是否划算</h3>
+<p>理清楚自己的目标，检验是否划算。</p>
+<p>举个例子，我想要购买战双新出的皮肤，且实际上其他的东西对我的影响不大。如果使用我自己原本的号进行氪金购买的话，至少需要氪金250￥（算上首充的翻倍）。<br>
+但是如果我选择购买账号的话，可以获得一堆资源和部分限定道具（概率），还可以拥有足够抽出新皮肤的黑卡。而这样的账号才50￥</p>
+<h2 id="实际购买经验">实际购买经验</h2>
+<p>实际购买过一次战双的账号之后，就目前来说，体验良好。花费50获得了我期望中的东西，且剧本通关程度和我原本的账号相近，所以说体验剧情也是不会差太多的。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/14/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%B8%B8%E6%88%8F%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/07/1.Archieve/%E8%87%AA%E5%88%B6%E8%8B%B1%E9%9B%84%E2%80%94%E2%80%94%E7%88%B1%E5%93%AD%E9%AC%BC%EF%BC%88%E6%94%B9%E7%BC%96%EF%BC%89/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/07/1.Archieve/%E8%87%AA%E5%88%B6%E8%8B%B1%E9%9B%84%E2%80%94%E2%80%94%E7%88%B1%E5%93%AD%E9%AC%BC%EF%BC%88%E6%94%B9%E7%BC%96%EF%BC%89/" class="post-title-link" itemprop="url">自制英雄——爱哭鬼（改编）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-02-07 11:25:00" itemprop="dateCreated datePublished" datetime="2024-02-07T11:25:00+08:00">2024-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-04-05 10:04:11" itemprop="dateModified" datetime="2024-04-05T10:04:11+08:00">2024-04-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/游戏策划/" rel="contents" data-pjax-state="">#
+游戏策划</a> <br>
+<a href="/tags/灵感/" rel="contents" data-pjax-state=""># 灵感</a> <br>
+<a href="/tags/我的策划/" rel="contents" data-pjax-state="">#
+我的策划</a> <br></p>
+<p>原文来自于</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv15975040/">【非人学园/第五人格】自制联动英雄——爱哭鬼|-|哔哩哔哩|(bilibili.com)</a></p>
+<p>本篇在其基础上改了些东西，以达到本人的审美水准</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/07/1.Archieve/%E8%87%AA%E5%88%B6%E8%8B%B1%E9%9B%84%E2%80%94%E2%80%94%E7%88%B1%E5%93%AD%E9%AC%BC%EF%BC%88%E6%94%B9%E7%BC%96%EF%BC%89/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/02/02/1.Archieve/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/02/02/1.Archieve/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/" class="post-title-link" itemprop="url">python指定位数的16进制码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-02-02 18:11:00 / 修改时间：18:14:55" itemprop="dateCreated datePublished" datetime="2024-02-02T18:11:00+08:00">2024-02-02</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>312</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
+python</a> <br></p>
+<h3 id="背景">背景</h3>
+<p>python中hex内置函数无法将生成的16进制码自动补0，比如说：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">2</span>))</span><br><span class="line"><span class="number">0x2</span> <span class="comment">#输出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">25225842</span>))</span><br><span class="line"><span class="number">0x180ea72</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="number">255842</span>))</span><br><span class="line"><span class="number">0x3e762</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>很明显，这个一点都不好便于后续处理，我们总喜欢规整的嘛，全是总共8位的16进制就是32位数，就像：<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0x00112233</span><br><span class="line">0x12345678</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="解决办法">解决办法</h3>
+<p>&nbsp;通过多次查资料和尝试，得到如下：<br>
+</p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&nbsp;<span class="keyword">def</span> <span class="title function_">myhex</span>(<span class="params">n</span>):</span><br><span class="line"><span class="keyword">return</span> <span class="string">""</span>.join(<span class="string">f"0x<span class="subst">{n:08x}</span>"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/02/02/1.Archieve/python%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%8416%E8%BF%9B%E5%88%B6%E7%A0%81/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -235,14 +683,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>420</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -253,8 +701,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
+          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
+<br></p>
+<h3 id="背景">背景</h3>
+<p>最近qq搞了个龙年可以刷龙表情的小彩蛋，qq用户可以刷出五颜六色的龙，其中还有一个隐藏款。</p>
 <p>hmmm然后就发现了一件比较有意思的事情</p>
           <!--noindex-->
             <div class="post-button">
@@ -335,7 +785,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>59</span>
+      <span>91</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -353,109 +803,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br><br>我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br>
+我的世界的配方使用json进行配置，json的名称没有硬性要求，但是建议与产物相关</p>
 <p>实际上，只需要照着IDF框架给出的示例进行改编即可</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/31/1.Archieve/mcMod%EF%BC%9A1.3%EF%BC%9A%E5%88%B6%E4%BD%9C%E9%85%8D%E6%96%B9/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/" class="post-title-link" itemprop="url">mcMod：1.2：制作第一个物品</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-01-30 07:00:00" itemprop="dateCreated datePublished" datetime="2024-01-30T07:00:00+08:00">2024-01-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-01 14:28:17" itemprop="dateModified" datetime="2024-03-01T14:28:17+08:00">2024-03-01</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>214</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
@@ -532,14 +886,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>476</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -550,12 +904,112 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br></p>
 <p>因为附魔不需要画贴图，所以说我们将其作为我们的第一个mod</p>
 <p>首先肯定就是创建声明，使得我们的mod能够正常被挂载</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.1%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%99%84%E9%AD%94/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/" class="post-title-link" itemprop="url">mcMod：1.2：制作第一个物品</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-01-30 07:00:00" itemprop="dateCreated datePublished" datetime="2024-01-30T07:00:00+08:00">2024-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-03-01 14:28:17" itemprop="dateModified" datetime="2024-03-01T14:28:17+08:00">2024-03-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>605</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/01/30/1.Archieve/mcMod%EF%BC%9A1.2%EF%BC%9A%E5%88%B6%E4%BD%9C%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%89%A9%E5%93%81&amp;%E6%96%B9%E5%9D%97/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
@@ -632,14 +1086,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>518</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -650,9 +1104,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod 1</a> <br></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
-<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑<br></p>
+          <p><a href="/tags/mcmod 1/" rel="contents" data-pjax-state=""># mcmod
+1</a> <br></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7Qk/">【MC
+Mod开发】边睡觉边开发mod：初级Mod制作教程_哔哩哔哩_bilibili</a></p>
+<p>我是跟着这个开始学习mod制作的，这里主要是用来记录我遇到的坑</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/29/1.Archieve/mcMod%EF%BC%9A0.1%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83/#more" rel="contents">
@@ -732,14 +1188,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>6 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -750,451 +1206,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/桌游/" rel="contents" data-pjax-state=""># 桌游</a> <br></p>
+          <p><a href="/tags/桌游/" rel="contents" data-pjax-state=""># 桌游</a>
+<br></p>
 <p>昨天和王仁喆一起去桌游店去体验了一款重策，名字叫做<strong>方舟动物园</strong></p>
 <p>总体来说，游戏给我带来的体验较为良好，整体游戏的设计较为良好</p>
 <p>我并不想过多复杂的介绍它的具体规则，这里挑几个我认为比较有讨论性的点进行分析。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2024/01/27/1.Archieve/%E6%A1%8C%E6%B8%B8%EF%BC%9A%E6%96%B9%E8%88%9F%E5%8A%A8%E7%89%A9%E5%9B%AD/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E5%BC%80%E5%85%B3%E5%BC%80-%E7%B1%BB%E6%9C%BA%E5%85%B3/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E5%BC%80%E5%85%B3%E5%BC%80-%E7%B1%BB%E6%9C%BA%E5%85%B3/" class="post-title-link" itemprop="url">COCOON：开关类机关</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-01-14 16:14:00" itemprop="dateCreated datePublished" datetime="2024-01-14T16:14:00+08:00">2024-01-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-04-05 11:20:18" itemprop="dateModified" datetime="2024-04-05T11:20:18+08:00">2024-04-05</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>185</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/游戏设计/" rel="contents" data-pjax-state=""># 游戏设计</a> <br><br><a href="/tags/cocoon/" rel="contents" data-pjax-state=""># cocoon</a> <br></p>
-<h3 id="COCOON：开关开-类机关"><a href="#COCOON：开关开-类机关" class="headerlink" title="COCOON：开关开-类机关"></a>COCOON：开关开-类机关</h3><p>这个可以说是COCOON中最基础的解密构成元素，最基础的结构。</p>
-<p>最本质的特征就是A控制甲的上下，甲的上下又可以在甲上控制，玩家需要先使用A将甲移动过来，之后就能够自由使用甲  </p>
-<blockquote>
-<p>比如：</p>
-<p>————-=              —-甲—— =——————<br>—————-A-</p>
-</blockquote>
-<p>先使用a将甲移过来，然后就可以自由的使用甲。</p>
-<p>这样的机关的最大的优势就是</p>
-<ol>
-<li>首先，玩家知道这里有路。</li>
-<li>其次，玩家知道需要寻找一个A使得这个电梯启动。</li>
-<li>玩家在平台过来的时候也就一并知道了这个电梯能够去哪里。</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E5%BC%80%E5%85%B3%E5%BC%80-%E7%B1%BB%E6%9C%BA%E5%85%B3/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E7%B2%BE%E5%A6%99%E7%BB%9D%E4%BC%A6%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E7%B2%BE%E5%A6%99%E7%BB%9D%E4%BC%A6%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">COCOON：精妙绝伦的游戏设计</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-01-14 16:09:00" itemprop="dateCreated datePublished" datetime="2024-01-14T16:09:00+08:00">2024-01-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-04-05 11:19:58" itemprop="dateModified" datetime="2024-04-05T11:19:58+08:00">2024-04-05</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>6 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/cocoon/" rel="contents" data-pjax-state=""># cocoon</a> <br></p>
-<p><a href="/tags/游戏设计/" rel="contents" data-pjax-state=""># 游戏设计</a> <br></p>
-<p>今天游玩通关了COCOON这款游戏，真的是精妙绝伦。</p>
-<p>整个游戏中没有一个文字的描述，却总是能够让人在谜题之中找到方向，其中包含了十分巧妙地引导以及十分优秀的谜题设计。</p>
-<p>游戏在画风上采用的是低多边形画风，简单但不简陋，在此基础之上构建起了四个各有特色的世界，以及每个世界不太一样的解密巧思。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/14/1.Archieve/COCOON%EF%BC%9A%E7%B2%BE%E5%A6%99%E7%BB%9D%E4%BC%A6%E7%9A%84%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/13/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E7%9A%84%E6%9E%84%E7%AD%91/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/13/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E7%9A%84%E6%9E%84%E7%AD%91/" class="post-title-link" itemprop="url">闲聊：知识体系的构筑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-01-13 15:09:00" itemprop="dateCreated datePublished" datetime="2024-01-13T15:09:00+08:00">2024-01-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-01 09:40:29" itemprop="dateModified" datetime="2024-02-01T09:40:29+08:00">2024-02-01</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈]][[___效率工具/" rel="contents" data-pjax-state=""># 杂谈]][[___效率工具</a> <br></p>
-<p>为什么我会比较感兴趣类似的方法论的东西呢？实际上我认为这和我的个人特点有关，我比较喜欢找到一些比较巧妙的东西来增加我自己的效率。  </p>
-<p>但是我同时认为我自己不是一个空谈者，我对于那些东西进行实践，并且结合自己的知识将他们转化为我自己的东西。  </p>
-<h2 id="一、接触学习方法论的历程"><a href="#一、接触学习方法论的历程" class="headerlink" title="一、接触学习方法论的历程"></a>一、接触学习方法论的历程</h2><h3 id="1-初识"><a href="#1-初识" class="headerlink" title="1.初识"></a>1.初识</h3><p>带领我从一个较为专业的视角去看待学习这件事情的是yJango的学习观。当时我会在考差了之后断断续续地学习其中的知识。<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/46841114">学习观01：好多人一辈子都没搞清什么是学习 - 知乎 (zhihu.com)</a></p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">但是说起来另外一件让我饶有兴趣的事情就是这个up主记忆宫殿宁梓亦：[记忆宫殿宁梓亦的个人(bilibili.com)](https://space.bilibili.com/129860965/)</span><br><span class="line"></span><br><span class="line">他后面开始反驳起来了yJango的观点，而后在现在看起来，我认为yJango的学习观的建立的模型有点过于简化了，但是从根本上是没有错的，而记忆宫殿宁梓亦的批评就显得有点吹毛求疵了。</span><br></pre></td></tr></tbody></table></figure>
-<p>如果要说当时这个给我带来的最大的影响是什么，那就是对于学习就是压缩信息，总结方法的过程。这一观点我现在还在使用</p>
-<p>另外，最重要的一点就是其让我知道了线性笔记 的劣势，我第一次知道了思维导图是什么。</p>
-<h3 id="2-进一步认识"><a href="#2-进一步认识" class="headerlink" title="2.进一步认识"></a>2.进一步认识</h3><p>更进一步的认识则是后来实际的阅读相关的书籍，当时我拿着我的闲钱想买本书，然后这一系列书刚好激发了我的兴趣：博赞学习技巧系列。</p>
-<p>怎么说呢，当时我本身对于相关的学习技巧之类的东西颇感兴趣。然后当时我本来打算是选购一本小说的，但是很可惜，没有我想要的书本。然后这系列书中有一本叫做思维导图的书吸引了我的兴趣，我知道线性笔记的劣势，同时知道思维导图可以很好地解决我的问题之后，便一直思考着想要变革我自己的笔记形式，但是苦于我拿到了手机的时候不可能再去学习了，我肯定是要玩游戏的，而且这种需要时间去实践的东西，使用不是很容易就能接触到的手机作为学习的对象来说不是十分的理想。</p>
-<p>所以说我当即就想着要将其买下来看看，然后又得知这一本书才买7元的时候，我简直要高兴坏了，当即就将这一系列一并购买了下来。一本小说的价格也就30左右，而这一本学习之key却只要35，还是五本。</p>
-<p>然后我就开始正式的阅读起了这几本书……虽然也是断断续续的读，但是我认为这几本书对于我现在的影响十分之大。</p>
-<h3 id="3-初步实践"><a href="#3-初步实践" class="headerlink" title="3.初步实践"></a>3.初步实践</h3><p>光是学习理论是没有什么用处的，只有真正的践行，才能被称之为有效。</p>
-<p>博赞在书中主要是介绍了以下几种观念：</p>
-<ol>
-<li>“学习整体”的思路，先通读书然后再追求细节</li>
-<li>学习规律：主要强调的是学习时的整体观念和学习后的复习</li>
-<li>快速阅读技术：通过一些技巧去有意识地提高自己的阅读速度</li>
-<li>思维导图：思维导图是一种构建知识体系的东西</li>
-<li>快速记忆：能够在几秒钟记忆下大量的信息</li>
-</ol>
-<p>虽然说我知道有这么多的理论知识，但是实际上，在那个时候我能加以实践并且对于我来说卓有成效的几乎没有。<br>在高中的那段时间里面，所需要学习的知识基本上属于是应试的内容，根本用不到这么多的技巧，beside，学习观给我带来的思维上的启示的意义反而更大一点。</p>
-<p>学习整体的方式主要是因为所学习的内容的缘故所以说优点运用不来，但是其对于新的知识的获取确实十分有用<br>学习规律要求定时复习，这是有道理的，但是在高中基本上的东西就那么多，后面到了高二下之后又不怎么学习新的东西，所以说也不是十分适用。<br>快速阅读我一直没有学会……或许这需要专门的训练？<br>思维导图主要还是载体的限制性和长线生效的局限性，在高中的后半部分，我通过软件Xmind解决了载体形式上的局限性，但是同时仍然没有解决长期生效的问题，一部分可能还是因为高中时期的知识体系还是较为死板的。<br>而至于快速记忆，确实有用但是，但是怎么说呢，感觉用来记忆小板块的东西较为好用，而记忆体系较大的东西实际上没有那么好用。当然这也有我没有完全学会的原因。</p>
-<h3 id="4-现在"><a href="#4-现在" class="headerlink" title="4.现在"></a>4.现在</h3><p>而后就是现在了，我仍然在探索较为高效的知识体系构建法，目前的想法是：</p>
-<p>听课学懂——做题——整理错题以及想法《循环》</p>
-<p>总而言之，还是需要实践，另外，我仍旧想实践一下博赞的学习技巧原理</p>
-<p>另外，为了使自己更加深刻的理解《自控力》这本书，我打算再抽时间出来对其进行按部就班的实践，并且总结我的想法和体验。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/13/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E7%9A%84%E6%9E%84%E7%AD%91/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/01/11/%E6%9D%82%E8%B0%88%EF%BC%9A2024-1-11%20%E6%9C%89%E5%85%B3%E4%BA%8E%E5%90%AC%E9%9F%B3%E4%B9%90/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/01/11/%E6%9D%82%E8%B0%88%EF%BC%9A2024-1-11%20%E6%9C%89%E5%85%B3%E4%BA%8E%E5%90%AC%E9%9F%B3%E4%B9%90/" class="post-title-link" itemprop="url">杂谈：2024-1-11 有关于听音乐</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-01-11 22:34:00" itemprop="dateCreated datePublished" datetime="2024-01-11T22:34:00+08:00">2024-01-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-02-01 09:57:59" itemprop="dateModified" datetime="2024-02-01T09:57:59+08:00">2024-02-01</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br></p>
-<p>hmmm，好久没有写blog了，毕竟这几天考试的话加上确实也没有干什么较为有意思的事情。</p>
-<p>然后今天写这篇的起因实际上是因为之前我不是换了个耳机和购置了个耳机线嘛，今天连麦的调试麦克风的时候突然想到一件事情就是</p>
-<p>之前我把耳机接在显示器上面是因为耳机线的线长的限制，而我现在换了个两米长的线，那么我为什么还要接在显示器上面呢？😂</p>
-<p>然后我就去确认了一下……</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/01/11/%E6%9D%82%E8%B0%88%EF%BC%9A2024-1-11%20%E6%9C%89%E5%85%B3%E4%BA%8E%E5%90%AC%E9%9F%B3%E4%B9%90/#more" rel="contents">
                 阅读全文 »
               </a>
             </div>
