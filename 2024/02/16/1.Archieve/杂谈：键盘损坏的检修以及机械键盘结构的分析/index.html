@@ -18,34 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# 杂谈
-  # 键盘
- 
- 正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。
- 背景
- 在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。
- 遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。
- 更为详细的内容可以参考：聊聊机械键盘的结构。 -
- 知乎 (zhihu.com)
- 键盘损坏的检修
- 排查是否是电脑本身的问题
- 键盘损坏">
+    <meta name="description" content="# 杂谈 # 键盘  正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。 背景在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。 遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。 更为详细的内容可以参考：聊聊机械键盘的结构。 - 知乎 (zhihu.com) 键盘损坏的检修排查是否是电脑本身的问题键盘损坏无非就是要么是电脑的驱动出了问">
 <meta property="og:type" content="article">
 <meta property="og:title" content="杂谈：键盘损坏的检修以及机械键盘结构的分析">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/02/16/1.Archieve/%E6%9D%82%E8%B0%88%EF%BC%9A%E9%94%AE%E7%9B%98%E6%8D%9F%E5%9D%8F%E7%9A%84%E6%A3%80%E4%BF%AE%E4%BB%A5%E5%8F%8A%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98%E7%BB%93%E6%9E%84%E7%9A%84%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# 杂谈
-  # 键盘
- 
- 正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。
- 背景
- 在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。
- 遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。
- 更为详细的内容可以参考：聊聊机械键盘的结构。 -
- 知乎 (zhihu.com)
- 键盘损坏的检修
- 排查是否是电脑本身的问题
- 键盘损坏">
+<meta property="og:description" content="# 杂谈 # 键盘  正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。 背景在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。 遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。 更为详细的内容可以参考：聊聊机械键盘的结构。 - 知乎 (zhihu.com) 键盘损坏的检修排查是否是电脑本身的问题键盘损坏无非就是要么是电脑的驱动出了问">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.imagehub.cc/images/2024/02/16/c026784cb092d7f463db9ca305e2b124.png">
 <meta property="article:published_time" content="2024-02-16T14:37:00.000Z">
@@ -163,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E6%8D%9F%E5%9D%8F%E7%9A%84%E6%A3%80%E4%BF%AE"><span class="nav-number">2.</span> <span class="nav-text">键盘损坏的检修</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E6%9F%A5%E6%98%AF%E5%90%A6%E6%98%AF%E7%94%B5%E8%84%91%E6%9C%AC%E8%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">排查是否是电脑本身的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E6%9F%A5%E9%94%AE%E7%9B%98%E7%9A%84%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.2.</span> <span class="nav-text">排查键盘的驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E8%AE%BE%E5%A4%87%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">键盘设备的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">键盘结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">3.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E6%8D%9F%E5%9D%8F%E7%9A%84%E6%A3%80%E4%BF%AE"><span class="nav-number">2.</span> <span class="nav-text">键盘损坏的检修</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E6%9F%A5%E6%98%AF%E5%90%A6%E6%98%AF%E7%94%B5%E8%84%91%E6%9C%AC%E8%BA%AB%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">排查是否是电脑本身的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E6%9F%A5%E9%94%AE%E7%9B%98%E7%9A%84%E9%A9%B1%E5%8A%A8"><span class="nav-number">2.2.</span> <span class="nav-text">排查键盘的驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E8%AE%BE%E5%A4%87%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.3.</span> <span class="nav-text">键盘设备的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">键盘结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">3.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,14 +268,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>760</span>
+      <span>590</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -307,40 +285,27 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a>
-<br> <a href="/tags/键盘/" rel="contents" data-pjax-state=""># 键盘</a>
-<br></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/杂谈/" rel="contents" data-pjax-state=""># 杂谈</a> <br><br><a href="/tags/键盘/" rel="contents" data-pjax-state=""># 键盘</a> <br></p>
 <p>正如题目，在这里简单聊聊键盘损坏的检修以及机械键盘结构的分析。</p>
-<h2 id="背景">背景</h2>
-<p>在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在昨天，本人发现机械键盘的反斜杠失灵了，在更换设备以及更换键盘之后锁定是键盘本身的问题。</p>
 <p>遂将键盘拆开来分析了一下机械键盘出问题的地方，在这里记录一下。</p>
-<p>更为详细的内容可以参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/133532919">聊聊机械键盘的结构。 -
-知乎 (zhihu.com)</a></p>
-<h2 id="键盘损坏的检修">键盘损坏的检修</h2>
-<h3 id="排查是否是电脑本身的问题">排查是否是电脑本身的问题</h3>
-<p>键盘损坏无非就是要么是电脑的驱动出了问题或者是该按键被应用占用了，优先排除电脑本身的问题。当有其他设备的时候，直接将键盘连接到其他设备上就知道是不是电脑的问题了，但是有的时候身边并没有其他设备，这个时候可以使用openArk来查询。</p>
+<p>更为详细的内容可以参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/133532919">聊聊机械键盘的结构。 - 知乎 (zhihu.com)</a></p>
+<h2 id="键盘损坏的检修"><a href="#键盘损坏的检修" class="headerlink" title="键盘损坏的检修"></a>键盘损坏的检修</h2><h3 id="排查是否是电脑本身的问题"><a href="#排查是否是电脑本身的问题" class="headerlink" title="排查是否是电脑本身的问题"></a>排查是否是电脑本身的问题</h3><p>键盘损坏无非就是要么是电脑的驱动出了问题或者是该按键被应用占用了，优先排除电脑本身的问题。当有其他设备的时候，直接将键盘连接到其他设备上就知道是不是电脑的问题了，但是有的时候身边并没有其他设备，这个时候可以使用openArk来查询。</p>
 <p>openArk可以查询所有的快捷键占用情况，当然，它还有许多其他的功能，但是我并不熟悉。</p>
-<h3 id="排查键盘的驱动">排查键盘的驱动</h3>
-<p>有的键盘是可以添加配置设置的。当键盘配置不正确可能会导致键盘失灵的问题，这个时候需要尝试将键盘的配置重置为默认配置即可。</p>
-<h3 id="键盘设备的问题">键盘设备的问题</h3>
-<p>如果上述操作后，键盘仍然没有恢复正常的话，那就需要考虑是键盘设备的问题了。键盘设备的问题可以通过了解键盘的构造来了解，具体在下面键盘构造讲解。</p>
-<h2 id="键盘结构">键盘结构</h2>
-<p>本人键盘的结构为Bottom
-mount，即只有Plate被固定在盒体上，PCB和键轴为插栓结构固定在Plate上。</p>
-<figure>
-<img src="https://s1.imagehub.cc/images/2024/02/16/c026784cb092d7f463db9ca305e2b124.png" alt="c026784cb092d7f463db9ca305e2b124.png">
-<figcaption aria-hidden="true">c026784cb092d7f463db9ca305e2b124.png</figcaption>
-</figure>
+<h3 id="排查键盘的驱动"><a href="#排查键盘的驱动" class="headerlink" title="排查键盘的驱动"></a>排查键盘的驱动</h3><p>有的键盘是可以添加配置设置的。当键盘配置不正确可能会导致键盘失灵的问题，这个时候需要尝试将键盘的配置重置为默认配置即可。</p>
+<h3 id="键盘设备的问题"><a href="#键盘设备的问题" class="headerlink" title="键盘设备的问题"></a>键盘设备的问题</h3><p>如果上述操作后，键盘仍然没有恢复正常的话，那就需要考虑是键盘设备的问题了。键盘设备的问题可以通过了解键盘的构造来了解，具体在下面键盘构造讲解。</p>
+<h2 id="键盘结构"><a href="#键盘结构" class="headerlink" title="键盘结构"></a>键盘结构</h2><p>本人键盘的结构为Bottom mount，即只有Plate被固定在盒体上，PCB和键轴为插栓结构固定在Plate上。</p>
+<p><img src="https://s1.imagehub.cc/images/2024/02/16/c026784cb092d7f463db9ca305e2b124.png" alt="c026784cb092d7f463db9ca305e2b124.png"></p>
 <p>检查是键盘哪个部位的问题，可以按照以下步骤尝试：</p>
-<ol type="1">
+<ol>
 <li>直接短接PCB上面的开关，观察是否触发按键。如果没触发，恭喜你就是PCB有问题，这种问题很难自己修好……很不巧的是，我就是这种故障</li>
 <li>PCB正常，检查是否是键轴的问题。通过更换键轴就能够很方便地检修。</li>
 </ol>
 <p>以上两步就能够检查出到底是哪里得问题了。</p>
 <span id="more"></span>
-<hr>
-<h3 id="reference">Reference</h3>
 
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>
 
     
