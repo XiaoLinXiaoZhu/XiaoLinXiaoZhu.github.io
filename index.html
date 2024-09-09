@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">64</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">211</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">65</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">213</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,13 +147,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">211</span>
+          <span class="site-state-item-count">213</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-count">65</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -180,6 +180,226 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/09/03/electron%EF%BC%9A%E6%97%A0%E8%BE%B9%E6%A1%86%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/09/03/electron%EF%BC%9A%E6%97%A0%E8%BE%B9%E6%A1%86%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">electron：无边框应用设计</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-09-03 08:24:00 / 修改时间：08:34:47" itemprop="dateCreated datePublished" datetime="2024-09-03T08:24:00+08:00">2024-09-03</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>671</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/electron/" rel="contents" data-pjax-state=""># electron</a> <br></p>
+<p>使用electron创建窗口的时候，默认会使用window的边框以及工具栏，如果想要创建一个无边框的窗口，可以通过设置<code>frame</code>属性为<code>false</code>来实现。</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">const</span> { <span class="title class_">BrowserWindow</span> } = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>({</span><br><span class="line">  <span class="attr">width</span>: <span class="number">800</span>,</span><br><span class="line">  <span class="attr">height</span>: <span class="number">600</span>,</span><br><span class="line">  <span class="attr">frame</span>: <span class="literal">false</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样就可以创建一个无边框的窗口了。但是随之又会带来两个问题：窗口无法拖拽以及无法最小化、最大化、关闭按钮消失（当然你也可以通过快捷键来使用这些功能）。</p>
+<h2 id="自定义窗口控制按钮"><a href="#自定义窗口控制按钮" class="headerlink" title="自定义窗口控制按钮"></a>自定义窗口控制按钮</h2><p>在 html内部，只能控制窗口的关闭，而最大化和最小化需要和主进程通信，然后再由主进程来控制窗口的最大化和最小化。</p>
+<p>一般我们统一使用<code>ipcMain</code>和<code>ipcRenderer</code>将窗口的控制操作发送到主进程，然后由主进程来控制窗口的最大化、最小化和关闭（以便更好的控制窗口的行为）。</p>
+<p>下面是一个简单的实现：</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>无边框窗口<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#drag</span> {</span></span><br><span class="line"><span class="language-css">      -webkit-app-region: drag;</span></span><br><span class="line"><span class="language-css">    }</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drag"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"min"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"max"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"close"</span>&gt;</span>x<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> { ipcRenderer } = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'min'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'min'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'max'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'max'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'close'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'close'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">const</span> { app, <span class="title class_">BrowserWindow</span>, ipcMain } = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">on</span>(<span class="string">'ready'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>({</span><br><span class="line">    <span class="attr">width</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">600</span>,</span><br><span class="line">    <span class="attr">frame</span>: <span class="literal">false</span></span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  win.<span class="title function_">loadFile</span>(<span class="string">'index.html'</span>)</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'min'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    win.<span class="title function_">minimize</span>()</span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'max'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="keyword">if</span> (win.<span class="title function_">isMaximized</span>()) {</span><br><span class="line">      win.<span class="title function_">unmaximize</span>()</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      win.<span class="title function_">maximize</span>()</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'close'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    win.<span class="title function_">close</span>()</span><br><span class="line">  })</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="窗口拖拽"><a href="#窗口拖拽" class="headerlink" title="窗口拖拽"></a>窗口拖拽</h2><p>想要使得窗口可以拖拽，只需要将元素的<code>-webkit-app-region</code>属性设置为<code>drag</code>即可。</p>
+<figure class="highlight css"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#drag</span> {</span><br><span class="line">  -webkit-app-region: drag;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drag"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样就可以使得<code>div</code>元素可以拖拽窗口了。</p>
+<p>但是这样会使得div内部的元素无法点击，因为<code>-webkit-app-region</code>属性会使得元素变为一个拖拽区域。</p>
+<p>想要解决这个问题办法也很简单，只需要将其内部不需要拖拽而是需要响应鼠标点击的元素的<code>-webkit-app-region</code>属性设置为<code>no-drag</code>即可。</p>
+<h2 id="完整实例"><a href="#完整实例" class="headerlink" title="完整实例"></a>完整实例</h2><p>下面结合自定义窗口控制按钮和窗口拖拽来实现一个无边框窗口：</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>无边框窗口<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#drag</span> {</span></span><br><span class="line"><span class="language-css">      -webkit-app-region: drag;</span></span><br><span class="line"><span class="language-css">    }</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#control</span> {</span></span><br><span class="line"><span class="language-css">      -webkit-app-region: no-drag;</span></span><br><span class="line"><span class="language-css">    }</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"drag"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"control"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"min"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"max"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"close"</span>&gt;</span>x<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">const</span> { ipcRenderer } = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'min'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'min'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'max'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'max'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">'close'</span>).<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, <span class="function">() =&gt;</span> {</span></span><br><span class="line"><span class="language-javascript">    ipcRenderer.<span class="title function_">send</span>(<span class="string">'close'</span>)</span></span><br><span class="line"><span class="language-javascript">  })</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="keyword">const</span> { app, <span class="title class_">BrowserWindow</span>, ipcMain } = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> win</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">on</span>(<span class="string">'ready'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">  win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>({</span><br><span class="line">    <span class="attr">width</span>: <span class="number">800</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">600</span>,</span><br><span class="line">    <span class="attr">frame</span>: <span class="literal">false</span></span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  win.<span class="title function_">loadFile</span>(<span class="string">'index.html'</span>)</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'min'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    win.<span class="title function_">minimize</span>()</span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'max'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    <span class="keyword">if</span> (win.<span class="title function_">isMaximized</span>()) {</span><br><span class="line">      win.<span class="title function_">unmaximize</span>()</span><br><span class="line">    } <span class="keyword">else</span> {</span><br><span class="line">      win.<span class="title function_">maximize</span>()</span><br><span class="line">    }</span><br><span class="line">  })</span><br><span class="line"></span><br><span class="line">  ipcMain.<span class="title function_">on</span>(<span class="string">'close'</span>, <span class="function">() =&gt;</span> {</span><br><span class="line">    win.<span class="title function_">close</span>()</span><br><span class="line">  })</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样就可以实现一个无边框窗口了。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/09/03/electron%EF%BC%9A%E6%97%A0%E8%BE%B9%E6%A1%86%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/08/31/CSS%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/31/CSS%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">CSS：一些设计技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-31 23:14:00" itemprop="dateCreated datePublished" datetime="2024-08-31T23:14:00+08:00">2024-08-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-09-01 12:10:53" itemprop="dateModified" datetime="2024-09-01T12:10:53+08:00">2024-09-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>200</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/JS/" rel="contents" data-pjax-state=""># JS</a> <br></p>
+<p>html 是一种标记语言，css 是一种样式语言。通过 编排 html 的层次结构，然后再使用css 来控制这些层次结构的样式，从而实现页面的设计。</p>
+<p>通过将页面划分成大的块，然后再在这些块上面细分更小的块……这就是html的层次结构。然后再通过css来控制这些块的样式，从而实现页面的设计。</p>
+<p>下面主要是积累一些常用的css设计技巧。</p>
+<h2 id="flex-布局"><a href="#flex-布局" class="headerlink" title="flex 布局"></a>flex 布局</h2><p>当你感到迷茫的时候，只要设置display: flex;然后再在开发者工具中直接用可视化工具来调整布局，就可以很快的解决问题。</p>
+<p>如果不能解决问题，那么就套两个display: flex; hhhhh</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/31/CSS%EF%BC%9A%E4%B8%80%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1130,240 +1350,6 @@ x}\)</span>：<span class="math inline">\(y\)</span>关于<span class="math inli
 表示将数据转换为浮点数类型。</p>
 <p>数据从 <code>DataFrame</code> -&gt; <code>numpy</code> 数组 -&gt;
 张量，完成了数据的转换。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/07/30/d2l-3-softmax%E5%9B%9E%E5%BD%92/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/30/d2l-3-softmax%E5%9B%9E%E5%BD%92/" class="post-title-link" itemprop="url">d2l-3-softmax回归</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-07-30 22:50:00" itemprop="dateCreated datePublished" datetime="2024-07-30T22:50:00+08:00">2024-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-08-02 10:06:24" itemprop="dateModified" datetime="2024-08-02T10:06:24+08:00">2024-08-02</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/d2l/" rel="contents" data-pjax-state=""># d2l</a> <br>
-<a href="/tags/python/" rel="contents" data-pjax-state=""># python</a>
-<br></p>
-<h2 id="对于一般模型的概述">对于一般模型的概述</h2>
-<p>在深度学习中，实际上对于任意的一个模型，都有两个重要的部分： 1.
-模型的结构 2. 模型的损失函数</p>
-<p>模型的结构定义了模型的计算过程，而损失函数定义了模型的优劣并且指导模型的优化。</p>
-<h2 id="softmax回归">softmax回归</h2>
-<p>线性回归用于解决回归问题，softmax回归用于解决分类问题。</p>
-<p><img src="/2024/03/01/3.Source/Pasted%20image%2020240802095624.png"></p>
-<p>在简单的线性回归中，我们期望模型能够输出一个 标量值，对于 一系列
-输入而言，其能够输出符合预期的结果。</p>
-<p>softmax
-回归也类似，其被用于解决分类问题，我们希望模型能够输出一个n维向量，这个向量的每一个元素代表了输入属于某个类别的概率。</p>
-<h3 id="softmax-函数">softmax 函数</h3>
-<p>为了达到这样的目的，我们需要引入 softmax
-函数，其能够将模型的输出转换为概率。softmax 函数的定义如下： <span class="math display">\[softmax(x)_i =
-\frac{exp(x_i)}{\sum_{j=1}^{n}exp(x_j)}\]</span></p>
-<p>其中，<span class="math inline">\(x\)</span> 为模型的输出，<span class="math inline">\(n\)</span> 为类别的数量，<span class="math inline">\(softmax(x)_i\)</span> 代表了输入属于第 <span class="math inline">\(i\)</span>
-个类别的概率。这个函数的优点在于，其能够保持输出的概率和为1，并且各个概率值都在0到1之间。另外，由于
-<span class="math inline">\(exp(x)\)</span> 是一个非线性函数，因此
-softmax
-函数也是一个非线性函数，这使得模型对于较大的输入值更加敏感，从而能够更好地区分不同的类别。</p>
-<h3 id="损失函数交叉熵">损失函数——交叉熵</h3>
-<p>soft函数很好的解决了从模型的输出到概率的转换问题，</p>
-<p>但是这样也引出来了另一个问题，为了优化参数，我们需要定义一个损失函数，但是对于分类问题，我该如何定义损失函数呢？这里我们引入了<strong>交叉熵损失函数</strong>，其定义如下：</p>
-<p><span class="math display">\[H(y, \hat{y}) =
--\sum_{i=1}^{n}y_i\log(\hat{y}_i)\]</span></p>
-<p>其中，<span class="math inline">\(y\)</span> 为真实的标签，<span class="math inline">\(\hat{y}\)</span> 为模型的输出，<span class="math inline">\(n\)</span> 为类别的数量。</p>
-<p>这个损失函数的优点在于，其能够衡量模型的输出与真实标签之间的差距，当模型的输出与真实标签完全一致时，交叉熵损失函数的值为0，当模型的输出与真实标签差距越大时，交叉熵损失函数的值也越大。</p>
-<p>对于分类问题，我们期望的输出 应当是
-除了真实标签之外，其他标签的概率都应该接近于0，而真实标签的概率应该接近于1。通过计算交叉熵损失函数，我们就能够衡量模型的输出与真实标签之间的差距，从而指导模型的优化。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/07/30/d2l-2-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/07/30/d2l-2-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">d2l-2-线性回归的简单实现</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-07-30 22:50:00" itemprop="dateCreated datePublished" datetime="2024-07-30T22:50:00+08:00">2024-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-08-02 09:12:56" itemprop="dateModified" datetime="2024-08-02T09:12:56+08:00">2024-08-02</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>10 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/python/" rel="contents" data-pjax-state="">#
-python</a> <br> <a href="/tags/d2l/" rel="contents" data-pjax-state="">#
-d2l</a> <br></p>
-<p>在 神经网络
-中，训练的本质实际上是优化参数，使得模型的预测值与真实值之间的误差尽可能小。通过定义损失函数的方式，我们可以知道
-参数 与 结果 之间的关系，通过求导的方式，
-我们可以知道如何调整参数使得损失函数最小。</p>
-<p>假设损失函数为 <span class="math inline">\(L(\theta)\)</span>，那么我们的目标就是找到一个
-<span class="math inline">\(\theta\)</span> 使得 <span class="math inline">\(L(\theta)\)</span> 最小。对于一个给定的 <span class="math inline">\(\theta\)</span>，我们可以通过计算 <span class="math inline">\(L(\theta)\)</span> 得知其的损失，然后我们求导
-<span class="math inline">\(L(\theta)\)</span>，得到其在 <span class="math inline">\(\theta\)</span> 处的梯度 <span class="math inline">\(\nabla
-L(\theta)\)</span>，然后我们可以通过梯度下降的方式，即 <span class="math inline">\(\theta = \theta - \alpha \nabla L(\theta)\)</span>
-来更新 <span class="math inline">\(\theta\)</span> 。其中 <span class="math inline">\(\alpha\)</span>
-是学习率，是一个超参数，用来控制每次更新的步长。</p>
-<p>上述的方法即为梯度下降法，是一种常用的优化方法。从数学上可以证明，梯度下降最终一定能找到一个局部最优解。</p>
-<p>在实际运用的时候，我们经常将多个样本的损失函数的平均值作为最终的损失函数，即
-<span class="math inline">\(L(\theta) = \frac{1}{n} \sum_{i=1}^{n}
-L(\theta, x_i, y_i)\)</span>，其中 <span class="math inline">\(n\)</span> 为样本的数量，<span class="math inline">\(x_i\)</span> 为第 <span class="math inline">\(i\)</span> 个样本的特征，<span class="math inline">\(y_i\)</span> 为第 <span class="math inline">\(i\)</span>
-个样本的标签。但是这样又引出了另一个问题，即当样本数量很大的时候，我们需要计算所有样本的梯度，这样会导致计算量过大，因此我们通常会采用随机梯度下降法，即每次只计算随机选择的多个样本，然后更新参数，而不是全部样本。</p>
-<p>下面，我们生成一个人工数据集，然后使用梯度下降法来拟合这个数据集。</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成数据集</span></span><br><span class="line">num_inputs = <span class="number">2</span></span><br><span class="line">num_examples = <span class="number">1000</span></span><br><span class="line">true_w = [<span class="number">2</span>, -<span class="number">3.4</span>]</span><br><span class="line">true_b = <span class="number">4.2</span></span><br><span class="line">features = torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (num_examples, num_inputs)), dtype=torch.<span class="built_in">float</span>)</span><br><span class="line">labels = true_w[<span class="number">0</span>] * features[:, <span class="number">0</span>] + true_w[<span class="number">1</span>] * features[:, <span class="number">1</span>] + true_b</span><br><span class="line"><span class="comment"># 加入噪声</span></span><br><span class="line">labels += torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">0.01</span>, size=labels.size()), dtype=torch.<span class="built_in">float</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">data_iter</span>(<span class="params">batch_size, features, labels</span>):</span><br><span class="line">    num_examples = <span class="built_in">len</span>(features)</span><br><span class="line">    indices = <span class="built_in">list</span>(<span class="built_in">range</span>(num_examples))</span><br><span class="line">    random.shuffle(indices)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, num_examples, batch_size):</span><br><span class="line">        j = torch.LongTensor(indices[i: <span class="built_in">min</span>(i + batch_size, num_examples)])</span><br><span class="line">        <span class="keyword">yield</span> features.index_select(<span class="number">0</span>, j), labels.index_select(<span class="number">0</span>, j)</span><br><span class="line"></span><br><span class="line">batch_size = <span class="number">10</span></span><br><span class="line"><span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter(batch_size, features, labels):</span><br><span class="line">    <span class="built_in">print</span>(X, y)</span><br><span class="line">    <span class="keyword">break</span></span><br></pre></td></tr></tbody></table></figure>
-<p>接下来，我们定义模型和损失函数。</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义模型，这里我们不使用 nn.Module，而是自己手搓</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">linreg</span>(<span class="params">X, w, b</span>):</span><br><span class="line">    <span class="string">"""线性回归模型。"""</span></span><br><span class="line">    <span class="keyword">return</span> torch.matmul(X, w) + b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义损失函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss</span>(<span class="params">y_hat, y</span>):</span><br><span class="line">    <span class="string">"""均方损失。"""</span></span><br><span class="line">    <span class="keyword">return</span> (y_hat - y.reshape(y_hat.shape)) ** <span class="number">2</span> / <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义优化算法</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sgd</span>(<span class="params">params, lr, batch_size</span>):  <span class="comment">#@save</span></span><br><span class="line">    <span class="string">"""小批量随机梯度下降。"""</span></span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        <span class="keyword">for</span> param <span class="keyword">in</span> params:</span><br><span class="line">            param -= lr * param.grad / batch_size</span><br><span class="line">            param.grad.zero_()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化参数</span></span><br><span class="line">w = torch.tensor(np.random.normal(<span class="number">0</span>, <span class="number">0.01</span>, (num_inputs, <span class="number">1</span>)), dtype=torch.<span class="built_in">float</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line">b = torch.zeros(<span class="number">1</span>, dtype=torch.<span class="built_in">float</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 训练模型</span></span><br><span class="line">lr = <span class="number">0.03</span></span><br><span class="line">num_epochs = <span class="number">3</span></span><br><span class="line">net = linreg</span><br><span class="line">loss = loss</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(num_epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter(batch_size, features, labels):</span><br><span class="line">        l = loss(net(X, w, b), y).<span class="built_in">sum</span>()</span><br><span class="line">        l.backward()</span><br><span class="line">        sgd([w, b], lr, batch_size)</span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        train_l = loss(net(features, w, b), labels)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f'epoch <span class="subst">{epoch + <span class="number">1</span>}</span>, loss <span class="subst">{<span class="built_in">float</span>(train_l.mean()):f}</span>'</span>)</span><br></pre></td></tr></tbody></table></figure>
 
       
     </div>
