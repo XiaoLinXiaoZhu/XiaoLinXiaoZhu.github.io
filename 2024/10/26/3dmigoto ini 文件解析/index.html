@@ -1,0 +1,611 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="# mod  3dmigoto中虽然已经有了非常详细的从如何捕获hash再到如何将模型应用到游戏中的详细教程，但是对于ini配置文件的描述却是不是很完整和具体 ，下面这篇文章将会系统地介绍一下3dmigoto的ini文件的涵义。 需要注意的是，3dmigoto的ini文件是 经过魔改的 ini 文件，其只是参考了ini文件的格式，但是并不是真正的ini文件。其拥有一定的自定义语法，但是我们还是从i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3dmigoto ini 文件解析">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/10/26/3dmigoto%20ini%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="# mod  3dmigoto中虽然已经有了非常详细的从如何捕获hash再到如何将模型应用到游戏中的详细教程，但是对于ini配置文件的描述却是不是很完整和具体 ，下面这篇文章将会系统地介绍一下3dmigoto的ini文件的涵义。 需要注意的是，3dmigoto的ini文件是 经过魔改的 ini 文件，其只是参考了ini文件的格式，但是并不是真正的ini文件。其拥有一定的自定义语法，但是我们还是从i">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-26T10:43:00.000Z">
+<meta property="article:modified_time" content="2024-10-26T11:24:54.429Z">
+<meta property="article:author" content="XLXZ">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2024/10/26/3dmigoto%20ini%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2024/10/26/3dmigoto%20ini%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/","path":"2024/10/26/3dmigoto ini 文件解析/","title":"3dmigoto ini 文件解析"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>3dmigoto ini 文件解析 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">67</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">218</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ini%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">ini文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFini%E6%96%87%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">什么是ini文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ini%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">ini文件的基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-number">1.2.1.</span> <span class="nav-text">section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E5%80%BC%E5%AF%B9"><span class="nav-number">1.2.3.</span> <span class="nav-text">键值对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E5%8F%B7"><span class="nav-number">1.2.4.</span> <span class="nav-text">引号</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3dmigoto-ini%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">3dmigoto ini文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3dmigoto-ini%E6%96%87%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">3dmigoto ini文件的基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.1.</span> <span class="nav-text">定义 变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%EF%BC%8C%E5%AE%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">定义函数，宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-else-endif"><span class="nav-number">2.1.3.</span> <span class="nav-text">if else endif</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE"><span class="nav-number">2.1.4.</span> <span class="nav-text">跨文件访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8Asection"><span class="nav-number">2.1.5.</span> <span class="nav-text">特殊section</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Constants"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">[Constants]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key%E2%80%A6%E2%80%A6"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">[key……]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TextureOverride%E2%80%A6%E2%80%A6"><span class="nav-number">2.1.5.3.</span> <span class="nav-text">[TextureOverride……]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CommandList%E2%80%A6%E2%80%A6"><span class="nav-number">2.1.5.4.</span> <span class="nav-text">[CommandList……]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Resource%E2%80%A6%E2%80%A6"><span class="nav-number">2.1.5.5.</span> <span class="nav-text">[Resource……]</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">218</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/10/26/3dmigoto%20ini%20%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="3dmigoto ini 文件解析 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          3dmigoto ini 文件解析
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-26 18:43:00 / 修改时间：19:24:54" itemprop="dateCreated datePublished" datetime="2024-10-26T18:43:00+08:00">2024-10-26</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/mod/" rel="contents" data-pjax-state=""># mod</a> <br></p>
+<p>3dmigoto中虽然已经有了非常详细的从如何捕获hash再到如何将模型应用到游戏中的详细教程，但是对于ini配置文件的描述却是不是很完整和具体 ，下面这篇文章将会系统地介绍一下3dmigoto的ini文件的涵义。</p>
+<p>需要注意的是，3dmigoto的ini文件是 经过魔改的 ini 文件，其只是参考了ini文件的格式，但是并不是真正的ini文件。其拥有一定的自定义语法，但是我们还是从ini文件的基本语法开始介绍。</p>
+<h1 id="ini文件"><a href="#ini文件" class="headerlink" title="ini文件"></a>ini文件</h1><h2 id="什么是ini文件"><a href="#什么是ini文件" class="headerlink" title="什么是ini文件"></a>什么是ini文件</h2><p>ini文件是windows系统中的配置文件，用于存储程序的配置信息，其作用实际上和json,xml,yaml等配置文件是一样的，只是格式不同而已。</p>
+<p>横向对比一下json和ini文件的区别：</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"section1"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">        <span class="attr">"key1"</span><span class="punctuation">:</span> <span class="string">"value1"</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">"key2"</span><span class="punctuation">:</span> <span class="string">"value2"</span></span><br><span class="line">    <span class="punctuation">}</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">"section2"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">        <span class="attr">"key3"</span><span class="punctuation">:</span> <span class="string">"value3"</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">"key4"</span><span class="punctuation">:</span> <span class="string">"value4"</span></span><br><span class="line">    <span class="punctuation">}</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">key1</span>=value1</span><br><span class="line"><span class="attr">key2</span>=value2</span><br><span class="line"></span><br><span class="line"><span class="section">[section2]</span></span><br><span class="line"><span class="attr">key3</span>=value3</span><br><span class="line"><span class="attr">key4</span>=value</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以看到，json文件是以键值对的形式存储数据，而ini文件是以section和键值对的形式存储数据。json的每个大括号下都表示一个构造体，并且可以多层嵌套，而ini文件则是以section为单位，每个section下都是键值对。</p>
+<h2 id="ini文件的基本语法"><a href="#ini文件的基本语法" class="headerlink" title="ini文件的基本语法"></a>ini文件的基本语法</h2><h3 id="section"><a href="#section" class="headerlink" title="section"></a>section</h3><p>ini文件以分节(section)的形式组织数据，每个section下都是键值对，键值对的形式为<code>key=value</code>，其中<code>key</code>是键，<code>value</code>是值。键值对之间用换行符分隔，section和键值对之间用中括号<code>[]</code>分隔。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">key1</span>=value1</span><br><span class="line"><span class="attr">key2</span>=value2</span><br><span class="line"></span><br><span class="line"><span class="section">[section2]</span></span><br><span class="line"><span class="attr">key3</span>=value3</span><br><span class="line"><span class="attr">key4</span>=value</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>ini文件使用分号<code>;</code>作为注释符号，分号后面的内容都会被忽略。</p>
+<p>有的解析器还支持<code>#</code>作为注释符号，以及行内注释，但是这些都是非标准的写法。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">key1</span>=value1 <span class="comment">; 这是注释（部分解析器支持）</span></span><br><span class="line"><span class="attr">key2</span>=value2 <span class="comment"># 这是注释（部分解析器支持）</span></span><br><span class="line"><span class="comment">; 这是注释</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="键值对"><a href="#键值对" class="headerlink" title="键值对"></a>键值对</h3><p>最基本的键值对的形式为<code>key=value</code>，其中<code>key</code>是键，<code>value</code>是值。键值对之间用换行符分隔。<br>ini还支持定义数组，数组的形式为<code>key=value1,value2,value3</code>，多个值之间用逗号分隔，或者使用 key[] 的形式定义数组。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">key1</span>=value1,value2,value3</span><br><span class="line">key2<span class="section">[]</span>=value1</span><br><span class="line">key2<span class="section">[]</span>=value2</span><br><span class="line">key2<span class="section">[]</span>=value3</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="引号"><a href="#引号" class="headerlink" title="引号"></a>引号</h3><p>ini文件中的值可以使用引号括起来，引号内的内容会被当做一个整体。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">key1</span>=<span class="string">"value1"</span></span><br><span class="line"><span class="attr">key2</span>=<span class="string">"value2"</span></span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h1 id="3dmigoto-ini文件"><a href="#3dmigoto-ini文件" class="headerlink" title="3dmigoto ini文件"></a>3dmigoto ini文件</h1><p>3dmigoto的ini文件是经过魔改的ini文件，其只是参考了ini文件的格式，但是并不是真正的ini文件。其拥有一定的自定义语法，下面我们来介绍一下3dmigoto ini文件的基本语法。</p>
+<h2 id="3dmigoto-ini文件的基本语法"><a href="#3dmigoto-ini文件的基本语法" class="headerlink" title="3dmigoto ini文件的基本语法"></a>3dmigoto ini文件的基本语法</h2><h3 id="定义-变量"><a href="#定义-变量" class="headerlink" title="定义 变量"></a>定义 变量</h3><p>3dmigoto ini文件中的变量定义的形式为<code>$变量名=值</code>，其中<code>$</code>是变量的标志，<code>变量名</code>是变量的名称，<code>值</code>是变量的值。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$<span class="attr">var1</span>=<span class="number">1</span></span><br><span class="line">$<span class="attr">var2</span>=<span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>变量还可以拥各种修饰词，比如global persist等，这些修饰词会影响变量的作用域和生命周期。</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">global $<span class="attr">var1</span>=<span class="number">1</span></span><br><span class="line"><span class="comment">; global修饰词表示变量的作用域为全局,即可以跨越section以及文件进行访问</span></span><br><span class="line">persist $<span class="attr">var2</span>=<span class="number">2</span></span><br><span class="line"><span class="comment">; persist修饰词表示变量的生命周期为持久，即变量的值会在游戏重启或者刷新时保持不变</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="定义函数，宏"><a href="#定义函数，宏" class="headerlink" title="定义函数，宏"></a>定义函数，宏</h3><p>3dmigoto ini文件中的函数定义的形式为<code>[函数名]</code>，其中<code>函数名</code>是函数的名称，函数的内容为函数的实现。</p>
+<p>你可以在别的section使用<code>run</code>关键字调用函数：<code>run = 函数名</code>。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[func1]</span></span><br><span class="line">$<span class="attr">var1</span>=<span class="number">1</span></span><br><span class="line">$<span class="attr">var2</span>=<span class="number">2</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>你可以在函数内 调用复杂的逻辑，从而简化代码。</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[func1]</span></span><br><span class="line">if $<span class="attr">var1</span>==<span class="number">1</span></span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">2</span></span><br><span class="line">else if $<span class="attr">var1</span>==<span class="number">2</span></span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">3</span></span><br><span class="line">else</span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="section">[section1]</span></span><br><span class="line"><span class="attr">run</span> = func1</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="if-else-endif"><a href="#if-else-endif" class="headerlink" title="if else endif"></a>if else endif</h3><p>3dmigoto ini文件中的条件语句的形式为<code>if 条件</code>，其中<code>条件</code>是条件表达式，<code>else</code>是条件不满足时执行的语句，<code>endif</code>是条件结束的标志。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if $<span class="attr">var1</span>==<span class="number">1</span></span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">2</span></span><br><span class="line">else if $<span class="attr">var1</span>==<span class="number">2</span></span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">3</span></span><br><span class="line">else</span><br><span class="line">    $<span class="attr">var2</span>=<span class="number">4</span></span><br><span class="line">endif</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="跨文件访问"><a href="#跨文件访问" class="headerlink" title="跨文件访问"></a>跨文件访问</h3><p>当变量定义为global时，可以跨文件访问。在别的文件夹中使用 <code>$.\文件路径\文件名\变量名</code> 即可访问。（不太确定 ）</p>
+<h3 id="特殊section"><a href="#特殊section" class="headerlink" title="特殊section"></a>特殊section</h3><p>在3dmigoto ini文件中，section的名称会影响其执行逻辑，下面是一些特殊section的名称：</p>
+<h4 id="Constants"><a href="#Constants" class="headerlink" title="[Constants]"></a>[Constants]</h4><p>这个section中定义的变量会在所有section中都可以访问，即全局变量。</p>
+<h4 id="key……"><a href="#key……" class="headerlink" title="[key……]"></a>[key……]</h4><p>以<code>key</code>开头的section表示这个section是一个按键绑定的section，其中<code>XXX</code>可以是任意的名称。</p>
+<p>使用<code>condition =  条件表达式</code>来定义按键绑定的条件，只有当条件表达式为真时，这个section中的代码才会被执行。</p>
+<p>比如：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[KeySwap]</span></span><br><span class="line"><span class="attr">condition</span> = <span class="variable">$active</span> == <span class="number">1</span></span><br><span class="line"><span class="attr">key</span> = k</span><br><span class="line"><span class="attr">type</span> = cycle</span><br><span class="line">$<span class="attr">swapvar</span> = <span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span></span><br><span class="line">$<span class="attr">creditinfo</span> = <span class="number">0</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里定义了一个按键绑定的section，当按键<code>k</code>被按下时，且<code>$active</code>的值为1时，执行一个循环的操作，将<code>$swapvar</code>的值循环设置为0,1,2,3,4。<code>$creditinfo</code>指定是否展示信息，这里设置为否。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>key</td>
+<td>按键</td>
+<td>指定任意一个按键作为触发按键，设置多个值时，只要有一个按键被按下，就会触发</td>
+</tr>
+<tr>
+<td>type</td>
+<td>操作类型</td>
+<td>cycle/toggle/hold 分别表示 在多个值之间循环切换/在两个值之间切换/按住按键时执行操作</td>
+</tr>
+<tr>
+<td>$swapvar</td>
+<td>循环变量</td>
+<td>在多个值之间循环切换</td>
+</tr>
+<tr>
+<td>$creditinfo</td>
+<td>是否展示信息</td>
+<td>0/1 表示是否展示信息</td>
+</tr>
+</tbody></table>
+<h4 id="TextureOverride……"><a href="#TextureOverride……" class="headerlink" title="[TextureOverride……]"></a>[TextureOverride……]</h4><p>以<code>TextureOverride</code>开头的section表示这个section是一个纹理替换的section，其中<code>……</code>可以是任意的名称。</p>
+<p>它默认有以下参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>可选值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hash</td>
+<td>纹理hash</td>
+<td>16进制数</td>
+<td>指定要替换的纹理的hash值</td>
+</tr>
+<tr>
+<td>format</td>
+<td>纹理格式</td>
+<td>DXGI_FORMAT</td>
+<td>指定要替换的纹理的格式</td>
+</tr>
+<tr>
+<td>width</td>
+<td>纹理宽度</td>
+<td>整数</td>
+<td>指定要替换的纹理的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>纹理高度</td>
+<td>整数</td>
+<td>指定要替换的纹理的高度</td>
+</tr>
+<tr>
+<td>mipLevels</td>
+<td>mipmap等级</td>
+<td>整数</td>
+<td>指定要替换的纹理的mipmap等级</td>
+</tr>
+<tr>
+<td>$texture</td>
+<td>纹理路径</td>
+<td>字符串</td>
+<td>指定要替换的纹理的路径</td>
+</tr>
+<tr>
+<td>run</td>
+<td>运行函数</td>
+<td>函数名</td>
+<td>指定要运行的函数</td>
+</tr>
+<tr>
+<td>$active</td>
+<td>是否需要激活</td>
+<td>0/1</td>
+<td>指定是否需要激活</td>
+</tr>
+<tr>
+<td>checktextureoverride</td>
+<td>检查纹理覆盖</td>
+<td>ps/ib/vb</td>
+<td>指定检查是否覆盖,如果已经覆盖则不再覆盖</td>
+</tr>
+<tr>
+<td>vb</td>
+<td>顶点缓冲</td>
+<td>路径</td>
+<td>指定要替换的顶点缓冲</td>
+</tr>
+<tr>
+<td>ib</td>
+<td>索引缓冲</td>
+<td>路径</td>
+<td>指定要替换的索引缓冲</td>
+</tr>
+<tr>
+<td>ps-n</td>
+<td>像素着色器</td>
+<td>路径</td>
+<td>指定要替换的像素着色器</td>
+</tr>
+<tr>
+<td>handle</td>
+<td>句柄操作</td>
+<td>skip/replace</td>
+<td>指定句柄操作</td>
+</tr>
+<tr>
+<td>draw</td>
+<td>绘制操作</td>
+<td>二维数组</td>
+<td>指定绘制操作</td>
+</tr>
+<tr>
+<td>drawindexed</td>
+<td>绘制索引操作</td>
+<td>整数/auto</td>
+<td>指定绘制索引操作</td>
+</tr>
+</tbody></table>
+<h4 id="CommandList……"><a href="#CommandList……" class="headerlink" title="[CommandList……]"></a>[CommandList……]</h4><p>以<code>CommandList</code>开头的section表示这个section是一个命令列表的section，其中<code>……</code>可以是任意的名称。</p>
+<p>在这个section中，可以定义一系列的命令，比如说if else endif等。</p>
+<p>其接受的参数有：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>可选值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>handle</td>
+<td>句柄操作</td>
+<td>skip/replace</td>
+<td>指定句柄操作</td>
+</tr>
+</tbody></table>
+<h4 id="Resource……"><a href="#Resource……" class="headerlink" title="[Resource……]"></a>[Resource……]</h4><p>以<code>Resource</code>开头的section表示这个section是一个资源的section，其中<code>……</code>可以是任意的名称。</p>
+<p>在这个section中，可以定义资源的种类，格式，路径等。</p>
+<p>其接受的参数有：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>可选值</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>资源类型</td>
+<td>texture/Buffer/indexbuffer/pixelshader</td>
+<td>指定资源的类型</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>资源hash</td>
+<td>16进制数</td>
+<td>指定资源的hash值</td>
+</tr>
+<tr>
+<td>format</td>
+<td>资源格式</td>
+<td>DXGI_FORMAT</td>
+<td>指定资源的格式</td>
+</tr>
+<tr>
+<td>stride</td>
+<td>资源步长</td>
+<td>整数</td>
+<td>指定资源的步长</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/kofi.png" alt="XLXZ Ko-fi">
+        <span>Ko-fi</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/09/20/2024%E5%86%B0%E5%B2%A9%E4%BD%9C%E5%9D%8A%E6%B8%B8%E6%88%8F%E7%BB%84%E7%AD%96%E5%88%92%E7%AC%94%E8%AF%95/" rel="prev" title="2024冰岩作坊游戏组策划笔试">
+                  <i class="fa fa-angle-left"></i> 2024冰岩作坊游戏组策划笔试
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/10/27/2024%E5%8F%8C%E5%8D%81%E4%B8%80%E7%94%B5%E8%84%91%E9%80%89%E8%B4%AD%E8%AE%B0%E5%BD%95/" rel="next" title="2024双十一电脑选购记录">
+                  2024双十一电脑选购记录 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
