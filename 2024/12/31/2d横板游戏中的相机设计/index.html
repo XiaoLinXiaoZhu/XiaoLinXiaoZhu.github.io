@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="# 游戏策划 # 游戏设计  在2d横板游戏中，相机的设计是一个非常重要的部分，它直接影响到玩家的游戏体验。一个好的相机设计可以让玩家更好的体验游戏，而一个不好的相机设计则会让玩家感到不适，有的游戏将相机和关卡设计到一起，更是可以让游戏更加有趣。 在这篇文章中，我简单聊聊2d横板游戏中相机的设计。我们将会从 相机的跟随方式、相机的注意力吸附、相机的震动 这三个方面来讨论相机的设计。 相机的跟随方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2d横板游戏中的相机设计">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/12/31/2d%E6%A8%AA%E6%9D%BF%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="# 游戏策划 # 游戏设计  在2d横板游戏中，相机的设计是一个非常重要的部分，它直接影响到玩家的游戏体验。一个好的相机设计可以让玩家更好的体验游戏，而一个不好的相机设计则会让玩家感到不适，有的游戏将相机和关卡设计到一起，更是可以让游戏更加有趣。 在这篇文章中，我简单聊聊2d横板游戏中相机的设计。我们将会从 相机的跟随方式、相机的注意力吸附、相机的震动 这三个方面来讨论相机的设计。 相机的跟随方式">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231220941.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231214322.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231214330.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231220038.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231221313.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231221702.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231221905.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_perlin.gif">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_liner.gif">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_spring.gif">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_combin.gif">
+<meta property="article:published_time" content="2024-12-31T12:45:00.000Z">
+<meta property="article:modified_time" content="2025-01-01T03:35:02.776Z">
+<meta property="article:author" content="XLXZ">
+<meta property="article:tag" content="游戏设计">
+<meta property="article:tag" content="游戏策划">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020241231220941.png">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2024/12/31/2d%E6%A8%AA%E6%9D%BF%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E8%AE%BE%E8%AE%A1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2024/12/31/2d%E6%A8%AA%E6%9D%BF%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E8%AE%BE%E8%AE%A1/","path":"2024/12/31/2d横板游戏中的相机设计/","title":"2d横板游戏中的相机设计"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2d横板游戏中的相机设计 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">67</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">220</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E6%9C%BA%E7%9A%84%E8%B7%9F%E9%9A%8F%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">相机的跟随方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E5%AE%9A%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.1.</span> <span class="nav-text">固定跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E6%BB%91%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.2.</span> <span class="nav-text">平滑跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%88%A4%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.3.</span> <span class="nav-text">预判跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%B6%E6%97%B6%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.4.</span> <span class="nav-text">延时跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E7%BC%98%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.5.</span> <span class="nav-text">边缘跟随</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E5%90%88%E8%B7%9F%E9%9A%8F"><span class="nav-number">1.6.</span> <span class="nav-text">混合跟随</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E6%9C%BA%E7%9A%84%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%90%B8%E9%99%84"><span class="nav-number">2.</span> <span class="nav-text">相机的注意力吸附</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%90%B8%E9%99%84"><span class="nav-number">2.1.</span> <span class="nav-text">直接吸附</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E5%BF%83%E5%90%B8%E9%99%84"><span class="nav-number">2.2.</span> <span class="nav-text">中心吸附</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%90%B8%E9%99%84"><span class="nav-number">2.3.</span> <span class="nav-text">4:6 吸附</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E6%9C%BA%E7%9A%84%E9%9C%87%E5%8A%A8"><span class="nav-number">3.</span> <span class="nav-text">相机的震动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%81%8F%E7%A7%BB%E9%9C%87%E5%8A%A8"><span class="nav-number">3.1.</span> <span class="nav-text">随机偏移震动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E8%BF%9E%E7%BB%AD%E6%8C%AF%E5%8A%A8"><span class="nav-number">3.2.</span> <span class="nav-text">随机连续振动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E5%90%91%E5%BC%B9%E7%B0%A7%E6%8C%AF%E5%8A%A8"><span class="nav-number">3.3.</span> <span class="nav-text">定向弹簧振动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%AF%E5%8A%A8%E7%9A%84%E7%BB%84%E5%90%88"><span class="nav-number">3.4.</span> <span class="nav-text">振动的组合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">4.1.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">220</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/03/06/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8E%88%E8%AF%BE%E5%BD%A2%E5%BC%8F/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-06</time>
+        <br>
+      杂谈：授课形式
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/03/07/1.Archieve/python%EF%BC%9A%E4%B8%80%E5%A5%97%E9%80%82%E7%94%A8%E4%BA%8ESpyder%E7%9A%84%E8%88%92%E6%9C%8D%E9%85%8D%E8%89%B2/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-07</time>
+        <br>
+      python：一套适用于Spyder的舒服配色
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/12/05/1.Archieve/2023-12-3%E6%95%B0%E6%A8%A1%E8%AE%B2%E5%BA%A7%E8%AE%B0%E5%BD%95%EF%BC%88%E6%B5%B7%E5%BA%95%E6%B5%8B%E7%BA%BF%EF%BC%89/" rel="bookmark">
+        <time class="popular-posts-time">2023-12-05</time>
+        <br>
+      2023-12-3数模讲座记录（海底测线）
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/02/28/1.Archieve/%E7%AD%94%E8%BE%A9PPT%E5%88%B6%E4%BD%9C%E8%A6%81%E9%A2%86/" rel="bookmark">
+        <time class="popular-posts-time">2024-02-28</time>
+        <br>
+      答辩PPT制作要领
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/11/07/1.Archieve/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8MATLAB%E8%BF%9B%E8%A1%8C%E7%BB%98%E5%9B%BE/" rel="bookmark">
+        <time class="popular-posts-time">2023-11-07</time>
+        <br>
+      第一次使用MATLAB进行绘图
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2024/12/31/2d%E6%A8%AA%E6%9D%BF%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2d横板游戏中的相机设计 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2d横板游戏中的相机设计
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-31 20:45:00" itemprop="dateCreated datePublished" datetime="2024-12-31T20:45:00+08:00">2024-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-01-01 11:35:02" itemprop="dateModified" datetime="2025-01-01T11:35:02+08:00">2025-01-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/游戏策划/" rel="contents" data-pjax-state=""># 游戏策划</a> <br><br><a href="/tags/游戏设计/" rel="contents" data-pjax-state=""># 游戏设计</a> <br></p>
+<p>在2d横板游戏中，相机的设计是一个非常重要的部分，它直接影响到玩家的游戏体验。一个好的相机设计可以让玩家更好的体验游戏，而一个不好的相机设计则会让玩家感到不适，有的游戏将相机和关卡设计到一起，更是可以让游戏更加有趣。</p>
+<p>在这篇文章中，我简单聊聊2d横板游戏中相机的设计。我们将会从 相机的跟随方式、相机的注意力吸附、相机的震动 这三个方面来讨论相机的设计。</p>
+<h2 id="相机的跟随方式"><a href="#相机的跟随方式" class="headerlink" title="相机的跟随方式"></a>相机的跟随方式</h2><p>在2d横板游戏中，相机的跟随方式有很多种，比如 固定跟随、平滑跟随、预判跟随、延时跟随 等等。不同的跟随方式适用于不同的游戏，下面我们来看看这几种跟随方式的特点。</p>
+<h3 id="固定跟随"><a href="#固定跟随" class="headerlink" title="固定跟随"></a>固定跟随</h3><p>固定跟随是最简单的一种跟随方式，相机会始终跟随玩家，不会有任何延迟。这种跟随方式适用于一些简单的游戏，比如一些小游戏或者一些简单的横板游戏。这里不再赘述。</p>
+<h3 id="平滑跟随"><a href="#平滑跟随" class="headerlink" title="平滑跟随"></a>平滑跟随</h3><p>平滑跟随是一种比较常见的跟随方式，相机会有一个延迟，玩家移动时，相机会慢慢跟上玩家。这种跟随方式可以让玩家感到更加舒适，不会有太大的晃动感。这种跟随方式适用于一些需要玩家感到舒适的游戏，比如一些休闲游戏或者一些简单的横板游戏。</p>
+<p>这种跟随方式比较适合慢节奏的游戏，这种方式的镜头移动较为平滑，不会有太大的晃动感，但是对于一些快节奏的游戏来说，延时的视角会让玩家无法第一时间获取想要的信息，这时候就需要使用预判跟随。</p>
+<h3 id="预判跟随"><a href="#预判跟随" class="headerlink" title="预判跟随"></a>预判跟随</h3><p>预判跟随是一种比较高级的跟随方式，相机会根据玩家的移动方向和速度来计算相机的位置，从而使得相机会提前“预判”玩家的移动。</p>
+<p>在大多数平台跳跃游戏中，已经走过的地方不再重要，玩家更关心的是即将到来的地方。因此，预判跟随是一个非常好的选择。</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20241231220941.png" alt=""></p>
+<h3 id="延时跟随"><a href="#延时跟随" class="headerlink" title="延时跟随"></a>延时跟随</h3><p>延时跟随是一种比较特殊的跟随方式，在玩家移动后，相机会有一个较短的延迟，然后才会跟上玩家。</p>
+<p>使用这种方式可以避免相机的大幅度晃动，并且增加真实感。</p>
+<h3 id="边缘跟随"><a href="#边缘跟随" class="headerlink" title="边缘跟随"></a>边缘跟随</h3><p>边缘跟随是一种比较特殊的跟随方式，相机不会移动，直到玩家移动到镜头的边缘，相机才会调整位置。这种跟随方式适用于一些地图设计对于游玩影响较大的游戏，比如说一些难度较高的平台跳跃游戏（《蔚蓝》就是一个很好的例子），或者一些boss战中。</p>
+<p>在这种游戏中，玩家需要更多的注意力来控制自己相对于地图的位置，而不是相对于相机的位置。这种跟随方式其所产生的晃动和视角变化较少、可以让玩家更加专注于游戏的地图设计。</p>
+<p>边缘跟随并不一定是同时作用于xy轴，实际上更为常见的是只作用于x轴，这样可以让玩家在y轴上更好的控制自己的位置。</p>
+<h3 id="混合跟随"><a href="#混合跟随" class="headerlink" title="混合跟随"></a>混合跟随</h3><p>在实际的相机设计中，我们常常会混合使用多种跟随方式。以《空洞骑士》为例，我们可以看到相机在不同的场景中使用了不同的跟随方式，在大多数场景中，使用的实际上是延时跟随，但是在一些特殊的场景中，比如boss战中，使用的是 x轴固定视角，y轴延时跟随。</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20241231214322.png" alt=""></p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20241231214330.png" alt=""></p>
+<p>《精灵与萤火意志》中，使用的也是延时跟随，其延时相较于《空洞骑士》更长，同时镜头也要更远一些。</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20241231220038.png" alt=""></p>
+<p>但是在追逐战中,其使用的是预测跟随<br><img src="/2024/03/01/3.Source/Pasted image 20241231221313.png" alt=""></p>
+<h2 id="相机的注意力吸附"><a href="#相机的注意力吸附" class="headerlink" title="相机的注意力吸附"></a>相机的注意力吸附</h2><p>在游戏过程中，我们的注意力不一定都在玩家身上，有时候我们需要让玩家注意到一些特殊的地方，比如说一些隐藏的道路、一些隐藏的宝藏、一些隐藏的敌人等等。这时候，我们就需要使用相机的注意力吸附功能。</p>
+<p>什么样的吸附是合理的？这个问题没有一个固定的答案，但是我们可以总结出游戏中常见的吸附方式。</p>
+<h3 id="直接吸附"><a href="#直接吸附" class="headerlink" title="直接吸附"></a>直接吸附</h3><p>直接吸附是一种比较简单的吸附方式，当需要玩家注意某个地方时，相机会移动到这个地方，然后再慢慢移动回来。比如：<br><img src="/2024/03/01/3.Source/Pasted image 20241231221702.png" alt=""></p>
+<h3 id="中心吸附"><a href="#中心吸附" class="headerlink" title="中心吸附"></a>中心吸附</h3><p>中心吸附是一种比较常见的吸附方式，当需要玩家注意某个地方时，相机会移动到该地方和玩家的中心位置。</p>
+<p><img src="/2024/03/01/3.Source/Pasted image 20241231221905.png" alt=""></p>
+<h3 id="4-6-吸附"><a href="#4-6-吸附" class="headerlink" title="4:6 吸附"></a>4:6 吸附</h3><p>4:6吸附比较少见，常见于两个角色对话的时候，相机会平滑移动到两个角色的 4:6 位置，这样可以让玩家更好的看到两个角色，同时强调当前说话的角色。<br>（我忘了是什么游戏来着的，使用了这种方式）  </p>
+<p>这种镜头比较有意思，整个屏幕实际上会被分成四个部分，A左边，A右边到摄像头，摄像头到B左边，B右边，它们的比例为 3：4：6：1。</p>
+<p>你会发现，对于A来说它位于左半边屏幕的近似于居中的位置，而对于B来说它位于右半边屏幕的近似于边缘的位置，这样可以让玩家更好的看到两个角色，同时强调当前说话的角色。</p>
+<p>比起使用直接吸附，它的视角移动没有那么突兀，比起使用中心吸附，它的视觉焦点更加明确。</p>
+<h2 id="相机的震动"><a href="#相机的震动" class="headerlink" title="相机的震动"></a>相机的震动</h2><p>相机的振动一般会使用下面几种方式：</p>
+<ol>
+<li>随机偏移震动</li>
+<li>随机连续振动</li>
+<li>定向弹簧振动</li>
+</ol>
+<p>一般会使用上述三种振动进行组合，来达到较为理想的效果</p>
+<h3 id="随机偏移震动"><a href="#随机偏移震动" class="headerlink" title="随机偏移震动"></a>随机偏移震动</h3><p><img src="/2024/03/01/3.Source/shake_perlin.gif" alt=""></p>
+<p>会发现，这种振动会有一点点生硬，但是同时也较为的强烈。</p>
+<p>这种振动由随机数生成，每一帧都会有一个随机的偏移量，这样就会产生一个随机的振动效果。随机数的选取可以选择直接的random，但是更好的方式是使用perlin noise，这样可以产生一个更加自然的振动效果。</p>
+<h3 id="随机连续振动"><a href="#随机连续振动" class="headerlink" title="随机连续振动"></a>随机连续振动</h3><p><img src="/2024/03/01/3.Source/shake_liner.gif" alt=""></p>
+<p>这种振动会比较平滑，但是同时不够强烈。它的特征是由一组连续的数控制振动。</p>
+<p>一般会使用 sin/cos 来控制振动的幅度 + 随机步长 来控制振动的幅度，当然也可以直接使用随机的dx，dy来控制振动，但是那样，镜头有一定概率朝一个方向连续移动，需要使用别的方式来限制振动范围和方向。</p>
+<h3 id="定向弹簧振动"><a href="#定向弹簧振动" class="headerlink" title="定向弹簧振动"></a>定向弹簧振动</h3><p><img src="/2024/03/01/3.Source/shake_spring.gif" alt=""></p>
+<p>模仿弹簧，拥有 spring 和 damping 两个参数，控制弹性系数以及阻尼系数。从而产生一个类似于弹簧的振动效果。</p>
+<p>它的优势就是方向明确，振动幅度逐渐减小，用来提示受到某个方向的冲击会比较合适。</p>
+<h3 id="振动的组合"><a href="#振动的组合" class="headerlink" title="振动的组合"></a>振动的组合</h3><p>一般会使用上述三种振动进行组合，来达到较为理想的效果。比如说，当玩家受到攻击时，可以使用定向弹簧振动，当玩家受到爆炸时，可以使用随机连续振动，当玩家受到地震时，可以使用随机偏移震动。</p>
+<p><img src="/2024/03/01/3.Source/shake_combin.gif" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结来看，在2D横板游戏中，相机设计直接影响到游戏体验。合理的相机跟随方式可以提升玩家的沉浸感和舒适度，预判和边缘跟随等方式适配于不同的游戏节奏和场景需求；相机的注意力吸附功能则能有效引导玩家关注关键元素，提升游戏互动性和趣味性；而多样化的相机震动设计通过巧妙的组合使用，为游戏增加了更多的动态反馈和沉浸感。这些设计要素不仅体现了游戏的艺术性和技术性，也强调了设计者对玩家体验的深刻理解和创新思考。未来的相机设计可以更加智能化和动态化，进一步丰富游戏的表现力和互动体验。</p>
+<span id="more"></span>
+<hr>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/kofi.png" alt="XLXZ Ko-fi">
+        <span>Ko-fi</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" rel="tag"># 游戏设计</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" rel="tag"># 游戏策划</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/30/%E6%89%8B%E5%8A%A8%E6%9F%A5%E6%9D%80%20drivemgr.exe%20U%E7%9B%98%E7%97%85%E6%AF%92/" rel="prev" title="手动查杀 drivemgr.exe U盘病毒">
+                  <i class="fa fa-angle-left"></i> 手动查杀 drivemgr.exe U盘病毒
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
