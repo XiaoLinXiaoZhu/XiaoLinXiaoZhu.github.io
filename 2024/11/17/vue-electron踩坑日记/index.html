@@ -18,15 +18,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# vue # electron  不知道为什么,在开发 vue-electron 项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下 electron:serve not found![](/2024/03/01/3.Source/Pasted image 20241117115340.png) 1234567891011网路上给的解决办法：">
+    <meta name="description" content="不知道为什么,在开发 vue-electron
+ 项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下
+ 12345678910111213//let output = &quot;&quot;;for (let group of dv.pages(&quot;#vue&quot;).where(p => &amp;#123;//output += p[&quot;title&quot;];//o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-electron踩坑日记">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2024/11/17/vue-electron%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# vue # electron  不知道为什么,在开发 vue-electron 项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下 electron:serve not found![](/2024/03/01/3.Source/Pasted image 20241117115340.png) 1234567891011网路上给的解决办法：">
+<meta property="og:description" content="不知道为什么,在开发 vue-electron
+ 项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下
+ 12345678910111213//let output = &quot;&quot;;for (let group of dv.pages(&quot;#vue&quot;).where(p => &amp;#123;//output += p[&quot;title&quot;];//o">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-17T03:52:00.000Z">
-<meta property="article:modified_time" content="2024-11-17T04:07:44.862Z">
+<meta property="article:modified_time" content="2025-02-01T13:37:08.333Z">
 <meta property="article:author" content="XLXZ">
 <meta property="article:tag" content="electron">
 <meta property="article:tag" content="vue">
@@ -89,7 +93,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">67</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">220</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">72</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">299</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -125,7 +129,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -138,7 +142,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-serve-not-found"><span class="nav-number">1.</span> <span class="nav-text">electron:serve not found</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-yarn-%E7%9A%84-serve-%E5%8C%85"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 安装 yarn 的 serve 包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85-electron-%E5%92%8C-electron-builder"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 重新安装 electron 和 electron-builder</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -152,13 +155,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">220</span>
+          <span class="site-state-item-count">299</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">67</span>
+        <span class="site-state-item-count">72</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -185,10 +188,20 @@
   </div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/" rel="bookmark">
+      
+      </a>
+    </li>
+    <li class="popular-posts-item">
       <a class="popular-posts-link" href="/2024/08/29/ZZZ-mod-manager%20%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" rel="bookmark">
         <time class="popular-posts-time">2024-08-29</time>
         <br>
       ZZZ-mod-manager 开发记录
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/" rel="bookmark">
+      
       </a>
     </li>
     <li class="popular-posts-item">
@@ -199,24 +212,8 @@
       </a>
     </li>
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2024/10/29/1.Archieve/20min%EF%BC%9A%E4%BD%BF%E7%94%A8GithubAction%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BD%A0%E7%9A%84electron%E6%89%93%E5%8C%85/" rel="bookmark">
-        <time class="popular-posts-time">2024-10-29</time>
-        <br>
-      使用GithubAction自动化你的electron打包
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2024/08/29/20min%EF%BC%9Aelectron%E5%BA%94%E7%94%A8%E6%89%93%E5%8C%85/" rel="bookmark">
-        <time class="popular-posts-time">2024-08-29</time>
-        <br>
-      electron应用打包
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2024/03/06/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8E%88%E8%AF%BE%E5%BD%A2%E5%BC%8F/" rel="bookmark">
-        <time class="popular-posts-time">2024-03-06</time>
-        <br>
-      杂谈：授课形式
+      <a class="popular-posts-link" href="/" rel="bookmark">
+      
       </a>
     </li>
   </ul>
@@ -268,9 +265,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-11-17 11:52:00 / 修改时间：12:07:44" itemprop="dateCreated datePublished" datetime="2024-11-17T11:52:00+08:00">2024-11-17</time>
+      <time title="创建时间：2024-11-17 11:52:00" itemprop="dateCreated datePublished" datetime="2024-11-17T11:52:00+08:00">2024-11-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-01 21:37:08" itemprop="dateModified" datetime="2025-02-01T21:37:08+08:00">2025-02-01</time>
     </span>
 
   
@@ -280,14 +283,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
+      <span>562</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>5 分钟</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -297,39 +300,10 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/vue/" rel="contents" data-pjax-state=""># vue</a> <br><br><a href="/tags/electron/" rel="contents" data-pjax-state=""># electron</a> <br></p>
-<p>不知道为什么,在开发 vue-electron 项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下</p>
-<h2 id="electron-serve-not-found"><a href="#electron-serve-not-found" class="headerlink" title="electron:serve not found"></a>electron:serve not found</h2><p>![](/2024/03/01/3.Source/Pasted image 20241117115340.png)</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">网路上给的解决办法：</span><br><span class="line"></span><br><span class="line">1. 检查各个组件是否安装正常：</span><br><span class="line"></span><br><span class="line">~~~</span><br><span class="line">node --version</span><br><span class="line">yarn --version</span><br><span class="line">~~~</span><br><span class="line"></span><br><span class="line">2. 如果都正常的话，那么应该是没有配置系统路径</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+    <div class="post-body" itemprop="articleBody"><p>不知道为什么,在开发 vue-electron
+项目的时候,总是会遇到一些奇奇怪怪的问题,这里记录一下</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//let output = "";</span><br><span class="line">for (let group of dv.pages("#vue").where(p =&gt; {</span><br><span class="line">//output += p["title"];</span><br><span class="line">//output += "\n"</span><br><span class="line">return p["title"].includes("踩坑");</span><br><span class="line">}).groupBy(p =&gt; p.tags)) {</span><br><span class="line">	dv.header(3, group.key);</span><br><span class="line">	dv.table(["Name", "Date", "Rating"],</span><br><span class="line">		group.rows</span><br><span class="line">			.sort(k =&gt; k.date, 'desc')</span><br><span class="line">			.map(k =&gt; [k.file.link, k["time-read"], k.rating]))</span><br><span class="line">}</span><br><span class="line">//dv.el("p",output)</span><br></pre></td></tr></tbody></table></figure>
 
-<p>首先，我检查了一下 node 和 yarn 的版本，都是正常的，按照网上的说法，应该是没有配置系统路径。但是问题是这玩意是npm的包，安装在 node_modules 里面的，为什么要为其配置系统路径呢？</p>
-<p>如果说是因为找不到路径，那么我直接 修改 package.json 里面的 scripts 直接指定路径不就好了吗？</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"scripts"</span><span class="punctuation">:</span> <span class="punctuation">{</span></span><br><span class="line">    <span class="attr">"serve"</span><span class="punctuation">:</span> <span class="string">"vue-cli-service serve"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>其实我也是一通捣鼓之后才解决的，解决办法是：</p>
-<h4 id="1-安装-yarn-的-serve-包"><a href="#1-安装-yarn-的-serve-包" class="headerlink" title="1. 安装 yarn 的 serve 包"></a>1. 安装 yarn 的 serve 包</h4><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add serve</span><br></pre></td></tr></tbody></table></figure>
-
-<p>在这之后，运行 yarn serve 能够在网页端启动项目，但是 希望的 应该是 创建一个 electron 窗口，而不是在浏览器中打开。</p>
-<p>运行 yarn build 后，它能够正常在 dist 目录下生成文件。</p>
-<h4 id="2-重新安装-electron-和-electron-builder"><a href="#2-重新安装-electron-和-electron-builder" class="headerlink" title="2. 重新安装 electron 和 electron-builder"></a>2. 重新安装 electron 和 electron-builder</h4><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add electron</span><br><span class="line">yarn add electron-builder</span><br></pre></td></tr></tbody></table></figure>
-
-<p>安装 electron-builder 的时候，会报错：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error @achrinza/node-ipc@9.2.2: The engine "node" is incompatible with this module. Expected version "8 || 10 || 12 || 14 || 16 || 17". Got "22.11.0"</span><br><span class="line">error Found incompatible module.</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这是因为我们的 node 版本太高了，而 electron-builder 不支持这么高的版本，但是实际上无所谓。</p>
-<p>输入以下命令，忽略这个错误：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add electron-builder --ignore-engines</span><br></pre></td></tr></tbody></table></figure>
-<p>或者将其默认设置为忽略错误：</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config set ignore-engines true</span><br></pre></td></tr></tbody></table></figure>
-
-<p>然后再次安装 electron-builder</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add electron-builder</span><br></pre></td></tr></tbody></table></figure>
-
-<p>之后问题就解决了，运行<code>yarn electron:serve</code>就能够在 electron 窗口中打开项目了。</p>
-<span id="more"></span>
-
-<hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
     </div>
 
     
@@ -360,8 +334,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/29/1.Archieve/20min%EF%BC%9A%E4%BD%BF%E7%94%A8GithubAction%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BD%A0%E7%9A%84electron%E6%89%93%E5%8C%85/" rel="prev" title="使用GithubAction自动化你的electron打包">
-                  <i class="fa fa-angle-left"></i> 使用GithubAction自动化你的electron打包
+                <a href="/2024/11/12/2.Reference/GTD%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" rel="prev" title="">
+                  <i class="fa fa-angle-left"></i> 
                 </a>
             </div>
             <div class="post-nav-item">
