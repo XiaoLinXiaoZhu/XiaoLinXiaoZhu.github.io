@@ -18,12 +18,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+    <meta name="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
 <meta property="og:type" content="website">
 <meta property="og:title" content="XLXZ's Blog">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/page/2/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+<meta property="og:description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="XLXZ">
 <meta name="twitter:card" content="summary">
@@ -141,7 +141,7 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -198,7 +198,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -247,163 +247,211 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state=""># AI绘画</a> <br></p>
-<h1 id="AI绘画模型：anime-illust-diffusion-xl"><a href="#AI绘画模型：anime-illust-diffusion-xl" class="headerlink" title="AI绘画模型：anime-illust-diffusion-xl"></a>AI绘画模型：anime-illust-diffusion-xl</h1><p>它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：</p>
-<h1 id="模型介绍（Chinese-Part）"><a href="#模型介绍（Chinese-Part）" class="headerlink" title="模型介绍（Chinese Part）"></a>模型介绍（Chinese Part）</h1><h2 id="I-目录"><a href="#I-目录" class="headerlink" title="I 目录"></a>I 目录</h2><p>在本介绍中，您将了解：</p>
-<ol>
-<li><p>模型介绍（见 II 部分）；</p>
-</li>
-<li><p>使用指南（见 III 部分）；</p>
-</li>
-<li><p>训练参数（见 IV 部分）；</p>
-</li>
-<li><p>触发词列表（见附录 A 部分）</p>
-</li>
+          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state="">#
+AI绘画</a> <br> # AI绘画模型：anime-illust-diffusion-xl</p>
+<p>它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：</p>
+<h1 id="模型介绍chinese-part">模型介绍（Chinese Part）</h1>
+<h2 id="i-目录">I 目录</h2>
+<p>在本介绍中，您将了解：</p>
+<ol type="1">
+<li><p>模型介绍（见 II 部分）；</p></li>
+<li><p>使用指南（见 III 部分）；</p></li>
+<li><p>训练参数（见 IV 部分）；</p></li>
+<li><p>触发词列表（见附录 A 部分）</p></li>
 </ol>
-<h2 id="II-模型介绍"><a href="#II-模型介绍" class="headerlink" title="II 模型介绍"></a>II 模型介绍</h2><p>动漫插画设计XL，或称 AIDXL 是一款专用于生成二次元插图的模型。它内置了 <strong>800</strong> 种以上（随着更新越来越多）的插画风格，依靠特定触发词（见附录 A 部分）触发。</p>
-<p>优点：构图大胆，没有摆拍感，主体突出，没有过多繁杂的细节，认识很多动漫人物（依靠角色日文名拼音触发，例如，“ayanami rei”对应角色“绫波丽”，“kamado nezuko”对应角色“祢豆子”）。</p>
-<h2 id="III-使用指南（将与时俱进）"><a href="#III-使用指南（将与时俱进）" class="headerlink" title="III 使用指南（将与时俱进）"></a>III 使用指南（将与时俱进）</h2><h3 id="1-基本用法"><a href="#1-基本用法" class="headerlink" title="1 基本用法"></a>1 基本用法</h3><p><strong>1.1 提示词书写</strong></p>
-<ol>
-<li><p><strong>使用触发词</strong>：使用附录 A 所提供的触发词来风格化图像。适合的触发词将 <strong>极大地</strong> 提高生成质量；</p>
-</li>
-<li><p><strong>提示词标签化</strong>：使用标签化的提示词描述生成对象；</p>
-</li>
+<h2 id="ii-模型介绍">II 模型介绍</h2>
+<p>动漫插画设计XL，或称 AIDXL 是一款专用于生成二次元插图的模型。它内置了
+<strong>800</strong>
+种以上（随着更新越来越多）的插画风格，依靠特定触发词（见附录 A
+部分）触发。</p>
+<p>优点：构图大胆，没有摆拍感，主体突出，没有过多繁杂的细节，认识很多动漫人物（依靠角色日文名拼音触发，例如，“ayanami
+rei”对应角色“绫波丽”，“kamado nezuko”对应角色“祢豆子”）。</p>
+<h2 id="iii-使用指南将与时俱进">III 使用指南（将与时俱进）</h2>
+<h3 id="基本用法">1 基本用法</h3>
+<p><strong>1.1 提示词书写</strong></p>
+<ol type="1">
+<li><p><strong>使用触发词</strong>：使用附录 A
+所提供的触发词来风格化图像。适合的触发词将 <strong>极大地</strong>
+提高生成质量；</p></li>
+<li><p><strong>提示词标签化</strong>：使用标签化的提示词描述生成对象；</p></li>
 <li><p><strong>提示词排序</strong>：排序您的提示词将有助于模型理解词义。推荐的标签顺序：</p>
-<p><strong>触发词（by xxx）</strong>-&gt;主角（1girl）-&gt;<strong>角色（frieren）</strong>-&gt;种族（elf）-&gt;<strong>构图（cowboy shot）</strong>-&gt;风格（impasto）-&gt;主题（fantasy）-&gt;主要环境（forest, day）-&gt;<strong>背景（gradient background）</strong>-&gt;动作（sitting）-&gt;表情（expressionless）-&gt;<strong>主要人物特征（white hair）</strong>-&gt;<strong>人体特征（twintails, green eyes, parted lip）</strong>-&gt;<strong>服饰（white dress）</strong>-&gt;服装配件（frills）-&gt;其他物品（magic wand）-&gt;次要环境（grass, sunshine）-&gt;<strong>美学（beautiful color, detailed, aesthetic）</strong>-&gt;<strong>质量（best quality）</strong></p>
-</li>
-<li><p><strong>负面提示词</strong>：**<em>worst quality</em>**_,_ <strong><em>low quality</em></strong><em>,</em> <strong><em>lowres</em></strong><em>,</em> <strong><em>messy</em></strong>, <em>abstract, ugly, disfigured, bad anatomy, deformed hands, fused fingers, signature, text, multi views</em></p>
-</li>
+<p><strong>触发词（by
+xxx）</strong>-&gt;主角（1girl）-&gt;<strong>角色（frieren）</strong>-&gt;种族（elf）-&gt;<strong>构图（cowboy
+shot）</strong>-&gt;风格（impasto）-&gt;主题（fantasy）-&gt;主要环境（forest,
+day）-&gt;<strong>背景（gradient
+background）</strong>-&gt;动作（sitting）-&gt;表情（expressionless）-&gt;<strong>主要人物特征（white
+hair）</strong>-&gt;<strong>人体特征（twintails, green eyes, parted
+lip）</strong>-&gt;<strong>服饰（white
+dress）</strong>-&gt;服装配件（frills）-&gt;其他物品（magic
+wand）-&gt;次要环境（grass, sunshine）-&gt;<strong>美学（beautiful
+color, detailed, aesthetic）</strong>-&gt;<strong>质量（best
+quality）</strong></p></li>
+<li><p><strong>负面提示词</strong>：<strong><em>worst
+quality</em></strong>_,_ <strong><em>low quality</em></strong>_,_
+<strong><em>lowres</em></strong>_,_ <strong><em>messy</em></strong>,
+<em>abstract, ugly, disfigured, bad anatomy, deformed hands, fused
+fingers, signature, text, multi views</em></p></li>
 </ol>
 <p><strong>1.2 生成参数</strong></p>
-<ol>
-<li><p><strong>分辨率</strong>：确保图像总分辨率（总分辨率=高度x宽度）围绕1024*1024且宽和高均为32的倍数。例如，832x1216 (3:2), 1216x832 (3:2), 以及 1024x1024 (1:1)。</p>
-</li>
-<li><p>不进行“<strong>Clip Skip</strong>”操作，即 Clip Skip = 1。</p>
-</li>
-<li><p><strong>采样器</strong>和<strong>步数</strong>：采用 “euler_ancester” 采样器（sampler），该组合在 webui 里称为 Euler A。在 7 CFG Scale 上采样 28 步。</p>
-</li>
-<li><p>仅需要使用模型本身，而不使用精炼器（Refiner）。</p>
-</li>
-<li><p>使用基底模型 vae 或 sdxl-vae。</p>
-</li>
+<ol type="1">
+<li><p><strong>分辨率</strong>：确保图像总分辨率（总分辨率=高度x宽度）围绕1024*1024且宽和高均为32的倍数。例如，832x1216
+(3:2), 1216x832 (3:2), 以及 1024x1024 (1:1)。</p></li>
+<li><p>不进行“<strong>Clip Skip</strong>”操作，即 Clip Skip =
+1。</p></li>
+<li><p><strong>采样器</strong>和<strong>步数</strong>：采用
+“euler_ancester” 采样器（sampler），该组合在 webui 里称为 Euler A。在 7
+CFG Scale 上采样 28 步。</p></li>
+<li><p>仅需要使用模型本身，而不使用精炼器（Refiner）。</p></li>
+<li><p>使用基底模型 vae 或 sdxl-vae。</p></li>
 </ol>
-<h3 id="2-特殊用法"><a href="#2-特殊用法" class="headerlink" title="2 特殊用法"></a>2 特殊用法</h3><p><strong>2.1 泛风格化</strong></p>
-<p>0.7 版本归纳了若干相似插画画风，引入了泛风格触发词。泛风格触发词各代表一种常见动漫插画画风类别。</p>
+<h3 id="特殊用法">2 特殊用法</h3>
+<p><strong>2.1 泛风格化</strong></p>
+<p>0.7
+版本归纳了若干相似插画画风，引入了泛风格触发词。泛风格触发词各代表一种常见动漫插画画风类别。</p>
 <p>请注意，泛风格触发词并不一定符合其词义指代的美术含义，而是经过重新定义的特殊触发词。</p>
 <p><strong>2.2 角色</strong></p>
-<p>0.7 版本对强化训练了角色。部分角色触发词的还原度已经能够达到 lora 的效果，且能够很好地将角色概念与其本身的着装分离。</p>
-<p>角色触发方式为 <code>角色名 \(作品\)</code>。例如，触发动画《赛博朋克：边缘行者》的女主角露西则使用 <code>lucy \(cyberpunk\)</code>；触发游戏《原神》中的角色甘雨则使用 <code>ganyu \(genshin impact\)</code>。这里，“lucy” 和 “ganyu” 为角色名，“\(cyberpunk\)” 和 “\(genshin impact\)” 则为对应角色的作品出处，括号使用斜杠”\“转义以防止被解释为提示词加权。对于部分角色，出处并非必要。</p>
-<p>角色触发词请参照 <a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">selected_tags.csv · SmilingWolf/wd-v1-4-convnext-tagger-v2 at main (</a><a target="_blank" rel="noopener" href="http://huggingface.co/">huggingface.co</a><a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">)</a>。</p>
+<p>0.7 版本对强化训练了角色。部分角色触发词的还原度已经能够达到 lora
+的效果，且能够很好地将角色概念与其本身的着装分离。</p>
+<p>角色触发方式为
+<code>角色名 \(作品\)</code>。例如，触发动画《赛博朋克：边缘行者》的女主角露西则使用
+<code>lucy \(cyberpunk\)</code>；触发游戏《原神》中的角色甘雨则使用
+<code>ganyu \(genshin impact\)</code>。这里，“lucy” 和 “ganyu”
+为角色名，“\(cyberpunk\)” 和 “\(genshin impact\)”
+则为对应角色的作品出处，括号使用斜杠"\"转义以防止被解释为提示词加权。对于部分角色，出处并非必要。</p>
+<p>角色触发词请参照 <a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">selected_tags.csv
+· SmilingWolf/wd-v1-4-convnext-tagger-v2 at main (</a><a target="_blank" rel="noopener" href="http://huggingface.co">huggingface.co</a><a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">)</a>。</p>
 <p>在使用中，若仅靠单个角色触发词无法完全还原角色，则需要在提示词中添加该角色的主要特征。</p>
-<p>角色触发词通常不会携带角色本身的着装特征，若要添加角色着装，则需要在提示词中添加衣物名。例如，游戏《碧蓝航线》中角色圣路易斯 ( <code>st. louis \(luxurious wheels\) \(azur lane\)</code> ) 的衣装触发可使用 <code>silver evening gown, plunging neckline</code>。类似地，您也能对任何角色添加其他角色的衣装标签。</p>
+<p>角色触发词通常不会携带角色本身的着装特征，若要添加角色着装，则需要在提示词中添加衣物名。例如，游戏《碧蓝航线》中角色圣路易斯
+( <code>st. louis \(luxurious wheels\) \(azur lane\)</code> )
+的衣装触发可使用
+<code>silver evening gown, plunging neckline</code>。类似地，您也能对任何角色添加其他角色的衣装标签。</p>
 <p><strong>2.3 质量标签</strong></p>
-<p>0.7 版本的质量和美学标签<strong>经过正式训练</strong>，在提示词中尾随它们将影响生成图像的质量。</p>
-<p>0.7 版本正式训练并引入了质量标签，质量标签分为六个等级，由好到坏分别为：**<em>amazing quality</em>**, <strong><em>best quality</em></strong>, <strong><em>high quality</em></strong>, <strong><em>normal quality</em></strong><em>,</em> <strong><em>low quality</em></strong> 和 <strong><em>worst quality</em></strong>.</p>
+<p>0.7
+版本的质量和美学标签<strong>经过正式训练</strong>，在提示词中尾随它们将影响生成图像的质量。</p>
+<p>0.7
+版本正式训练并引入了质量标签，质量标签分为六个等级，由好到坏分别为：<strong><em>amazing
+quality</em></strong>, <strong><em>best quality</em></strong>,
+<strong><em>high quality</em></strong>, <strong><em>normal
+quality</em></strong>_,_ <strong><em>low quality</em></strong> 和
+<strong><em>worst quality</em></strong>.</p>
 <p><strong>2.4 美学标签</strong></p>
 <p>0.7 版本起引入了美学标签，描述图像的特殊美学特征。</p>
 <p>2.5 风格融合</p>
-<p>您可以将一些样式合并到您的自定义样式中。 “合并”实际上意味着一次使用多种风格触发词。 例如，<em>chun-li, amazing quality,</em> <strong><em>(by yoneyama mai:0.9), (by chi4:0.8), by ask, by modare, (by ikky:0.9).</em></strong></p>
+<p>您可以将一些样式合并到您的自定义样式中。
+“合并”实际上意味着一次使用多种风格触发词。 例如，<em>chun-li, amazing
+quality,</em> <strong><em>(by yoneyama mai:0.9), (by chi4:0.8), by ask,
+by modare, (by ikky:0.9).</em></strong></p>
 <p>一些技巧：</p>
 <ul>
-<li><p>控制风格的权重和顺序来调整最终风格。</p>
-</li>
-<li><p>尾随而非前置到提示词上。</p>
-</li>
+<li><p>控制风格的权重和顺序来调整最终风格。</p></li>
+<li><p>尾随而非前置到提示词上。</p></li>
 </ul>
-<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3 注意事项"></a>3 注意事项</h3><ol>
-<li><p>使用 SDXL 支持的 VAE 模型、文本嵌入（embeddings）模型和 Lora 模型。注意：sd-vae-ft-mse-original 不是支持 SDXL 的 vae；EasyNegative、badhandv4 等负面文本嵌入也不是支持 SDXL 的 embeddings；</p>
-</li>
-<li><p>对于 0.61 及以下版本：生成图像时，强烈推荐使用模型专用的负面文本嵌入（下载参见 Suggested Resources 栏），因其为模型特制，故对模型几乎仅有正面效果；</p>
-</li>
-<li><p>每个版本新增触发词将在当前版本效果相对较弱或不稳定。</p>
-</li>
+<h3 id="注意事项">3 注意事项</h3>
+<ol type="1">
+<li><p>使用 SDXL 支持的 VAE 模型、文本嵌入（embeddings）模型和 Lora
+模型。注意：sd-vae-ft-mse-original 不是支持 SDXL 的
+vae；EasyNegative、badhandv4 等负面文本嵌入也不是支持 SDXL 的
+embeddings；</p></li>
+<li><p>对于 0.61
+及以下版本：生成图像时，强烈推荐使用模型专用的负面文本嵌入（下载参见
+Suggested Resources
+栏），因其为模型特制，故对模型几乎仅有正面效果；</p></li>
+<li><p>每个版本新增触发词将在当前版本效果相对较弱或不稳定。</p></li>
 </ol>
-<h2 id="IV-训练参数"><a href="#IV-训练参数" class="headerlink" title="IV 训练参数"></a>IV 训练参数</h2><p>以 SDXL1.0 为底模，使用大约 2w 张自己标注的图像在 5e-6 学习率，循环次数为 1 的余弦调度器上训练了约 100 期得到模型 A。之后在 2e-7 学习率，其余参数相同的条件下，训练得到模型 B。将模型 A 与 B 混合后得到 AIDXLv0.1 模型。</p>
+<h2 id="iv-训练参数">IV 训练参数</h2>
+<p>以 SDXL1.0 为底模，使用大约 2w 张自己标注的图像在 5e-6
+学习率，循环次数为 1 的余弦调度器上训练了约 100 期得到模型 A。之后在
+2e-7 学习率，其余参数相同的条件下，训练得到模型 B。将模型 A 与 B
+混合后得到 AIDXLv0.1 模型。</p>
 <p><em>其他训练参数请参照英文版本的介绍。</em></p>
-<h2 id="V-特别鸣谢"><a href="#V-特别鸣谢" class="headerlink" title="V 特别鸣谢"></a>V 特别鸣谢</h2><p>算力赞助：感谢 @捏Ta 社区（<a target="_blank" rel="noopener" href="https://nieta.art/">捏Ta (</a><a target="_blank" rel="noopener" href="http://nieta.art/">nieta.art</a><a target="_blank" rel="noopener" href="https://nieta.art/">)</a>）提供的算力支持；</p>
-<p>数据支持：感谢 @秋麒麟热茶（<a target="_blank" rel="noopener" href="https://civitai.com/user/KirinTea_Aki">KirinTea_Aki Creator Profile | Civitai</a>） 和 @风吟（<a target="_blank" rel="noopener" href="https://civitai.com/user/Chenkin">Chenkin Creator Profile | Civitai</a>）提供的大量数据支持；</p>
+<h2 id="v-特别鸣谢">V 特别鸣谢</h2>
+<p>算力赞助：感谢 <span class="citation" data-cites="捏Ta">@捏Ta</span>
+社区（<a target="_blank" rel="noopener" href="https://nieta.art/">捏Ta (</a><a target="_blank" rel="noopener" href="http://nieta.art">nieta.art</a><a target="_blank" rel="noopener" href="https://nieta.art/">)</a>）提供的算力支持；</p>
+<p>数据支持：感谢 <span class="citation" data-cites="秋麒麟热茶">@秋麒麟热茶</span>（<a target="_blank" rel="noopener" href="https://civitai.com/user/KirinTea_Aki">KirinTea_Aki Creator
+Profile | Civitai</a>） 和 <span class="citation" data-cites="风吟">@风吟</span>（<a target="_blank" rel="noopener" href="https://civitai.com/user/Chenkin">Chenkin Creator Profile |
+Civitai</a>）提供的大量数据支持；</p>
 <p>没有它们就不会有 0.7 版本。</p>
-<h2 id="VI-更新日志"><a href="#VI-更新日志" class="headerlink" title="VI 更新日志"></a>VI 更新日志</h2><p>2023/08/08：AIDXL 使用与 AIDv2.10 完全相同的训练集进行训练，但表现优于 AIDv2.10。AIDXL 更聪明，能做到很多以 SD1.5 为底模型无法做到的事。它还能很好地区分不同概念，学习图像细节，处理对 SD1.5 来说难于登天的构图，几近完美地学习旧版 AID 无法完全掌握的风格。总的来说，它拥有比 SD1.5 更高的上限，我会继续更新 AIDXL。</p>
-<p>2024/01/27：0.7 版本新增了大量内容，数据集大小是上一版本的两倍以上。</p>
-<ol>
-<li><p>为了得到令人满意的标注，我尝试了很多新的标签处理算法，例如标签排序、标签分层随机化、角色特征分离等等。项目地址：<a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">Eugeoter/sd-dataset-manager (</a><a target="_blank" rel="noopener" href="http://github.com/">github.com</a><a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">)</a>；</p>
-</li>
-<li><p>为了使训练可控，且更加服从我的意愿，我基于 Kohya-ss 制作了特制的训练脚本；</p>
-</li>
-<li><p>为了掌控不同世代的模型的融合过程，我开发了一些启发式的模型融合算法；为了使模型达到足够的风格化，我放弃了通过融合文本编码器和UNET的OUT层来提高模型的稳定和美学，因为这会伤害模型的风格。</p>
-</li>
-<li><p>为了筛选和过滤数据，我训练了一个水印检测模型、一个图像分类模型、一个美学评分模型，来帮助我清洗数据。</p>
-</li>
+<h2 id="vi-更新日志">VI 更新日志</h2>
+<p>2023/08/08：AIDXL 使用与 AIDv2.10
+完全相同的训练集进行训练，但表现优于 AIDv2.10。AIDXL
+更聪明，能做到很多以 SD1.5
+为底模型无法做到的事。它还能很好地区分不同概念，学习图像细节，处理对
+SD1.5 来说难于登天的构图，几近完美地学习旧版 AID
+无法完全掌握的风格。总的来说，它拥有比 SD1.5 更高的上限，我会继续更新
+AIDXL。</p>
+<p>2024/01/27：0.7
+版本新增了大量内容，数据集大小是上一版本的两倍以上。</p>
+<ol type="1">
+<li><p>为了得到令人满意的标注，我尝试了很多新的标签处理算法，例如标签排序、标签分层随机化、角色特征分离等等。项目地址：<a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">Eugeoter/sd-dataset-manager
+(</a><a target="_blank" rel="noopener" href="http://github.com">github.com</a><a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">)</a>；</p></li>
+<li><p>为了使训练可控，且更加服从我的意愿，我基于 Kohya-ss
+制作了特制的训练脚本；</p></li>
+<li><p>为了掌控不同世代的模型的融合过程，我开发了一些启发式的模型融合算法；为了使模型达到足够的风格化，我放弃了通过融合文本编码器和UNET的OUT层来提高模型的稳定和美学，因为这会伤害模型的风格。</p></li>
+<li><p>为了筛选和过滤数据，我训练了一个水印检测模型、一个图像分类模型、一个美学评分模型，来帮助我清洗数据。</p></li>
 </ol>
-<h2 id="VII-赞助我们"><a href="#VII-赞助我们" class="headerlink" title="VII 赞助我们"></a>VII 赞助我们</h2><p>如果您喜欢我们的工作，欢迎通过 Ko-fi(<a target="_blank" rel="noopener" href="https://ko-fi.com/eugeai">https://ko-fi.com/eugeai</a>) 赞助我们，以支持我们的研究和开发，感谢您的支持！</p>
-<h2 id="Appendix-附录"><a href="#Appendix-附录" class="headerlink" title="Appendix / 附录"></a>Appendix / 附录</h2><h3 id="A-Special-Trigger-Words-List-特殊触发词列表"><a href="#A-Special-Trigger-Words-List-特殊触发词列表" class="headerlink" title="A. Special Trigger Words List / 特殊触发词列表"></a>A. Special Trigger Words List / 特殊触发词列表</h3><ul>
-<li><p><strong>Art style trigger words</strong>: <a target="_blank" rel="noopener" href="https://huggingface.co/Eugeoter/anime_illust_diffusion_xl/blob/main/references/artist.csv">Click me</a></p>
-</li>
-<li><p><strong>Painting style trigger words</strong>: flat color, clean color, celluloid, flat-pasto, thin-pasto, pseudo-impasto, impasto, realistic, photorealistic, cel shading, 3d</p>
+<h2 id="vii-赞助我们">VII 赞助我们</h2>
+<p>如果您喜欢我们的工作，欢迎通过 Ko-fi(<a target="_blank" rel="noopener" href="https://ko-fi.com/eugeai">https://ko-fi.com/eugeai</a>)
+赞助我们，以支持我们的研究和开发，感谢您的支持！</p>
+<h2 id="appendix-附录">Appendix / 附录</h2>
+<h3 id="a.-special-trigger-words-list-特殊触发词列表">A. Special Trigger
+Words List / 特殊触发词列表</h3>
 <ul>
-<li><p>flat color: Flat colors, using lines to describe light and shadow</p>
-<p>平涂：平面色彩，使用线条和色块描述光影和层次</p>
-</li>
-<li><p>clean color: Style between flat color and flat-pasto. Simple and tidy coloring.</p>
-<p>具有简洁色彩的平涂，介于 flat color 和 flat-pasto 之间</p>
-</li>
+<li><p><strong>Art style trigger words</strong>: <a target="_blank" rel="noopener" href="https://huggingface.co/Eugeoter/anime_illust_diffusion_xl/blob/main/references/artist.csv">Click
+me</a></p></li>
+<li><p><strong>Painting style trigger words</strong>: flat color, clean
+color, celluloid, flat-pasto, thin-pasto, pseudo-impasto, impasto,
+realistic, photorealistic, cel shading, 3d</p>
+<ul>
+<li><p>flat color: Flat colors, using lines to describe light and
+shadow</p>
+<p>平涂：平面色彩，使用线条和色块描述光影和层次</p></li>
+<li><p>clean color: Style between flat color and flat-pasto. Simple and
+tidy coloring.</p>
+<p>具有简洁色彩的平涂，介于 flat color 和 flat-pasto 之间</p></li>
 <li><p>celluloid: Anime coloring</p>
-<p>平涂赛璐璐：动漫着色</p>
-</li>
-<li><p>flat-pasto: Nearly flat color, using gradient color to describe lighting and shadow</p>
-<p>接近平面的色彩，使用渐变描述光影和层次</p>
-</li>
-<li><p>thin-pasto: Thin contour, using gradient and paint thickness to describe light, shadow and layers</p>
+<p>平涂赛璐璐：动漫着色</p></li>
+<li><p>flat-pasto: Nearly flat color, using gradient color to describe
+lighting and shadow</p>
+<p>接近平面的色彩，使用渐变描述光影和层次</p></li>
+<li><p>thin-pasto: Thin contour, using gradient and paint thickness to
+describe light, shadow and layers</p>
 <p>细轮廓勾线，使用渐变和颜料厚度描述光影和层次</p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3664840-42e6-4fcf-b034-4aac7d816c09/width=525/e3664840-42e6-4fcf-b034-4aac7d816c09.jpeg"></p>
-</li>
-<li><p>pseudo-impasto：Use gradients and paint thickness to describe light, shadow and layers</p>
-<p>伪厚涂 / 半厚涂：使用渐变和颜料厚度描述光影和层次</p>
-</li>
-<li><p>impasto：Use paint thickness to describe light, shadow and gradation</p>
-<p>厚涂：使用颜料厚度描述光影和层次</p>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3664840-42e6-4fcf-b034-4aac7d816c09/width=525/e3664840-42e6-4fcf-b034-4aac7d816c09.jpeg"></p></li>
+<li><p>pseudo-impasto：Use gradients and paint thickness to describe
+light, shadow and layers</p>
+<p>伪厚涂 / 半厚涂：使用渐变和颜料厚度描述光影和层次</p></li>
+<li><p>impasto：Use paint thickness to describe light, shadow and
+gradation</p>
+<p>厚涂：使用颜料厚度描述光影和层次</p></li>
 <li><p>realistic</p>
-<p>写实</p>
-</li>
+<p>写实</p></li>
 <li><p>photorealistic：Redefined to a style closer to the real world</p>
-<p>相片写实主义：重定义为接近真实世界的风格</p>
-</li>
+<p>相片写实主义：重定义为接近真实世界的风格</p></li>
 <li><p>cel shading: Anime 3D modeling style</p>
-<p>卡通渲染：二次元三维建模风格</p>
-</li>
+<p>卡通渲染：二次元三维建模风格</p></li>
 <li><p>3d</p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d8ec942-4c66-48d8-b82a-51b4bbfd597c/width=525/1d8ec942-4c66-48d8-b82a-51b4bbfd597c.jpeg"></p>
-</li>
-</ul>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d8ec942-4c66-48d8-b82a-51b4bbfd597c/width=525/1d8ec942-4c66-48d8-b82a-51b4bbfd597c.jpeg"></p></li>
+</ul></li>
 <li><p><strong>Aesthetic trigger words:</strong></p>
 <ul>
 <li><p>beautiful</p>
-<p>美丽</p>
-</li>
+<p>美丽</p></li>
 <li><p>aesthetic: slightly abstract artistic sense</p>
-<p>唯美：稍微抽象的艺术感</p>
-</li>
+<p>唯美：稍微抽象的艺术感</p></li>
 <li><p>detailed</p>
-<p>细致</p>
-</li>
+<p>细致</p></li>
 <li><p>beautiful color: subtle use of color</p>
-<p>协调的色彩：精妙的用色</p>
-</li>
-<li><p>lowres</p>
-</li>
+<p>协调的色彩：精妙的用色</p></li>
+<li><p>lowres</p></li>
 <li><p>messy: messy composition or details</p>
-<p>杂乱：杂乱的构图或细节</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Quality trigger words</strong>: amazing quality, best quality, high quality, low quality, worst quality</p>
+<p>杂乱：杂乱的构图或细节</p></li>
+</ul></li>
+<li><p><strong>Quality trigger words</strong>: amazing quality, best
+quality, high quality, low quality, worst quality</p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f4cddf2b-2a3b-4ca4-84c3-dd70b5e2e5c0/width=525/f4cddf2b-2a3b-4ca4-84c3-dd70b5e2e5c0.jpeg"></p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/895a417a-0ffd-4cb1-877d-c2c59b323eb3/width=525/895a417a-0ffd-4cb1-877d-c2c59b323eb3.jpeg"></p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9063a6d4-25a0-4de1-a193-3d203d1ea06e/width=525/9063a6d4-25a0-4de1-a193-3d203d1ea06e.jpeg"></p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7417733-a110-41dc-9490-34a2aa13b3c5/width=525/a7417733-a110-41dc-9490-34a2aa13b3c5.jpeg"></p>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7417733-a110-41dc-9490-34a2aa13b3c5/width=525/a7417733-a110-41dc-9490-34a2aa13b3c5.jpeg"></p></li>
 </ul>
           <!--noindex-->
             <div class="post-button">
@@ -447,7 +495,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -502,61 +550,64 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state=""># AI绘画</a> <br></p>
+          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state="">#
+AI绘画</a> <br></p>
 <p>这里用来记录比较好的结果：</p>
-<h2 id="约尔太太和🛏"><a href="#约尔太太和🛏" class="headerlink" title="约尔太太和🛏"></a>约尔太太和🛏</h2><p>tags::  #NSFW, #约尔太太<br>category:: Prompt</p>
+<h2 id="约尔太太和">约尔太太和🛏</h2>
+<p>tags:: #NSFW, #约尔太太 category:: Prompt</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1girl,yor briar,medium breasts,open clothes,Pov mating press,1girl,1boy,pov,lying down,legs up,faceless male,cheating_(relationship),spreading legs,  </span><br><span class="line">BREAK  </span><br><span class="line">tunamayo (dsasd751),very aesthetic,ultra-detailed,masterpiece,best quality,amazing quality,&lt;lora:ZZZ_Emoji_style_ILv2:1&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,bad detail,lowres,bad anatomy,watermark,deformed,bad hands,sketch,3d,realistic,white background,  </span><br><span class="line">Steps: 29, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 7, Seed: 5116573, Size: 752x1040, Model hash: 89cb4ec0a9, Model: waiNSFWIllustrious_v120, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
 <p><img src="/2024/03/01/3.Source/00032-5116576.png"></p>
 <p>只能说这个底模太牛逼了，无需要复杂的提示词就能有非常好的效果</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1girl,yor briar,medium breasts,open clothes,Pov mating press,1girl,1boy,pov,lying down,legs up,faceless male,cheating_(relationship),spreading legs,  </span><br><span class="line">BREAK  </span><br><span class="line">tunamayo (dsasd751),very aesthetic,ultra-detailed,masterpiece,best quality,amazing quality,&lt;lora:ZZZ_Emoji_style_ILv2:1&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,bad detail,lowres,bad anatomy,watermark,deformed,bad hands,sketch,3d,realistic,white background,  </span><br><span class="line">Steps: 40, Sampler: Euler a, Schedule type: Automatic, CFG scale: 7, Seed: 5116573, Size: 832x1216, Model hash: 89cb4ec0a9, Model: waiNSFWIllustrious_v120, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-<p>![](/2024/03/01/3.Source/Pasted image 20250410222550.png)</p>
-<h2 id="另外一个，逆兔女郎，还不错"><a href="#另外一个，逆兔女郎，还不错" class="headerlink" title="另外一个，逆兔女郎，还不错"></a>另外一个，逆兔女郎，还不错</h2><p>tags:: #逆兔女郎<br>category:: Prompt</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece, very aesthetic, best quality, 1girl, skinny body, reverse_outfit, reverse_bunnysuit,  breasts, solo, navel,  animal_ears, female_pubic_hair, pubic_hair, rabbit_ears, shrug_(clothing), bowtie, bow, short_hair, fake_animal_ears, looking_at_viewer,  erected big nipples, pink nipples, holding candy, greedily looking on candy, nipple piercing, swooping medium tits, detailed tits, (puffy labia:1.4),  ((slim body)), fit slim, dynamic angle, unshaved pussy, trimmed pubic hair, slender legs, long legs, hipbone, skinny body, narrow waist, multiple boys, imminent group sex, thick penis, imminent gangbang, body grab, molested, aggressive grab, aggressive sex, rough sex, imminent sex,multiple penetration,double insertion,(gangbang, group sex, large cock, big dick,wear condom, hard pounding, deep penetration, groping, grabbing breasts, grabbing waist, pulling hair, pulling arms, hardcore ,wild sex, size difference, armpit sex, armpit fuck, used condoms everywhere)</span><br><span class="line">Negative prompt: Female tongue, female tongue out, Neck grab, worst quality, low quality, displeasing, text, , watermark, bad anatomy, text, artist name, signature, hearts, deformed hands, missing finger, shiny skin,child,children</span><br><span class="line">Steps: 40, CFG scale: 4, Sampler: Euler a, Seed: 2125656973, extra: [object Object], Size: 832x1216, nsfw: false, draft: false, width: 832, height: 1216, quantity: 2, workflow: txt2img, baseModel: Illustrious, Created Date: 2025-04-04T1504:42.1508795Z, Clip skip: 2</span><br></pre></td></tr></tbody></table></figure>
-<p><img src="/2024/03/01/3.Source/00046-2125656973.png"></p>
-<h2 id="看向冰箱"><a href="#看向冰箱" class="headerlink" title="看向冰箱"></a>看向冰箱</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,amazing quality, solo, androgynous asian woman , looking at a refrigerator, refrigerator interior,  </span><br><span class="line">from behind, bent over, </span><br><span class="line">(flat cute color 0.9), thick thighs, small breasts , wide hips, highly detailed isometric kitchen, from below</span><br><span class="line">Negative prompt: (lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, jpeg artifacts, signature, watermark, text, logo, artist name, text censor</span><br><span class="line">Steps: 20, CFG scale: 7, Sampler: Euler a, Seed: 803762383, Size: 1024x1536, Model: waiNSFWIllustrious_v120.safetensors, Model hash: 89CB4EC0A91D3626F65FB8EF187F9CBA92C74C3EA1123DE28291BDCCA25E7778</span><br></pre></td></tr></tbody></table></figure>
-<p>![](/2024/03/01/3.Source/Pasted image 20250411223838.png)</p>
-<h2 id="球鞋和黑裤袜"><a href="#球鞋和黑裤袜" class="headerlink" title="球鞋和黑裤袜"></a>球鞋和黑裤袜</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(fine fabric:1.1),1girl,skinny,((from below, extremely low angle)),feet,heel,bending over,pantyhose,(textured pantyhose:1.5),(shiny pantyhose:0.2),(dripping wet pantyhose:0.5),(fine fabric emphasis:1.2),(high detail texture:1.1),panties around knees,(((white sneakers))),pink panties down,panties off,puffy pussy,dripping wet pussy,pretty pussy,close up,pigeon-toed,from behind,feet together,wooden floor background,&lt;lora:fine_fabric&gt;,  </span><br><span class="line">Negative prompt: lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,  </span><br><span class="line">fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,  </span><br><span class="line">signature,watermark,username,blurry,bad fee,front foot,  </span><br><span class="line">Steps: 35, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 986852428, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Denoising strength: 0.7, Clip skip: 2, Hires upscale: 2, Hires upscaler: Latent, Lora hashes: "fine_fabric: 3c7a8e88d7ea", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250410222550.png"></p>
+<h2 id="另外一个逆兔女郎还不错">另外一个，逆兔女郎，还不错</h2>
+<p>tags:: #逆兔女郎 category:: Prompt </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece, very aesthetic, best quality, 1girl, skinny body, reverse_outfit, reverse_bunnysuit,  breasts, solo, navel,  animal_ears, female_pubic_hair, pubic_hair, rabbit_ears, shrug_(clothing), bowtie, bow, short_hair, fake_animal_ears, looking_at_viewer,  erected big nipples, pink nipples, holding candy, greedily looking on candy, nipple piercing, swooping medium tits, detailed tits, (puffy labia:1.4),  ((slim body)), fit slim, dynamic angle, unshaved pussy, trimmed pubic hair, slender legs, long legs, hipbone, skinny body, narrow waist, multiple boys, imminent group sex, thick penis, imminent gangbang, body grab, molested, aggressive grab, aggressive sex, rough sex, imminent sex,multiple penetration,double insertion,(gangbang, group sex, large cock, big dick,wear condom, hard pounding, deep penetration, groping, grabbing breasts, grabbing waist, pulling hair, pulling arms, hardcore ,wild sex, size difference, armpit sex, armpit fuck, used condoms everywhere)</span><br><span class="line">Negative prompt: Female tongue, female tongue out, Neck grab, worst quality, low quality, displeasing, text, , watermark, bad anatomy, text, artist name, signature, hearts, deformed hands, missing finger, shiny skin,child,children</span><br><span class="line">Steps: 40, CFG scale: 4, Sampler: Euler a, Seed: 2125656973, extra: [object Object], Size: 832x1216, nsfw: false, draft: false, width: 832, height: 1216, quantity: 2, workflow: txt2img, baseModel: Illustrious, Created Date: 2025-04-04T1504:42.1508795Z, Clip skip: 2</span><br></pre></td></tr></tbody></table></figure> <img src="/2024/03/01/3.Source/00046-2125656973.png"><p></p>
+<h2 id="看向冰箱">看向冰箱</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,amazing quality, solo, androgynous asian woman , looking at a refrigerator, refrigerator interior,  </span><br><span class="line">from behind, bent over, </span><br><span class="line">(flat cute color 0.9), thick thighs, small breasts , wide hips, highly detailed isometric kitchen, from below</span><br><span class="line">Negative prompt: (lowres:1.2), (worst quality:1.4), (low quality:1.4), (bad anatomy:1.4), bad hands, jpeg artifacts, signature, watermark, text, logo, artist name, text censor</span><br><span class="line">Steps: 20, CFG scale: 7, Sampler: Euler a, Seed: 803762383, Size: 1024x1536, Model: waiNSFWIllustrious_v120.safetensors, Model hash: 89CB4EC0A91D3626F65FB8EF187F9CBA92C74C3EA1123DE28291BDCCA25E7778</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250411223838.png"></p>
+<h2 id="球鞋和黑裤袜">球鞋和黑裤袜</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(fine fabric:1.1),1girl,skinny,((from below, extremely low angle)),feet,heel,bending over,pantyhose,(textured pantyhose:1.5),(shiny pantyhose:0.2),(dripping wet pantyhose:0.5),(fine fabric emphasis:1.2),(high detail texture:1.1),panties around knees,(((white sneakers))),pink panties down,panties off,puffy pussy,dripping wet pussy,pretty pussy,close up,pigeon-toed,from behind,feet together,wooden floor background,&lt;lora:fine_fabric&gt;,  </span><br><span class="line">Negative prompt: lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,  </span><br><span class="line">fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,  </span><br><span class="line">signature,watermark,username,blurry,bad fee,front foot,  </span><br><span class="line">Steps: 35, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 986852428, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Denoising strength: 0.7, Clip skip: 2, Hires upscale: 2, Hires upscaler: Latent, Lora hashes: "fine_fabric: 3c7a8e88d7ea", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
 <p><img src="/2024/03/01/3.Source/00028-986852428.png"></p>
-<h2 id="泳池里的女孩"><a href="#泳池里的女孩" class="headerlink" title="泳池里的女孩"></a>泳池里的女孩</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,amazing quality,very aesthetic,newest,depth of field,(blurred background),(dramatic lighting:0.1),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,masterpiece,best quality,8k,simple_background,half close-up,sexy pose,blushing,asian girl,small head,pretty girl,korean girl,((slim body)),(small breasts),LARGE AREOLAE,Erect nipples,LONG NIPPLES,(PUFFY NIPPLES:0.9),dynamic angle,dynamic pose,ear piercings,nsfw,portrait,girl,naked,in water,wet skin,&lt;lora:Huge_perfect_nipples_concept_with_inverted:1&gt;,&lt;lora:long_nipples_addift:0.6&gt;,  </span><br><span class="line">Negative prompt: bad quality,worst quality,worst detail,censor,bad anatomy,duplicate hair shape,  </span><br><span class="line">Steps: 50, Sampler: Euler a, Schedule type: Automatic, CFG scale: 7, Seed: 253947270, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "Huge_perfect_nipples_concept_with_inverted: 8c1df68dbb3d, long_nipples_addift: 0bf97da89fc1", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
+<h2 id="泳池里的女孩">泳池里的女孩</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,amazing quality,very aesthetic,newest,depth of field,(blurred background),(dramatic lighting:0.1),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,masterpiece,best quality,8k,simple_background,half close-up,sexy pose,blushing,asian girl,small head,pretty girl,korean girl,((slim body)),(small breasts),LARGE AREOLAE,Erect nipples,LONG NIPPLES,(PUFFY NIPPLES:0.9),dynamic angle,dynamic pose,ear piercings,nsfw,portrait,girl,naked,in water,wet skin,&lt;lora:Huge_perfect_nipples_concept_with_inverted:1&gt;,&lt;lora:long_nipples_addift:0.6&gt;,  </span><br><span class="line">Negative prompt: bad quality,worst quality,worst detail,censor,bad anatomy,duplicate hair shape,  </span><br><span class="line">Steps: 50, Sampler: Euler a, Schedule type: Automatic, CFG scale: 7, Seed: 253947270, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "Huge_perfect_nipples_concept_with_inverted: 8c1df68dbb3d, long_nipples_addift: 0bf97da89fc1", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
 <p><img src="/2024/03/01/3.Source/00062-253947270.png"></p>
-<h2 id="“覆面”系"><a href="#“覆面”系" class="headerlink" title="“覆面”系"></a>“覆面”系</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">embedding:lazypos,extreme sex,1girl,asian girl,korean girl,black hair,fit,slim,medium breasts,straight hair,blunt bangs,hair over one eye,long hair,red eyes,  </span><br><span class="line">eyes crossed,torogao,spitroast,black choker,black jacket,open clothes,long sleeves,big eyes,(((penis over one eye, hetero, penis on face, 1penis, from above, partial side view, bed room, open mouth, tongue, saliva, blush))),head grab,large cock,hand on cock,hand squeezing testicles,grabbing balls,squeezing balls,cumshot,cum on hair,cum on face,cum on nose,((animated, bright colors, hentai)),&lt;lora:kawafe:1&gt;,  </span><br><span class="line">Negative prompt: duplicate hair shape,(highlights:0.3),  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 7, Seed: 673152417, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "kawafe: c81c37f55eb4", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-<p>![](/2024/03/01/3.Source/Pasted image 20250412113329.png)</p>
-<h2 id="otintin画师，太好看了"><a href="#otintin画师，太好看了" class="headerlink" title="otintin画师，太好看了"></a>otintin画师，太好看了</h2><p>这里的 croptop 是 短款上衣<br>covered nipples 非常对我的xp<br>trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva 这一串的效果非常好</p>
+<h2 id="覆面系">“覆面”系</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">embedding:lazypos,extreme sex,1girl,asian girl,korean girl,black hair,fit,slim,medium breasts,straight hair,blunt bangs,hair over one eye,long hair,red eyes,  </span><br><span class="line">eyes crossed,torogao,spitroast,black choker,black jacket,open clothes,long sleeves,big eyes,(((penis over one eye, hetero, penis on face, 1penis, from above, partial side view, bed room, open mouth, tongue, saliva, blush))),head grab,large cock,hand on cock,hand squeezing testicles,grabbing balls,squeezing balls,cumshot,cum on hair,cum on face,cum on nose,((animated, bright colors, hentai)),&lt;lora:kawafe:1&gt;,  </span><br><span class="line">Negative prompt: duplicate hair shape,(highlights:0.3),  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 7, Seed: 673152417, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "kawafe: c81c37f55eb4", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250412113329.png"></p>
+<h2 id="otintin画师太好看了">otintin画师，太好看了</h2>
+<p>这里的 croptop 是 短款上衣 covered nipples 非常对我的xp
+trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva
+这一串的效果非常好</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,himekaidou_hatate,croptop,covered nipples,highleg thong,randoseru,thighhighs,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:otintin&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 25, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 4, Seed: 1869634766, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "otintin: d1d9268cc512", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>![](/2024/03/01/3.Source/Pasted image 20250412120756.png)</p>
-<p>加了 zzz emoji 的风格让它的边缘线和手稳定点</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,himekaidou_hatate,croptop,covered nipples,highleg thong,randoseru,thighhighs,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:otintin:0.9&gt;,&lt;lora:ZZZ_Emoji_style_ILv2:0.2&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 25, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 4, Seed: 1869634766, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "otintin: d1d9268cc512, ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-<p>![](/2024/03/01/3.Source/Pasted image 20250412121621.png)</p>
-<h2 id="埃及风格"><a href="#埃及风格" class="headerlink" title="埃及风格"></a>埃及风格</h2><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,young,brunette,freckles,petite,slim,dancer,piercing,bridal gauntlets,thighhighs,choker,pelvic curtain,breast curtains,jewlery,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:otintin:0.8&gt;,&lt;lora:fine_fabric:1&gt;,&lt;lora:ZZZ_Emoji_style_ILv2:0.4&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 4, Seed: 126744804, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "otintin: d1d9268cc512, fine_fabric: 3c7a8e88d7ea, ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>不知道为什么，这个丝袜质感的风格要么会过度涂抹要么质感其实也没有那么强。<br>不过总体来说还是非常棒的</p>
-<p>![](/2024/03/01/3.Source/Pasted image 20250412180449.png)</p>
-<h2 id="画师-96YOTTEA-作为背景画师"><a href="#画师-96YOTTEA-作为背景画师" class="headerlink" title="画师_96YOTTEA 作为背景画师"></a>画师_96YOTTEA 作为背景画师</h2><p>注意看背景的印象派的绘画方式</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,young,brunette,freckles,petite,slim,dancer,piercing,bridal gauntlets,thighhighs,choker,pelvic curtain,breast curtains,jewlery,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:ZZZ_Emoji_style_ILv2:0.6&gt;,&lt;lora:96YOTTEA-WAI:0.6&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 4, Seed: 126744804, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639, 96YOTTEA-WAI: 7a6cdc714921", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-<p>![](/2024/03/01/3.Source/Pasted image 20250412203127.png)</p>
-<h2 id="水池里的女孩"><a href="#水池里的女孩" class="headerlink" title="水池里的女孩"></a>水池里的女孩</h2><p>这其实也是一个画风对比</p>
-<h3 id="不加Lora"><a href="#不加Lora" class="headerlink" title="不加Lora"></a>不加Lora</h3><p>这一套提示词就算是不加lora也是非常好的画面效果<br><img src="/2024/03/01/3.Source/00142-989673675.png"></p>
-<h3 id="Choujiroo"><a href="#Choujiroo" class="headerlink" title="Choujiroo"></a>Choujiroo</h3><p>这位画师本身是画那种更加平涂的画，但是在面对这种高清的场景也能让它表情和整体的质感看起来好很多</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,ultra-HD,cinematic lighting,photorealistic,impressionism (1.5),high detail,depth of field,(blurred background),(dramatic lighting),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,realistic,masterpiece,best quality,8k,  </span><br><span class="line">simple_background,  </span><br><span class="line">half close-up,sexy pose,  </span><br><span class="line">blushing,asian girl,small head,pretty girl,korean girl,  </span><br><span class="line">((slim body)),(small breasts),areola,Dynamic angle,Dynamic pose,  </span><br><span class="line">ear piercings,Nswf,portrait,  </span><br><span class="line">girl,naked,in water,wet skin,&lt;lora:Choujiroo-P6bv1a-Illu01:1&gt;,  </span><br><span class="line">Negative prompt: Female tongue,female tongue out,Neck grab,worst quality,low quality,displeasing,text,watermark,bad anatomy,text,artist name,signature,hearts,deformed hands,missing finger,shiny skin,child,children,  </span><br><span class="line">Steps: 48, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 989673675, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "Choujiroo-P6bv1a-Illu01: 0x3d18df523c", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>![](/2024/03/01/3.Source/Pasted image 20250412212354.png)</p>
-<h3 id="96YOTTEA-WAI"><a href="#96YOTTEA-WAI" class="headerlink" title="96YOTTEA-WAI"></a>96YOTTEA-WAI</h3><p>这个画师说实话有点鬼刀的味道了<br>也是厚涂印象风格</p>
-<p>而且为了弥补这个风格会导致画面的边缘也变得模糊，可以加上万能的zzz_emoji_style，来将其边缘变得更加清晰，同时保留原本的风格。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,ultra-HD,cinematic lighting,photorealistic,impressionism (1.5),high detail,depth of field,(blurred background),(dramatic lighting),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,realistic,masterpiece,best quality,8k,  </span><br><span class="line">simple_background,  </span><br><span class="line">half close-up,sexy pose,  </span><br><span class="line">blushing,asian girl,small head,pretty girl,korean girl,  </span><br><span class="line">((slim body)),(small breasts),areola,Dynamic angle,Dynamic pose,  </span><br><span class="line">ear piercings,Nswf,portrait,  </span><br><span class="line">girl,naked,in water,wet skin,&lt;lora:ZZZ_Emoji_style_ILv2:1.1&gt;,&lt;lora:96YOTTEA-WAI:0.8&gt;,  </span><br><span class="line">Negative prompt: Female tongue,female tongue out,Neck grab,worst quality,low quality,displeasing,text,watermark,bad anatomy,text,artist name,signature,hearts,deformed hands,missing finger,shiny skin,child,children,  </span><br><span class="line">Steps: 48, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 989673675, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639, 96YOTTEA-WAI: 7a6cdc714921", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>![](/2024/03/01/3.Source/Pasted image 20250412213715.png)</p>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250412120756.png"></p>
+<p>加了 zzz emoji 的风格让它的边缘线和手稳定点 </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,himekaidou_hatate,croptop,covered nipples,highleg thong,randoseru,thighhighs,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:otintin:0.9&gt;,&lt;lora:ZZZ_Emoji_style_ILv2:0.2&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 25, Sampler: DPM++ 2M SDE, Schedule type: Exponential, CFG scale: 4, Seed: 1869634766, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "otintin: d1d9268cc512, ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure> <img src="/2024/03/01/3.Source/Pasted%20image%2020250412121621.png"><p></p>
+<h2 id="埃及风格">埃及风格</h2>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,young,brunette,freckles,petite,slim,dancer,piercing,bridal gauntlets,thighhighs,choker,pelvic curtain,breast curtains,jewlery,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:otintin:0.8&gt;,&lt;lora:fine_fabric:1&gt;,&lt;lora:ZZZ_Emoji_style_ILv2:0.4&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 4, Seed: 126744804, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "otintin: d1d9268cc512, fine_fabric: 3c7a8e88d7ea, ZZZ_Emoji_style_ILv2: 20170a56d639", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
+<p>不知道为什么，这个丝袜质感的风格要么会过度涂抹要么质感其实也没有那么强。
+不过总体来说还是非常棒的</p>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250412180449.png"></p>
+<h2 id="画师_96yottea-作为背景画师">画师_96YOTTEA 作为背景画师</h2>
+<p>注意看背景的印象派的绘画方式 </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,best quality,newest,absurdres,highres,1girl,young,brunette,freckles,petite,slim,dancer,piercing,bridal gauntlets,thighhighs,choker,pelvic curtain,breast curtains,jewlery,outdoors,standing sex,sex from behind,against wall,bent over,grabbing another's hair,clothes pull,clothes aside,trembling,sweat,blush,motion lines,tiptoes,tongue out,saliva,solo focus,&lt;lora:ZZZ_Emoji_style_ILv2:0.6&gt;,&lt;lora:96YOTTEA-WAI:0.6&gt;,  </span><br><span class="line">Negative prompt: worst quality,bad quality,low quality,lowres,anatomical nonsense,artistic error,bad anatomy,blood,censored,monochrome,  </span><br><span class="line">Steps: 50, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 4, Seed: 126744804, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639, 96YOTTEA-WAI: 7a6cdc714921", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure> <img src="/2024/03/01/3.Source/Pasted%20image%2020250412203127.png"><p></p>
+<h2 id="水池里的女孩">水池里的女孩</h2>
+<p>这其实也是一个画风对比</p>
+<h3 id="不加lora">不加Lora</h3>
+<p>这一套提示词就算是不加lora也是非常好的画面效果 <img src="/2024/03/01/3.Source/00142-989673675.png"> ### Choujiroo</p>
+<p>这位画师本身是画那种更加平涂的画，但是在面对这种高清的场景也能让它表情和整体的质感看起来好很多
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,ultra-HD,cinematic lighting,photorealistic,impressionism (1.5),high detail,depth of field,(blurred background),(dramatic lighting),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,realistic,masterpiece,best quality,8k,  </span><br><span class="line">simple_background,  </span><br><span class="line">half close-up,sexy pose,  </span><br><span class="line">blushing,asian girl,small head,pretty girl,korean girl,  </span><br><span class="line">((slim body)),(small breasts),areola,Dynamic angle,Dynamic pose,  </span><br><span class="line">ear piercings,Nswf,portrait,  </span><br><span class="line">girl,naked,in water,wet skin,&lt;lora:Choujiroo-P6bv1a-Illu01:1&gt;,  </span><br><span class="line">Negative prompt: Female tongue,female tongue out,Neck grab,worst quality,low quality,displeasing,text,watermark,bad anatomy,text,artist name,signature,hearts,deformed hands,missing finger,shiny skin,child,children,  </span><br><span class="line">Steps: 48, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 989673675, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "Choujiroo-P6bv1a-Illu01: 0x3d18df523c", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250412212354.png"></p>
+<h3 id="yottea-wai">96YOTTEA-WAI</h3>
+<p>这个画师说实话有点鬼刀的味道了 也是厚涂印象风格</p>
+<p>而且为了弥补这个风格会导致画面的边缘也变得模糊，可以加上万能的zzz_emoji_style，来将其边缘变得更加清晰，同时保留原本的风格。
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,ultra-HD,cinematic lighting,photorealistic,impressionism (1.5),high detail,depth of field,(blurred background),(dramatic lighting),masterpiece,best quality,very aesthetic,8k,masterpiece,best quality,realistic,masterpiece,best quality,8k,  </span><br><span class="line">simple_background,  </span><br><span class="line">half close-up,sexy pose,  </span><br><span class="line">blushing,asian girl,small head,pretty girl,korean girl,  </span><br><span class="line">((slim body)),(small breasts),areola,Dynamic angle,Dynamic pose,  </span><br><span class="line">ear piercings,Nswf,portrait,  </span><br><span class="line">girl,naked,in water,wet skin,&lt;lora:ZZZ_Emoji_style_ILv2:1.1&gt;,&lt;lora:96YOTTEA-WAI:0.8&gt;,  </span><br><span class="line">Negative prompt: Female tongue,female tongue out,Neck grab,worst quality,low quality,displeasing,text,watermark,bad anatomy,text,artist name,signature,hearts,deformed hands,missing finger,shiny skin,child,children,  </span><br><span class="line">Steps: 48, Sampler: Euler a, Schedule type: Automatic, CFG scale: 4, Seed: 989673675, Size: 832x1216, Model hash: a810e710a2, Model: waiNSFWIllustrious_v130, Clip skip: 2, Lora hashes: "ZZZ_Emoji_style_ILv2: 20170a56d639, 96YOTTEA-WAI: 7a6cdc714921", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250412213715.png"></p>
 <p>不知道是为什么，好像它们都喜欢用这一套tag：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">asian girl,small head,pretty girl,korean girl,</span><br><span class="line">((slim body)),(small breasts),Dynamic angle,Dynamic pose,</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-<h2 id="模仿图片生成的机械娘"><a href="#模仿图片生成的机械娘" class="headerlink" title="模仿图片生成的机械娘"></a>模仿图片生成的机械娘</h2><p><img src="/2024/03/01/3.Source/ComfyUI_00266_.png"></p>
-<p>非常美丽。<br>直接复制粘贴图片就看在comfyUI中直接导出工作流。</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(masterpiece, best quality, ultra-detailed), 1girl, petite body (158cm), (long straight black hair:1.3), slender eyes, (porcelain white skin with subtle mechanical texture:1.2), shy smile, (gentle yet dependent gaze:1.3), (engineer-style outfit:1.4) - white shirt with tie, brown tool skirt, (small gear-shaped accessories:1.2), (delicate repair marks on limbs:1.1), (soft mechanical glow on joints), standing beside vintage computer consoles, steampunk pipes and brass machinery in background, warm ambient lighting, holographic data panels floating nearby, (blend of organic and mechanical aesthetics:1.3),&lt;otintin:0.8&gt;,&lt;zzz-emoji:0.5&gt;</span><br></pre></td></tr></tbody></table></figure>
-
+<h2 id="模仿图片生成的机械娘">模仿图片生成的机械娘</h2>
+<p><img src="/2024/03/01/3.Source/ComfyUI_00266_.png"></p>
+<p>非常美丽。 直接复制粘贴图片就看在comfyUI中直接导出工作流。
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(masterpiece, best quality, ultra-detailed), 1girl, petite body (158cm), (long straight black hair:1.3), slender eyes, (porcelain white skin with subtle mechanical texture:1.2), shy smile, (gentle yet dependent gaze:1.3), (engineer-style outfit:1.4) - white shirt with tie, brown tool skirt, (small gear-shaped accessories:1.2), (delicate repair marks on limbs:1.1), (soft mechanical glow on joints), standing beside vintage computer consoles, steampunk pipes and brass machinery in background, warm ambient lighting, holographic data panels floating nearby, (blend of organic and mechanical aesthetics:1.3),&lt;otintin:0.8&gt;,&lt;zzz-emoji:0.5&gt;</span><br></pre></td></tr></tbody></table></figure><p></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bad quality,worst quality,worst detail,censor,bad anatomy,duplicate hair shape,embedding:badhandv4, </span><br></pre></td></tr></tbody></table></figure>
+
       
     </div>
 
@@ -591,7 +642,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -683,7 +734,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -732,40 +783,105 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a> <br></p>
-<h1 id="Obsidian-Annotator"><a href="#Obsidian-Annotator" class="headerlink" title="Obsidian Annotator"></a>Obsidian Annotator</h1><p>黑曜石注释器</p>
+          <p><a href="/tags/hexo/" rel="contents" data-pjax-state=""># hexo</a>
+<br></p>
+<h1 id="obsidian-annotator">Obsidian Annotator</h1>
+<p>黑曜石注释器</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator">项目github</a></p>
-<p>这是 Obsidian （<a target="_blank" rel="noopener" href="https://obsidian.md/">https://obsidian.md</a>） 的插件。它允许您打开和注释 PDF 和 EPUB 文件。</p>
-<p>该插件基于 <a target="_blank" rel="noopener" href="https://web.hypothes.is/">https://web.hypothes.is/</a>，但经过修改后将注释存储在本地 markdown 文件中，而不是存储在 Internet 上。</p>
-<h2 id="Demonstration"><a href="#Demonstration" class="headerlink" title="Demonstration"></a>Demonstration</h2><p>示范</p>
+<p>这是 Obsidian （<a target="_blank" rel="noopener" href="https://obsidian.md">https://obsidian.md</a>）
+的插件。它允许您打开和注释 PDF 和 EPUB 文件。</p>
+<p>该插件基于 <a target="_blank" rel="noopener" href="https://web.hypothes.is/">https://web.hypothes.is/</a>，但经过修改后将注释存储在本地
+markdown 文件中，而不是存储在 Internet 上。</p>
+<h2 id="demonstration">Demonstration</h2>
+<p>示范</p>
 <p><img src="/2024/03/01/3.Source/131702952-1aa76baa-a279-474c-978d-cec95a683485.gif"></p>
-<p><strong>警告！</strong> 在上面的 gif 中，我使用 <strong>Dataview</strong> 语法来指定 annotation-target。如果你没有安装 dataview 插件，则必须在 <strong>frontmatter</strong> 中编写 annotation-target，如下所示：</p>
+<p><strong>警告！</strong> 在上面的 gif 中，我使用
+<strong>Dataview</strong> 语法来指定 annotation-target。如果你没有安装
+dataview 插件，则必须在 <strong>frontmatter</strong> 中编写
+annotation-target，如下所示：</p>
 <figure class="highlight md"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">annotation-target: https://arxiv.org/pdf/2104.13478.pdf</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>开始</p>
-<p>将属性 <code>annotation-target</code> 添加到黑曜石便笺的 frontmatter 中，其值对应于 EPUB/PDF 文件的位置。该位置可以是 Vault 中的文件（如 <code>Pdf/mypdf.pdf</code>），也可以是联机文件（如 <code>https://arxiv.org/pdf/2104.13478.pdf</code> ）</p>
-<p>然后，您可以在打开的注释窗格中，选择 “more options”（右上角的三个点），并且应该有一个新选项 “annotate” 可用。</p>
-<p>该插件会自动尝试根据文件路径确定文件是 <code>epub</code> 还是 <code>pdf</code>，但如果这不起作用，您还可以添加属性 <code>annotation-target-type</code> 并手动指定它是 <code>epub</code> 还是 <code>pdf</code>。</p>
-<p>如果您安装了 <a target="_blank" rel="noopener" href="https://github.com/blacksmithgu/obsidian-dataview">dataview</a>，则还可以使用 dataview 属性指定注释目标。在这种情况下，可以使用 obsidian 样式的链接来代替纯文本路径。</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>开始</p>
+<p>将属性 <code>annotation-target</code> 添加到黑曜石便笺的 frontmatter
+中，其值对应于 EPUB/PDF 文件的位置。该位置可以是 Vault 中的文件（如
+<code>Pdf/mypdf.pdf</code>），也可以是联机文件（如
+<code>https://arxiv.org/pdf/2104.13478.pdf</code> ）</p>
+<p>然后，您可以在打开的注释窗格中，选择 “more
+options”（右上角的三个点），并且应该有一个新选项 “annotate” 可用。</p>
+<p>该插件会自动尝试根据文件路径确定文件是 <code>epub</code> 还是
+<code>pdf</code>，但如果这不起作用，您还可以添加属性
+<code>annotation-target-type</code> 并手动指定它是 <code>epub</code>
+还是 <code>pdf</code>。</p>
+<p>如果您安装了 <a target="_blank" rel="noopener" href="https://github.com/blacksmithgu/obsidian-dataview">dataview</a>，则还可以使用
+dataview 属性指定注释目标。在这种情况下，可以使用 obsidian
+样式的链接来代替纯文本路径。</p>
 <blockquote>
-<p>WARNING! Don’t rename an original pdf or epub file! The plugin is going to lose the connection between annotations and file in that case.<br>警告！不要重命名原始 PDF 或 epub 文件！在这种情况下，插件将失去 annotation 和 file 之间的连接。</p>
+<p>WARNING! Don't rename an original pdf or epub file! The plugin is
+going to lose the connection between annotations and file in that
+case.<br>
+警告！不要重命名原始 PDF 或 epub 文件！在这种情况下，插件将失去
+annotation 和 file 之间的连接。</p>
 </blockquote>
-<h3 id="Annotating"><a href="#Annotating" class="headerlink" title="Annotating"></a>Annotating</h3><p>注释<br>Annotation is self-explanatory. Select text with your mouse to get started.<br>注释是不言自明的。用鼠标选择文本以开始使用。</p>
-<p>In the future, it would be nice to add colored highlights and image/region highlights. These features will have to be added to hypothes.is first, however. See these relevant issues: <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/198">hypothesis/product-backlog#198</a>, <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/669">hypothesis/product-backlog#669</a><br>将来，添加彩色高光和图像/区域高光会很好。但是，必须先将这些功能添加到 hypothes.is 中。请参阅以下相关问题： <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/198">hypothesis/product-backlog#198</a> ， <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/669">hypothesis/product-backlog#669</a></p>
-<h3 id="The-annotations-in-markdown"><a href="#The-annotations-in-markdown" class="headerlink" title="The annotations in markdown"></a>The annotations in markdown</h3><p>markdown 中的注解</p>
+<h3 id="annotating">Annotating</h3>
+<p>注释 Annotation is self-explanatory. Select text with your mouse to
+get started.<br>
+注释是不言自明的。用鼠标选择文本以开始使用。</p>
+<p>In the future, it would be nice to add colored highlights and
+image/region highlights. These features will have to be added to
+hypothes.is first, however. See these relevant issues: <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/198">hypothesis/product-backlog#198</a>,
+<a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/669">hypothesis/product-backlog#669</a><br>
+将来，添加彩色高光和图像/区域高光会很好。但是，必须先将这些功能添加到
+hypothes.is 中。请参阅以下相关问题： <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/198">hypothesis/product-backlog#198</a>
+， <a target="_blank" rel="noopener" href="https://github.com/hypothesis/product-backlog/issues/669">hypothesis/product-backlog#669</a></p>
+<h3 id="the-annotations-in-markdown">The annotations in markdown</h3>
+<p>markdown 中的注解</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator#the-annotations-in-markdown"></a></p>
-<p>To return to the regular obsidian markdown editing mode, you can select <code>more options</code> → <code>Open as MD</code>. Each annotation has an associated quote block with a block reference. Be careful with modifying these blocks. Minor edits to PREFIX, HIGHLIGHT, and POSTFIX are typically ok. But if the edits are too major, hypothesis may no longer be able to identify the corresponding text.<br>要返回常规的 obsidian markdown 编辑模式，你可以选择 <code>Open as MD</code>→ <code>更多选项</code> 。每个注释都有一个带有块引用的关联 quote 块。修改这些块时要小心。对 PREFIX、HIGHLIGHT 和 POSTFIX 进行次要编辑通常是可以的。但是，如果编辑过于严重，假设可能无法再识别相应的文本。</p>
-<p>The COMMENT region can be freely edited. (but ensure that it is still part of the quote block.)<br>COMMENT 区域可以自由编辑。（但请确保它仍然是 quote 块的一部分。</p>
-<p>The TAGS region should consist of a comma-separated list of obsidian tags. (like <code>#tag1, #tag2, #tag3</code>)<br>TAGS 区域应由以逗号分隔的黑曜石标签列表组成。（如 <code>#tag1、#tag2 #tag3</code>）</p>
-<h3 id="Dark-Mode"><a href="#Dark-Mode" class="headerlink" title="Dark Mode"></a>Dark Mode</h3><p>深色模式</p>
+<p>To return to the regular obsidian markdown editing mode, you can
+select <code>more options</code> → <code>Open as MD</code>. Each
+annotation has an associated quote block with a block reference. Be
+careful with modifying these blocks. Minor edits to PREFIX, HIGHLIGHT,
+and POSTFIX are typically ok. But if the edits are too major, hypothesis
+may no longer be able to identify the corresponding text.<br>
+要返回常规的 obsidian markdown 编辑模式，你可以选择
+<code>Open as MD</code>→ <code>更多选项</code>
+。每个注释都有一个带有块引用的关联 quote 块。修改这些块时要小心。对
+PREFIX、HIGHLIGHT 和 POSTFIX
+进行次要编辑通常是可以的。但是，如果编辑过于严重，假设可能无法再识别相应的文本。</p>
+<p>The COMMENT region can be freely edited. (but ensure that it is still
+part of the quote block.)<br>
+COMMENT 区域可以自由编辑。（但请确保它仍然是 quote 块的一部分。</p>
+<p>The TAGS region should consist of a comma-separated list of obsidian
+tags. (like <code>#tag1, #tag2, #tag3</code>)<br>
+TAGS 区域应由以逗号分隔的黑曜石标签列表组成。（如
+<code>#tag1、#tag2 #tag3</code>）</p>
+<h3 id="dark-mode">Dark Mode</h3>
+<p>深色模式</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator#dark-mode"></a></p>
-<p>The plugin has built-in dark mode support. To toggle dark mode, select <code>more options</code> → <code>Toggle Dark Mode</code> while annotating. You can also tweak the dark mode behavior in the settings tab for the plugin.<br>该插件具有内置的暗模式支持。要切换深色模式，请在注释时选择<code>更多选项</code> <code>→ Toggle Dark Mode（切换深色模式</code> ）。您还可以在插件的 settings （设置） 选项卡中调整暗模式行为。</p>
-<h3 id="Linking-to-annotations"><a href="#Linking-to-annotations" class="headerlink" title="Linking to annotations"></a>Linking to annotations</h3><p>链接到注释</p>
+<p>The plugin has built-in dark mode support. To toggle dark mode,
+select <code>more options</code> → <code>Toggle Dark Mode</code> while
+annotating. You can also tweak the dark mode behavior in the settings
+tab for the plugin.<br>
+该插件具有内置的暗模式支持。要切换深色模式，请在注释时选择<code>更多选项</code>
+<code>→ Toggle Dark Mode（切换深色模式</code> ）。您还可以在插件的
+settings （设置） 选项卡中调整暗模式行为。</p>
+<h3 id="linking-to-annotations">Linking to annotations</h3>
+<p>链接到注释</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator#linking-to-annotations"></a></p>
-<p>An obsidian link to an annotation block-reference will, when clicked, open the corresponding file and scroll to the associated highlight. If the file is already open in a pane, then the link will cause the existing pane to scroll instead.<br>单击指向注释块引用的黑曜石链接将打开相应的文件并滚动到关联的高亮显示。如果文件已在窗格中打开，则该链接将导致现有窗格滚动。</p>
-<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>贡献</p>
+<p>An obsidian link to an annotation block-reference will, when clicked,
+open the corresponding file and scroll to the associated highlight. If
+the file is already open in a pane, then the link will cause the
+existing pane to scroll instead.<br>
+单击指向注释块引用的黑曜石链接将打开相应的文件并滚动到关联的高亮显示。如果文件已在窗格中打开，则该链接将导致现有窗格滚动。</p>
+<h2 id="contributing">Contributing</h2>
+<p>贡献</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator#contributing"></a></p>
-<p>Visit <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for information on building from source or contribution improvements. To report a bug, ask a question or suggest an improvement for this plugin, you can create an <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/issues">issue</a>.<br>请访问 <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> 以获取有关从源构建或贡献改进的信息。要报告错误、提出问题或建议此插件的改进，您可以创建一个<a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/issues">问题</a> 。</p>
+<p>Visit <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>
+for information on building from source or contribution improvements. To
+report a bug, ask a question or suggest an improvement for this plugin,
+you can create an <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/issues">issue</a>.<br>
+请访问 <a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a>
+以获取有关从源构建或贡献改进的信息。要报告错误、提出问题或建议此插件的改进，您可以创建一个<a target="_blank" rel="noopener" href="https://github.com/elias-sundqvist/obsidian-annotator/issues">问题</a>
+。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2025/03/24/Obsidian%20Annotator%20%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98%E5%BD%95/#more" rel="contents">
@@ -808,7 +924,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -857,6 +973,7 @@
     
     <div class="post-body" itemprop="articleBody">
           
+
       
     </div>
 
@@ -891,7 +1008,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1199,7 +1316,7 @@ Workers API - Web APIs | MDN</a></p>
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1340,7 +1457,7 @@ nodejs 作为依赖。</p>
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1395,77 +1512,91 @@ nodejs 作为依赖。</p>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state=""># AI绘画</a> <br></p>
-<h2 id="Day-2：提示词与参数优化"><a href="#Day-2：提示词与参数优化" class="headerlink" title="Day 2：提示词与参数优化"></a><strong>Day 2：提示词与参数优化</strong></h2><p><strong>学习目标</strong>：掌握提示词编写技巧，调整参数提升生成质量。</p>
-<ul>
-<li><strong>实践步骤</strong>：<ol>
-<li><strong>提示词公式</strong>：使用“主体+细节+风格+质量”结构（如“a knight in armor, detailed armor texture, dark fantasy style, 8k, masterpiece”）。</li>
-<li><strong>权重控制</strong>：用<code>(keyword:1.5)</code>增强权重，<code>[keyword]</code>降低权重。</li>
-<li><strong>参数调整</strong>：<ul>
-<li>采样方法：推荐<code>DPM++ 2M Karras</code>（速度快且稳定）。</li>
-<li>迭代步数：20-30步（平衡速度与质量）。</li>
-<li>提示词相关性（CFG Scale）：7-12（值越高越贴近描述，但可能过锐化）。</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><strong>检验成果</strong>：生成一张符合复杂提示词描述的图片（如“科幻城市夜景，赛博朋克风格”）。</li>
-</ul>
+          <p><a href="/tags/AI绘画/" rel="contents" data-pjax-state="">#
+AI绘画</a> <br> ## <strong>Day 2：提示词与参数优化</strong></p>
+<p><strong>学习目标</strong>：掌握提示词编写技巧，调整参数提升生成质量。
+- <strong>实践步骤</strong>： 1.
+<strong>提示词公式</strong>：使用“主体+细节+风格+质量”结构（如“a knight
+in armor, detailed armor texture, dark fantasy style, 8k,
+masterpiece”）。 2.
+<strong>权重控制</strong>：用<code>(keyword:1.5)</code>增强权重，<code>[keyword]</code>降低权重。
+3. <strong>参数调整</strong>： -
+采样方法：推荐<code>DPM++ 2M Karras</code>（速度快且稳定）。 -
+迭代步数：20-30步（平衡速度与质量）。 - 提示词相关性（CFG
+Scale）：7-12（值越高越贴近描述，但可能过锐化）。 -
+<strong>检验成果</strong>：生成一张符合复杂提示词描述的图片（如“科幻城市夜景，赛博朋克风格”）。</p>
 <p>为此我研读了这本书，<a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素同典：确实不完全科学的魔导书</a></p>
-<p>我会在另外一篇文章里面分享自己的 结合书本中的知识以的实战经历[[元素同典：确实不完全科学的魔导书 批注]]</p>
-<h2 id="预制提示词测试"><a href="#预制提示词测试" class="headerlink" title="预制提示词测试"></a>预制提示词测试</h2><p>这里，大佬给了一个非常棒的风格模板，后面加上想要的提示词大概率能出非常好的图像效果：</p>
-<img src="/2024/03/01/3.Source/00086-1533094715.png" alt="00086-1533094715.png" align="right" width="38%">
-
+<p>我会在另外一篇文章里面分享自己的
+结合书本中的知识以的实战经历[[元素同典：确实不完全科学的魔导书
+批注]]</p>
+<h2 id="预制提示词测试">预制提示词测试</h2>
+<p>这里，大佬给了一个非常棒的风格模板，后面加上想要的提示词大概率能出非常好的图像效果：</p>
+<p><img src="/2024/03/01/3.Source/00086-1533094715.png" alt="00086-1533094715.png" align="right" width="38%"></p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(masterpiece, extremely detailed 8k wallpaper,best quality),(best illumination, best shadow, extremely delicate and beautiful),dynamic angle,floating,finely detail,Depth of field (bloom),(shine),glinting stars,classic,(illustration),(painting),(sketch),1girl,solo,bare shoulders,medium breasts,areola,red eyes,beautiful detailed cold face,black hair,straight_hair,short hair,extremely delicate and beautiful girls,beautiful detailed eyes,(((rose))),cage,bandage,(red rope),  </span><br><span class="line">Negative prompt: lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,sketches,EasyNegativeV2,badhandv4,  </span><br><span class="line">Steps: 18, Sampler: DPM++ 2M, Schedule type: Karras, CFG scale: 7, Seed: 1533094715, Size: 512x512, Model hash: 7f96a1a9ca, Model: anything-v5, Denoising strength: 0.7, Clip skip: 2, Hires upscale: 2, Hires upscaler: Latent, TI hashes: "EasyNegativeV2: 339cc9210f70, badhandv4: 5e40d722fc3d", Version: v1.10.1</span><br></pre></td></tr></tbody></table></figure>
-
-
-
-
-<h2 id="迭代步数和采样方式对结果的影响"><a href="#迭代步数和采样方式对结果的影响" class="headerlink" title="迭代步数和采样方式对结果的影响"></a>迭代步数和采样方式对结果的影响</h2><p>在控制同一个seed的情况下，我们可以用 X/Y参照来生成对比图像：</p>
-<p>这里，我用提示词为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,1 girl,cute face,black short hair,red eyes,[SFW:(NSFW:1):0.1],</span><br></pre></td></tr></tbody></table></figure>
-<p>负面提示词为：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,</span><br><span class="line">fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,</span><br><span class="line">signature,watermark,username,blurry,bad fee,</span><br></pre></td></tr></tbody></table></figure>
-
+<h2 id="迭代步数和采样方式对结果的影响">迭代步数和采样方式对结果的影响</h2>
+<p>在控制同一个seed的情况下，我们可以用 X/Y参照来生成对比图像：</p>
+<p>这里，我用提示词为： </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">masterpiece,1 girl,cute face,black short hair,red eyes,[SFW:(NSFW:1):0.1],</span><br></pre></td></tr></tbody></table></figure> 负面提示词为： <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lowres,bad anatomy,bad hands,text,error,missing fingers,extra digit,</span><br><span class="line">fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,</span><br><span class="line">signature,watermark,username,blurry,bad fee,</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="/2024/03/01/3.Source/xyz_grid-0001-13877462132.jpg"></p>
-<h2 id="镜头控制"><a href="#镜头控制" class="headerlink" title="镜头控制"></a>镜头控制</h2><p>close up、close shot、medium view、panorama 这几个镜头控制十分好用</p>
-<h2 id="吟唱方式"><a href="#吟唱方式" class="headerlink" title="吟唱方式"></a>吟唱方式</h2><p>常见的吟唱方式有三种：</p>
-<ol>
-<li>字节式</li>
-</ol>
-<h2 id="提示词的分割"><a href="#提示词的分割" class="headerlink" title="提示词的分割"></a>提示词的分割</h2><h2 id="语法功能"><a href="#语法功能" class="headerlink" title="语法功能"></a>语法功能</h2><h3 id="提示词"><a href="#提示词" class="headerlink" title="提示词"></a>提示词</h3><p>提示词是用于提示ai需要生成什么样式的图片的引导词，ai会根据你的提示词生成图片。</p>
-<p>为什么提示词会有效我们可以从文生图的原理说起：<br>SD等模型使用的都是让使用将一个带有若干个标签的图片，通过不断参杂噪声，让其变为一张纯噪声图作为正向过程让ai去学习，而这个参杂的过程在一定程度上是可逆的，所以说将ai通过这种方式得到的一系列参数求一个逆，我们就可以得到一个能够从一个噪声图生成为我们想要的图片的模型。</p>
+<h2 id="镜头控制">镜头控制</h2>
+<p>close up、close shot、medium view、panorama
+这几个镜头控制十分好用</p>
+<h2 id="吟唱方式">吟唱方式</h2>
+<p>常见的吟唱方式有三种： 1. 字节式 ## 提示词的分割</p>
+<h2 id="语法功能">语法功能</h2>
+<h3 id="提示词">提示词</h3>
+<p>提示词是用于提示ai需要生成什么样式的图片的引导词，ai会根据你的提示词生成图片。</p>
+<p>为什么提示词会有效我们可以从文生图的原理说起：
+SD等模型使用的都是让使用将一个带有若干个标签的图片，通过不断参杂噪声，让其变为一张纯噪声图作为正向过程让ai去学习，而这个参杂的过程在一定程度上是可逆的，所以说将ai通过这种方式得到的一系列参数求一个逆，我们就可以得到一个能够从一个噪声图生成为我们想要的图片的模型。</p>
 <p>也就是说，提示词本质上就是一开始用来训练ai的图片上面带着的标签，了解训练ai的数据的来源，我们可以直到每个标签大概指的是什么意思：<a target="_blank" rel="noopener" href="https://danbooru.donmai.us/">Danbooru: Anime Image Board</a></p>
 <p>但是它们可能有的好用有的不好用，一般引用数大于2000的tag都能够出比较好的效果。</p>
-<p>这里还有一些小伙伴们自己收集的比较好的tag资料：<br><a target="_blank" rel="noopener" href="https://kdocs.cn/l/cre0TwbMkdx3">https://kdocs.cn/l/cre0TwbMkdx3</a><br><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/11SE4uW0TiXqrHotBfT3hsQ?pwd=pdlk">https://pan.baidu.com/s/11SE4uW0TiXqrHotBfT3hsQ?pwd=pdlk</a></p>
-<p>然后这里是一些比较好的提示词组合，可以以此为范例：<br><a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWHFOd2hDSFJaamFm?nlc=1">元素法典 第二点五卷——Novel AI 元素魔法全收录</a><br><a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWEpNdERNbnBRZWNL?dver=">元素法典 第二卷——Novel AI 元素魔法全收录</a><br>等等</p>
-<h3 id="提示词-权重调整方法"><a href="#提示词-权重调整方法" class="headerlink" title="提示词 权重调整方法"></a>提示词 权重调整方法</h3><p>权重控制在咒语中非常重要，这关系着你想要的东西是否合乎心意的获得了AI的重视。</p>
+<p>这里还有一些小伙伴们自己收集的比较好的tag资料：
+https://kdocs.cn/l/cre0TwbMkdx3
+https://pan.baidu.com/s/11SE4uW0TiXqrHotBfT3hsQ?pwd=pdlk</p>
+<p>然后这里是一些比较好的提示词组合，可以以此为范例： <a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWHFOd2hDSFJaamFm?nlc=1">元素法典
+第二点五卷——Novel AI 元素魔法全收录</a> <a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DWEpNdERNbnBRZWNL?dver=">元素法典
+第二卷——Novel AI 元素魔法全收录</a> 等等</p>
+<h3 id="提示词-权重调整方法">提示词 权重调整方法</h3>
+<p>权重控制在咒语中非常重要，这关系着你想要的东西是否合乎心意的获得了AI的重视。</p>
 <p>最基础的权重控制为控制prompt在咒语中的位置。越靠前的词汇越受到重视。</p>
-<p>权重控制可以通过对prompt加括号进行。() 或 {} 为加强权重，[] 为减弱权重，括号可以一次扩多个词条。(1girl:1.5)括号后对添加 “:1.5”是对词条直接赋予权重，数字即为权重大小。数字越大权重越大，默认1，通常为0-2之间。</p>
+<p>权重控制可以通过对prompt加括号进行。() 或 {} 为加强权重，[]
+为减弱权重，括号可以一次扩多个词条。(1girl:1.5)括号后对添加
+":1.5"是对词条直接赋予权重，数字即为权重大小。数字越大权重越大，默认1，通常为0-2之间。</p>
 <p>目前在webui中()为对其中内容权重乘以1.1，[]为对其中内容除以1.1，而{}在webui版本中不生效。虽然多重括号也能生效，但是这种方法低效且不优雅，例如((((girl))))进行了4次括号，但是只对girl权重增加到了1.4641。</p>
 <p>这里强烈推荐使用(prompt:权重数)的方式来进行权重调整。</p>
 <p>比如，你可以在提示词中加入[]，然后在括号中加入权重数，这样就可以对整个括号内的词条进行权重调整。</p>
 <p>此外，webui还支持快速调节：选中一组词，然后按方向键上下（根据编译器版本不同可能是ctrl+方向键）可以直接完成权重调整。</p>
-<h3 id="权重调整的高阶技巧"><a href="#权重调整的高阶技巧" class="headerlink" title="权重调整的高阶技巧"></a>权重调整的高阶技巧</h3><p>除了上面的方法可以调整权重之外，还可以使用·</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[from:to:step]</span><br></pre></td></tr></tbody></table></figure>
-<p>来配置阶段性的权重调整。</p>
+<h3 id="权重调整的高阶技巧">权重调整的高阶技巧</h3>
+<p>除了上面的方法可以调整权重之外，还可以使用· </p><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[from:to:step]</span><br></pre></td></tr></tbody></table></figure>
+来配置阶段性的权重调整。<p></p>
 <p>它可以在步数进行到 某一阶段时，将prompt 从 from 变成 to。</p>
-<p>比如我个人觉得比较好用的一个是<code>[SFW:NSFW:0.1]</code> ，这样可以在推理的早些阶段，生成一个 SFW 的底图，之后，在经过了整体步数的 10% 之后，再转换为 NSFW 的图像。</p>
+<p>比如我个人觉得比较好用的一个是<code>[SFW:NSFW:0.1]</code>
+，这样可以在推理的早些阶段，生成一个 SFW
+的底图，之后，在经过了整体步数的 10% 之后，再转换为 NSFW 的图像。</p>
 <p>这样可以保证擦边球的图像不会在早期就生成，而是在后期生成，从而保证了生成的图像的质量。</p>
-<h2 id="书写技巧"><a href="#书写技巧" class="headerlink" title="书写技巧"></a>书写技巧</h2><p>上面是单个词的方法，但是实际上我们需要的画面并不能使用寥寥几个词就能够描述，想要生成出好的效果，往往需要在多个方面去对于画面进行描述，对于画面中的元素进行控制，这就需要我们将多个提示词组合起来，构成一整句“咒语”。</p>
-<h3 id="三种常见的书写方式及其异同"><a href="#三种常见的书写方式及其异同" class="headerlink" title="三种常见的书写方式及其异同"></a>三种常见的书写方式及其异同</h3><p>这里直接引用 [[元素同典：确实不完全科学的魔导书.pdf]] 里面的原文了：</p>
+<h2 id="书写技巧">书写技巧</h2>
+<p>上面是单个词的方法，但是实际上我们需要的画面并不能使用寥寥几个词就能够描述，想要生成出好的效果，往往需要在多个方面去对于画面进行描述，对于画面中的元素进行控制，这就需要我们将多个提示词组合起来，构成一整句“咒语”。</p>
+<h3 id="三种常见的书写方式及其异同">三种常见的书写方式及其异同</h3>
+<p>这里直接引用 [[元素同典：确实不完全科学的魔导书.pdf]]
+里面的原文了：</p>
 <p>咏唱大致有着三种不同形式——最常见的直接咏唱、稍不常见的短句咏唱和堪称行为艺术一般的长咏唱。</p>
 <p>假设要生成一个有着黄色头发、蓝色眼眸、白色上衣、红色裙子、黑色裤袜的全身坐姿二次元美少女，且强调服饰颜色，那么这三种咏唱分别看上去大概是这样的：</p>
 <p>直接咏唱(pitch 式咏唱)：</p>
-<p>masterpiece, best quality, 1 girl, (blue eyes), (yellow hair), (white clothes), (red skirt), (black leggings), sitting, full body</p>
+<p>masterpiece, best quality, 1 girl, (blue eyes), (yellow hair), (white
+clothes), (red skirt), (black leggings), sitting, full body</p>
 <p>短句咏唱(AND 强调咏唱)：</p>
-<p>masterpiece, best quality, 1 girl, (blue eyes) AND (yellow hair), (white clothes) AND (red skirt) AND (black leggings), sitting, full body</p>
+<p>masterpiece, best quality, 1 girl, (blue eyes) AND (yellow hair),
+(white clothes) AND (red skirt) AND (black leggings), sitting, full
+body</p>
 <blockquote>
-<p>注意短句咏唱的 AND 必须是三个大写字母，AND 两侧的小括号是不必要的(但建议加上)，这是一个专用语法，不过因为效果仍未明晰所以不单独介绍。此外，该语法并不能应用于所有采样方法，例如 DDIM 就不支持 AND，会导致报错。</p>
+<p>注意短句咏唱的 AND 必须是三个大写字母，AND
+两侧的小括号是不必要的(但建议加上)，这是一个专用语法，不过因为效果仍未明晰所以不单独介绍。此外，该语法并不能应用于所有采样方法，例如
+DDIM 就不支持 AND，会导致报错。</p>
 <p>这里似乎有点问题，大写“AND”会导致碎片化图片，但是小写“and”反而可以正常出图，估计是版本更新的问题</p>
 </blockquote>
 <p>长咏唱(自然语言咏唱)：</p>
-<p>masterpiece, best quality, (1 girl with blue eyes and yellow hair wearing white clothes and red skirt with black leggings), sitting, full body</p>
+<p>masterpiece, best quality, (1 girl with blue eyes and yellow hair
+wearing white clothes and red skirt with black leggings), sitting, full
+body</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2025/03/20/AI%E7%BB%98%E7%94%BB%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0-%E7%AC%AC%E4%BA%8C%E5%A4%A9/#more" rel="contents">
@@ -1508,7 +1639,7 @@ nodejs 作为依赖。</p>
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1539,7 +1670,7 @@ nodejs 作为依赖。</p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>99</span>
+      <span>64</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1606,7 +1737,7 @@ nodejs 作为依赖。</p>
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -1637,14 +1768,14 @@ nodejs 作为依赖。</p>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
+      <span>1.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>10 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 

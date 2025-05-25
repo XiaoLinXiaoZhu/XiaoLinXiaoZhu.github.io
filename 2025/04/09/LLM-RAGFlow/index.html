@@ -18,12 +18,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# AI # LLM  前段时间，对于 LLM-RAGFlow 的介绍引起了我的兴趣，今天就来试试。 但是，实际上它并没有提供我想要的功能。尽管使用了Rag，ai仍然无法将文本中的内容当作自己的知识来使用，而是将其作为外部的文本信息来处理。 它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM 直接访问外部知识库。它的基本运作逻辑如下：  RAGFlow 事先读取知识库中的所">
+    <meta name="description" content="# AI 
+ # LLM
+ 
+ 前段时间，对于 LLM-RAGFlow 的介绍引起了我的兴趣，今天就来试试。
+ 但是，实际上它并没有提供我想要的功能。尽管使用了Rag，ai仍然无法将文本中的内容当作自己的知识来使用，而是将其作为外部的文本信息来处理。
+ 它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM
+ 直接访问外部知识库。它的基本运作逻辑如下：
+ 
+ RAGFlow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LLM-RAGFlow">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2025/04/09/LLM-RAGFlow/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# AI # LLM  前段时间，对于 LLM-RAGFlow 的介绍引起了我的兴趣，今天就来试试。 但是，实际上它并没有提供我想要的功能。尽管使用了Rag，ai仍然无法将文本中的内容当作自己的知识来使用，而是将其作为外部的文本信息来处理。 它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM 直接访问外部知识库。它的基本运作逻辑如下：  RAGFlow 事先读取知识库中的所">
+<meta property="og:description" content="# AI 
+ # LLM
+ 
+ 前段时间，对于 LLM-RAGFlow 的介绍引起了我的兴趣，今天就来试试。
+ 但是，实际上它并没有提供我想要的功能。尽管使用了Rag，ai仍然无法将文本中的内容当作自己的知识来使用，而是将其作为外部的文本信息来处理。
+ 它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM
+ 直接访问外部知识库。它的基本运作逻辑如下：
+ 
+ RAGFlow">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-09T00:19:00.000Z">
 <meta property="article:modified_time" content="2025-04-09T00:47:07.523Z">
@@ -137,7 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E4%BC%9F%E5%A4%A7%E7%9A%84%E6%83%B3%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">一个伟大的想法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ragflow-%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">ragflow 存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A3%80%E7%B4%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 检索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E8%BF%9B%E4%B8%80%E6%AD%A5%E2%80%A6%E2%80%A6%E8%87%AA%E5%AD%A6%E4%B9%A0%E5%8A%9F%E8%83%BD"><span class="nav-number">1.3.</span> <span class="nav-text">更进一步……自学习功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%87%AA%E6%88%91%E8%AF%84%E4%BC%B0%E5%92%8C%E5%8F%8D%E9%A6%88"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 自我评估和反馈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%87%AA%E6%88%91%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%94%B9%E8%BF%9B"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 自我学习和改进</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%97%E5%BF%98%E5%92%8C%E7%B2%BE%E7%82%BC"><span class="nav-number">1.4.</span> <span class="nav-text">遗忘和精炼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">1.5.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E4%BC%9F%E5%A4%A7%E7%9A%84%E6%83%B3%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">一个伟大的想法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ragflow-%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">ragflow 存在的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 预处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E7%B4%A2"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 检索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E8%BF%9B%E4%B8%80%E6%AD%A5%E8%87%AA%E5%AD%A6%E4%B9%A0%E5%8A%9F%E8%83%BD"><span class="nav-number">1.3.</span> <span class="nav-text">更进一步……自学习功能</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E8%AF%84%E4%BC%B0%E5%92%8C%E5%8F%8D%E9%A6%88"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 自我评估和反馈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E6%88%91%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%94%B9%E8%BF%9B"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 自我学习和改进</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%97%E5%BF%98%E5%92%8C%E7%B2%BE%E7%82%BC"><span class="nav-number">1.4.</span> <span class="nav-text">遗忘和精炼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">1.5.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -145,7 +161,7 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -203,7 +219,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -251,63 +267,85 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/AI/" rel="contents" data-pjax-state=""># AI</a> <br><br><a href="/tags/LLM/" rel="contents" data-pjax-state=""># LLM</a> <br></p>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/AI/" rel="contents" data-pjax-state=""># AI</a> <br>
+<a href="/tags/LLM/" rel="contents" data-pjax-state=""># LLM</a>
+<br></p>
 <p>前段时间，对于 LLM-RAGFlow 的介绍引起了我的兴趣，今天就来试试。</p>
 <p>但是，实际上它并没有提供我想要的功能。尽管使用了Rag，ai仍然无法将文本中的内容当作自己的知识来使用，而是将其作为外部的文本信息来处理。</p>
-<p>它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM 直接访问外部知识库。它的基本运作逻辑如下：</p>
-<ol>
-<li>RAGFlow 事先读取知识库中的所有文本，并将其转换为向量存储在数据库中。</li>
-<li>当 LLM 需要回答问题时，它会先将问题转换为向量，并在数据库中查找与之相似的文本。</li>
-<li>找到相似文本后，LLM 会将这些文本作为上下文信息传递给自己，并生成回答。</li>
+<p>它其实类似于给 LLM 提供了 MCP Server 的功能，允许 LLM
+直接访问外部知识库。它的基本运作逻辑如下：</p>
+<ol type="1">
+<li>RAGFlow
+事先读取知识库中的所有文本，并将其转换为向量存储在数据库中。</li>
+<li>当 LLM
+需要回答问题时，它会先将问题转换为向量，并在数据库中查找与之相似的文本。</li>
+<li>找到相似文本后，LLM
+会将这些文本作为上下文信息传递给自己，并生成回答。</li>
 <li>生成的回答会结合上下文信息和LLM自身的知识。</li>
 <li>最终，LLM 会将回答返回给用户。</li>
 </ol>
-<p>所以说实际上，对于ai而言，RagFlow 只是一个知识库的接口，它并没有改变 LLM 的工作方式，仅仅是为ai提供了一个能够访问知识库的途径。</p>
+<p>所以说实际上，对于ai而言，RagFlow 只是一个知识库的接口，它并没有改变
+LLM 的工作方式，仅仅是为ai提供了一个能够访问知识库的途径。</p>
 <p>就像人能够使用百度搜索引擎一样，人能够通过搜索引擎来获取信息，但这并不意味着人能够将搜索引擎中的信息当作自己的知识来使用。</p>
-<h2 id="一个伟大的想法"><a href="#一个伟大的想法" class="headerlink" title="一个伟大的想法"></a>一个伟大的想法</h2><h3 id="ragflow-存在的问题"><a href="#ragflow-存在的问题" class="headerlink" title="ragflow 存在的问题"></a>ragflow 存在的问题</h3><p>其实我在想，现有的rag的实现方式依赖于 向量化文本 来实现，它能够很好的将文本进行聚类处理，聚类后的文本就像是拥有了无数个tag，每个tag意味着它与某个知识关联。</p>
-<p>比如说，我有3篇文章与ai绘画相关，那么在向量化后，它们就会被聚类到一起，当检索到与ai绘画相关的内容时，ragflow 就会将这3篇文章作为上下文信息传递给 LLM。</p>
+<h2 id="一个伟大的想法">一个伟大的想法</h2>
+<h3 id="ragflow-存在的问题">ragflow 存在的问题</h3>
+<p>其实我在想，现有的rag的实现方式依赖于 向量化文本
+来实现，它能够很好的将文本进行聚类处理，聚类后的文本就像是拥有了无数个tag，每个tag意味着它与某个知识关联。</p>
+<p>比如说，我有3篇文章与ai绘画相关，那么在向量化后，它们就会被聚类到一起，当检索到与ai绘画相关的内容时，ragflow
+就会将这3篇文章作为上下文信息传递给 LLM。</p>
 <p>但是这样存在的最大的问题就是，人类的知识是融汇贯通的，而向量化后的文本是孤立的，尽管它们能通过聚类关联在一起，但是并不能确认它们之间的准确关系：</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">文档1：</span><br><span class="line"></span><br><span class="line">学习好累，我不想学习</span><br><span class="line"></span><br><span class="line">文档2：</span><br><span class="line"></span><br><span class="line">学习好累，我想去玩</span><br><span class="line"></span><br><span class="line">文档3：</span><br><span class="line">学习真的好快乐啊，学习到了很多新知识</span><br></pre></td></tr></tbody></table></figure>
-
-<p>这3篇文章的向量化后，会被聚类到一起，当检索学习相关的内容时，ragflow 就会将这3篇文章作为上下文信息传递给 LLM。<br>但是实际上，这3篇文章之间并没有任何关联，它们只是因为包含了“学习”这个词而被聚类到了一起，而对于学习的态度，则是截然相反的。</p>
-<p>对于学习的态度，其实更大可能是和最近发生的事情相关联，而非简单的点到点的关系。而rag无法捕获到这一点，将错误的内容作为信息传递给 LLM 后，LLM同样无法确认它们之间的关系，只会将其理解为类似于日志的内容。</p>
+<p>这3篇文章的向量化后，会被聚类到一起，当检索学习相关的内容时，ragflow
+就会将这3篇文章作为上下文信息传递给 LLM。
+但是实际上，这3篇文章之间并没有任何关联，它们只是因为包含了“学习”这个词而被聚类到了一起，而对于学习的态度，则是截然相反的。</p>
+<p>对于学习的态度，其实更大可能是和最近发生的事情相关联，而非简单的点到点的关系。而rag无法捕获到这一点，将错误的内容作为信息传递给
+LLM
+后，LLM同样无法确认它们之间的关系，只会将其理解为类似于日志的内容。</p>
 <p>于是我就想有没有可能尝试这样一种ai的实现方式：</p>
-<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><h4 id="1-预处理"><a href="#1-预处理" class="headerlink" title="1. 预处理"></a>1. 预处理</h4><ol>
+<h3 id="实现方式">实现方式</h3>
+<h4 id="预处理">1. 预处理</h4>
+<ol type="1">
 <li>通过向量化文本，将文本进行聚类处理，聚类后的文本就像是拥有了无数个tag，每个tag意味着它与某个知识关联。</li>
 <li>将有关联的文本，通过一个特殊的ai进行处理，将处理后的文章也加入向量化文本的数据库中。</li>
 </ol>
-<h4 id="2-检索"><a href="#2-检索" class="headerlink" title="2. 检索"></a>2. 检索</h4><ol start="3">
-<li>当 LLM 需要回答问题时，它会先将问题转换为向量，并在数据库中查找与之相似的文本。</li>
-<li>当检索到与某个知识相关的内容时，原始的文本和处理后的文本都会被传递给 LLM，其中原始文本的提示词影响力权重会降低，而处理后的文本的提示词影响力权重会提高。从而期望ai能够捕捉到文本之间深层次的关联。</li>
+<h4 id="检索">2. 检索</h4>
+<ol start="3" type="1">
+<li>当 LLM
+需要回答问题时，它会先将问题转换为向量，并在数据库中查找与之相似的文本。</li>
+<li>当检索到与某个知识相关的内容时，原始的文本和处理后的文本都会被传递给
+LLM，其中原始文本的提示词影响力权重会降低，而处理后的文本的提示词影响力权重会提高。从而期望ai能够捕捉到文本之间深层次的关联。</li>
 <li>生成的回答会结合上下文信息和LLM自身的知识。</li>
 <li>最终，LLM 会将回答返回给用户。</li>
 </ol>
-<p>特殊的ai核心有两个功能：</p>
-<ol>
-<li>对于单个文件，思考前后文的语义连贯性以及合理性</li>
-<li>对于多个文件，思考它们之间的关联性</li>
-</ol>
+<p>特殊的ai核心有两个功能： 1.
+对于单个文件，思考前后文的语义连贯性以及合理性 2.
+对于多个文件，思考它们之间的关联性</p>
 <p>这样的话，ai或许能够将文本中的内容当作自己的知识来使用，而不是将其作为外部的文本信息来处理。</p>
 <p>实际上这种做法类似于人类的思维方式，人类在学习知识时，往往会将不同的知识进行关联，从而形成一个完整的知识体系。而ragflow则是将知识孤立开来，无法形成一个完整的知识体系。</p>
-<h3 id="更进一步……自学习功能"><a href="#更进一步……自学习功能" class="headerlink" title="更进一步……自学习功能"></a>更进一步……自学习功能</h3><p>如果上述功能的效果很好的话，那么我们可以尝试加入自学习的功能，主要使用两个特性：</p>
-<ol>
-<li>自我评估和反馈</li>
-<li>自我学习和改进</li>
-</ol>
-<h4 id="1-自我评估和反馈"><a href="#1-自我评估和反馈" class="headerlink" title="1. 自我评估和反馈"></a>1. 自我评估和反馈</h4><p>当 LLM 生成回答后，可以通过一个特殊的 ai 对回答进行评估，判断回答的正确性和合理性，并给出反馈。这个反馈可以是一个评分，也可以是一个文本描述。<br>这个反馈会被存储在数据库中，并与原始文本和处理后的文本进行关联。</p>
-<h4 id="2-自我学习和改进"><a href="#2-自我学习和改进" class="headerlink" title="2. 自我学习和改进"></a>2. 自我学习和改进</h4><p>要求特殊的ai在处理文本时，能够生成“疑问”，并将这些疑问存储在数据库中。</p>
-<p>LLM 在合适的时间可以对这些疑问进行检索，并尝试回答这些疑问。这个过程可以看作是一个自我学习的过程。同时它也可以将问题询问人类，并将获取到的答案存储在数据库中。</p>
-<p>这样的话，LLM 就可以不断地进行自我学习和改进，从而提高自己的知识水平和回答能力。</p>
-<h3 id="遗忘和精炼"><a href="#遗忘和精炼" class="headerlink" title="遗忘和精炼"></a>遗忘和精炼</h3><p>在上述的机制下，rag存储的文本会越来越多，此时需要引入遗忘和精炼的机制。</p>
-<ol>
+<h3 id="更进一步自学习功能">更进一步……自学习功能</h3>
+<p>如果上述功能的效果很好的话，那么我们可以尝试加入自学习的功能，主要使用两个特性：
+1. 自我评估和反馈 2. 自我学习和改进</p>
+<h4 id="自我评估和反馈">1. 自我评估和反馈</h4>
+<p>当 LLM 生成回答后，可以通过一个特殊的 ai
+对回答进行评估，判断回答的正确性和合理性，并给出反馈。这个反馈可以是一个评分，也可以是一个文本描述。
+这个反馈会被存储在数据库中，并与原始文本和处理后的文本进行关联。</p>
+<h4 id="自我学习和改进">2. 自我学习和改进</h4>
+<p>要求特殊的ai在处理文本时，能够生成“疑问”，并将这些疑问存储在数据库中。</p>
+<p>LLM
+在合适的时间可以对这些疑问进行检索，并尝试回答这些疑问。这个过程可以看作是一个自我学习的过程。同时它也可以将问题询问人类，并将获取到的答案存储在数据库中。</p>
+<p>这样的话，LLM
+就可以不断地进行自我学习和改进，从而提高自己的知识水平和回答能力。</p>
+<h3 id="遗忘和精炼">遗忘和精炼</h3>
+<p>在上述的机制下，rag存储的文本会越来越多，此时需要引入遗忘和精炼的机制。</p>
+<ol type="1">
 <li>遗忘：当文本经由ai处理后，原始文本的权重乘以k（k&lt;1）存储到数据库中。这样的话，随着时间的推移，原始文本的权重会越来越低，当权重低于Kmin时，就可以将其删除。</li>
 <li>精炼：当文本经由ai处理后，生成出来的文本的权重为1，存储到数据库中，从而形成一个新的知识体系。</li>
 </ol>
 <p>通过上述的机制，知识库的信息熵能够越来越低，从而形成一个完整的知识体系。但是同时，其连接数和广度也会越来越高，从而形成一个完整的知识网络。</p>
 <span id="more"></span>
-
 <hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+<h3 id="reference">Reference</h3>
+
     </div>
 
     

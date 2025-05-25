@@ -18,12 +18,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
 
-    <meta name="description" content="# AI绘画  AI绘画模型：anime-illust-diffusion-xl它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份： 模型介绍（Chinese Part）I 目录在本介绍中，您将了解：  模型介绍（见 II 部分）；  使用指南（见 III 部分）；  训练参数（见 IV 部分）；  触发词列表（见附录 A 部分）   II 模型介绍动漫插画设计XL，或称">
+    <meta name="description" content="#
+ AI绘画  # AI绘画模型：anime-illust-diffusion-xl
+ 它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：
+ 模型介绍（Chinese Part）
+ I 目录
+ 在本介绍中，您将了解：
+ 
+ 模型介绍（见 II 部分）；
+ 使用指南（见 III 部分）；
+ 训练参数（见 IV 部分）；
+ 触发词列表（见附录 A 部分）
+ 
+ II 模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AI绘画模型：anime-illust-diffusion-xl">
 <meta property="og:url" content="https://xiaolinxiaozhu.github.io/2025/03/27/AI%E7%BB%98%E7%94%BB%E6%A8%A1%E5%9E%8B%EF%BC%9Aanime-illust-diffusion-xl/index.html">
 <meta property="og:site_name" content="XLXZ's Blog">
-<meta property="og:description" content="# AI绘画  AI绘画模型：anime-illust-diffusion-xl它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份： 模型介绍（Chinese Part）I 目录在本介绍中，您将了解：  模型介绍（见 II 部分）；  使用指南（见 III 部分）；  训练参数（见 IV 部分）；  触发词列表（见附录 A 部分）   II 模型介绍动漫插画设计XL，或称">
+<meta property="og:description" content="#
+ AI绘画  # AI绘画模型：anime-illust-diffusion-xl
+ 它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：
+ 模型介绍（Chinese Part）
+ I 目录
+ 在本介绍中，您将了解：
+ 
+ 模型介绍（见 II 部分）；
+ 使用指南（见 III 部分）；
+ 训练参数（见 IV 部分）；
+ 触发词列表（见附录 A 部分）
+ 
+ II 模型">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3664840-42e6-4fcf-b034-4aac7d816c09/width=525/e3664840-42e6-4fcf-b034-4aac7d816c09.jpeg">
 <meta property="og:image" content="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d8ec942-4c66-48d8-b82a-51b4bbfd597c/width=525/1d8ec942-4c66-48d8-b82a-51b4bbfd597c.jpeg">
@@ -143,7 +167,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AI%E7%BB%98%E7%94%BB%E6%A8%A1%E5%9E%8B%EF%BC%9Aanime-illust-diffusion-xl"><span class="nav-number">1.</span> <span class="nav-text">AI绘画模型：anime-illust-diffusion-xl</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D%EF%BC%88Chinese-Part%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">模型介绍（Chinese Part）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-%E7%9B%AE%E5%BD%95"><span class="nav-number">2.1.</span> <span class="nav-text">I 目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.2.</span> <span class="nav-text">II 模型介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88%E5%B0%86%E4%B8%8E%E6%97%B6%E4%BF%B1%E8%BF%9B%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">III 使用指南（将与时俱进）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">2.3.1.</span> <span class="nav-text">1 基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%89%B9%E6%AE%8A%E7%94%A8%E6%B3%95"><span class="nav-number">2.3.2.</span> <span class="nav-text">2 特殊用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.3.3.</span> <span class="nav-text">3 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-%E8%AE%AD%E7%BB%83%E5%8F%82%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">IV 训练参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V-%E7%89%B9%E5%88%AB%E9%B8%A3%E8%B0%A2"><span class="nav-number">2.5.</span> <span class="nav-text">V 特别鸣谢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VI-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="nav-number">2.6.</span> <span class="nav-text">VI 更新日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VII-%E8%B5%9E%E5%8A%A9%E6%88%91%E4%BB%AC"><span class="nav-number">2.7.</span> <span class="nav-text">VII 赞助我们</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appendix-%E9%99%84%E5%BD%95"><span class="nav-number">2.8.</span> <span class="nav-text">Appendix / 附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Special-Trigger-Words-List-%E7%89%B9%E6%AE%8A%E8%A7%A6%E5%8F%91%E8%AF%8D%E5%88%97%E8%A1%A8"><span class="nav-number">2.8.1.</span> <span class="nav-text">A. Special Trigger Words List / 特殊触发词列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Reference"><span class="nav-number">2.8.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8Dchinese-part"><span class="nav-number">1.</span> <span class="nav-text">模型介绍（Chinese Part）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#i-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">I 目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ii-%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.2.</span> <span class="nav-text">II 模型介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iii-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%E5%B0%86%E4%B8%8E%E6%97%B6%E4%BF%B1%E8%BF%9B"><span class="nav-number">1.3.</span> <span class="nav-text">III 使用指南（将与时俱进）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">1 基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E7%94%A8%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">2 特殊用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.3.3.</span> <span class="nav-text">3 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iv-%E8%AE%AD%E7%BB%83%E5%8F%82%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">IV 训练参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-%E7%89%B9%E5%88%AB%E9%B8%A3%E8%B0%A2"><span class="nav-number">1.5.</span> <span class="nav-text">V 特别鸣谢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vi-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97"><span class="nav-number">1.6.</span> <span class="nav-text">VI 更新日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vii-%E8%B5%9E%E5%8A%A9%E6%88%91%E4%BB%AC"><span class="nav-number">1.7.</span> <span class="nav-text">VII 赞助我们</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#appendix-%E9%99%84%E5%BD%95"><span class="nav-number">1.8.</span> <span class="nav-text">Appendix / 附录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a.-special-trigger-words-list-%E7%89%B9%E6%AE%8A%E8%A7%A6%E5%8F%91%E8%AF%8D%E5%88%97%E8%A1%A8"><span class="nav-number">1.8.1.</span> <span class="nav-text">A. Special Trigger
+Words List / 特殊触发词列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">1.8.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,7 +176,7 @@
           <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
   <p class="site-author-name" itemprop="name">XLXZ</p>
-  <div class="site-description" itemprop="description">我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。</div>
+  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -233,7 +258,7 @@
 
     <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="我最喜欢的两句话:1.你的目标有多坚定?2.明天和今天一样。">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
     </span>
 
     <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
@@ -281,168 +306,216 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a href="/tags/AI绘画/" rel="contents" data-pjax-state=""># AI绘画</a> <br></p>
-<h1 id="AI绘画模型：anime-illust-diffusion-xl"><a href="#AI绘画模型：anime-illust-diffusion-xl" class="headerlink" title="AI绘画模型：anime-illust-diffusion-xl"></a>AI绘画模型：anime-illust-diffusion-xl</h1><p>它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：</p>
-<h1 id="模型介绍（Chinese-Part）"><a href="#模型介绍（Chinese-Part）" class="headerlink" title="模型介绍（Chinese Part）"></a>模型介绍（Chinese Part）</h1><h2 id="I-目录"><a href="#I-目录" class="headerlink" title="I 目录"></a>I 目录</h2><p>在本介绍中，您将了解：</p>
-<ol>
-<li><p>模型介绍（见 II 部分）；</p>
-</li>
-<li><p>使用指南（见 III 部分）；</p>
-</li>
-<li><p>训练参数（见 IV 部分）；</p>
-</li>
-<li><p>触发词列表（见附录 A 部分）</p>
-</li>
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/AI绘画/" rel="contents" data-pjax-state="">#
+AI绘画</a> <br> # AI绘画模型：anime-illust-diffusion-xl</p>
+<p>它这个模型有自己的使用方式，为了避免网站失效导致无法查看，我在这里也记录一份：</p>
+<h1 id="模型介绍chinese-part">模型介绍（Chinese Part）</h1>
+<h2 id="i-目录">I 目录</h2>
+<p>在本介绍中，您将了解：</p>
+<ol type="1">
+<li><p>模型介绍（见 II 部分）；</p></li>
+<li><p>使用指南（见 III 部分）；</p></li>
+<li><p>训练参数（见 IV 部分）；</p></li>
+<li><p>触发词列表（见附录 A 部分）</p></li>
 </ol>
-<h2 id="II-模型介绍"><a href="#II-模型介绍" class="headerlink" title="II 模型介绍"></a>II 模型介绍</h2><p>动漫插画设计XL，或称 AIDXL 是一款专用于生成二次元插图的模型。它内置了 <strong>800</strong> 种以上（随着更新越来越多）的插画风格，依靠特定触发词（见附录 A 部分）触发。</p>
-<p>优点：构图大胆，没有摆拍感，主体突出，没有过多繁杂的细节，认识很多动漫人物（依靠角色日文名拼音触发，例如，“ayanami rei”对应角色“绫波丽”，“kamado nezuko”对应角色“祢豆子”）。</p>
-<h2 id="III-使用指南（将与时俱进）"><a href="#III-使用指南（将与时俱进）" class="headerlink" title="III 使用指南（将与时俱进）"></a>III 使用指南（将与时俱进）</h2><h3 id="1-基本用法"><a href="#1-基本用法" class="headerlink" title="1 基本用法"></a>1 基本用法</h3><p><strong>1.1 提示词书写</strong></p>
-<ol>
-<li><p><strong>使用触发词</strong>：使用附录 A 所提供的触发词来风格化图像。适合的触发词将 <strong>极大地</strong> 提高生成质量；</p>
-</li>
-<li><p><strong>提示词标签化</strong>：使用标签化的提示词描述生成对象；</p>
-</li>
+<h2 id="ii-模型介绍">II 模型介绍</h2>
+<p>动漫插画设计XL，或称 AIDXL 是一款专用于生成二次元插图的模型。它内置了
+<strong>800</strong>
+种以上（随着更新越来越多）的插画风格，依靠特定触发词（见附录 A
+部分）触发。</p>
+<p>优点：构图大胆，没有摆拍感，主体突出，没有过多繁杂的细节，认识很多动漫人物（依靠角色日文名拼音触发，例如，“ayanami
+rei”对应角色“绫波丽”，“kamado nezuko”对应角色“祢豆子”）。</p>
+<h2 id="iii-使用指南将与时俱进">III 使用指南（将与时俱进）</h2>
+<h3 id="基本用法">1 基本用法</h3>
+<p><strong>1.1 提示词书写</strong></p>
+<ol type="1">
+<li><p><strong>使用触发词</strong>：使用附录 A
+所提供的触发词来风格化图像。适合的触发词将 <strong>极大地</strong>
+提高生成质量；</p></li>
+<li><p><strong>提示词标签化</strong>：使用标签化的提示词描述生成对象；</p></li>
 <li><p><strong>提示词排序</strong>：排序您的提示词将有助于模型理解词义。推荐的标签顺序：</p>
-<p><strong>触发词（by xxx）</strong>-&gt;主角（1girl）-&gt;<strong>角色（frieren）</strong>-&gt;种族（elf）-&gt;<strong>构图（cowboy shot）</strong>-&gt;风格（impasto）-&gt;主题（fantasy）-&gt;主要环境（forest, day）-&gt;<strong>背景（gradient background）</strong>-&gt;动作（sitting）-&gt;表情（expressionless）-&gt;<strong>主要人物特征（white hair）</strong>-&gt;<strong>人体特征（twintails, green eyes, parted lip）</strong>-&gt;<strong>服饰（white dress）</strong>-&gt;服装配件（frills）-&gt;其他物品（magic wand）-&gt;次要环境（grass, sunshine）-&gt;<strong>美学（beautiful color, detailed, aesthetic）</strong>-&gt;<strong>质量（best quality）</strong></p>
-</li>
-<li><p><strong>负面提示词</strong>：**<em>worst quality</em>**_,_ <strong><em>low quality</em></strong><em>,</em> <strong><em>lowres</em></strong><em>,</em> <strong><em>messy</em></strong>, <em>abstract, ugly, disfigured, bad anatomy, deformed hands, fused fingers, signature, text, multi views</em></p>
-</li>
+<p><strong>触发词（by
+xxx）</strong>-&gt;主角（1girl）-&gt;<strong>角色（frieren）</strong>-&gt;种族（elf）-&gt;<strong>构图（cowboy
+shot）</strong>-&gt;风格（impasto）-&gt;主题（fantasy）-&gt;主要环境（forest,
+day）-&gt;<strong>背景（gradient
+background）</strong>-&gt;动作（sitting）-&gt;表情（expressionless）-&gt;<strong>主要人物特征（white
+hair）</strong>-&gt;<strong>人体特征（twintails, green eyes, parted
+lip）</strong>-&gt;<strong>服饰（white
+dress）</strong>-&gt;服装配件（frills）-&gt;其他物品（magic
+wand）-&gt;次要环境（grass, sunshine）-&gt;<strong>美学（beautiful
+color, detailed, aesthetic）</strong>-&gt;<strong>质量（best
+quality）</strong></p></li>
+<li><p><strong>负面提示词</strong>：<strong><em>worst
+quality</em></strong>_,_ <strong><em>low quality</em></strong>_,_
+<strong><em>lowres</em></strong>_,_ <strong><em>messy</em></strong>,
+<em>abstract, ugly, disfigured, bad anatomy, deformed hands, fused
+fingers, signature, text, multi views</em></p></li>
 </ol>
 <p><strong>1.2 生成参数</strong></p>
-<ol>
-<li><p><strong>分辨率</strong>：确保图像总分辨率（总分辨率=高度x宽度）围绕1024*1024且宽和高均为32的倍数。例如，832x1216 (3:2), 1216x832 (3:2), 以及 1024x1024 (1:1)。</p>
-</li>
-<li><p>不进行“<strong>Clip Skip</strong>”操作，即 Clip Skip = 1。</p>
-</li>
-<li><p><strong>采样器</strong>和<strong>步数</strong>：采用 “euler_ancester” 采样器（sampler），该组合在 webui 里称为 Euler A。在 7 CFG Scale 上采样 28 步。</p>
-</li>
-<li><p>仅需要使用模型本身，而不使用精炼器（Refiner）。</p>
-</li>
-<li><p>使用基底模型 vae 或 sdxl-vae。</p>
-</li>
+<ol type="1">
+<li><p><strong>分辨率</strong>：确保图像总分辨率（总分辨率=高度x宽度）围绕1024*1024且宽和高均为32的倍数。例如，832x1216
+(3:2), 1216x832 (3:2), 以及 1024x1024 (1:1)。</p></li>
+<li><p>不进行“<strong>Clip Skip</strong>”操作，即 Clip Skip =
+1。</p></li>
+<li><p><strong>采样器</strong>和<strong>步数</strong>：采用
+“euler_ancester” 采样器（sampler），该组合在 webui 里称为 Euler A。在 7
+CFG Scale 上采样 28 步。</p></li>
+<li><p>仅需要使用模型本身，而不使用精炼器（Refiner）。</p></li>
+<li><p>使用基底模型 vae 或 sdxl-vae。</p></li>
 </ol>
-<h3 id="2-特殊用法"><a href="#2-特殊用法" class="headerlink" title="2 特殊用法"></a>2 特殊用法</h3><p><strong>2.1 泛风格化</strong></p>
-<p>0.7 版本归纳了若干相似插画画风，引入了泛风格触发词。泛风格触发词各代表一种常见动漫插画画风类别。</p>
+<h3 id="特殊用法">2 特殊用法</h3>
+<p><strong>2.1 泛风格化</strong></p>
+<p>0.7
+版本归纳了若干相似插画画风，引入了泛风格触发词。泛风格触发词各代表一种常见动漫插画画风类别。</p>
 <p>请注意，泛风格触发词并不一定符合其词义指代的美术含义，而是经过重新定义的特殊触发词。</p>
 <p><strong>2.2 角色</strong></p>
-<p>0.7 版本对强化训练了角色。部分角色触发词的还原度已经能够达到 lora 的效果，且能够很好地将角色概念与其本身的着装分离。</p>
-<p>角色触发方式为 <code>角色名 \(作品\)</code>。例如，触发动画《赛博朋克：边缘行者》的女主角露西则使用 <code>lucy \(cyberpunk\)</code>；触发游戏《原神》中的角色甘雨则使用 <code>ganyu \(genshin impact\)</code>。这里，“lucy” 和 “ganyu” 为角色名，“\(cyberpunk\)” 和 “\(genshin impact\)” 则为对应角色的作品出处，括号使用斜杠”\“转义以防止被解释为提示词加权。对于部分角色，出处并非必要。</p>
-<p>角色触发词请参照 <a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">selected_tags.csv · SmilingWolf/wd-v1-4-convnext-tagger-v2 at main (</a><a target="_blank" rel="noopener" href="http://huggingface.co/">huggingface.co</a><a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">)</a>。</p>
+<p>0.7 版本对强化训练了角色。部分角色触发词的还原度已经能够达到 lora
+的效果，且能够很好地将角色概念与其本身的着装分离。</p>
+<p>角色触发方式为
+<code>角色名 \(作品\)</code>。例如，触发动画《赛博朋克：边缘行者》的女主角露西则使用
+<code>lucy \(cyberpunk\)</code>；触发游戏《原神》中的角色甘雨则使用
+<code>ganyu \(genshin impact\)</code>。这里，“lucy” 和 “ganyu”
+为角色名，“\(cyberpunk\)” 和 “\(genshin impact\)”
+则为对应角色的作品出处，括号使用斜杠"\"转义以防止被解释为提示词加权。对于部分角色，出处并非必要。</p>
+<p>角色触发词请参照 <a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">selected_tags.csv
+· SmilingWolf/wd-v1-4-convnext-tagger-v2 at main (</a><a target="_blank" rel="noopener" href="http://huggingface.co">huggingface.co</a><a target="_blank" rel="noopener" href="https://huggingface.co/SmilingWolf/wd-v1-4-convnext-tagger-v2/blob/main/selected_tags.csv">)</a>。</p>
 <p>在使用中，若仅靠单个角色触发词无法完全还原角色，则需要在提示词中添加该角色的主要特征。</p>
-<p>角色触发词通常不会携带角色本身的着装特征，若要添加角色着装，则需要在提示词中添加衣物名。例如，游戏《碧蓝航线》中角色圣路易斯 ( <code>st. louis \(luxurious wheels\) \(azur lane\)</code> ) 的衣装触发可使用 <code>silver evening gown, plunging neckline</code>。类似地，您也能对任何角色添加其他角色的衣装标签。</p>
+<p>角色触发词通常不会携带角色本身的着装特征，若要添加角色着装，则需要在提示词中添加衣物名。例如，游戏《碧蓝航线》中角色圣路易斯
+( <code>st. louis \(luxurious wheels\) \(azur lane\)</code> )
+的衣装触发可使用
+<code>silver evening gown, plunging neckline</code>。类似地，您也能对任何角色添加其他角色的衣装标签。</p>
 <p><strong>2.3 质量标签</strong></p>
-<p>0.7 版本的质量和美学标签<strong>经过正式训练</strong>，在提示词中尾随它们将影响生成图像的质量。</p>
-<p>0.7 版本正式训练并引入了质量标签，质量标签分为六个等级，由好到坏分别为：**<em>amazing quality</em>**, <strong><em>best quality</em></strong>, <strong><em>high quality</em></strong>, <strong><em>normal quality</em></strong><em>,</em> <strong><em>low quality</em></strong> 和 <strong><em>worst quality</em></strong>.</p>
+<p>0.7
+版本的质量和美学标签<strong>经过正式训练</strong>，在提示词中尾随它们将影响生成图像的质量。</p>
+<p>0.7
+版本正式训练并引入了质量标签，质量标签分为六个等级，由好到坏分别为：<strong><em>amazing
+quality</em></strong>, <strong><em>best quality</em></strong>,
+<strong><em>high quality</em></strong>, <strong><em>normal
+quality</em></strong>_,_ <strong><em>low quality</em></strong> 和
+<strong><em>worst quality</em></strong>.</p>
 <p><strong>2.4 美学标签</strong></p>
 <p>0.7 版本起引入了美学标签，描述图像的特殊美学特征。</p>
 <p>2.5 风格融合</p>
-<p>您可以将一些样式合并到您的自定义样式中。 “合并”实际上意味着一次使用多种风格触发词。 例如，<em>chun-li, amazing quality,</em> <strong><em>(by yoneyama mai:0.9), (by chi4:0.8), by ask, by modare, (by ikky:0.9).</em></strong></p>
+<p>您可以将一些样式合并到您的自定义样式中。
+“合并”实际上意味着一次使用多种风格触发词。 例如，<em>chun-li, amazing
+quality,</em> <strong><em>(by yoneyama mai:0.9), (by chi4:0.8), by ask,
+by modare, (by ikky:0.9).</em></strong></p>
 <p>一些技巧：</p>
 <ul>
-<li><p>控制风格的权重和顺序来调整最终风格。</p>
-</li>
-<li><p>尾随而非前置到提示词上。</p>
-</li>
+<li><p>控制风格的权重和顺序来调整最终风格。</p></li>
+<li><p>尾随而非前置到提示词上。</p></li>
 </ul>
-<h3 id="3-注意事项"><a href="#3-注意事项" class="headerlink" title="3 注意事项"></a>3 注意事项</h3><ol>
-<li><p>使用 SDXL 支持的 VAE 模型、文本嵌入（embeddings）模型和 Lora 模型。注意：sd-vae-ft-mse-original 不是支持 SDXL 的 vae；EasyNegative、badhandv4 等负面文本嵌入也不是支持 SDXL 的 embeddings；</p>
-</li>
-<li><p>对于 0.61 及以下版本：生成图像时，强烈推荐使用模型专用的负面文本嵌入（下载参见 Suggested Resources 栏），因其为模型特制，故对模型几乎仅有正面效果；</p>
-</li>
-<li><p>每个版本新增触发词将在当前版本效果相对较弱或不稳定。</p>
-</li>
+<h3 id="注意事项">3 注意事项</h3>
+<ol type="1">
+<li><p>使用 SDXL 支持的 VAE 模型、文本嵌入（embeddings）模型和 Lora
+模型。注意：sd-vae-ft-mse-original 不是支持 SDXL 的
+vae；EasyNegative、badhandv4 等负面文本嵌入也不是支持 SDXL 的
+embeddings；</p></li>
+<li><p>对于 0.61
+及以下版本：生成图像时，强烈推荐使用模型专用的负面文本嵌入（下载参见
+Suggested Resources
+栏），因其为模型特制，故对模型几乎仅有正面效果；</p></li>
+<li><p>每个版本新增触发词将在当前版本效果相对较弱或不稳定。</p></li>
 </ol>
-<h2 id="IV-训练参数"><a href="#IV-训练参数" class="headerlink" title="IV 训练参数"></a>IV 训练参数</h2><p>以 SDXL1.0 为底模，使用大约 2w 张自己标注的图像在 5e-6 学习率，循环次数为 1 的余弦调度器上训练了约 100 期得到模型 A。之后在 2e-7 学习率，其余参数相同的条件下，训练得到模型 B。将模型 A 与 B 混合后得到 AIDXLv0.1 模型。</p>
+<h2 id="iv-训练参数">IV 训练参数</h2>
+<p>以 SDXL1.0 为底模，使用大约 2w 张自己标注的图像在 5e-6
+学习率，循环次数为 1 的余弦调度器上训练了约 100 期得到模型 A。之后在
+2e-7 学习率，其余参数相同的条件下，训练得到模型 B。将模型 A 与 B
+混合后得到 AIDXLv0.1 模型。</p>
 <p><em>其他训练参数请参照英文版本的介绍。</em></p>
-<h2 id="V-特别鸣谢"><a href="#V-特别鸣谢" class="headerlink" title="V 特别鸣谢"></a>V 特别鸣谢</h2><p>算力赞助：感谢 @捏Ta 社区（<a target="_blank" rel="noopener" href="https://nieta.art/">捏Ta (</a><a target="_blank" rel="noopener" href="http://nieta.art/">nieta.art</a><a target="_blank" rel="noopener" href="https://nieta.art/">)</a>）提供的算力支持；</p>
-<p>数据支持：感谢 @秋麒麟热茶（<a target="_blank" rel="noopener" href="https://civitai.com/user/KirinTea_Aki">KirinTea_Aki Creator Profile | Civitai</a>） 和 @风吟（<a target="_blank" rel="noopener" href="https://civitai.com/user/Chenkin">Chenkin Creator Profile | Civitai</a>）提供的大量数据支持；</p>
+<h2 id="v-特别鸣谢">V 特别鸣谢</h2>
+<p>算力赞助：感谢 <span class="citation" data-cites="捏Ta">@捏Ta</span>
+社区（<a target="_blank" rel="noopener" href="https://nieta.art/">捏Ta (</a><a target="_blank" rel="noopener" href="http://nieta.art">nieta.art</a><a target="_blank" rel="noopener" href="https://nieta.art/">)</a>）提供的算力支持；</p>
+<p>数据支持：感谢 <span class="citation" data-cites="秋麒麟热茶">@秋麒麟热茶</span>（<a target="_blank" rel="noopener" href="https://civitai.com/user/KirinTea_Aki">KirinTea_Aki Creator
+Profile | Civitai</a>） 和 <span class="citation" data-cites="风吟">@风吟</span>（<a target="_blank" rel="noopener" href="https://civitai.com/user/Chenkin">Chenkin Creator Profile |
+Civitai</a>）提供的大量数据支持；</p>
 <p>没有它们就不会有 0.7 版本。</p>
-<h2 id="VI-更新日志"><a href="#VI-更新日志" class="headerlink" title="VI 更新日志"></a>VI 更新日志</h2><p>2023/08/08：AIDXL 使用与 AIDv2.10 完全相同的训练集进行训练，但表现优于 AIDv2.10。AIDXL 更聪明，能做到很多以 SD1.5 为底模型无法做到的事。它还能很好地区分不同概念，学习图像细节，处理对 SD1.5 来说难于登天的构图，几近完美地学习旧版 AID 无法完全掌握的风格。总的来说，它拥有比 SD1.5 更高的上限，我会继续更新 AIDXL。</p>
-<p>2024/01/27：0.7 版本新增了大量内容，数据集大小是上一版本的两倍以上。</p>
-<ol>
-<li><p>为了得到令人满意的标注，我尝试了很多新的标签处理算法，例如标签排序、标签分层随机化、角色特征分离等等。项目地址：<a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">Eugeoter/sd-dataset-manager (</a><a target="_blank" rel="noopener" href="http://github.com/">github.com</a><a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">)</a>；</p>
-</li>
-<li><p>为了使训练可控，且更加服从我的意愿，我基于 Kohya-ss 制作了特制的训练脚本；</p>
-</li>
-<li><p>为了掌控不同世代的模型的融合过程，我开发了一些启发式的模型融合算法；为了使模型达到足够的风格化，我放弃了通过融合文本编码器和UNET的OUT层来提高模型的稳定和美学，因为这会伤害模型的风格。</p>
-</li>
-<li><p>为了筛选和过滤数据，我训练了一个水印检测模型、一个图像分类模型、一个美学评分模型，来帮助我清洗数据。</p>
-</li>
+<h2 id="vi-更新日志">VI 更新日志</h2>
+<p>2023/08/08：AIDXL 使用与 AIDv2.10
+完全相同的训练集进行训练，但表现优于 AIDv2.10。AIDXL
+更聪明，能做到很多以 SD1.5
+为底模型无法做到的事。它还能很好地区分不同概念，学习图像细节，处理对
+SD1.5 来说难于登天的构图，几近完美地学习旧版 AID
+无法完全掌握的风格。总的来说，它拥有比 SD1.5 更高的上限，我会继续更新
+AIDXL。</p>
+<p>2024/01/27：0.7
+版本新增了大量内容，数据集大小是上一版本的两倍以上。</p>
+<ol type="1">
+<li><p>为了得到令人满意的标注，我尝试了很多新的标签处理算法，例如标签排序、标签分层随机化、角色特征分离等等。项目地址：<a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">Eugeoter/sd-dataset-manager
+(</a><a target="_blank" rel="noopener" href="http://github.com">github.com</a><a target="_blank" rel="noopener" href="https://github.com/Eugeoter/sd-dataset-manager">)</a>；</p></li>
+<li><p>为了使训练可控，且更加服从我的意愿，我基于 Kohya-ss
+制作了特制的训练脚本；</p></li>
+<li><p>为了掌控不同世代的模型的融合过程，我开发了一些启发式的模型融合算法；为了使模型达到足够的风格化，我放弃了通过融合文本编码器和UNET的OUT层来提高模型的稳定和美学，因为这会伤害模型的风格。</p></li>
+<li><p>为了筛选和过滤数据，我训练了一个水印检测模型、一个图像分类模型、一个美学评分模型，来帮助我清洗数据。</p></li>
 </ol>
-<h2 id="VII-赞助我们"><a href="#VII-赞助我们" class="headerlink" title="VII 赞助我们"></a>VII 赞助我们</h2><p>如果您喜欢我们的工作，欢迎通过 Ko-fi(<a target="_blank" rel="noopener" href="https://ko-fi.com/eugeai">https://ko-fi.com/eugeai</a>) 赞助我们，以支持我们的研究和开发，感谢您的支持！</p>
-<h2 id="Appendix-附录"><a href="#Appendix-附录" class="headerlink" title="Appendix / 附录"></a>Appendix / 附录</h2><h3 id="A-Special-Trigger-Words-List-特殊触发词列表"><a href="#A-Special-Trigger-Words-List-特殊触发词列表" class="headerlink" title="A. Special Trigger Words List / 特殊触发词列表"></a>A. Special Trigger Words List / 特殊触发词列表</h3><ul>
-<li><p><strong>Art style trigger words</strong>: <a target="_blank" rel="noopener" href="https://huggingface.co/Eugeoter/anime_illust_diffusion_xl/blob/main/references/artist.csv">Click me</a></p>
-</li>
-<li><p><strong>Painting style trigger words</strong>: flat color, clean color, celluloid, flat-pasto, thin-pasto, pseudo-impasto, impasto, realistic, photorealistic, cel shading, 3d</p>
+<h2 id="vii-赞助我们">VII 赞助我们</h2>
+<p>如果您喜欢我们的工作，欢迎通过 Ko-fi(<a target="_blank" rel="noopener" href="https://ko-fi.com/eugeai">https://ko-fi.com/eugeai</a>)
+赞助我们，以支持我们的研究和开发，感谢您的支持！</p>
+<h2 id="appendix-附录">Appendix / 附录</h2>
+<h3 id="a.-special-trigger-words-list-特殊触发词列表">A. Special Trigger
+Words List / 特殊触发词列表</h3>
 <ul>
-<li><p>flat color: Flat colors, using lines to describe light and shadow</p>
-<p>平涂：平面色彩，使用线条和色块描述光影和层次</p>
-</li>
-<li><p>clean color: Style between flat color and flat-pasto. Simple and tidy coloring.</p>
-<p>具有简洁色彩的平涂，介于 flat color 和 flat-pasto 之间</p>
-</li>
+<li><p><strong>Art style trigger words</strong>: <a target="_blank" rel="noopener" href="https://huggingface.co/Eugeoter/anime_illust_diffusion_xl/blob/main/references/artist.csv">Click
+me</a></p></li>
+<li><p><strong>Painting style trigger words</strong>: flat color, clean
+color, celluloid, flat-pasto, thin-pasto, pseudo-impasto, impasto,
+realistic, photorealistic, cel shading, 3d</p>
+<ul>
+<li><p>flat color: Flat colors, using lines to describe light and
+shadow</p>
+<p>平涂：平面色彩，使用线条和色块描述光影和层次</p></li>
+<li><p>clean color: Style between flat color and flat-pasto. Simple and
+tidy coloring.</p>
+<p>具有简洁色彩的平涂，介于 flat color 和 flat-pasto 之间</p></li>
 <li><p>celluloid: Anime coloring</p>
-<p>平涂赛璐璐：动漫着色</p>
-</li>
-<li><p>flat-pasto: Nearly flat color, using gradient color to describe lighting and shadow</p>
-<p>接近平面的色彩，使用渐变描述光影和层次</p>
-</li>
-<li><p>thin-pasto: Thin contour, using gradient and paint thickness to describe light, shadow and layers</p>
+<p>平涂赛璐璐：动漫着色</p></li>
+<li><p>flat-pasto: Nearly flat color, using gradient color to describe
+lighting and shadow</p>
+<p>接近平面的色彩，使用渐变描述光影和层次</p></li>
+<li><p>thin-pasto: Thin contour, using gradient and paint thickness to
+describe light, shadow and layers</p>
 <p>细轮廓勾线，使用渐变和颜料厚度描述光影和层次</p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3664840-42e6-4fcf-b034-4aac7d816c09/width=525/e3664840-42e6-4fcf-b034-4aac7d816c09.jpeg"></p>
-</li>
-<li><p>pseudo-impasto：Use gradients and paint thickness to describe light, shadow and layers</p>
-<p>伪厚涂 / 半厚涂：使用渐变和颜料厚度描述光影和层次</p>
-</li>
-<li><p>impasto：Use paint thickness to describe light, shadow and gradation</p>
-<p>厚涂：使用颜料厚度描述光影和层次</p>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e3664840-42e6-4fcf-b034-4aac7d816c09/width=525/e3664840-42e6-4fcf-b034-4aac7d816c09.jpeg"></p></li>
+<li><p>pseudo-impasto：Use gradients and paint thickness to describe
+light, shadow and layers</p>
+<p>伪厚涂 / 半厚涂：使用渐变和颜料厚度描述光影和层次</p></li>
+<li><p>impasto：Use paint thickness to describe light, shadow and
+gradation</p>
+<p>厚涂：使用颜料厚度描述光影和层次</p></li>
 <li><p>realistic</p>
-<p>写实</p>
-</li>
+<p>写实</p></li>
 <li><p>photorealistic：Redefined to a style closer to the real world</p>
-<p>相片写实主义：重定义为接近真实世界的风格</p>
-</li>
+<p>相片写实主义：重定义为接近真实世界的风格</p></li>
 <li><p>cel shading: Anime 3D modeling style</p>
-<p>卡通渲染：二次元三维建模风格</p>
-</li>
+<p>卡通渲染：二次元三维建模风格</p></li>
 <li><p>3d</p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d8ec942-4c66-48d8-b82a-51b4bbfd597c/width=525/1d8ec942-4c66-48d8-b82a-51b4bbfd597c.jpeg"></p>
-</li>
-</ul>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/1d8ec942-4c66-48d8-b82a-51b4bbfd597c/width=525/1d8ec942-4c66-48d8-b82a-51b4bbfd597c.jpeg"></p></li>
+</ul></li>
 <li><p><strong>Aesthetic trigger words:</strong></p>
 <ul>
 <li><p>beautiful</p>
-<p>美丽</p>
-</li>
+<p>美丽</p></li>
 <li><p>aesthetic: slightly abstract artistic sense</p>
-<p>唯美：稍微抽象的艺术感</p>
-</li>
+<p>唯美：稍微抽象的艺术感</p></li>
 <li><p>detailed</p>
-<p>细致</p>
-</li>
+<p>细致</p></li>
 <li><p>beautiful color: subtle use of color</p>
-<p>协调的色彩：精妙的用色</p>
-</li>
-<li><p>lowres</p>
-</li>
+<p>协调的色彩：精妙的用色</p></li>
+<li><p>lowres</p></li>
 <li><p>messy: messy composition or details</p>
-<p>杂乱：杂乱的构图或细节</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Quality trigger words</strong>: amazing quality, best quality, high quality, low quality, worst quality</p>
+<p>杂乱：杂乱的构图或细节</p></li>
+</ul></li>
+<li><p><strong>Quality trigger words</strong>: amazing quality, best
+quality, high quality, low quality, worst quality</p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/f4cddf2b-2a3b-4ca4-84c3-dd70b5e2e5c0/width=525/f4cddf2b-2a3b-4ca4-84c3-dd70b5e2e5c0.jpeg"></p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/895a417a-0ffd-4cb1-877d-c2c59b323eb3/width=525/895a417a-0ffd-4cb1-877d-c2c59b323eb3.jpeg"></p>
 <p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9063a6d4-25a0-4de1-a193-3d203d1ea06e/width=525/9063a6d4-25a0-4de1-a193-3d203d1ea06e.jpeg"></p>
-<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7417733-a110-41dc-9490-34a2aa13b3c5/width=525/a7417733-a110-41dc-9490-34a2aa13b3c5.jpeg"></p>
-</li>
+<p><img src="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/a7417733-a110-41dc-9490-34a2aa13b3c5/width=525/a7417733-a110-41dc-9490-34a2aa13b3c5.jpeg"></p></li>
 </ul>
 <span id="more"></span>
-
 <hr>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3>
+<h3 id="reference">Reference</h3>
+
     </div>
 
     
