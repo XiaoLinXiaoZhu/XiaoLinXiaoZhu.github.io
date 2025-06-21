@@ -1,0 +1,489 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+
+
+
+
+
+  
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xiaolinxiaozhu.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script>
+
+    <meta name="description" content="#
+ 游戏设计 
+ 为什么我们需要相机震动
+ 相机震动可以让游戏 feel 更 “好”，具体而言，
+ 
+ 增强反馈：相机震动可以在玩家执行某些动作时提供即时反馈，例如攻击、跳跃或受到伤害。这种反馈可以让玩家更好地理解他们的行为对游戏世界的影响。
+ 增加沉浸感：通过模拟真实世界中的相机运动，游戏可以让玩家感受到更强的沉浸感。例如，在激烈的战斗场景中，微妙的相机震动可以让玩家感受到紧张和刺激。
+ 提升">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2d游戏中的相机震动">
+<meta property="og:url" content="https://xiaolinxiaozhu.github.io/2025/06/20/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8/index.html">
+<meta property="og:site_name" content="XLXZ's Blog">
+<meta property="og:description" content="#
+ 游戏设计 
+ 为什么我们需要相机震动
+ 相机震动可以让游戏 feel 更 “好”，具体而言，
+ 
+ 增强反馈：相机震动可以在玩家执行某些动作时提供即时反馈，例如攻击、跳跃或受到伤害。这种反馈可以让玩家更好地理解他们的行为对游戏世界的影响。
+ 增加沉浸感：通过模拟真实世界中的相机运动，游戏可以让玩家感受到更强的沉浸感。例如，在激烈的战斗场景中，微妙的相机震动可以让玩家感受到紧张和刺激。
+ 提升">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020250228085124.png">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_compare.gif">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shake_compare2.gif">
+<meta property="og:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/shakeperlin.gif">
+<meta property="article:published_time" content="2025-06-20T10:34:00.000Z">
+<meta property="article:modified_time" content="2025-06-21T05:31:54.410Z">
+<meta property="article:author" content="XLXZ">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xiaolinxiaozhu.github.io/2024/03/01/3.Source/Pasted%20image%2020250228085124.png">
+
+
+<link rel="canonical" href="https://xiaolinxiaozhu.github.io/2025/06/20/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://xiaolinxiaozhu.github.io/2025/06/20/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8/","path":"2025/06/20/2d游戏中的相机震动/","title":"2d游戏中的相机震动"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2d游戏中的相机震动 | XLXZ's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    
+  </noscript>
+<script>function loadCss(l){var d=document,h=d.head,s=d.createElement('link');s.rel='stylesheet';s.href=l;!function e(f){if (d.body)return f();setTimeout(function(){e(f)})}(function(){h.appendChild(s);});}loadCss('/style.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');loadCss('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css');</script><noscript><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css"></noscript></head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+      <img class="custom-logo-image" src="/uploads/custom-logo.png" alt="XLXZ's Blog">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">XLXZ's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">76</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">324</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8"><span class="nav-number">1.</span> <span class="nav-text">为什么我们需要相机震动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E9%9C%87%E5%8A%A8"><span class="nav-number">2.</span> <span class="nav-text">了解震动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%87%E5%8A%A8%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">震动的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E4%BA%8E%E4%BA%BA%E7%9C%BC%E7%9A%84%E6%84%9F%E7%9F%A5"><span class="nav-number">2.2.</span> <span class="nav-text">对于人眼的感知</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E9%9C%87%E5%8A%A8"><span class="nav-number">3.</span> <span class="nav-text">设计震动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%B9%E9%85%8D%E4%BA%BA%E7%9C%BC%E7%9A%84%E7%9E%AC%E6%97%B6%E6%84%9F%E7%9F%A5"><span class="nav-number">3.1.</span> <span class="nav-text">匹配人眼的瞬时感知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reference"><span class="nav-number">3.2.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="XLXZ" src="/images/apple-touch-icon-next.png">
+  <p class="site-author-name" itemprop="name">XLXZ</p>
+  <div class="site-description" itemprop="description">����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">324</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">76</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xiaolinxiaozhu" title="GitHub → https://github.com/xiaolinxiaozhu" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="Gmail:helloxlxz233@gmail.com" title="E-Mail → Gmail:helloxlxz233@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/12/31/2d%E6%A8%AA%E6%9D%BF%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E6%8C%AF%E5%8A%A8/" rel="bookmark">
+        <time class="popular-posts-time">2024-12-31</time>
+        <br>
+      2d横板游戏中的相机振动
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/06/19/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8%E9%80%9A%E5%88%99%EF%BC%88%E8%8D%89%E7%A8%BF%EF%BC%89/" rel="bookmark">
+        <time class="popular-posts-time">2025-06-19</time>
+        <br>
+      2D游戏中的相机震动通则
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/03/06/%E6%9D%82%E8%B0%88%EF%BC%9A%E6%8E%88%E8%AF%BE%E5%BD%A2%E5%BC%8F/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-06</time>
+        <br>
+      杂谈：授课形式
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/03/07/1.Archieve/python%EF%BC%9A%E4%B8%80%E5%A5%97%E9%80%82%E7%94%A8%E4%BA%8ESpyder%E7%9A%84%E8%88%92%E6%9C%8D%E9%85%8D%E8%89%B2/" rel="bookmark">
+        <time class="popular-posts-time">2024-03-07</time>
+        <br>
+      python：一套适用于Spyder的舒服配色
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2024/06/15/6.Dairy/2024/06.15%20%20%E6%98%9F%E6%9C%9F%E5%85%AD/" rel="bookmark">
+        <time class="popular-posts-time">2024-06-15</time>
+        <br>
+      2024/06.15  星期六
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2025/06/20/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2d游戏中的相机震动 | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2d游戏中的相机震动
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-06-20 18:34:00" itemprop="dateCreated datePublished" datetime="2025-06-20T18:34:00+08:00">2025-06-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-21 13:31:54" itemprop="dateModified" datetime="2025-06-21T13:31:54+08:00">2025-06-21</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>998</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><a href="/tags/游戏设计/" rel="contents" data-pjax-state="">#
+游戏设计</a> <br></p>
+<h2 id="为什么我们需要相机震动">为什么我们需要相机震动</h2>
+<p>相机震动可以让游戏 feel 更 “好”，具体而言，</p>
+<ol type="1">
+<li><strong>增强反馈</strong>：相机震动可以在玩家执行某些动作时提供即时反馈，例如攻击、跳跃或受到伤害。这种反馈可以让玩家更好地理解他们的行为对游戏世界的影响。</li>
+<li><strong>增加沉浸感</strong>：通过模拟真实世界中的相机运动，游戏可以让玩家感受到更强的沉浸感。例如，在激烈的战斗场景中，微妙的相机震动可以让玩家感受到紧张和刺激。</li>
+<li><strong>提升游戏节奏</strong>：相机震动可以用来强调游戏中的关键时刻，例如击败敌人或完成任务。这种视觉上的强调可以帮助玩家更好地理解游戏节奏和重要事件。</li>
+</ol>
+<h2 id="了解震动">了解震动</h2>
+<h3 id="震动的类型">震动的类型</h3>
+<p>游戏中的振动无非是模仿现实中的振动，了解现实中的振动，我们可以更好的设计游戏中的振动。</p>
+<p>首先，按照目标来看，震动可以分为以下几种类型：</p>
+<ol type="1">
+<li><strong>位置震动</strong>：相机在空间中的位置发生变化。</li>
+<li><strong>旋转震动</strong>：相机的朝向发生变化。</li>
+<li><strong>缩放震动</strong>：相机的缩放级别发生变化。</li>
+<li><strong>混合震动</strong>：同时应用位置、旋转和缩放的震动。</li>
+</ol>
+<p>其次，按照震动的特征来看，震动可以分为以下几种类型： 1.
+<strong>简谐震动</strong>：震动的幅度和频率是恒定的。 2.
+<strong>阻尼震动</strong>：震动的幅度随着时间逐渐减小。 3.
+<strong>各种非线性震动</strong>：震动的幅度和频率不是线性关系。</p>
+<p>如果按照震动的规律来看，震动可以分为以下几种类型： 1. 简谐振动 2.
+周期振动 3. 准周期振动 4. 过渡振动 5. 窄频带随机振动 6. 宽频带随机振动
+7. 不平稳随机振动</p>
+<p><img src="/2024/03/01/3.Source/Pasted%20image%2020250228085124.png"></p>
+<h3 id="对于人眼的感知">对于人眼的感知</h3>
+<p>但是上面的那么多震动类型，对于人眼来说，实际上是比较难以分辨的。比如下面两种震动方式：</p>
+<p><img src="/2024/03/01/3.Source/shake_compare.gif"></p>
+<p>这里依次播放了两种震动模式，一个是窄频带随机震动，一个是不平稳随机震动。</p>
+<p><img src="/2024/03/01/3.Source/shake_compare2.gif">
+这里依次播放了两种震动模式，一个是阻尼震动，一个是弹簧震动，它们在频率分布或者振幅分布上拥有特殊的规律。</p>
+<p>人眼对于震动的感知可以分为两个部分： 1. 基于
+<strong>运动感知</strong> 的 瞬时感知 2. 基于 <strong>模式识别</strong>
+的 持续感知</p>
+<p>对于瞬时感知，人眼对于震动的频率非常敏感，尤其是高频震动。对于持续感知，人眼更擅长于识别震动的模式和规律。</p>
+<h2 id="设计震动">设计震动</h2>
+<p>我们
+基于上述的震动类型和人眼的感知特点，可以设计出更符合玩家体验的震动效果。</p>
+<h3 id="匹配人眼的瞬时感知">匹配人眼的瞬时感知</h3>
+<p>查看下面的两种震动方式： <img src="/2024/03/01/3.Source/shakeperlin.gif"></p>
+<p>我们可以发现，如果是使用随机偏移生成的震动，它会看起来非常“难受”，这种不适感有两个成因：
+1.
+<strong>瞬时感知困难</strong>：是因为对于一个人眼来说，随机偏移将会使得在短时间内，物体发生过大的位移，导致人眼对于运动的感知存在一定的困难。
+2.
+<strong>频率过高</strong>：是因为随机偏移的震动频率理论上是无限的（实际和帧率有关），而人眼对于高频震动的感知是非常敏感的。这种高频震动会让人感到不适。</p>
+<p>或许你可能会认为还好，但是如果是看下面这个对比（仅仅是将原本的小球替换为了多个点）：
+<video src="/2024/03/01/3.Source/Video_2025-06-21_110412.mp4" controls="" style="max-width:100%"></video></p>
+<span id="more"></span>
+<hr>
+<h3 id="reference">Reference</h3>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>不是三元喝不起而是四元更有性价比awa，想喝四元大可乐</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/kofi.png" alt="XLXZ Ko-fi">
+        <span>Ko-fi</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" rel="tag"># 游戏设计</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/06/19/2d%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%9B%B8%E6%9C%BA%E9%9C%87%E5%8A%A8%E9%80%9A%E5%88%99%EF%BC%88%E8%8D%89%E7%A8%BF%EF%BC%89/" rel="prev" title="2D游戏中的相机震动通则">
+                  <i class="fa fa-angle-left"></i> 2D游戏中的相机震动通则
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    © 2023 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">XLXZ</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> &amp; <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="/bundle.js"></script><script>false;
+{"enable":true,"tags":"all","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script></body></html>
