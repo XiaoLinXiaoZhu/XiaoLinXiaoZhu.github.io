@@ -85,7 +85,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">75</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">316</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-sponsor"><a href="/sponsor/" rel="section"><i class="fa fa-heart fa-fw"></i>sponsor</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">75</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">320</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -147,7 +147,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">316</span>
+          <span class="site-state-item-count">320</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -180,6 +180,465 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++中string和int相互转换的常用方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 00:33:00 / 修改时间：00:45:09" itemprop="dateCreated datePublished" datetime="2023-12-08T00:33:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>600</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a>
+<br></p>
+<h1 id="前言">前言</h1>
+<p>字符串操作是各种算法题中的常客，很多数据常常以字符串形式给出，其中有的需要自己转化成整数，而一些整型数据有时转换成字符串处理起来更加方便，比如判断一个整数是否是回文数，所以字符串和整数的转换是一些问题处理的基础步骤，C++
+在处理这类问题时并不像 Python
+那样方便，但是也有许多方法能够实现，为了今后查找方便，整理如下。</p>
+<h1 id="int-转-string">int 转 string</h1>
+<h2 id="通过-stdto_string-函数转换">通过 std::to_string() 函数转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::cout &lt;&lt; std::<span class="built_in">to_string</span>(num);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">这种方式在 C++<span class="number">11</span> 中才能使用，编译时记得加上 --std=c++<span class="number">11</span> 的选项</span><br><span class="line"></span><br><span class="line">## 通过 ostringstream 转换</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="built_in">main</span>()</span><br><span class="line">{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    std::ostringstream ss;</span><br><span class="line">    ss &lt;&lt; num;</span><br><span class="line">    std::cout &lt;&lt; ss.<span class="built_in">str</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这是一种通过字符流的方式将整数转换成字符串，这种方式在C++11之前也可以使用</p>
+<h2 id="通过-sprintf-转换">通过 sprintf 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> num = <span class="number">123</span>;</span><br><span class="line">    <span class="type">char</span> buffer[<span class="number">256</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(buffer, <span class="string">"%d"</span>, num);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, buffer);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>这是一种C语言中的转换方式，sprintf 也可以换成更安全的 snprintf
+函数</p>
+<h1 id="string-转-int">string 转 int</h1>
+<h2 id="通过-istringstream-转换">通过 istringstream 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sstream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">std::istringstream <span class="title">ss</span><span class="params">(str)</span></span>;</span><br><span class="line">    ss &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+<p>使用 istringstream 可以从字符流中读取整数，与 ostringstream
+是一种相反的操作</p>
+<h2 id="使用-sscanf-来转化">使用 sscanf 来转化</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">sscanf</span>(str.<span class="built_in">c_str</span>(), <span class="string">"%d"</span>, &amp;num);</span><br><span class="line">    std::cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>注意 sscanf 函数的第一个参数类型是 const char
+*，string类型的参数需要转换一下</p>
+<h2 id="使用-atoi-转换">使用 atoi 转换</h2>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    std::string str = <span class="string">"668"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">atoi</span>(str.<span class="built_in">c_str</span>());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>atoi 函数的头文件是 stdlib.h，同样是一个C语言中的函数</p>
+<h2 id="使用方法stod">使用方法stod</h2>
+<p>该方法在C++11中被支持，十分地方便，但是需要确保给定的string是否可以转化为double，不然会抛出错误。</p>
+<p>总结 itoa
+不是c语言标准函数，在跨平台的整数转字符串的代码中不要使用这个函数 atoi
+是一个标准函数，需要将它和 itoa 区别开来，这一点很容易记混的
+如果是在C++环境中进行转换，推荐使用 stringstream 字符流的形式和
+to_string 函数</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/C++%E4%B8%ADstring%E5%92%8Cint%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C++：string的运用和相关方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-12-08 00:30:00 / 修改时间：00:33:16" itemprop="dateCreated datePublished" datetime="2023-12-08T00:30:00+08:00">2023-12-08</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>121</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>[[___C++]]</p>
+<h1 id="cstring的运用和相关方法">C++：string的运用和相关方法</h1>
+<h2 id="一删除stdstring或stdwstring的最后一个字符">一、删除std::string或std::wstring的最后一个字符：</h2>
+<h3 id="s.pop_back">s.pop_back();</h3>
+<p>  从s中移走最后一个元素。在string/wstring中相当于移走最后一个char/wchar_t。这个方法算是比较简单的了。</p>
+<h3 id="s.erases.end-1">s.erase(s.end()-1);</h3>
+<p>  删除s的最后一个字符</p>
+<h3 id="ss.substr0s.length-1">s=s.substr(0,s.length()-1);</h3>
+<p>  取出s从最开始到倒数第二个字符之间的字符串，赋值给s。相当于去掉最后一个字符</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/1.Archieve/C++%EF%BC%9Astring%E7%9A%84%E8%BF%90%E7%94%A8%E5%92%8C%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">C++的运算符重载</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-08 00:24:00" itemprop="dateCreated datePublished" datetime="2023-12-08T00:24:00+08:00">2023-12-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-05 18:14:13" itemprop="dateModified" datetime="2024-05-05T18:14:13+08:00">2024-05-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/C++/" rel="contents" data-pjax-state=""># C++</a> <br>
+[[___未完成]]</p>
+<h3 id="概念">1.概念</h3>
+<p>  运算符的重载，实际是一种特殊的函数重载，必须定义一个函数，并告诉C++编译器，当遇到该运算符时就调用此函数来行使运算符功能。这个函数叫做运算符重载函数（常为类的成员函数）。<br>
+  用函数的方式实现了（+ - * / []数组 &amp;&amp; || 逻辑
+等）运算符的重载。根据需求决定重载那些运算符，用到的时候再百度案例即可。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/C++%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
+
+    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
+      <meta itemprop="name" content="XLXZ">
+    </span>
+
+    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XLXZ's Blog">
+      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
+    </span>
+
+    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | XLXZ's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">01背包问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-12-07 23:34:00" itemprop="dateCreated datePublished" datetime="2023-12-07T23:34:00+08:00">2023-12-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-02-01 09:51:05" itemprop="dateModified" datetime="2024-02-01T09:51:05+08:00">2024-02-01</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 ≈</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="/tags/未完成/" rel="contents" data-pjax-state="">#
+未完成</a> <br></p>
+<h2 id="背包问题详解">01背包问题详解</h2>
+<p>01背包是一种动态规划问题。动态规划的核心就是状态转移方程，本文主要解释01背包状态转移方程的原理。</p>
+<h2 id="问题描述">问题描述</h2>
+<p>01背包问题可描述为如下问题：
+有一个容量为V的背包，还有n个物体。现在忽略物体实际几何形状，我们认为只要背包的剩余容量大于等于物体体积，那就可以装进背包里。每个物体都有两个属性，即体积w和价值v。
+问：如何向背包装物体才能使背包中物体的总价值最大？</p>
+<h2 id="为什么不用贪心">为什么不用贪心？</h2>
+<p>我在第一次做这个题目时考虑的是贪心算法。所谓贪心问题，就是每一步决策都采取最优解，按照此方案最后结果也是最优解。
+为什么这个问题不能用贪心呢？ 举个例子
+我的背包容量为10，而且有4个物体，它们的体积和价值分别为<br>
+w1 = 8, v1 = 9 w2 = 3, v2 = 3 w3 = 4, v3 = 4 w4 = 3, v4 = 3
+贪心是每一步采取最优拿法，即每一次都优先拿价值与体积比值最大的物体<br>
+c1 = v1/w1 = 1.125（最大） c2 = v2/w2 = 1 c3 = v3/w3 = 1 c4 = v4/w4 = 1
+所以优先拿第一个物体，随后背包再也装不下其他物体了，则最大价值为9。
+但是这个问题的最优解是取物体2，3，4装进背包，最大价值为3+4+3=10！！！
+所以这个问题不可以用贪心法来处理。</p>
+<h2 id="原始的-01背包">原始的 01背包</h2>
+<p>01背包的状态转移方程为 `f[i][j] = max(f[i - 1][j], f[i - 1][j - w[i]]
++ v[j])</p>
+<p>i代表对i件物体做决策，有两种方式—放入背包和不放入背包。
+j表示当前背包剩余的容量。</p>
+<p>转移方程的解释： 创建一个状态矩阵f，横坐标 i 是物体编号，纵坐标 j
+为背包容量。 首先将 f 第0行和第0列初始化为0
+（代码里面将整个f初始化为0了，其实只初始化第0行和第0列就够了）。这个表示不放物体时最大价值为0
+。（物体编号从1开始） 接下来依次遍历f的每一行。如下所示。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">{</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">	{</span><br><span class="line">		<span class="keyword">if</span> (j &gt;= w[i])<span class="comment">//如果背包装得下当前的物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">		}</span><br><span class="line">		<span class="keyword">else</span><span class="comment">//如果背包装不下当前物体</span></span><br><span class="line">		{</span><br><span class="line">			f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>如果背包装得下当前的物体，在遍历过程中分别计算第i件物体放入和不放入背包的价值，取其中大的做为当前的最大价值。
+如果背包装不下当前物体那么第i个物体只有不放入背包一种选择。</p>
+<p>不放入背包时:第i次决策后的最大价值和第i-1次决策时候的价值是一样的（还是原来的那些物体，没多没少）。
+放入背包时:第i次决策后的价值为 第i-1次决策时候的价值 加上
+当前物体的价值v[j]。物体放入背包后会使背包容量变为 j
+，即没放物体之前背包的容量为j - w[i]。</p>
+<figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> max(N1,N2) N1&gt;N2?N1:N2</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	第一行输入背包容量V和物体的个数n</span></span><br><span class="line"><span class="comment">	接下来有n行，每行包含两个数字，分别为该物体的花费和价值</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	vector&lt;<span class="type">int</span>&gt; w, v;<span class="comment">//w为花费，v为价值</span></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; f;<span class="comment">//f状态矩阵</span></span><br><span class="line">	<span class="type">int</span> V, n;<span class="comment">//V背包容量，n物体数</span></span><br><span class="line">	<span class="keyword">while</span> (cin &gt;&gt; V &gt;&gt; n)</span><br><span class="line">	{</span><br><span class="line">		w.<span class="built_in">clear</span>();</span><br><span class="line">		v.<span class="built_in">clear</span>();</span><br><span class="line">		f.<span class="built_in">clear</span>();</span><br><span class="line">		w.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">		v.<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输入原始数据</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="type">int</span> cur_w, cur_v;</span><br><span class="line">			cin &gt;&gt; cur_w &gt;&gt; cur_v;</span><br><span class="line">			w.<span class="built_in">push_back</span>(cur_w);</span><br><span class="line">			v.<span class="built_in">push_back</span>(cur_v);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//初始化状态矩阵</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">buff</span><span class="params">(V + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">			f.<span class="built_in">push_back</span>(buff);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//动态规划过程</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		{</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = V; j &gt;= <span class="number">0</span>; j--)</span><br><span class="line">			{</span><br><span class="line">				<span class="keyword">if</span> (j &gt;= w[i])</span><br><span class="line">				{</span><br><span class="line">					f[i][j] = <span class="built_in">max</span>(f[i - <span class="number">1</span>][j], f[i - <span class="number">1</span>][j - w[i]] + v[i]);</span><br><span class="line">				}</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				{</span><br><span class="line">					f[i][j] = f[i - <span class="number">1</span>][j];</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输出答案</span></span><br><span class="line">		<span class="type">int</span> ans = f[n][V];</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/07/01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/#more" rel="contents">
+                阅读全文 »
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -791,407 +1250,6 @@
 <p>如果能够这样，那么游戏将会变得十分有意思……</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">总的来说，帝国的边界很有创意地加入了外交系统</span><br><span class="line"></span><br><span class="line">但是整个外交系统构建得又过于简单了，如果能够复杂一点，那么整个游戏的可玩度将会大大提升。</span><br></pre></td></tr></tbody></table></figure>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/04/1.Archieve/%E5%B0%86%E6%B8%B8%E6%88%8F%E7%9A%84%E5%B1%9E%E6%80%A7%E7%B2%BE%E7%AE%80%E5%8C%96/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/1.Archieve/%E5%B0%86%E6%B8%B8%E6%88%8F%E7%9A%84%E5%B1%9E%E6%80%A7%E7%B2%BE%E7%AE%80%E5%8C%96/" class="post-title-link" itemprop="url">将游戏的属性精简化</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-12-04 11:50:00 / 修改时间：11:50:52" itemprop="dateCreated datePublished" datetime="2023-12-04T11:50:00+08:00">2023-12-04</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>11</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="将游戏的属性精简化">将游戏的属性精简化</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/04/1.Archieve/%E5%B0%86%E6%B8%B8%E6%88%8F%E7%9A%84%E5%B1%9E%E6%80%A7%E7%B2%BE%E7%AE%80%E5%8C%96/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/" class="post-title-link" itemprop="url">冰汽时代：《帝国的边界》</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-04 09:37:00" itemprop="dateCreated datePublished" datetime="2023-12-04T09:37:00+08:00">2023-12-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-06 09:07:46" itemprop="dateModified" datetime="2024-03-06T09:07:46+08:00">2024-03-06</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>464</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**苍天已死，黄天当立**</span><br></pre></td></tr></tbody></table></figure>
-<p><a href="/tags/冰汽时代/" rel="contents" data-pjax-state="">#
-冰汽时代</a> <br></p>
-<h2 id="简介">简介</h2>
-<p>在这部dlc中，你将作为一支探险小队，接到命令的你将在前政府留下来的军火库中搜集资源，并且提交给新伦敦的政府。</p>
-<p>但是政府腐败日益增长，你也因为伦敦长期不提供食物而关系破裂。</p>
-<p>我们没有能源塔，在孤独无援，冰天雪地之中，我们需要找到其他的盟友并且打好关系，只有这样我们才能活下去。</p>
-<p>在游戏的最后，新伦敦四分五裂，其中的人们向我们求助，救援？还是不救？面对昔日的母城。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/04/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E3%80%8A%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%BE%B9%E7%95%8C%E3%80%8B/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/03/2.Reference/Admonition%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/03/2.Reference/Admonition%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="post-title-link" itemprop="url">Admonition插件使用手册</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-03 09:06:00" itemprop="dateCreated datePublished" datetime="2023-12-03T09:06:00+08:00">2023-12-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-06 07:04:27" itemprop="dateModified" datetime="2024-03-06T07:04:27+08:00">2024-03-06</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>110</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="/tags/效率工具/" rel="contents" data-pjax-state="">#
-效率工具</a> <br></p>
-<p>admonition是一款obsidian中的插件，可以支持更多类型的引用的生成，其中包含了很多的个性化生成，但是这对你来说无关紧要</p>
-<p>详细信息可以取他们的官网查看<a target="_blank" rel="noopener" href="https://plugins.javalent.com/admonitions/beginner/types">admontion使用指南</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/03/2.Reference/Admonition%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope="" itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xiaolinxiaozhu.github.io/2023/12/02/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9/">
-
-    <span hidden="" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/apple-touch-icon-next.png">
-      <meta itemprop="name" content="XLXZ">
-    </span>
-
-    <span hidden="" itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XLXZ's Blog">
-      <meta itemprop="description" content="����ϲ�������仰:1.���Ŀ���ж�ᶨ?2.����ͽ���һ����">
-    </span>
-
-    <span hidden="" itemprop="post" itemscope="" itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | XLXZ's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/12/02/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9/" class="post-title-link" itemprop="url">冰汽时代：最后的秋天</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-12-02 20:03:00" itemprop="dateCreated datePublished" datetime="2023-12-02T20:03:00+08:00">2023-12-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-03-06 09:08:40" itemprop="dateModified" datetime="2024-03-06T09:08:40+08:00">2024-03-06</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>850</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 ≈</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**做个资本家压迫工人阶级**</span><br></pre></td></tr></tbody></table></figure>
-<p><a href="/tags/冰汽时代/" rel="contents" data-pjax-state="">#
-冰汽时代</a> <br></p>
-<h2 id="简介">简介</h2>
-<p>在在这部dlc中，时间定为了寒冬来临的最后一个秋天，你接到公司的命令，加急制造能源塔，以对抗即将到来的严寒。</p>
-<p>在游戏中，你的游戏目标发生了变化，同时也会解锁新的建筑和法律、科技树……</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/12/02/1.Archieve/%E5%86%B0%E6%B1%BD%E6%97%B6%E4%BB%A3%EF%BC%9A%E6%9C%80%E5%90%8E%E7%9A%84%E7%A7%8B%E5%A4%A9/#more" rel="contents">
-                阅读全文 »
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
